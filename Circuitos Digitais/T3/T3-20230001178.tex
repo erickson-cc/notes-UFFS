@@ -43,18 +43,36 @@
 			A = (\overline{F}.P.C) + (F.P.\overline{C})
 		\end{equation*}
 	\section{Circuitos Integrados}
+		Além de fonte de energia, cabos diversos, switch, resistor e lâmpada LED; Foram usados neste projeto 3 peças de portas lógicas para representar o circuito:\\ \\
+		CI 7400 (NAND): Foi usada para negar os sinais do farol e da chave, poderia também ser usado uma porta NOR. \\ \\
+		CI 7408 (AND): Foi usada para representar as portas AND do circuito, como o circuito utiliza portas AND de 3 entradas, tivemos que utilizar 4 portas AND de 2 entradas para obter os mesmos resultados. \\ \\
+		CI 7432 (OR): Foi usada ao final do circuito para representar a porta OR. \\
 	\section{Processo de Montagem em Plataforma Virtual}
 		\subsection{Energização da Protoboard e Montagem das Entradas}
 			1 = Farol \\ 2 = Porta \\ 3 = Chaves \\
-			\includegraphics[scale=0.6]{Images/Tinkercad 01.jpg} \\
+			\includegraphics[scale=0.5]{Images/Tinkercad 01.jpg} \\
 		\subsection{Porta Lógica NAND (CI 7400)}
 			Essas portas lógicas são necessárias para inverter os valores das entradas 1 (Farol, representado pelo fio amarelo) e 3 (Chave na ignição, representado pelo fio verde) \\
 			A CI foi energizada puxando da linha 2 da parte superior e aterrando no negativo da parte inferior. \\
-			\includegraphics[scale=0.6]{Images/Tinkercad 02.jpg} \\
-		\includegraphics[scale=0.6]{Images/Tinkercad 03.jpg} \\
-		\includegraphics[scale=0.6]{Images/Tinkercad 04.jpg} \\
-		\includegraphics[scale=0.6]{Images/Tinkercad 05.jpg} \\
-		\includegraphics[scale=0.6]{Images/Tinkercad 06.jpg} \\
+			\includegraphics[scale=0.5]{Images/Tinkercad 02.jpg} \\
+		\subsection{Porta Lógica AND (CI 7408)}
+			Na parte inferior, foram montados duas portas AND, uma com o sinal da Porta e o sinal negado do Farol, outra com o sinal da Porta e o sinal negado da Chave. \\
+			\includegraphics[scale=0.5]{Images/Tinkercad 03.jpg} \\
+			Em seguida, o resultado de cada uma dessas portas foi passado para a parte superior do CI, a outra entrada da porta foi ligada com o sinal não-negado da outra entrada que não foi usada na entrada da porta AND anterior. Desse modo, podemos simular a Porta AND com 3 entradas usando duas Portas AND de 2 entradas. \\
+			\includegraphics[scale=0.5]{Images/Tinkercad 04.jpg} \\
+		\subsection{Porta Lógica OR (CI 7432)}
+			Foi anexada na protoboard a porta lógica OR. Com 2 entradas, uma para cada sinal da Porta AND anterior.\\
+			\includegraphics[scale=0.5]{Images/Tinkercad 05.jpg} \\
+		\subsection{LED}
+			A saída da porta lógica OR anterior foi ligada a um LED devidamente aterrado. Esse Led simula o Alarme do carro, quando está ligado o alarme dispara. \\
+			\includegraphics[scale=0.5]{Images/Tinkercad 06.jpg} \\
 	\section{Circuito na Protoboard}
-	
+		\includegraphics[scale=0.25]{Images/Protoboard 000.jpg} \\
+		Farol, Porta, Chave = {0, 0, 0} \\ \\
+		\includegraphics[scale=0.263]{Images/Protoboard 011.jpg} \\
+		Farol, Porta, Chave = {0, 1, 1} \\ \\
+		\includegraphics[scale=0.25]{Images/Protoboard 110.jpg} \\
+		Farol, Porta, Chave = {1, 1, 0} \\ \\
+		\includegraphics[scale=0.25]{Images/Protoboard 111.jpg} \\
+		Farol, Porta, Chave = {1, 1, 1} \\ \\
 \end{document}

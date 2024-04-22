@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  19 APR 2024 16:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  22 APR 2024 16:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -262,92 +262,146 @@ Overfull \hbox (56.62448pt too wide) in paragraph at lines 14--15
  []
 
 [2 <./Images/Circuito Alarme.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--50
+
+ []
+
 <Images/Tinkercad 01.jpg, id=14, 611.28375pt x 570.63188pt>
 File: Images/Tinkercad 01.jpg Graphic file (type jpg)
 <use Images/Tinkercad 01.jpg>
-Package pdftex.def Info: Images/Tinkercad 01.jpg  used on input line 49.
-(pdftex.def)             Requested size: 366.77307pt x 342.38177pt.
+Package pdftex.def Info: Images/Tinkercad 01.jpg  used on input line 53.
+(pdftex.def)             Requested size: 305.64113pt x 285.31525pt.
 
-Overfull \hbox (21.77307pt too wide) in paragraph at lines 48--50
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 48--50
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
-<Images/Tinkercad 02.jpg, id=15, 603.75563pt x 564.60938pt>
+[3]
+<Images/Tinkercad 02.jpg, id=19, 603.75563pt x 564.60938pt>
 File: Images/Tinkercad 02.jpg Graphic file (type jpg)
 <use Images/Tinkercad 02.jpg>
-Package pdftex.def Info: Images/Tinkercad 02.jpg  used on input line 53.
-(pdftex.def)             Requested size: 362.25616pt x 338.76823pt.
-<Images/Tinkercad 03.jpg, id=16, 603.0028pt x 560.0925pt>
+Package pdftex.def Info: Images/Tinkercad 02.jpg  used on input line 57.
+(pdftex.def)             Requested size: 301.87708pt x 282.30399pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--58
+
+ []
+
+[4 <./Images/Tinkercad 01.jpg>]
+<Images/Tinkercad 03.jpg, id=23, 603.0028pt x 560.0925pt>
 File: Images/Tinkercad 03.jpg Graphic file (type jpg)
 <use Images/Tinkercad 03.jpg>
-Package pdftex.def Info: Images/Tinkercad 03.jpg  used on input line 54.
-(pdftex.def)             Requested size: 361.80447pt x 336.05809pt.
-<Images/Tinkercad 04.jpg, id=17, 596.98032pt x 561.59813pt>
+Package pdftex.def Info: Images/Tinkercad 03.jpg  used on input line 60.
+(pdftex.def)             Requested size: 301.50066pt x 280.04556pt.
+<Images/Tinkercad 04.jpg, id=24, 596.98032pt x 561.59813pt>
 File: Images/Tinkercad 04.jpg Graphic file (type jpg)
 <use Images/Tinkercad 04.jpg>
-Package pdftex.def Info: Images/Tinkercad 04.jpg  used on input line 55.
-(pdftex.def)             Requested size: 358.19095pt x 336.96147pt.
-<Images/Tinkercad 05.jpg, id=18, 598.48593pt x 563.85657pt>
+Package pdftex.def Info: Images/Tinkercad 04.jpg  used on input line 62.
+(pdftex.def)             Requested size: 298.48943pt x 280.79837pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+
+ []
+
+[5 <./Images/Tinkercad 02.jpg>] [6 <./Images/Tinkercad 03.jpg>]
+<Images/Tinkercad 05.jpg, id=31, 598.48593pt x 563.85657pt>
 File: Images/Tinkercad 05.jpg Graphic file (type jpg)
 <use Images/Tinkercad 05.jpg>
-Package pdftex.def Info: Images/Tinkercad 05.jpg  used on input line 56.
-(pdftex.def)             Requested size: 359.09433pt x 338.31654pt.
-<Images/Tinkercad 06.jpg, id=19, 599.23875pt x 569.12625pt>
+Package pdftex.def Info: Images/Tinkercad 05.jpg  used on input line 65.
+(pdftex.def)             Requested size: 299.24223pt x 281.9276pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--66
+
+ []
+
+[7 <./Images/Tinkercad 04.jpg>]
+<Images/Tinkercad 06.jpg, id=36, 599.23875pt x 569.12625pt>
 File: Images/Tinkercad 06.jpg Graphic file (type jpg)
 <use Images/Tinkercad 06.jpg>
-Package pdftex.def Info: Images/Tinkercad 06.jpg  used on input line 57.
-(pdftex.def)             Requested size: 359.54602pt x 341.47838pt.
+Package pdftex.def Info: Images/Tinkercad 06.jpg  used on input line 68.
+(pdftex.def)             Requested size: 299.61864pt x 284.56242pt.
 
-Overfull \hbox (17.25616pt too wide) in paragraph at lines 51--58
-[] 
- []
-
-
-Overfull \hbox (16.80447pt too wide) in paragraph at lines 51--58
-[] 
- []
-
-
-Overfull \hbox (13.19095pt too wide) in paragraph at lines 51--58
-[] 
- []
-
-
-Overfull \hbox (14.09433pt too wide) in paragraph at lines 51--58
-[] 
- []
-
-
-Overfull \hbox (14.54602pt too wide) in paragraph at lines 51--58
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 51--58
+Underfull \hbox (badness 10000) in paragraph at lines 67--69
 
  []
 
-[3 <./Images/Tinkercad 01.jpg>] [4 <./Images/Tinkercad 02.jpg>] [5 <./Images/Ti
-nkercad 03.jpg>] [6 <./Images/Tinkercad 04.jpg>] [7 <./Images/Tinkercad 05.jpg>
-] [8 <./Images/Tinkercad 06.jpg>] (T3-20230001178.aux)
+[8 <./Images/Tinkercad 05.jpg>]
+<Images/Protoboard 000.jpg, id=40, 1204.5pt x 656.4525pt>
+File: Images/Protoboard 000.jpg Graphic file (type jpg)
+<use Images/Protoboard 000.jpg>
+Package pdftex.def Info: Images/Protoboard 000.jpg  used on input line 70.
+(pdftex.def)             Requested size: 301.12427pt x 164.11272pt.
+<Images/Protoboard 011.jpg, id=41, 1127.71312pt x 663.98062pt>
+File: Images/Protoboard 011.jpg Graphic file (type jpg)
+<use Images/Protoboard 011.jpg>
+Package pdftex.def Info: Images/Protoboard 011.jpg  used on input line 72.
+(pdftex.def)             Requested size: 296.58836pt x 174.62679pt.
+<Images/Protoboard 110.jpg, id=42, 1185.67969pt x 688.07062pt>
+File: Images/Protoboard 110.jpg Graphic file (type jpg)
+<use Images/Protoboard 110.jpg>
+Package pdftex.def Info: Images/Protoboard 110.jpg  used on input line 74.
+(pdftex.def)             Requested size: 296.41919pt x 172.01723pt.
+<Images/Protoboard 111.jpg, id=43, 1188.69093pt x 647.41875pt>
+File: Images/Protoboard 111.jpg Graphic file (type jpg)
+<use Images/Protoboard 111.jpg>
+Package pdftex.def Info: Images/Protoboard 111.jpg  used on input line 76.
+(pdftex.def)             Requested size: 297.172pt x 161.85428pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--78
+
+ []
+
+[9 <./Images/Tinkercad 06.jpg> <./Images/Protoboard 000.jpg>] [10 <./Images/Pro
+toboard 011.jpg> <./Images/Protoboard 110.jpg>] [11 <./Images/Protoboard 111.jp
+g>] (T3-20230001178.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3654 strings out of 474435
- 62815 string characters out of 5737685
+ 3685 strings out of 474435
+ 63776 string characters out of 5737685
  1932190 words of memory out of 5000000
- 25963 multiletter control sequences out of 15000+600000
+ 25994 multiletter control sequences out of 15000+600000
  563452 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,69p,220b,208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,6n,69p,348b,208s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ericksonmuller/AppData/Local/Pr
@@ -356,9 +410,9 @@ r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
 ers/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr17.pfb>
-Output written on T3-20230001178.pdf (8 pages, 908413 bytes).
+Output written on T3-20230001178.pdf (11 pages, 1968707 bytes).
 PDF statistics:
- 66 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 
