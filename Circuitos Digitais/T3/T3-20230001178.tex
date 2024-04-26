@@ -66,13 +66,25 @@
 		\subsection{LED}
 			A saída da porta lógica OR anterior foi ligada a um LED devidamente aterrado. Esse Led simula o Alarme do carro, quando está ligado o alarme dispara. \\
 			\includegraphics[scale=0.5]{Images/Tinkercad 06.jpg} \\
+		\pagebreak
 	\section{Circuito na Protoboard}
-		\includegraphics[scale=0.25]{Images/Protoboard 000.jpg} \\
-		Farol, Porta, Chave = {0, 0, 0} \\ \\
-		\includegraphics[scale=0.263]{Images/Protoboard 011.jpg} \\
-		Farol, Porta, Chave = {0, 1, 1} \\ \\
-		\includegraphics[scale=0.25]{Images/Protoboard 110.jpg} \\
-		Farol, Porta, Chave = {1, 1, 0} \\ \\
-		\includegraphics[scale=0.25]{Images/Protoboard 111.jpg} \\
-		Farol, Porta, Chave = {1, 1, 1} \\ \\
+		\subsection{Mapeamento dos cabos}
+			Os cabos que ligam a protoboard à fonte estão na linha horizontal inferior esquerda da protoboard; a linha de cima é o positivo e a de baixo o negativo. Na parte que liga a linha da esquerda com a direita foi usado um resistor como ponte e dali foi puxado um fio para uma linha vertical à esquerda do switch que foi usado para energizar as outras partes do circuito. \\ \\
+			\includegraphics[scale=0.25]{Images/Protoboard Side.jpeg} \\
+			\includegraphics[scale=0.25]{Images/Protoboard Top.jpeg} \pagebreak\\
+			Na porta AND, diferentemente do modelo apresentado no Tinkercad, foram puxados os fios priemeiro na parte superior para depois, na parte inferior, passarem por outra porta AND. Outra coisa que o circuito físico está diferente do circuito digital na plataforma virtual é que este foi montado da esquerda para a direita, com o switch à esquerda e o LED à direita. Já na protoboard, o circuito foi montado da direita para a esquerda. \\ \\
+			\includegraphics[scale=0.25]{Images/Protoboard Jumpers.jpeg} \\
+			\includegraphics[scale=0.25]{Images/Protoboard Jumpers 2.jpeg} \\
+		\subsection{(Farol, Porta, Chave) = (0,0,0) [Alarme Desativado]}
+			\includegraphics[scale=0.25]{Images/Protoboard 000 Down.jpeg} \\
+			\includegraphics[scale=0.25]{Images/Protoboard 000 Top.jpeg} \\
+		\subsection{(Farol, Porta, Chave) = (0,1,1) [Alarme Ativado]}
+			\includegraphics[scale=0.25]{Images/Protoboard 011 Down.jpeg} \\
+			\includegraphics[scale=0.25]{Images/Protoboard 011 Top.jpeg} \\
+		\subsection{(Farol, Porta, Chave) = (1,1,0) [Alarme Ativado]}
+			\includegraphics[scale=0.25]{Images/Protoboard 110 Down.jpeg} \\
+			\includegraphics[scale=0.25]{Images/Protoboard 110 Top.jpeg} \\
+		\subsection{(Farol, Porta, Chave) = (1,1,1) [Alarme Desativado]}
+			\includegraphics[scale=0.25]{Images/Protoboard 111 Down.jpeg} \\
+		
 \end{document}

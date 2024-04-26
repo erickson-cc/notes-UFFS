@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  22 APR 2024 16:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  26 APR 2024 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -335,73 +335,180 @@ File: Images/Tinkercad 06.jpg Graphic file (type jpg)
 <use Images/Tinkercad 06.jpg>
 Package pdftex.def Info: Images/Tinkercad 06.jpg  used on input line 68.
 (pdftex.def)             Requested size: 299.61864pt x 284.56242pt.
+ [8 <./Images/Tinkercad 05.jpg>] [9 <./Images/Tinkercad 06.jpg>]
+<Images/Protoboard Side.jpeg, id=43, 1606.0pt x 739.76375pt>
+File: Images/Protoboard Side.jpeg Graphic file (type jpg)
+<use Images/Protoboard Side.jpeg>
+Package pdftex.def Info: Images/Protoboard Side.jpeg  used on input line 73.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard Top.jpeg, id=44, 1606.0pt x 739.76375pt>
+File: Images/Protoboard Top.jpeg Graphic file (type jpg)
+<use Images/Protoboard Top.jpeg>
+Package pdftex.def Info: Images/Protoboard Top.jpeg  used on input line 74.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard Jumpers.jpeg, id=45, 1606.0pt x 739.76375pt>
+File: Images/Protoboard Jumpers.jpeg Graphic file (type jpg)
+<use Images/Protoboard Jumpers.jpeg>
+Package pdftex.def Info: Images/Protoboard Jumpers.jpeg  used on input line 76.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard Jumpers 2.jpeg, id=46, 1606.0pt x 739.76375pt>
+File: Images/Protoboard Jumpers 2.jpeg Graphic file (type jpg)
+<use Images/Protoboard Jumpers 2.jpeg>
+Package pdftex.def Info: Images/Protoboard Jumpers 2.jpeg  used on input line 7
+7.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
 
- []
-
-[8 <./Images/Tinkercad 05.jpg>]
-<Images/Protoboard 000.jpg, id=40, 1204.5pt x 656.4525pt>
-File: Images/Protoboard 000.jpg Graphic file (type jpg)
-<use Images/Protoboard 000.jpg>
-Package pdftex.def Info: Images/Protoboard 000.jpg  used on input line 70.
-(pdftex.def)             Requested size: 301.12427pt x 164.11272pt.
-<Images/Protoboard 011.jpg, id=41, 1127.71312pt x 663.98062pt>
-File: Images/Protoboard 011.jpg Graphic file (type jpg)
-<use Images/Protoboard 011.jpg>
-Package pdftex.def Info: Images/Protoboard 011.jpg  used on input line 72.
-(pdftex.def)             Requested size: 296.58836pt x 174.62679pt.
-<Images/Protoboard 110.jpg, id=42, 1185.67969pt x 688.07062pt>
-File: Images/Protoboard 110.jpg Graphic file (type jpg)
-<use Images/Protoboard 110.jpg>
-Package pdftex.def Info: Images/Protoboard 110.jpg  used on input line 74.
-(pdftex.def)             Requested size: 296.41919pt x 172.01723pt.
-<Images/Protoboard 111.jpg, id=43, 1188.69093pt x 647.41875pt>
-File: Images/Protoboard 111.jpg Graphic file (type jpg)
-<use Images/Protoboard 111.jpg>
-Package pdftex.def Info: Images/Protoboard 111.jpg  used on input line 76.
-(pdftex.def)             Requested size: 297.172pt x 161.85428pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--78
+Underfull \hbox (badness 10000) in paragraph at lines 72--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--78
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 72--78
+[] 
+ []
+
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 72--78
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--78
-
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 72--78
+[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--78
-
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 72--78
+[] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--78
+Underfull \hbox (badness 10000) in paragraph at lines 72--78
 
  []
 
-[9 <./Images/Tinkercad 06.jpg> <./Images/Protoboard 000.jpg>] [10 <./Images/Pro
-toboard 011.jpg> <./Images/Protoboard 110.jpg>] [11 <./Images/Protoboard 111.jp
-g>] (T3-20230001178.aux)
+[10 <./Images/Protoboard Side.jpeg> <./Images/Protoboard Top.jpeg>]
+<Images/Protoboard 000 Down.jpeg, id=50, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 000 Down.jpeg Graphic file (type jpg)
+<use Images/Protoboard 000 Down.jpeg>
+Package pdftex.def Info: Images/Protoboard 000 Down.jpeg  used on input line 79
+.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard 000 Top.jpeg, id=51, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 000 Top.jpeg Graphic file (type jpg)
+<use Images/Protoboard 000 Top.jpeg>
+Package pdftex.def Info: Images/Protoboard 000 Top.jpeg  used on input line 80.
+
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 79--81
+[] 
+ []
+
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 79--81
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--81
+
+ []
+
+[11 <./Images/Protoboard Jumpers.jpeg> <./Images/Protoboard Jumpers 2.jpeg>]
+<Images/Protoboard 011 Down.jpeg, id=55, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 011 Down.jpeg Graphic file (type jpg)
+<use Images/Protoboard 011 Down.jpeg>
+Package pdftex.def Info: Images/Protoboard 011 Down.jpeg  used on input line 82
+.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard 011 Top.jpeg, id=56, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 011 Top.jpeg Graphic file (type jpg)
+<use Images/Protoboard 011 Top.jpeg>
+Package pdftex.def Info: Images/Protoboard 011 Top.jpeg  used on input line 83.
+
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 82--84
+[] 
+ []
+
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 82--84
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+[12 <./Images/Protoboard 000 Down.jpeg> <./Images/Protoboard 000 Top.jpeg>]
+<Images/Protoboard 110 Down.jpeg, id=60, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 110 Down.jpeg Graphic file (type jpg)
+<use Images/Protoboard 110 Down.jpeg>
+Package pdftex.def Info: Images/Protoboard 110 Down.jpeg  used on input line 85
+.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+<Images/Protoboard 110 Top.jpeg, id=61, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 110 Top.jpeg Graphic file (type jpg)
+<use Images/Protoboard 110 Top.jpeg>
+Package pdftex.def Info: Images/Protoboard 110 Top.jpeg  used on input line 86.
+
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 85--87
+[] 
+ []
+
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 85--87
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+[13 <./Images/Protoboard 011 Down.jpeg> <./Images/Protoboard 011 Top.jpeg>]
+<Images/Protoboard 111 Down.jpeg, id=66, 1606.0pt x 739.76375pt>
+File: Images/Protoboard 111 Down.jpeg Graphic file (type jpg)
+<use Images/Protoboard 111 Down.jpeg>
+Package pdftex.def Info: Images/Protoboard 111 Down.jpeg  used on input line 88
+.
+(pdftex.def)             Requested size: 401.49902pt x 184.94048pt.
+
+Overfull \hbox (56.49902pt too wide) in paragraph at lines 88--89
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+[14 <./Images/Protoboard 110 Down.jpeg> <./Images/Protoboard 110 Top.jpeg>]
+[15 <./Images/Protoboard 111 Down.jpeg>] (T3-20230001178.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3685 strings out of 474435
- 63776 string characters out of 5737685
+ 3735 strings out of 474435
+ 65723 string characters out of 5737685
  1932190 words of memory out of 5000000
- 25994 multiletter control sequences out of 15000+600000
+ 26044 multiletter control sequences out of 15000+600000
  563452 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,6n,69p,348b,208s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,6n,69p,478b,208s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ericksonmuller/AppData/Local/Pr
@@ -410,9 +517,9 @@ r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
 ers/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
 /cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/p
 ublic/amsfonts/cm/cmr17.pfb>
-Output written on T3-20230001178.pdf (11 pages, 1968707 bytes).
+Output written on T3-20230001178.pdf (15 pages, 2641564 bytes).
 PDF statistics:
- 79 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
