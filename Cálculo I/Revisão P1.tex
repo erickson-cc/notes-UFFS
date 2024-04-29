@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[]{amsmath}
+\usepackage{amssymb}
+\usepackage[english]{babel}
+\usepackage{tikz}
+
+\title{Revisão Prova 1 de Cálculo I\\Divane Macron}
+\author{Erickson Giesel Müller}
+\begin{document}
+	\maketitle
+	
+	\section{Introdução}
+		Para o desenvolvimento deste resumo, foi utilizado o livro da Diva Marília Flemming \textit{ Cálculo A: funções, limite, derivação e integração.}\\
+		Além das aulas e listas fornecidas pela professora Divane.\\
+		
+	\section{Funções}
+		\subsection{Noção Intuitiva}
+		\subsection{Exemplos}
+			Para calcular a função abaixo, quando tende a 2 quando x = +$\infty$
+			\begin{equation*}
+				y = \frac{2x+1}{x-1}
+			\end{equation*}
+		\subsection{Unicidade do Limite}
+			Se $\lim_{x\to a}$f(x) = $L_{1}$ e $\lim_{x\to a}$f(x) = $L_{2}$ então $L_{1} = L_{2}$
+			\\ \\
+			\[ \lim_{x\to 2}(x^2+3x+5) = \lim_{x\to 2}x^2 + 3.\lim_{x\to 2}x + \lim_{x\to 2}5 \]
+		\subsection{Teorema do Confronto}
+			\begin{minipage}{5 cm}
+				 \[ a) \lim_{x\to 0} sen \frac{1}{x} = \nexists \]
+			\end{minipage}
+			\begin{minipage}{5 cm}
+				\[ b) \lim_{x\to 0} xsen \frac{1}{x} = 0\]
+			\end{minipage}
+			\\ \\
+			\begin{minipage}{5 cm}
+				\[ c) \lim_{x\to 0} x^2sen \frac{1}{x} = 0\]
+			\end{minipage}
+			\begin{minipage}{5 cm}
+				\[ d) \lim_{x\to 0} x^3sen \frac{1}{x} = 0 \]
+			\end{minipage}
+			\\ \\
+			Por mais que $\frac{1}{0}$ seja um absurdo, ao multiplicar por um outro limite que resulte em zero, todo o conjunto resultará zero.
+			\\ \\
+			No teorema de sanduíche, é escolhido uma função maior igual e outra menor igual no ponto em que o limite da função f(x) será calculado.
+			\[ g(x) \leq f(x) \leq h(x)\]
+			\[ g(x) \leq \lim_{x\to 0}xsen \frac{1}{x} \leq h(x)\]
+			\[ g(x) \leq \lim_{x\to 0}x . \lim_{x\to 0}sen \frac{1}{x} \leq h(x)\]
+			\end{document}
