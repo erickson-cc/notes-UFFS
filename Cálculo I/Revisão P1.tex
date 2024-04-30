@@ -4,17 +4,20 @@
 \usepackage[english]{babel}
 \usepackage{tikz}
 
-\title{Revisão Prova 1 de Cálculo I\\Divane Macron}
+\title{Revisão Prova 1 de Cálculo I\\Divane Marcon}
 \author{Erickson Giesel Müller}
 \begin{document}
 	\maketitle
 	
 	\section{Introdução}
-		Para o desenvolvimento deste resumo, foi utilizado o livro da Diva Marília Flemming \textit{ Cálculo A: funções, limite, derivação e integração.}\\
+		Para o desenvolvimento deste resumo, foi utilizado o livro da Diva Marília Flemming \textit{ Cálculo A: funções, limite, derivação e integração.}
 		Além das aulas e listas fornecidas pela professora Divane.\\
 		
 	\section{Funções}
 		\subsection{Noção Intuitiva}
+			Em um gráfico de uma função, o limite é a tendência à qual a imagem está se aproximando conforme o x se aproxima, dos dois lados, pelo número determinado no limite.\\
+			Às vezes a curva passa pelo ponto em que o x está se aproximando, e esse limite é exato. Outras, como no caso quando o limite é infinito ou a função se aproxima ao eixo das abscissas, a função nunca intercepta realmente aquela imagem, mas tende a ele.
+			
 		\subsection{Exemplos}
 			Para calcular a função abaixo, quando tende a 2 quando x = +$\infty$
 			\begin{equation*}
@@ -44,5 +47,26 @@
 			No teorema de sanduíche, é escolhido uma função maior igual e outra menor igual no ponto em que o limite da função f(x) será calculado.
 			\[ g(x) \leq f(x) \leq h(x)\]
 			\[ g(x) \leq \lim_{x\to 0}xsen \frac{1}{x} \leq h(x)\]
-			\[ g(x) \leq \lim_{x\to 0}x . \lim_{x\to 0}sen \frac{1}{x} \leq h(x)\]
-			\end{document}
+			Como o seno varia de 1 até menos 1, temos que:
+			\[ -1. \lim_{x\to 0}x \leq \lim_{x\to 0}x . \lim_{x\to 0}sen \frac{1}{x} \leq 1.\lim_{x\to 0}x \]
+			logo:
+			\[ -1.0 \leq \lim_{x\to 0}xsen \frac{1}{x} \leq 1.0 \]
+			\[ \lim_{x\to 0}xsen \frac{1}{x} = 0\]
+			
+		\subsection{Limites Laterais}
+			Seja \textit{f} uma função definida no intervalo (a,c). Dizemos que um número L é o limite \textbf{à direita} da função \textit{f} quando x tende para a e escrevemos:
+				\[ \lim_{x\to a^+}f(x)= L\]
+			Esse limite é real se para todo $\varepsilon >0$ existe um $\delta>0$ tal que $|f(x)-L|<\varepsilon$ sempre que $a<x<a+\delta^*$.\\
+			\hspace*{4cm} *
+			\begin{minipage}{8cm}
+				Essa função é semelhante ao teorema do sanduíche. O x se encontra entre o valor ao qual se aproxima e esse valor + $\delta$.
+			\end{minipage}\\ \\
+			Ou seja, no gráfico, para um limite que se aproxima pela direita, precisa necessariamente existir uma imagem para todo domínio dentro do $\delta$ à direita.\\
+			\\
+			 Seja \textit{f} uma função definida no intervalo (d,a). Dizemos que um número L é o limite \textbf{à esquerda} da função \textit{f} quando x tende para a e escrevemos:
+				\[ \lim_{x\to a^-}f(x)= L\]
+			Esse limite é real se para todo $\varepsilon >0$ existe um $\delta>0$ tal que $|f(x)-L|<\varepsilon$ sempre que $a-\delta<x<a$.\\
+			\textbf{TEOREMA:} se \textit{f} é definida em um intervalo aberto contendo \textit{a}, exceto no ponto a, então $\lim_{x\to a}f(x) = L$ se $\lim_{x\to a^+}f(x) = L$ e $\lim_{x\to a^-}f(x) = L$.\\ \\
+			Ou seja, só existe limite nos dois lados se existe o mesmo limite no lado direito e no lado esquerdo.
+			
+\end{document}
