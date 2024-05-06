@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage[english]{babel}
 \usepackage{tikz}
+\usepackage[]{cancel}
 
 \title{Revisão Prova 1 de Cálculo I\\Divane Marcon}
 \author{Erickson Giesel Müller}
@@ -68,5 +69,28 @@
 			Esse limite é real se para todo $\varepsilon >0$ existe um $\delta>0$ tal que $|f(x)-L|<\varepsilon$ sempre que $a-\delta<x<a$.\\
 			\textbf{TEOREMA:} se \textit{f} é definida em um intervalo aberto contendo \textit{a}, exceto no ponto a, então $\lim_{x\to a}f(x) = L$ se $\lim_{x\to a^+}f(x) = L$ e $\lim_{x\to a^-}f(x) = L$.\\ \\
 			Ou seja, só existe limite nos dois lados se existe o mesmo limite no lado direito e no lado esquerdo.
+			
+		\subsection{Indeterminações}
+			\begin{equation*}
+				\frac{0}{0}, \frac{\infty}{\infty}, \infty - \infty, 0.\infty, 0^0, \infty^0,1^\infty	
+			\end{equation*}
+			\begin{enumerate}
+				\item Sejam $f(x) = x^3$ e $g(x) = x^2$, temos:\\
+				\[ \lim_{x\to 0}f(x) = \lim_{x\to 0}g(x) = 0 \]
+				e
+				\[ \lim_{x\to 0}\frac{f(x)}{g(x)} = \lim_{x\to 0}\frac{x^3}{x^2} = \lim_{x\to 0}
+				\frac{\cancel{x^{3}}}{\cancel{x^2}} = \lim_{x\to 0}x = 0\]
+				
+				\item Sejam $f(x) = x^2$ e $g(x) = 2x^2$, temos:\\
+				\[ \lim_{x\to 0}f(x) = \lim_{x\to 0}g(x) = 0\]
+				e
+				\[ \lim_{x\to 0}\frac{f(x)}{g(x)} = \lim_{x\to 0}\frac{\cancel{x^2}}{2\cancel{x^2}} = \frac{1}{2} \]
+				
+				\item Agora um exemplo de  cálculo de limites onde os artifícios algébricos são necessários. São os casos de funções racionais em que o limite do denominador é zero num determinado ponto e o limite do numerador também é zero neste mesmo ponto.\\
+				
+				Seja:\\
+				\[ \lim_{x\to -2}\frac{x^3-3x+2}{x^2-4} \]
+				Neste caso, fatora-se o numerador e o denominador VER PREPOSIÇÕES 3.5.2
+			\end{enumerate}
 			
 \end{document}
