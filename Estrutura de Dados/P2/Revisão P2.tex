@@ -1,30 +1,47 @@
 \documentclass[ ]{article}
+\usepackage[usenames,dvipsnames]{xcolor} %used for font color
+\usepackage[utf8]{inputenc} %useful to type directly diacritic characters
 \usepackage[brazil]{babel}
 \usepackage{listings}
 \usepackage{tcolorbox}
 \tcbuselibrary{listings, skins}
 
-\newtcblisting{mylisting}{
-	arc = 4mm
-}
+
 \title{Revisão P2 de Estruturas de Dados \\ Dênio Duarte}
 \author{Erickson G. Müller}
 
-\usepackage[ ]{xcolor}
+\begin{document}
 
 \definecolor{codebg}{HTML}{333333}
 \definecolor{codetext}{HTML}{ffffff}
 \definecolor{codegreen}{HTML}{57db0b}
 \definecolor{codeorange}{HTML}{f78e05}
 \definecolor{codered}{HTML}{f7052d}
+\definecolor{codeshadow}{HTML}{432fa3}
 
 \lstdefinestyle{codestyle}{
-	backgroundcolor = \color{codebg},
-	basicstyle = \color{codetext}
+	basicstyle =  \color{codetext},
+	language = C,
+	keywordstyle = \color{codeorange}\bf,
+	tabsize = 8
 }
+\newtcblisting{mylist}{
+      enhanced,   %%% needed for shadow
+      arc=5mm,
+      top=2mm,
+      bottom=2mm,
+      left=2mm,
+      right=12mm,
+      boxrule=0pt,
+      colback=codebg,
+      shadow={1mm}{-1mm}{0mm}{fill=codeshadow,
+                      opacity=0.5},             %%% here for shadow  and adjust as you like
+      listing only,
+      listing options={style=codestyle},
+      hbox
+}
+%\lstset{style=codestyle}
 
-\lstset{style=codestyle}
-\begin{document}
 \maketitle
 
 \section{Conteúdos}
@@ -35,10 +52,17 @@
 	\item Filas e Pilhas
 \end{enumerate}
 \pagebreak
+\section{Alocação Dinâmica de Memória}
+	A Alocação Dinâmica de Lista Encadeada na Memória segue os seguintes passos:
+	\begin{enumerate}
+		\item Alocação de memória
+		\item Colocar os valores no espaço alocado e NULLificar as variáveis ponteiras
+		\item Encadeamento
+	\end{enumerate}
 \section{Estudo de Código}
-	Desenvolver uma lista encadeada com alocação dinâmica é uma receita de bolo, 
+	Desenvolver uma lista encadeada com alocação dinâmica é uma receita de bolo, para isso, iremos analisar cada etapa do código abaixo, que imprime uma sequência de pontos cartesianos.
 	
-	\begin{lstlisting}[language = C]
+	\begin{mylist}
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -81,5 +105,8 @@ int main(){
 		free(aux);
 		first=NULL;
 	}
-	\end{lstlisting}
+	return 0;
+}
+	\end{mylist}
+
 \end{document}

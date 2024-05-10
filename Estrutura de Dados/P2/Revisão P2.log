@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  8 MAY 2024 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  9 MAY 2024 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -26,6 +26,46 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.
+sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\c
+olor.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+
+Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
+put line 266.
+
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
+dftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathc
+olor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvips
+nam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.
+sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
 )
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.
 sty
@@ -60,11 +100,11 @@ ngs.sty
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
 l.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks17
+\KV@toks@=\toks19
 )
 \lst@mode=\count198
 \lst@gtempboxa=\box51
-\lst@token=\toks18
+\lst@token=\toks20
 \lst@length=\count199
 \lst@currlwidth=\dimen142
 \lst@column=\count266
@@ -102,7 +142,7 @@ Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
 pgfrcs.sty
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfutil-common.tex
-\pgfutil@everybye=\toks19
+\pgfutil@everybye=\toks21
 \pgfutil@tempdima=\dimen146
 \pgfutil@tempdimb=\dimen147
 )
@@ -137,11 +177,7 @@ raphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
-
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
-dftex.def
-File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-))
+)
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
 )
@@ -153,12 +189,12 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks20
-\pgfkeys@temptoks=\toks21
+\pgfkeys@pathtoks=\toks22
+\pgfkeys@temptoks=\toks23
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
 s\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks22
+\pgfkeys@tmptoks=\toks24
 ))
 \pgf@x=\dimen150
 \pgf@y=\dimen151
@@ -176,9 +212,9 @@ s\pgfkeyslibraryfiltered.code.tex
 \c@pgf@countb=\count273
 \c@pgf@countc=\count274
 \c@pgf@countd=\count275
-\t@pgf@toka=\toks23
-\t@pgf@tokb=\toks24
-\t@pgf@tokc=\toks25
+\t@pgf@toka=\toks25
+\t@pgf@tokb=\toks26
+\t@pgf@tokc=\toks27
 \pgf@sys@id@count=\count276
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
@@ -205,28 +241,6 @@ File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 yer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.
-sty
-Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
-
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\c
-olor.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathc
-olor.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
-Package xcolor Info: Model `RGB' extended on input line 1366.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-)
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
 er\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
@@ -240,9 +254,9 @@ mathparser.code.tex
 \pgfmath@dimen=\dimen160
 \pgfmath@count=\count279
 \pgfmath@box=\box54
-\pgfmath@toks=\toks26
-\pgfmath@stack@operand=\toks27
-\pgfmath@stack@operation=\toks28
+\pgfmath@toks=\toks28
+\pgfmath@stack@operand=\toks29
+\pgfmath@stack@operation=\toks30
 )
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
 mathfunctions.code.tex)
@@ -391,8 +405,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim
 .sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks29
-\verbatim@line=\toks30
+\every@verbatim=\toks31
+\verbatim@line=\toks32
 \verbatim@in@stream=\read4
 )
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/environ\enviro
@@ -403,7 +417,7 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 mspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks31
+\@envbody=\toks33
 )
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
 box.sty
@@ -459,8 +473,8 @@ s\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen188
 \pgffor@skip=\dimen189
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+\pgffor@stack=\toks34
+\pgffor@toks=\toks35
 ))
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz\tikz.code.tex
@@ -524,40 +538,38 @@ ckend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box74
-)
-No file "Revisão P2".aux.
+) (Revisão P2.aux)
 \openout1 = `"Revisão P2.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-\c@lstlisting=\count299
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
 pp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count300
+\scratchcounter=\count299
 \scratchdimen=\dimen199
 \scratchbox=\box75
-\nofMPsegments=\count301
-\nofMParguments=\count302
-\everyMPshowfont=\toks34
-\MPscratchCnt=\count303
+\nofMPsegments=\count300
+\nofMParguments=\count301
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count302
 \MPscratchDim=\dimen256
-\MPnumerator=\count304
-\makeMPintoPDFobject=\count305
-\everyMPtoPDFconversion=\toks35
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
+\everyMPtoPDFconversion=\toks37
 )
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
 pstopdf-base.sty
@@ -569,15 +581,20 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 pdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+\c@lstlisting=\count305
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 28.
+(Font)              <12> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 28.
+(Font)              <8> on input line 45.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 28.
+(Font)              <6> on input line 45.
  [1
 
 {C:/Users/ericksonmuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+\g__tcobox_out_iow=\write4
+\openout4 = `"Revisão P2.listing"'.
+
+
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstla
 ng1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
@@ -586,36 +603,46 @@ File: lstlang1.sty 2024/02/21 1.10 listings language file
 sc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 110.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 110.
+ (Revisão P2.listing
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+.
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 42.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-5.
+.
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
- [2] (Revisão P2.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
+)
+Overfull \hbox (6.52747pt too wide) in paragraph at lines 110--110
+[] 
+ []
+
+[2] [3] (Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18349 strings out of 474435
- 394825 string characters out of 5737685
- 1960190 words of memory out of 5000000
- 40430 multiletter control sequences out of 15000+600000
+ 18548 strings out of 474435
+ 399129 string characters out of 5737685
+ 1963190 words of memory out of 5000000
+ 40617 multiletter control sequences out of 15000+600000
  562352 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,6n,107p,459b,1381s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,8n,107p,459b,1727s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ericksonmuller\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
 i600\tcrm1000.pk><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ericksonmuller/AppData/Local/Progr
@@ -626,9 +653,9 @@ mr10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ericksonmuller/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Revisão P2.pdf" (2 pages, 91031 bytes).
+Output written on "Revisão P2.pdf" (3 pages, 95184 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
