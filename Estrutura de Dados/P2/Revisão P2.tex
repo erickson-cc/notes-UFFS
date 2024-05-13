@@ -1,7 +1,7 @@
 \documentclass[ ]{article}
 \usepackage[usenames,dvipsnames]{xcolor} %used for font color
 \usepackage[utf8]{inputenc} %useful to type directly diacritic characters
-\usepackage[brazil]{babel}
+\usepackage[english]{babel}
 \usepackage{listings}
 \usepackage{tcolorbox}
 \usepackage[ ]{tikz}
@@ -191,4 +191,53 @@ int(main){
 		(1,1) node [shape = rectangle,draw]{3}
 		(1,0) node [shape = rectangle,draw]{4};		
 	\end{tikzpicture}
+	\\
+	O código abaixo serve para atribuir valores às variáveis atuais. Pode ser de diversas formas diferentes.
+	\begin{mylist}
+		p->x = i;
+		p->y = i + 10;
+	\end{mylist}
+	Em seguida vamos encadear a lista:
+	\begin{mylist}
+		if(first == NULL){
+			first = p;
+			aux = p;
+		}
+		else{
+			aux->next = p;
+			aux = p;
+		}
+	\end{mylist}
+	O primeiro bloco é chamado quando a lista está vazia. Ele aponta o elemento $p$ como first e o $aux$ apontando para o próprio elemento. Inicialmente, todos apontam para a mesma região alocada.\\
+	Dentro do else, $aux$ deve apontar sempre para a \textbf{região anterior} àquela a ser alocada, or isso que $aux->next = p$ antes de $aux = p$.\\
+	\subsection{Como está a variável p em cada linha do loop}
+	\begin{minipage}{8cm}
+		\begin{mylist}
+1 for(i=1;i<=10;i++){
+2 	p = (tpnt*)malloc(sizeof(tpnt));
+3		
+4	p->x=i;
+5	p->y=i+10;
+6
+7	if(first==NULL){
+8		first = p;
+9		aux = p;
+10	}
+11	else{
+12		aux->next = p;
+13		aux = p;
+14	}
+15 }
+	
+		\end{mylist}
+	
+	\end{minipage}
+	
+	
+\section{Função para Printar as Coordenadas}
+	\begin{mylist}
+	for(aux=first; aux != NULL; aux = aux->nex){
+		printf("(%d,%d)\n", aux->x,aux->y):
+	}
+	\end{mylist}
 \end{document}
