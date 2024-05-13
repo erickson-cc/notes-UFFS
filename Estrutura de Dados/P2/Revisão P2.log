@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  9 MAY 2024 14:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  13 MAY 2024 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -438,24 +438,6 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box67
 \tcb@temp=\box68
 )
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
-istings.code.tex
-Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
-
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
-istingscore.code.tex
-Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
-
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbp
-rocessing.code.tex
-Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
-)
-\c@tcblisting=\count288
-))
-(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbs
-kins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
-
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendla
 yer\tikz.sty
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\
@@ -483,7 +465,7 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librarie
 s\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count289
+\pgf@plot@mark@count=\count288
 \pgfplotmarksize=\dimen190
 )
 \tikz@lastx=\dimen191
@@ -498,24 +480,42 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@figbox@bg=\box70
 \tikz@tempbox=\box71
 \tikz@tempbox@bg=\box72
-\tikztreelevel=\count290
-\tikznumberofchildren=\count291
-\tikznumberofcurrentchild=\count292
-\tikz@fig@count=\count293
+\tikztreelevel=\count289
+\tikznumberofchildren=\count290
+\tikznumberofcurrentchild=\count291
+\tikz@fig@count=\count292
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
 pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count294
-\pgfmatrixcurrentcolumn=\count295
-\pgf@matrix@numberofcolumns=\count296
+\pgfmatrixcurrentrow=\count293
+\pgfmatrixcurrentcolumn=\count294
+\pgf@matrix@numberofcolumns=\count295
 )
-\tikz@expandcount=\count297
+\tikz@expandcount=\count296
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
 layer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
+istings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
+istingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbp
+rocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
+)
+\c@tcblisting=\count297
+))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbs
+kins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
+
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzf
 ill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
@@ -541,20 +541,20 @@ File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 ) (Revisão P2.aux)
 \openout1 = `"Revisão P2.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 (C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
 pp-pdf.mkii
@@ -583,11 +583,11 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count305
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 45.
+(Font)              <12> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 45.
+(Font)              <8> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 45.
+(Font)              <6> on input line 47.
  [1
 
 {C:/Users/ericksonmuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
@@ -604,9 +604,9 @@ sc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 110.
+(Font)              <7> on input line 112.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 110.
+(Font)              <5> on input line 112.
  (Revisão P2.listing
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
 .
@@ -625,24 +625,58 @@ File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 4.
 )
-Overfull \hbox (6.52747pt too wide) in paragraph at lines 110--110
+Overfull \hbox (0.83691pt too wide) in paragraph at lines 112--112
 [] 
  []
 
-[2] [3] (Revisão P2.aux)
+[2]
+\openout4 = `"Revisão P2.listing"'.
+
+ (Revisão P2.listing)
+
+LaTeX Warning: Characters dropped after `\end{mylist}' on input line 121.
+
+
+Overfull \hbox (112.4663pt too wide) in paragraph at lines 114--130
+$[]$ $[]$ 
+ []
+
+[3]
+\openout4 = `"Revisão P2.listing"'.
+
+ (Revisão P2.listing)
+Overfull \hbox (112.4663pt too wide) in paragraph at lines 133--148
+$[]$ $[]$ 
+ []
+
+\openout4 = `"Revisão P2.listing"'.
+
+(Revisão P2.listing)
+\openout4 = `"Revisão P2.listing"'.
+
+ (Revisão P2.listing) [4]
+
+LaTeX Warning: Characters dropped after `\end{mylist}' on input line 169.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--173
+
+ []
+
+[5] (Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18548 strings out of 474435
- 399129 string characters out of 5737685
- 1963190 words of memory out of 5000000
- 40617 multiletter control sequences out of 15000+600000
- 562352 words of font info for 50 fonts, out of 8000000 for 9000
+ 18603 strings out of 474435
+ 400773 string characters out of 5737685
+ 1967190 words of memory out of 5000000
+ 40664 multiletter control sequences out of 15000+600000
+ 562651 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,8n,107p,459b,1727s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,10n,107p,448b,1727s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ericksonmuller\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
 i600\tcrm1000.pk><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ericksonmuller/AppData/Local/Progr
@@ -653,9 +687,9 @@ mr10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/pub
 lic/amsfonts/cm/cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ericksonmuller/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Revisão P2.pdf" (3 pages, 95184 bytes).
+Output written on "Revisão P2.pdf" (5 pages, 105983 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 62 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

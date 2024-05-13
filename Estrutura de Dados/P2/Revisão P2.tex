@@ -4,6 +4,8 @@
 \usepackage[brazil]{babel}
 \usepackage{listings}
 \usepackage{tcolorbox}
+\usepackage[ ]{tikz}
+\tikzset{ram grid/.style = {black!100, very thick}}
 \tcbuselibrary{listings, skins}
 
 
@@ -31,7 +33,7 @@
       top=2mm,
       bottom=2mm,
       left=2mm,
-      right=12mm,
+      right=10mm,
       boxrule=0pt,
       colback=codebg,
       shadow={1mm}{-1mm}{0mm}{fill=codeshadow,
@@ -108,5 +110,85 @@ int main(){
 	return 0;
 }
 	\end{mylist}
+\section{Definir a Estrutura}
+\begin{minipage}{8 cm}
+	\begin{mylist}
+struct tpoint{
+	int x,y;
+	struct tpoint *next;
+};
+typedef struct tpoint tpnt;
+	\end{mylist}		
+\end{minipage}
+\begin{minipage}{8 cm}
+	\begin{enumerate}
+	\item Variáveis usadas nos itens dentro da lista
+	\item Ponteiro *next, que apontará para o próximo da lista
+	\item Atribuir um apelido para essa struct
+	\end{enumerate}
+\end{minipage}
+\section{free\_memory \& *ins\_end}
+	Antes de criarmos a função main, podemos inserir no código uma função para liberar o espaço de memória ou para fazer modificações na lista encadeada, como incluir novo item no meio da lista. Essas duas funções não estão presentes neste código e serão apresentadas ao final da explicação.
+\section{Criar Variáveis Ponteiros}
+\begin{minipage}{8 cm}
+	\begin{mylist}
+int(main){
+	tpnt *p;
+	tpnt *aux;
+	tpnt *first = NULL;
+	\end{mylist}
+\end{minipage}
+\begin{minipage}{8 cm}
+	\begin{enumerate}
+		\item *p - aponta para o item
+		\item *aux - aponta para várias coisas ao mesmo tempo
+		\item *first - se for NULL (first = p)
+	\end{enumerate}
+\end{minipage}
 
+\section{Criar um Loop de Encadeamento}
+	\begin{mylist}
+	int i;
+	for(i=1;i<=10;i++){
+		p = (tpnt *)malloc(sizeof(tpnt)):
+
+		p->x=i;
+		p->y=i+10;
+		
+		if(first == NULL){
+			first = p;
+			aux = p;
+		}
+		else{
+			aux->next = p;
+			aux = p;
+		}
+	}
+		
+	\end{mylist}
+	A primeira ação do loop é alocar espaço na memória através da linha:\begin{mylist}		p = (tpnt *)malloc(sizeof(tpnt)\end{mylist}\\
+	Essa função vai designar um único espaço na memória para alterar suas variáveis conforme a iteração no loop. Assim, o programa fica mais leve na memória primária.\\
+	\\
+	Lembrando as três etapas do encadeamento:
+	\begin{enumerate}
+	\item \textbf{Alocação de memória}
+	\item Colocar os valores no espaço alocado e NULLificar as variáveis ponteiras
+	\item Encadeamento \vspace{1 cm} \\
+	\begin{huge}
+	RAM
+	\end{huge}
+	\end{enumerate}
+	
+	\begin{tikzpicture}
+		\draw[ram grid,step=1.0cm] (0,0) grid (10,6);
+		\draw[red] (6,4) rectangle(7,5) node[pos=0.5]{p};
+	\end{tikzpicture}
+	\\
+	\begin{tikzpicture}
+		\path
+		(0,0) node [shape = rectangle,draw]{1}
+		(0,1) node [shape = rectangle,draw]{2}
+		(1,1) node [shape = rectangle,draw]{3}
+		(1,0) node [shape = rectangle,draw]{4};		
+	\end{tikzpicture}
 \end{document}
