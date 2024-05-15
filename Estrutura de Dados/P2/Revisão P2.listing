@@ -1,4 +1,3 @@
 	for(aux=first; aux != NULL; aux = aux->nex){
 		printf("(%d,%d)\n", aux->x,aux->y):
 	}
-	

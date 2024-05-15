@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage[ ]{tikz}
 %\usepackage[brazil]{babel}
 
 \title{Revisão Prova 1 de Circuitos Digitais}
@@ -113,5 +114,19 @@
 			\end{tabular}
 			\\
 			Podemos perceber que $\overline{A}+\overline{B}$ é igual a $\overline{A.B}$; e $\overline{A+B}$ é igual a $\overline{A}.\overline{B}$. Teorema de DeMorgan.
+	\section{Mapa de Karnaugh}		
+		O mapa de Karnaugh é muito utilizado em questões em que o professor pede para montar um circuito de acordo com tais requisitos, como por exemplo:\\
+		\begin{enumerate}
+			\item Monte um circuito em que a saída S tem sinal de \textbf{nível lógico ALTO} quando A é 0 e B e C são iguais
+		\end{enumerate}
+		Nesse caso, o circuito que iremos montar tem 3 variáveis, portanto vamos fazer um mapa de Karnaugh 2x4, de 8 minitermos:\\
+		\begin{tikzpicture}
+			\draw [very thick](0,2) -- (5,2);
+			\draw[very thick](	2,0) -- (2,3);
+			\draw[very thick](3,1) -- (3,4);
+			\draw[very thick](4,0) -- (4,3);
+			\draw[step=1 cm] (1,1) grid (5,3);
 			
+			\draw (.5,.5) node{A};
+		\end{tikzpicture}
 \end{document}
