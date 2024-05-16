@@ -127,6 +127,38 @@
 			\draw[very thick](4,0) -- (4,3);
 			\draw[step=1 cm] (1,1) grid (5,3);
 			
-			\draw (.5,.5) node{A};
+			\draw (.5,2.5) node{!A};
+			\draw (.5,1.5) node{A};
+			
+			\draw (2,3.5) node{!B};
+			\draw (4,3.5) node{B};
+			
+			\draw (1.5,0.5) node{!C};
+			\draw (3,0.5) node{C};
+			\draw (4.5,0.5) node{!C};
+		\end{tikzpicture}\\
+		A seguir, um mapa de Karnaugh com 4 entradas:\\
+		\begin{tikzpicture}
+			\draw[very thick](2,0) -- (2,5);
+			\draw[very thick](4,0) -- (4,5);
+			\draw[very thick](3,1) -- (3,6);
+			\draw[very thick](0,3) -- (5,3);
+			\draw[very thick](1,2) -- (6,2);
+			\draw[very thick](1,4) -- (6,4);
+			\draw[step=1cm] (1,1) grid (5,5);
+			
+			\draw (.5,4) node{!A};
+			\draw (.5,2) node{A};
+			\draw (5.5,4.5) node{!B};
+			\draw (5.5,3) node{B};
+			\draw (5.5,1.5) node{!B};
+			\draw (2,5.5) node{!C};
+			\draw (4,5.5) node{C};
+			\draw (1.5,.5) node{!D};
+			\draw (3,.5) node{D};
+			\draw (4.5,.5) node{!D};
 		\end{tikzpicture}
+	\section{Diferença entre Mintermo e Maxitermo}
+		Soma de Produtos (Mintermo)\\
+		Produto de Somas (Maxitermo)
 \end{document}
