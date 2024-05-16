@@ -161,4 +161,56 @@
 	\section{Diferença entre Mintermo e Maxitermo}
 		Soma de Produtos (Mintermo)\\
 		Produto de Somas (Maxitermo)
+	\section{Descobrindo a Expressão Booleana usando a Tabela-Verdade}
+		Quando temos menos 1 que 0 na tabela-verdade, utilizamos soma de produtos com os mintermos que deram 1.\\
+		Por exemplo:\\
+		$$ABC+A\overline{C}+AB$$
+		\begin{tabular}{|c|c|c|c|}
+				\hline
+				A & B & C & S \\
+				\hline
+				0 & 0 & 0 & 0 \\
+				\hline
+				0 & 0 & 1 & 0 \\
+				\hline
+				0 & 1 & 0 & 0 \\
+				\hline
+				0 & 1 & 1 & 0 \\
+				\hline
+				1 & 0 & 0 & 1 \\
+				\hline
+				1 & 0 & 1 & 0 \\
+				\hline
+				1 & 1 & 0 & 1 \\
+				\hline
+				1 & 1 & 1 & 1 \\
+				\hline
+		\end{tabular}
+		
+		Para obtermos a expressão, pegamos os mintermos que deu 1 e negamos a variável que está zerada. Por exemplo no mintermo 4. A, B, C = (1,0,0). Portanto, o primeiro item da soma de produtos é $A.\overline{B}.\overline{C}$.\\
+		
+		Agora por produto de somas:\\
+		$$A.B+A.C+\overline{A}$$
+		\begin{tabular}{|c|c|c|c|}
+				\hline
+				A & B & C & S \\
+				\hline
+				0 & 0 & 0 & 1 \\
+				\hline
+				0 & 0 & 1 & 1 \\
+				\hline
+				0 & 1 & 0 & 1 \\
+				\hline
+				0 & 1 & 1 & 1 \\
+				\hline
+				1 & 0 & 0 & 0 \\
+				\hline
+				1 & 0 & 1 & 1 \\
+				\hline
+				1 & 1 & 0 & 1 \\
+				\hline
+				1 & 1 & 1 & 1 \\
+				\hline
+		\end{tabular}
+		Nesse caso, pegamos os maxitermos que deu 0 e negamos as variáveis que está ALTA. Portanto, o primeiro item do produto de somas é $\overline{A}+B+C$.\\
 \end{document}
