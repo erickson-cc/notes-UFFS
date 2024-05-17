@@ -1,14 +1,18 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.11)  15 MAY 2024 19:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  17 MAY 2024 13:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Revisão P2.tex"
-(./Revisão P2.tex
+**"./Revisão P2.tex"
+(Revisão P2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\article.c
+ls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.cl
+o
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count188
@@ -23,10 +27,12 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.
+sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\c
+olor.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 
@@ -34,10 +40,13 @@ Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
 put line 266.
 
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
+dftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 )
-(/usr/share/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathc
+olor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
@@ -48,43 +57,56 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 )
-(/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\dvips
+nam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 )
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.
+sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
 )
-(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.
+sty
 Package: babel 2024/02/07 v24.2 The Babel package
 \babel@savecnt=\count196
 \U@D=\dimen141
-\l@unhyphenated=\language5
+\l@unhyphenated=\language79
 
-(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbab
+el.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count197
 
-(/usr/share/texmf-dist/tex/generic/babel-english/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.
+cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\
+english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'british' set to \l@english
-(babel)             (\language0). Reported on input line 82.
-Package babel Info: Hyphen rules for 'UKenglish' set to \l@english
-(babel)             (\language0). Reported on input line 83.
 Package babel Info: Hyphen rules for 'canadian' set to \l@english
 (babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@english
-(babel)             (\language0). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@english
-(babel)             (\language0). Reported on input line 108.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
 ))
-(/usr/share/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale
+/en\babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
 )
-(/usr/share/texmf-dist/tex/latex/listings/listings.sty
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\listi
+ngs.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
+l.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks19
 )
@@ -101,50 +123,65 @@ Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \lst@lineno=\count269
 \lst@maxwidth=\dimen145
 
-(/usr/share/texmf-dist/tex/latex/listings/lstpatch.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpa
+tch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 )
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmi
+sc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count270
 \lst@skipnumbers=\count271
 \lst@framebox=\box52
 )
-(/usr/share/texmf-dist/tex/latex/listings/listings.cfg
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\listi
+ngs.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
 Package: listings 2024/02/21 1.10 (Carsten Heinz)
 
-(/usr/share/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcol
+orbox.sty
 Package: tcolorbox 2024/01/10 version 6.2.0 text color boxes
 
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer
+\pgf.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\
+pgfrcs.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfutil-common.tex
 \pgfutil@everybye=\toks21
 \pgfutil@tempdima=\dimen146
 \pgfutil@tempdimb=\dimen147
 )
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfutil-latex.def
 \pgfutil@abb=\box53
 )
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfrcs.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revi
+sion.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer
+\pgfcore.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+icx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+ics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.
+sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\g
+raphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
@@ -152,16 +189,19 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 \Gin@req@height=\dimen148
 \Gin@req@width=\dimen149
 )
-(/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlaye
+r\pgfsys.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks22
 \pgfkeys@temptoks=\toks23
 
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.te
-x
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfkeyslibraryfiltered.code.tex
 \pgfkeys@tmptoks=\toks24
 ))
 \pgf@x=\dimen150
@@ -184,31 +224,41 @@ x
 \t@pgf@tokb=\toks26
 \t@pgf@tokc=\toks27
 \pgf@sys@id@count=\count276
- (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfsyssoftpath@smallbuffer@items=\count277
 \pgfsyssoftpath@bigbuffer@items=\count278
 )
-(/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemla
+yer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+math.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathutil.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathparser.code.tex
 \pgfmath@dimen=\dimen160
 \pgfmath@count=\count279
 \pgfmath@box=\box54
@@ -216,22 +266,34 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operand=\toks29
 \pgfmath@stack@operation=\toks30
 )
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code
-.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.te
-x) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics
-.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.basic.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.trigonometric.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.random.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.comparison.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.base.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.round.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.misc.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfunctions.integerarithmetics.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathcalc.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+mathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count280
 ))
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+int.code.tex)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen161
 \pgf@picmaxx=\dimen162
@@ -248,99 +310,125 @@ File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@zx=\dimen173
 \pgf@zy=\dimen174
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@path@lastx=\dimen175
 \pgf@path@lasty=\dimen176
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@shorten@end@additional=\dimen177
 \pgf@shorten@start@additional=\dimen178
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box55
 \pgf@hbox=\box56
 \pgf@layerbox@main=\box57
 \pgf@picture@serial@count=\count281
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgflinewidth=\dimen179
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.t
-ex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@pt@x=\dimen180
 \pgf@pt@y=\dimen181
 \pgf@pt@temp=\dimen182
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoreobjects.code.tex
 File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.te
-x
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorepathprocessing.code.tex
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfarrowsep=\dimen183
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@max=\dimen184
 \pgf@sys@shading@range@num=\count282
 \pgf@shadingcount=\count283
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfexternal@startupbox=\box58
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcoretransparency.code.tex
 File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
-) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorepatterns.code.tex
 File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclay
+er\pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
+pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfnodeparttextbox=\box59
 )
-(/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
+pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibil
+ity\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepstart=\dimen185
 \pgf@nodesepend=\dimen186
 )
-(/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibil
+ity\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 ))
-(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tools\verbatim
+.sty
 Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks31
 \verbatim@line=\toks32
 \verbatim@in@stream=\read4
 )
-(/usr/share/texmf-dist/tex/latex/environ/environ.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/environ\enviro
+n.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/trimspaces\tri
+mspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks33
 )
-(/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etool
+box.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count284
 )
@@ -358,24 +446,32 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@temp=\box67
 \tcb@temp=\box68
 )
-(/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
-(/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendla
+yer\tikz.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\
+pgffor.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\
+pgfkeys.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgfkeys.code.tex))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/pgf/math\pgfma
+th.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgf
+math.code.tex))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilitie
+s\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen188
 \pgffor@skip=\dimen189
 \pgffor@stack=\toks34
 \pgffor@toks=\toks35
 ))
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
+layer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 
-(/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.te
-x
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/librarie
+s\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@plot@mark@count=\count288
 \pgfplotmarksize=\dimen190
@@ -396,7 +492,9 @@ File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikznumberofchildren=\count290
 \tikznumberofcurrentchild=\count291
 \tikz@fig@count=\count292
- (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\
+pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfmatrixcurrentrow=\count293
 \pgfmatrixcurrentcolumn=\count294
@@ -404,38 +502,51 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 \tikz@expandcount=\count296
 
-(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
-topaths.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontend
+layer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
-(/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
+istings.code.tex
 Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
-(/usr/share/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbl
+istingscore.code.tex
 Library (tcolorbox): 'tcblistingscore.code.tex' version '6.2.0'
-(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbp
+rocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '6.2.0'
 )
 \c@tcblisting=\count297
-)) (/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbs
+kins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.2.0'
-(/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill.image.sty
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzf
+ill.image.sty
 Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 
-(/usr/share/texmf-dist/tex/latex/tikzfill/tikzfill-common.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzf
+ill-common.sty
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 )
-(/usr/share/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tikzfill\tikzl
+ibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
 \l__tikzfill_img_box=\box73
 ))
-(/usr/share/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/tcolorbox\tcbs
+kinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
-)) (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+))
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3ba
+ckend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box74
-)
-(./Revisão P2.aux)
+) (Revisão P2.aux)
 \openout1 = `"Revisão P2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
@@ -452,7 +563,9 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
+pp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count299
 \scratchdimen=\dimen199
@@ -465,14 +578,16 @@ LaTeX Font Info:    ... okay on input line 15.
 \MPnumerator=\count303
 \makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks37
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
+pstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epsto
+pdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 \c@lstlisting=\count305
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -483,26 +598,28 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 47.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/Users/ericksonmuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 \g__tcobox_out_iow=\write4
 \openout4 = `"Revisão P2.listing"'.
 
 
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstla
+ng1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
-(/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmi
+sc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 112.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 112.
- (./Revisão P2.listing
+ (Revisão P2.listing
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
 .
 
-(/usr/share/texmf-dist/tex/latex/base/omlcmr.fd
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
@@ -510,7 +627,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
 .
 
-(/usr/share/texmf-dist/tex/latex/base/omscmr.fd
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
@@ -523,7 +640,7 @@ Overfull \hbox (0.83691pt too wide) in paragraph at lines 112--112
 [2]
 \openout4 = `"Revisão P2.listing"'.
 
- (./Revisão P2.listing)
+ (Revisão P2.listing)
 
 LaTeX Warning: Characters dropped after `\end{mylist}' on input line 121.
 
@@ -532,21 +649,20 @@ Overfull \hbox (112.4663pt too wide) in paragraph at lines 114--130
 $[]$ $[]$ 
  []
 
-[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[3]
 \openout4 = `"Revisão P2.listing"'.
 
-
-(./Revisão P2.listing)
+ (Revisão P2.listing)
 Overfull \hbox (112.4663pt too wide) in paragraph at lines 133--148
 $[]$ $[]$ 
  []
 
 \openout4 = `"Revisão P2.listing"'.
 
-(./Revisão P2.listing)
+(Revisão P2.listing)
 \openout4 = `"Revisão P2.listing"'.
 
- (./Revisão P2.listing) [4]
+ (Revisão P2.listing) [4]
 
 LaTeX Warning: Characters dropped after `\end{mylist}' on input line 169.
 
@@ -557,17 +673,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 170--173
 
 \openout4 = `"Revisão P2.listing"'.
 
-(./Revisão P2.listing)
+(Revisão P2.listing)
 \openout4 = `"Revisão P2.listing"'.
 
- (./Revisão P2.listing) [5]
+ (Revisão P2.listing) [5]
 Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
 \openout4 = `"Revisão P2.listing"'.
 
-(./Revisão P2.listing
+(Revisão P2.listing
 Overfull \hbox (12.38039pt too wide) in paragraph at lines 2--3
 [][][][][][][][][][][][][][][][][][][][] 
  []
@@ -579,36 +695,38 @@ Overfull \hbox (52.21419pt too wide) in paragraph at lines 232--232
 
 \openout4 = `"Revisão P2.listing"'.
 
-(./Revisão P2.listing)
+(Revisão P2.listing)
 Overfull \hbox (6.83698pt too wide) in paragraph at lines 242--242
 [] 
  []
 
-[6] (./Revisão P2.aux)
+[6] (Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 18630 strings out of 476076
- 393247 string characters out of 5793775
- 1967187 words of memory out of 5000000
- 40451 multiletter control sequences out of 15000+600000
+ 18643 strings out of 474435
+ 402438 string characters out of 5737685
+ 1967190 words of memory out of 5000000
+ 40691 multiletter control sequences out of 15000+600000
  562958 words of font info for 52 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 101i,10n,107p,446b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P2.pdf" (6 pages, 114971 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 101i,10n,107p,448b,1726s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ericksonmuller\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\tcrm1000.pk><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/ericksonmuller/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/ericksonmuller/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/User
+s/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ericksonmuller/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Revisão P2.pdf" (6 pages, 114146 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
