@@ -23,6 +23,7 @@ struct Date{
 typedef struct Date Data;
 
 struct Student{
+	int id;
 	char  mat[10];
 	char name[40];
 	Data bDay;
@@ -39,20 +40,23 @@ void printMenu(){
 	printf(" 4 - LISTAR ALUNOS POR ORDEM INVERSA\n");
 	printf(" 5 - VER QUANTIDADE DE ALUNOS MATRICULADOS\n");
 }
-
+Aluno *delAluno(Aluno *first, int id)
 	
 
 int main(){
 
 	Aluno *a, *aux, *first = NULL;
+	int id=0; 
 
 	int command=999;
 	while(command != 0){
 		printMenu();
 		scanf("%d",&command);
-
+			
 		if(command == 1){
 			a = (Aluno *)malloc(sizeof(Aluno));
+			id = id+1;
+			a->id = id;
 			printf("Matrícula:"); scanf("%s",a->mat);
 			printf("Nome:"); scanf("%s",a->name);
 			a->bDay.day = 22;
@@ -63,10 +67,19 @@ int main(){
 			
 			if (first == NULL){
 				first = a;
+				aux = a;
 			}
-			for (aux=first;aux->next != NULL;aux=aux->next){
+			else{
 				aux->next = a;
 				aux = a;
+			}
+		}
+		if(command == 3){
+			for(aux=first;aux!=NULL;aux=aux->next){
+				printf("Matrícula: %s\n",aux->mat);
+				printf("Nome: %s\n",aux->name);
+				printf("Aniversário = %d/%d/%d\n",aux->bDay.day,aux->bDay.month,aux->bDay.year);
+				printf("Nota: %f\n",aux->nota);
 			}
 		}
 	}
