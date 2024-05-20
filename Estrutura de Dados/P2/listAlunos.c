@@ -40,13 +40,31 @@ void printMenu(){
 	printf(" 4 - LISTAR ALUNOS POR ORDEM INVERSA\n");
 	printf(" 5 - VER QUANTIDADE DE ALUNOS MATRICULADOS\n");
 }
-Aluno *delAluno(Aluno *first, int id)
+Aluno *delAluno(Aluno *first, int id){
+	Aluno *aux, *previous;
+	for(aux=first;aux!=NULL;aux=aux->next){
+		if (aux->id == id){
+			if(aux==first){
+				first = first->next;
+				break;
+			}
+			previous->next=aux->next;
+			break;
+		}
+		previous = aux;
+	}
+	if(aux!=NULL){ 
+		free(aux);
+	}
+	return first;
+	}
 	
 
 int main(){
 
 	Aluno *a, *aux, *first = NULL;
 	int id=0; 
+	int delid;
 
 	int command=999;
 	while(command != 0){
@@ -74,12 +92,17 @@ int main(){
 				aux = a;
 			}
 		}
+		if(command == 2){
+			printf("ID: "); scanf("%d",&delid);
+			delAluno(Aluno *first, int delid);
+		}
 		if(command == 3){
 			for(aux=first;aux!=NULL;aux=aux->next){
 				printf("Matrícula: %s\n",aux->mat);
 				printf("Nome: %s\n",aux->name);
 				printf("Aniversário = %d/%d/%d\n",aux->bDay.day,aux->bDay.month,aux->bDay.year);
 				printf("Nota: %f\n",aux->nota);
+				printf("ID: %d\n\n",aux->id);
 			}
 		}
 	}
