@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  21 MAY 2024 14:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  22 MAY 2024 15:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -685,46 +685,46 @@ your preamble.
 [1
 
 {C:/Users/ericksonmuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 <Images/Graph1.jpg, id=12, 260.47313pt x 228.10219pt>
 File: Images/Graph1.jpg Graphic file (type jpg)
 <use Images/Graph1.jpg>
-Package pdftex.def Info: Images/Graph1.jpg  used on input line 27.
+Package pdftex.def Info: Images/Graph1.jpg  used on input line 28.
 (pdftex.def)             Requested size: 151.07451pt x 132.29935pt.
 <Images/Graph2.jpg, id=13, 261.22594pt x 220.57407pt>
 File: Images/Graph2.jpg Graphic file (type jpg)
 <use Images/Graph2.jpg>
-Package pdftex.def Info: Images/Graph2.jpg  used on input line 30.
+Package pdftex.def Info: Images/Graph2.jpg  used on input line 31.
 (pdftex.def)             Requested size: 156.73676pt x 132.34544pt.
 
-Overfull \hbox (13.65526pt too wide) in paragraph at lines 26--32
+Overfull \hbox (13.65526pt too wide) in paragraph at lines 27--33
 []$[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--37
+Underfull \hbox (badness 10000) in paragraph at lines 35--38
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-[2 <./Images/Graph1.jpg> <./Images/Graph2.jpg>] [3] (Revisão P2.aux)
+[2 <./Images/Graph1.jpg> <./Images/Graph2.jpg>] [3] [4] (Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 23509 strings out of 474435
- 626507 string characters out of 5737685
- 1937190 words of memory out of 5000000
- 45486 multiletter control sequences out of 15000+600000
+ 23510 strings out of 474435
+ 626515 string characters out of 5737685
+ 1940190 words of memory out of 5000000
+ 45487 multiletter control sequences out of 15000+600000
  563144 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,9n,107p,734b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -737,13 +737,14 @@ rs/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
 cmr10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/pu
 blic/amsfonts/cm/cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ericksonmuller/AppData/Lo
-cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/ericksonm
-uller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmsy7.pfb>
-Output written on "Revisão P2.pdf" (3 pages, 155110 bytes).
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/ericksonm
+uller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:
+/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmsy10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/public/amsfonts/cm/cmsy7.pfb>
+Output written on "Revisão P2.pdf" (4 pages, 168665 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

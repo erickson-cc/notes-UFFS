@@ -14,11 +14,12 @@
 \section{Conteúdos}
 	\begin{enumerate}
 		\item Derivadas
+		\item Velocidade e Aceleração
 		\item Integrais Definidas e Indefinidas
 		\item Teorema Fundamental do Cálculo
 		\item Cálculo de Áreas
 	\end{enumerate}
-\pagebreak
+\newpage
 
 \section{Derivadas}
 	A derivada é o coeficiente angular da reta tangente à curva f(x) num determinado ponto.\\
@@ -72,6 +73,20 @@
 	
 	\subsection{Propriedades}
 	
+	\subsection{Derivada de ma Função num Ponto}
+		A derivada da função $f(x)$ no ponto $x_1$, denotada por $f'(x_1)$, é definida pelo limite:
+		
+		$$f'(x) = \lim_{\Delta x\to 0} \dfrac{f(x_1+\Delta x)-f(x_1)}{\Delta x}$$
+		ou
+		$$f'(x) = \lim_{x_f\to x_0}\dfrac{f(x_f)-f(x_0)}{x_f-x_0}$$		
+	\subsection{Velocidade e Aceleração}
+		Existem dois tipos de cálculo para encontrar uma velocidade ou aceleração, a velocidade ou aceleração instantâneas e a velocidade e aceleração intervalares. A intervalar é calculada fazendo a média da diferença entre as distâncias ou as velocidades em um determinado intervalo de tempo ($\frac{s(t+\Delta t)-s(t)}{\Delta t}$). Para calcularmos a velocidade em determinado momento, precisamos aplicar o limite das velocidades médias quando $\Delta t$ se aproxima de 0.
+		
+		$$v(\Delta t) = \frac{s(t+\Delta t)-s(t)}{\Delta t}$$
+		$$v(t) =\lim_{\Delta t\to 0}\frac{s(t+\Delta t)-s(t)}{\Delta t}= s'(t)$$
+		
+		Para calcular a aceleração, em vez da velocidade, apenas se substituem na fórmula as variáveis distância(s) pelas variáveis velocidade(v). Assim como a velocidade é calculada pela variação de distância, a aceleração é calculada pela variação de velocidade.
+		
 	\subsection{Regra da Cadeia}
 	\subsection{Derivada das Funções Elementares}
 	\subsection{Derivada das Funções Trigonométricas}
