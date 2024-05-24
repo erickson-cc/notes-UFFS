@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.11)  22 MAY 2024 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.11)  23 MAY 2024 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -205,24 +205,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-<Images/H1 not =.png, id=10, 748.7975pt x 588.1975pt>
-File: Images/H1 not =.png Graphic file (type png)
-<use Images/H1 not =.png>
-Package pdftex.def Info: Images/H1 not =.png  used on input line 44.
+<Images/H1 diff.png, id=10, 748.7975pt x 588.1975pt>
+File: Images/H1 diff.png Graphic file (type png)
+<use Images/H1 diff.png>
+Package pdftex.def Info: Images/H1 diff.png  used on input line 44.
 (pdftex.def)             Requested size: 224.64098pt x 176.4606pt.
 [2]
-<Images/H1<.png, id=18, 740.7675pt x 552.0625pt>
-File: Images/H1<.png Graphic file (type png)
-<use Images/H1<.png>
-Package pdftex.def Info: Images/H1<.png  used on input line 46.
+<Images/H1 smaller.png, id=18, 740.7675pt x 552.0625pt>
+File: Images/H1 smaller.png Graphic file (type png)
+<use Images/H1 smaller.png>
+Package pdftex.def Info: Images/H1 smaller.png  used on input line 46.
 (pdftex.def)             Requested size: 222.23196pt x 165.62003pt.
-<Images/H1>.png, id=19, 688.5725pt x 552.0625pt>
-File: Images/H1>.png Graphic file (type png)
-<use Images/H1>.png>
-Package pdftex.def Info: Images/H1>.png  used on input line 48.
+<Images/H1 bigger.png, id=19, 688.5725pt x 552.0625pt>
+File: Images/H1 bigger.png Graphic file (type png)
+<use Images/H1 bigger.png>
+Package pdftex.def Info: Images/H1 bigger.png  used on input line 48.
 (pdftex.def)             Requested size: 206.57333pt x 165.62003pt.
- [3 <./Images/H1 not =.png> <./Images/H1<.png>] [4 <./Images/H1>.png>]
-(./Revisão P2.aux)
+ [3 <./Images/H1 diff.png> <./Images/H1 smaller.png>] [4 <./Images/H1 bigger.pn
+g>] (./Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -230,7 +230,7 @@ L3 programming layer <2024-02-20>
  ) 
 Here is how much of TeX's memory you used:
  2607 strings out of 476076
- 41016 string characters out of 5793775
+ 41100 string characters out of 5793775
  1931187 words of memory out of 5000000
  24702 multiletter control sequences out of 15000+600000
  563144 words of font info for 54 fonts, out of 8000000 for 9000
