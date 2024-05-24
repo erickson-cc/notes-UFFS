@@ -1,14 +1,18 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.5.11)  23 MAY 2024 23:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.3) (preloaded format=pdflatex 2024.3.13)  24 MAY 2024 09:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"Revisão P2.tex"
-(./Revisão P2.tex
+**"./Revisão P2.tex"
+(Revisão P2.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
-(/usr/share/texmf-dist/tex/latex/base/article.cls
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\article.c
+ls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/size10.clo
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.cl
+o
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count188
@@ -23,48 +27,60 @@ File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+icx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyva
+l.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graph
+ics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.
+sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\g
+raphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\p
+dftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen141
 \Gin@req@width=\dimen142
 )
-(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmat
+h.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstex
+t.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen
+.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen143
 ))
-(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy
+.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen144
 )
-(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn
+.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count196
@@ -115,12 +131,12 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3ba
+ckend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count274
 \l__pdf_internal_box=\box53
-)
-(./Revisão P2.aux)
+) (Revisão P2.aux)
 \openout1 = `"Revisão P2.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -137,7 +153,9 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
- (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\su
+pp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count275
 \scratchdimen=\dimen152
@@ -150,32 +168,42 @@ LaTeX Font Info:    ... okay on input line 10.
 \MPnumerator=\count279
 \makeMPintoPDFobject=\count280
 \everyMPtoPDFconversion=\toks24
-) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+)
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\e
+pstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
-(/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\in
+fwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
-(/usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.
+sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 
-(/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys
+\kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ))
-(/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvop
+tions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxc
+mds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(/usr/share/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvse
+tkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
-(/usr/share/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\p
+dftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.
+sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 )
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -189,12 +217,12 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 504.
 
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+(C:\Users\ericksonmuller\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epsto
+pdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 )) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{C:/Users/ericksonmuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 Overfull \hbox (10.19409pt too wide) in paragraph at lines 23--24
 \OT1/cmr/m/n/10 A vari-abil-i-dade amostral se com-porta como uma dis-tribui^^X
 c~ao nor-mal para amostras
@@ -205,49 +233,52 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
-<Images/H1 diff.png, id=10, 748.7975pt x 588.1975pt>
+<Images/H1 diff.png, id=9, 748.7975pt x 588.1975pt>
 File: Images/H1 diff.png Graphic file (type png)
 <use Images/H1 diff.png>
 Package pdftex.def Info: Images/H1 diff.png  used on input line 44.
 (pdftex.def)             Requested size: 224.64098pt x 176.4606pt.
 [2]
-<Images/H1 smaller.png, id=18, 740.7675pt x 552.0625pt>
+<Images/H1 smaller.png, id=17, 740.7675pt x 552.0625pt>
 File: Images/H1 smaller.png Graphic file (type png)
 <use Images/H1 smaller.png>
 Package pdftex.def Info: Images/H1 smaller.png  used on input line 46.
 (pdftex.def)             Requested size: 222.23196pt x 165.62003pt.
-<Images/H1 bigger.png, id=19, 688.5725pt x 552.0625pt>
+<Images/H1 bigger.png, id=18, 688.5725pt x 552.0625pt>
 File: Images/H1 bigger.png Graphic file (type png)
 <use Images/H1 bigger.png>
 Package pdftex.def Info: Images/H1 bigger.png  used on input line 48.
 (pdftex.def)             Requested size: 206.57333pt x 165.62003pt.
  [3 <./Images/H1 diff.png> <./Images/H1 smaller.png>] [4 <./Images/H1 bigger.pn
-g>] (./Revisão P2.aux)
+g>] (Revisão P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2607 strings out of 476076
- 41100 string characters out of 5793775
- 1931187 words of memory out of 5000000
- 24702 multiletter control sequences out of 15000+600000
+ 2609 strings out of 474435
+ 43505 string characters out of 5737685
+ 1931190 words of memory out of 5000000
+ 24934 multiletter control sequences out of 15000+600000
  563144 words of font info for 54 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
- 61i,8n,69p,315b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb>
-Output written on "Revisão P2.pdf" (4 pages, 1287519 bytes).
+ 1141 hyphenation exceptions out of 8191
+ 61i,8n,69p,317b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/font
+s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ericksonmuller/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ericksonmulle
+r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Us
+ers/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/ericksonmuller/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/ericksonmuller/AppData/L
+ocal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/erickson
+muller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+
+Output written on "Revisão P2.pdf" (4 pages, 1294764 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 67 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
