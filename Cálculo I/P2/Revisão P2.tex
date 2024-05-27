@@ -73,12 +73,41 @@
 	
 	\subsection{Propriedades}
 	
-	\subsection{Derivada de ma Função num Ponto}
+	\subsection{Derivada de uma Função num Ponto}
 		A derivada da função $f(x)$ no ponto $x_1$, denotada por $f'(x_1)$, é definida pelo limite:
 		
 		$$f'(x) = \lim_{\Delta x\to 0} \dfrac{f(x_1+\Delta x)-f(x_1)}{\Delta x}$$
 		ou
-		$$f'(x) = \lim_{x_f\to x_0}\dfrac{f(x_f)-f(x_0)}{x_f-x_0}$$		
+		$$f'(x) = \lim_{x_f\to x_0}\dfrac{f(x_f)-f(x_0)}{x_f-x_0}$$	
+		Exemplo:\\
+		Encontre a equção da reta tangente à curva $y = \sqrt{x}$ que seja paralela à reta $8.x - 4.y + 1 = 0$.\\
+		Por serem paralelas, seus coeficientes angulares são iguais.\\
+		Por esse motivo vamos encontrar a inclinação da reta tangente à curva $y = \sqrt{x}$ num ponto $(x_1,y_1)$. Temos:
+		$$f'(x) = \lim_{\Delta x\to 0}\dfrac{\sqrt[]{x_1 + \Delta x}-\sqrt[ ]{x_1}}{\Delta x}$$
+
+		$$= \lim_{\Delta x\to 0}\dfrac{\sqrt[]{x_1 + \Delta x}-\sqrt[ ]{x_1}}{\Delta x}.\dfrac{(\sqrt[ ]{x_1+\Delta x}+\sqrt[ ]{x_1})}{(\sqrt[ ]{x_1+\Delta x}+\sqrt[ ]{x_1})}$$
+
+		$$= \lim_{\Delta x \to 0}\dfrac{\sqrt[ ]{x_1+\Delta x}^2-\sqrt[ ]{x_1}^2}  {\Delta x.(\sqrt[ ]{x_1 + \Delta x}+ \sqrt[ ]{x_1})}$$		
+		
+		$$= \lim_{\Delta x \to 0}\dfrac{x_1+\Delta x-x_1}{\Delta x.(\sqrt[ ]{x_1 + \Delta x}+ \sqrt[ ]{x_1})}$$
+		
+		$$f'(x) = \lim_{\Delta x\to 0}\dfrac{1}{\sqrt[ ]{x_1+\Delta x}+ \sqrt[ ]{x_1}}$$
+		$$f'(x) = \dfrac{1}{2.\sqrt[ ]{x_1}}$$
+		
+		Essa é a derivada de $f(x) = \sqrt[ ]{x}$, como queremos encontrar a reta tangente que seja paralela à reta $8.x-4.y+1=0$, precisamos igualar a derivada de $f(x)$ ao coeficiente angular da segunda reta. \textbf{Pois a derivada de uma curva é o coeficiente angular da reta tangente à curva em determinado ponto.}
+		
+		$$\dfrac{1}{2.\sqrt[ ]{x_1}}=\dfrac{8}{4}$$
+		$$\sqrt[ ]{x_1}=\dfrac{1}{4}$$
+		$$x_1 = \dfrac{1}{16}$$
+		$$y_1 = \dfrac{1}{4}$$
+
+		Esse é o ponto da reta tangente. Podemos agora aplicar à fórmula da função de segundo grau:
+
+		$$\dfrac{1}{4}=2.\dfrac{1}{16}+b$$
+		$$b =\dfrac{2}{8}-\dfrac{1}{8}=\dfrac{1}{8}$$
+		$$y=2.x+\dfrac{1}{8}$$
+		$$16.x-8.y+1=0$$
+		
 	\subsection{Velocidade e Aceleração}
 		Existem dois tipos de cálculo para encontrar uma velocidade ou aceleração, a velocidade ou aceleração instantâneas e a velocidade e aceleração intervalares. A intervalar é calculada fazendo a média da diferença entre as distâncias ou as velocidades em um determinado intervalo de tempo ($\frac{s(t+\Delta t)-s(t)}{\Delta t}$). Para calcularmos a velocidade em determinado momento, precisamos aplicar o limite das velocidades médias quando $\Delta t$ se aproxima de 0.
 		
