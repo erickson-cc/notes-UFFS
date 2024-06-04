@@ -79,8 +79,23 @@
 		$$f'(x) = \lim_{\Delta x\to 0} \dfrac{f(x_1+\Delta x)-f(x_1)}{\Delta x}$$
 		ou
 		$$f'(x) = \lim_{x_f\to x_0}\dfrac{f(x_f)-f(x_0)}{x_f-x_0}$$	
-		Exemplo:\\
-		Encontre a equção da reta tangente à curva $y = \sqrt{x}$ que seja paralela à reta $8.x - 4.y + 1 = 0$.\\
+		
+	\subsection{Velocidade e Aceleração}
+		Existem dois tipos de cálculo para encontrar uma velocidade ou aceleração, a velocidade ou aceleração instantâneas e a velocidade e aceleração intervalares. A intervalar é calculada fazendo a média da diferença entre as distâncias ou as velocidades em um determinado intervalo de tempo ($\frac{s(t+\Delta t)-s(t)}{\Delta t}$). Para calcularmos a velocidade em determinado momento, precisamos aplicar o limite das velocidades médias quando $\Delta t$ se aproxima de 0.
+		
+		$$v(\Delta t) = \frac{s(t+\Delta t)-s(t)}{\Delta t}$$
+		$$v(t) =\lim_{\Delta t\to 0}\frac{s(t+\Delta t)-s(t)}{\Delta t}= s'(t)$$
+		
+		Para calcular a aceleração, em vez da velocidade, apenas se substituem na fórmula as variáveis distância(s) pelas variáveis velocidade(v). Assim como a velocidade é calculada pela variação de distância, a aceleração é calculada pela variação de velocidade.
+	
+	\subsection{Regra da Cadeia}
+	\subsection{Derivada das Funções Elementares}
+	\subsection{Derivada das Funções Trigonométricas}
+	
+\newpage
+\section{Exemplos Derivada no Ponto}
+	\subsection{Reta Tangente que seja Paralela a Outra Reta}	
+		Encontre a equação da reta tangente à curva $y = \sqrt{x}$ que seja paralela à reta $8.x - 4.y + 1 = 0$.\\
 		Por serem paralelas, seus coeficientes angulares são iguais.\\
 		Por esse motivo vamos encontrar a inclinação da reta tangente à curva $y = \sqrt{x}$ num ponto $(x_1,y_1)$. Temos:
 		$$f'(x) = \lim_{\Delta x\to 0}\dfrac{\sqrt[]{x_1 + \Delta x}-\sqrt[ ]{x_1}}{\Delta x}$$
@@ -108,25 +123,31 @@
 		$$y=2.x+\dfrac{1}{8}$$
 		$$16.x-8.y+1=0$$
 		
-		Exemplo:\\
+	\subsection{Reta Tangente que seja Perpendicular a Outra Reta}
 		No último exemplo, encontramos a derivada usando uma reta paralela à reta a qual buscamos, para isso a derivada da função deve ser igual ao coeficiente angular da reta paralela. Agora vamos ver um exemplo de como encontrar uma reta tangente que seja perpendicular a uma outra reta.\\
 		\textbf{O nome dessa reta perpendicular é reta normal} e ela apresenta ângulo reto no ponto da reta tangente.\\
 		\includegraphics[scale=0.3]{Images/reta normal.png}
 		\\
 		Acima temos a equação para a reta normal à curva $y = x²$ no ponto $(2,4)$.\\
 		Duas retas $f(x)$ e $g(x)$ são perpendiculares se o \textbf{produto dos coeficientes angulares das duas retas for igual a -1}.
-		
-	\subsection{Velocidade e Aceleração}
-		Existem dois tipos de cálculo para encontrar uma velocidade ou aceleração, a velocidade ou aceleração instantâneas e a velocidade e aceleração intervalares. A intervalar é calculada fazendo a média da diferença entre as distâncias ou as velocidades em um determinado intervalo de tempo ($\frac{s(t+\Delta t)-s(t)}{\Delta t}$). Para calcularmos a velocidade em determinado momento, precisamos aplicar o limite das velocidades médias quando $\Delta t$ se aproxima de 0.
-		
-		$$v(\Delta t) = \frac{s(t+\Delta t)-s(t)}{\Delta t}$$
-		$$v(t) =\lim_{\Delta t\to 0}\frac{s(t+\Delta t)-s(t)}{\Delta t}= s'(t)$$
-		
-		Para calcular a aceleração, em vez da velocidade, apenas se substituem na fórmula as variáveis distância(s) pelas variáveis velocidade(v). Assim como a velocidade é calculada pela variação de distância, a aceleração é calculada pela variação de velocidade.
-		
-	\subsection{Regra da Cadeia}
-	\subsection{Derivada das Funções Elementares}
-	\subsection{Derivada das Funções Trigonométricas}
+
+	\subsection{Derivada Conforme Valor de x}
+	Dada $f(x)=\sqrt[]{x}$, encontre $f'(4)$.
+
+	$$f'(x)=\lim_{x\to x_1}\dfrac{f(x)-f(x_1)}{x-x_1}$$	
+
+	Em vez de aproximarmos o $\Delta x$ a $0$, aproximamos o $x$ ao valor de $x$ para aquele ponto.
+
+	$$f'(x) = \lim_{x\to 4}\dfrac{\sqrt[ ]{x}-\sqrt[•]{4}}{x-4}$$
+	
+	$$= \lim_{x\to 4}\dfrac{\sqrt[•]{x}-2}{x-4}.\dfrac{\sqrt[]{x}+2}{\sqrt[•]{x}+2}$$
+	
+	$$= \lim_{x\to 4}\dfrac{x-4}{(x-4).(\sqrt[•]{x}+2)}$$
+	
+	$$= \lim_{x\to 4}\dfrac{1}{\sqrt[•]{x}+2} = \dfrac{1}{4}$$
+	
+	
+\newpage
 \section{Integrais}
 	\subsection{Integrais Definidas}
 	\subsection{Integrais Indefinidas}
