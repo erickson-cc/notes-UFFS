@@ -1,5 +1,14 @@
 #include <stdio.h>
-// struct Task(id,description,deadline,state=0) 
+struct Task{//(id,description,deadline,state=0) 
+	int id;
+	char note;	
+	int deadline;
+	int state;
+	struct Task *next;
+};
+typedef struct Task task;
+
+
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
 // task addTask
@@ -13,14 +22,18 @@
 // BONUS - TAD .h & .c // binary tree (id)
 void mainMenu(){
 	int command;
-	printf("-------Sistema de Gerenciamento de Tarevas v1.0-----------\n");
+	printf("-------Sistema de Gerenciamento de Tarefas v1.0-----------\n");
 	printf("Digite o número:\n");
 	printf("1 - Adicionar Tarefa\n");
 	printf("2 - Visualizar Tarefas\n");
 	printf("3 - Finalizar Tarefa\n");
 	printf("4 - Remover Tarefa\n");
 	printf("0 - Encerrar Programa\n");
-
+	
+	scanf("%d",&command);
+	if(command == 1){
+		printf("command =1");
+	}
 }
 int main(){
 	mainMenu();
