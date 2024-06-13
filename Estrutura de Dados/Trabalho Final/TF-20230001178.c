@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 struct Task{//(id,description,deadline,state=0) 
 	int id;
 	char note;	
@@ -8,6 +9,16 @@ struct Task{//(id,description,deadline,state=0)
 };
 typedef struct Task task;
 
+task *addTask(task *tarefa, task *first){
+	task *aux;
+	if (first == NULL){
+		first = tarefa;
+		return first;
+	}
+	for (aux = first; aux->next!=NULL;aux=aux->next);
+	aux->next=tarefa;
+	return first;
+}
 
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
@@ -22,6 +33,8 @@ typedef struct Task task;
 // BONUS - TAD .h & .c // binary tree (id)
 void mainMenu(){
 	int command;
+	task *tarefa, *aux, *first = NULL;
+
 	printf("-------Sistema de Gerenciamento de Tarefas v1.0-----------\n");
 	printf("Digite o número:\n");
 	printf("1 - Adicionar Tarefa\n");
@@ -32,7 +45,22 @@ void mainMenu(){
 	
 	scanf("%d",&command);
 	if(command == 1){
-		printf("command =1");
+		tarefa=(task *)malloc(sizeof(task));
+		
+		tarefa->id = 1;
+		tarefa->note = 'H';
+		tarefa->deadline = 10;
+		tarefa->state = 0;
+
+		if(first == NULL){
+			first = tarefa;
+			aux = tarefa;
+		}
+		else{
+//			aux->next = tarefa;
+			aux = tarefa;
+		}
+
 	}
 }
 int main(){
