@@ -19,7 +19,16 @@ task *addTask(task *tarefa, task *first){
 	aux->next=tarefa;
 	return first;
 }
-
+task *showTask(task *first){
+	task *aux;
+	if(first!=NULL){
+		for(aux=first;aux!=NULL;aux=aux->next){
+			printf("%d ",aux->id);
+				
+		}
+	}
+	return first;
+}
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
 // task addTask
@@ -32,9 +41,7 @@ task *addTask(task *tarefa, task *first){
 //
 // BONUS - TAD .h & .c // binary tree (id)
 void mainMenu(){
-	int command;
-	task *tarefa, *aux, *first = NULL;
-
+	
 	printf("-------Sistema de Gerenciamento de Tarefas v1.0-----------\n");
 	printf("Digite o número:\n");
 	printf("1 - Adicionar Tarefa\n");
@@ -43,6 +50,13 @@ void mainMenu(){
 	printf("4 - Remover Tarefa\n");
 	printf("0 - Encerrar Programa\n");
 	
+}
+int main(){
+	int command;
+	task *tarefa, *first = NULL;
+	int i;
+	for(i=0;i<=5;i++){
+	mainMenu();
 	scanf("%d",&command);
 	if(command == 1){
 		tarefa=(task *)malloc(sizeof(task));
@@ -52,18 +66,11 @@ void mainMenu(){
 		tarefa->deadline = 10;
 		tarefa->state = 0;
 
-		if(first == NULL){
-			first = tarefa;
-			aux = tarefa;
-		}
-		else{
-//			aux->next = tarefa;
-			aux = tarefa;
-		}
-
+		addTask(tarefa, first);
 	}
-}
-int main(){
-	mainMenu();
+	if(command == 2){
+		showTask(first);
+	}
+	}
 	return 0;
 }
