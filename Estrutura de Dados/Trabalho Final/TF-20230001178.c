@@ -5,29 +5,35 @@ struct Task{//(id,description,deadline,state=0)
 	char note;	
 	int deadline;
 	int state;
-	struct Task *next;
 };
 typedef struct Task task;
 
-task *addTask(task *tarefa, task *first){
-	task *aux;
-	if (first == NULL){
-		first = tarefa;
-		return first;
+struct binNode{
+	task tarefa;
+	struct binNode *left, *right;
+};
+typedef struct binNode node;
+
+node *addTask(node *root, node *new){
+	if(root==NULL){
+		root = new;
+		return new;
 	}
-	for (aux = first; aux->next!=NULL;aux=aux->next);
-	aux->next=tarefa;
-	return first;
+	if(root->tarefa.id>new->tarefa.id){
+		root->left = addTask(root->left,new);
+	}
+	if(root->tarefa.id<new->tarefa.id){
+		root->right = addTask(root->right,new);
+	}
+	return root;
 }
-task *showTask(task *first){
-	task *aux;
-	if(first!=NULL){
-		for(aux=first;aux!=NULL;aux=aux->next){
-			printf("%d ",aux->id);
-				
-		}
+void showTasks(node *root){
+	if(root==NULL){
+		return;
 	}
-	return first;
+	showTasks(root->left);
+	printf("%d ",root->tarefa.id);
+	showTasks(root->right);
 }
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
@@ -53,7 +59,8 @@ void mainMenu(){
 }
 int main(){
 	int command;
-	task *tarefa, *first = NULL;
+	task *tarefa;
+	node *root, *new;
 	int i;
 	for(i=0;i<=5;i++){
 	mainMenu();
@@ -66,10 +73,10 @@ int main(){
 		tarefa->deadline = 10;
 		tarefa->state = 0;
 
-		addTask(tarefa, first);
+		addTask(root, tarefa);
 	}
 	if(command == 2){
-		showTask(first);
+		showTasks(root);
 	}
 	}
 	return 0;
