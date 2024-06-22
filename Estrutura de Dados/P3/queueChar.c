@@ -42,8 +42,7 @@ void popChar(fila *head,fila *tail){
 	return;
 }
 
-void printChar(fila *head, fila *tail){
-	printf("O primeiro char da fila = %s\n",&head->letra);
+void printChar(fila *head, fila *tail){ printf("O primeiro char da fila = %s\n",&head->letra);
 	printf("O ultimo char da fila = %s\n",&tail->letra);
 	return;
 }
@@ -58,7 +57,7 @@ void menu(int encerrar, fila *head, fila *tail, char new){
 		
 		scanf("%d",&command);
 		if(command==1){
-			head = addChar(head, tail, new);
+				head = addChar(head, tail, new);
 		}
 		if(command==2){
 			popChar(head, tail);
@@ -75,11 +74,12 @@ void menu(int encerrar, fila *head, fila *tail, char new){
 
 int main(){
 	
-	fila *head=NULL, *tail=NULL;
-	
+	fila *head, *tail;
+	//&head = NULL;
+	//&tail = NULL;
 	char new='c';
 	int encerrar=1;
-	menu(encerrar, head, tail, new);
+	menu(encerrar, &head, &tail, new);
 	return 1;
 }
 
