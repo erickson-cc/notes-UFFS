@@ -59,21 +59,23 @@ void mainMenu(){
 }
 int main(){
 	int command;
-	task *tarefa;
-	node *root, *new;
+	task tarefa;
+	node *root=NULL, *new;
 	int i;
 	for(i=0;i<=5;i++){
 	mainMenu();
 	scanf("%d",&command);
 	if(command == 1){
-		tarefa=(task *)malloc(sizeof(task));
-		
-		tarefa->id = 1;
-		tarefa->note = 'H';
-		tarefa->deadline = 10;
-		tarefa->state = 0;
-
-		addTask(root, tarefa);
+			new = (node *)malloc(sizeof(task));
+		//tarefa=(task *)malloc(sizeof(task));
+	
+		tarefa.id = 1;
+		tarefa.note = 'H';
+		tarefa.deadline = 10;
+		tarefa.state = 0;
+	
+		new->tarefa = tarefa;
+		addTask(root, new);
 	}
 	if(command == 2){
 		showTasks(root);
