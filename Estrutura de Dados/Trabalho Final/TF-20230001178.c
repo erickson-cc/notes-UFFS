@@ -27,12 +27,13 @@ node *addTask(node *root, node *new){
 	}
 	return root;
 }
+
 void showTasks(node *root){
 	if(root==NULL){
 		return;
 	}
 	showTasks(root->left);
-	printf("%d ",root->tarefa.id);
+	printf("%s ",&root->tarefa.note);
 	showTasks(root->right);
 }
 // 		state = 0 (ATIVA)
@@ -66,12 +67,16 @@ int main(){
 	mainMenu();
 	scanf("%d",&command);
 	if(command == 1){
-			new = (node *)malloc(sizeof(task));
+		new = (node *)malloc(sizeof(task));
 		//tarefa=(task *)malloc(sizeof(task));
 	
 		tarefa.id = 1;
-		tarefa.note = 'H';
-		tarefa.deadline = 10;
+		printf("Descrição da tarefa\n");
+		scanf("%s",&tarefa.note);
+		//tarefa.note = 'H';
+		printf("Deadline da tarefa\n");
+		scanf("%d",&tarefa.deadline);
+		//tarefa.deadline = 10;
 		tarefa.state = 0;
 	
 		new->tarefa = tarefa;
