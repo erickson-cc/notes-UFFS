@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 struct Task{//(id,description,deadline,state=0) 
 	int id;
 	char note;	
@@ -13,6 +15,32 @@ struct binNode{
 	struct binNode *left, *right;
 };
 typedef struct binNode node;
+
+struct binTree{
+	node *root;
+};
+typedef struct binTree tree;
+
+void initTree(tree *tree){
+	tree->root = NULL;
+}
+int searchID(tree *tree, int key){
+	if(tree->root==NULL){
+		return 0;
+	}
+	if(tree->root->tarefa.id == key){
+		return 1;
+	}
+	if(tree->root->tarefa.id > key){
+		tree->root = tree->root->left;
+		return searchID(tree, key);
+	}
+	if(tree->root->tarefa.id < key){
+		tree->root = tree->root->right;
+		return searchID(tree, key);
+	}
+	return 0;
+}
 
 node *addTask(node *root, node *new){
 	if(root==NULL){
@@ -29,6 +57,7 @@ node *addTask(node *root, node *new){
 }
 
 void showTasks(node *root){
+	printf("showTasks");
 	if(root==NULL){
 		return;
 	}
@@ -61,8 +90,13 @@ void mainMenu(){
 int main(){
 	int command;
 	task tarefa;
-	node *root=NULL, *new;
+	tree *tree;
+	node *new;
 	int i;
+	tree->root = NULL;
+
+//	initTree(tree);
+
 	for(i=0;i<=5;i++){
 	mainMenu();
 	scanf("%d",&command);
@@ -80,10 +114,10 @@ int main(){
 		tarefa.state = 0;
 	
 		new->tarefa = tarefa;
-		addTask(root, new);
+		addTask(&tree->root, new);
 	}
 	if(command == 2){
-		showTasks(root);
+		showTasks(&tree->root);
 	}
 	}
 	return 0;
