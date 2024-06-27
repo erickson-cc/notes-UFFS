@@ -1,0 +1,27 @@
+Relatório (3pt)
+Circuito Logisim (3pt)
+Videos (3pt)
+Apresentação (1pt)
+
+Circuito:
+Banco de Registradores:
+
+			SelRA SelRB SelRW
+		R0				VA
+		R1	
+		R2	
+(8bits)		R3				VB
+	
+	Registradores:
+		D-Recebe o valor Binário que ser´armazenado
+		WE-Clock ativa o registro de sinal na entrada Data
+		R-Clock que ativa a saída da entrada Data na saída Q
+	
+	VW-Valor que vai para os registradores
+	SelRW-Seleciona qual registrador vai receber o valor da entrada VW
+	
+	SelRA Seleciona qual registrador vai passar Data para VA
+	SelRB Seleciona qual registrador vai passar Data para VB
+
+	Multiplexadores:
+	ULA:
