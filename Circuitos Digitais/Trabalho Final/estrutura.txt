@@ -4,6 +4,7 @@ Videos (3pt)
 Apresentação (1pt)
 
 Circuito:
+Sel.Valor-Multiplexador
 Banco de Registradores:
 
 			SelRA SelRB SelRW
@@ -24,4 +25,4 @@ Banco de Registradores:
 	SelRB Seleciona qual registrador vai passar Data para VB
 
 	Multiplexadores:
-	ULA:
+	ULA: Vai fazer a operação aritmética A +/*/div B
