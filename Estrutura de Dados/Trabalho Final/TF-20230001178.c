@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct listNode{
+struct listNode{//Tarefa
 	int id;
 	char note[50];
 	int deadline;
@@ -12,7 +12,7 @@ struct listNode{
 };
 typedef struct listNode node;
 
-struct listSent{
+struct listSent{//Aponta para o início e o fim da lista
 	node *head, *tail;
 };
 typedef struct listSent list;
@@ -58,9 +58,9 @@ void finishTask(list *sent, int key){
 
 void removeTask(list *sent, int key){
 	node *aux;
-	if(sent->head == sent->tail){
-		aux = sent->head;
-		if(aux->id == key){
+	if(sent->head == sent->tail){//Caso a lista tenha apenas 1 item
+		aux = sent->head;//declarar o aux
+		if(aux->id == key){//checar se o ID bate
 			aux = sent->head;
 			sent->head = NULL;
 			sent->tail = NULL;
@@ -68,7 +68,7 @@ void removeTask(list *sent, int key){
 			return;
 		}
 	}
-	for(aux=sent->head;aux!=NULL;aux=aux->next){
+	for(aux=sent->head;aux!=NULL;aux=aux->next){//Procurar o ID = Key
 		if(aux->id == key){
 			if(aux == sent->head){
 				sent->head = aux->next;
@@ -95,7 +95,7 @@ void printList(list *sent,int command){
 	node *aux;
 	if(command>3) return;
 	if(command<0) return;
-	if(command<=2){
+	if(command<=2){//Caso 1 ou 2 (Todas e Pendentes)
 		for(aux=sent->head;aux!=NULL;aux=aux->next){
 			if(aux->state == 0){
 				printf("(%d) ",aux->id);
@@ -105,7 +105,7 @@ void printList(list *sent,int command){
 			}
 		}
 	}
-	if(command%2!=0){
+	if(command%2!=0){//Caso 1 ou 3 (Todas e Concluídas)
 		for(aux=sent->head;aux!=NULL;aux=aux->next){
 			if(aux->state == 1){
 				printf("(%d) ",aux->id);
@@ -117,17 +117,9 @@ void printList(list *sent,int command){
 	}
 }
 
-
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
-// task showTasks(any, state=1, state=0)
-// 		sort 1-> state = 0
-// 		if state = 0 -> deadline(0,inf)
-// task concludeTask
-// task popTask
-// void mainMenu 
-//
-// BONUS - TAD .h & .c // binary tree (id)
+
 void mainMenu(int command){
 	printf("\nDigite 1 para chamar o menu ");
 	scanf("%d",&command);
@@ -152,33 +144,32 @@ int main(){
 
 	initList(&sent);
 
-	//for(i=0;i<=5;i++){
 	while(command!=0){
-	mainMenu(command);
-	scanf("%d",&command);
-	if(command == 1){
-		i = i+1;
-		addTask(&sent, i);
-	}
-	if(command == 2){
-		printf("\n-----Modo de visualização-----\n");
-		printf("1 - Todas as Tarefas\n");
-		printf("2 - Tarefas Ativas\n");
-		printf("3 - Tarefas Concluídas\n");
+		mainMenu(command);
 		scanf("%d",&command);
-		printList(&sent,command);
-		command = 999;
-	}
-	if(command == 3){
-		printf("\nInforme a ID da tarefa a ser finalizada\n");
-		scanf("%d",&key);
-		finishTask(&sent,key);
-	}
-	if(command == 4){
-		printf("\nInforme a ID da tarefa a ser removida\n");
-		scanf("%d",&key);
-		removeTask(&sent,key);
-	}
+		if(command == 1){//Adicionar
+			i = i+1;
+			addTask(&sent, i);
+		}
+		if(command == 2){//Visualizar
+			printf("\n-----Modo de visualização-----\n");
+			printf("1 - Todas as Tarefas\n");
+			printf("2 - Tarefas Ativas\n");
+			printf("3 - Tarefas Concluídas\n");
+			scanf("%d",&command);
+			printList(&sent,command);
+			command = 999;
+		}
+		if(command == 3){//Concluir
+			printf("\nInforme a ID da tarefa a ser finalizada\n");
+			scanf("%d",&key);
+			finishTask(&sent,key);
+		}
+		if(command == 4){//Remover
+			printf("\nInforme a ID da tarefa a ser removida\n");
+			scanf("%d",&key);
+			removeTask(&sent,key);
+		}
 	}
 	return 0;
 }
