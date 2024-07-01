@@ -2,72 +2,100 @@
 #include <stdlib.h>
 #include <string.h>
 
-struct Task{//(id,description,deadline,state=0) 
+struct listNode{
 	int id;
-	char note;	
+	char note[20];
 	int deadline;
 	int state;
+
+	struct listNode *prev, *next;
 };
-typedef struct Task task;
+typedef struct listNode node;
 
-struct binNode{
-	task tarefa;
-	struct binNode *left, *right;
+struct listSent{
+	node *head, *tail;
 };
-typedef struct binNode node;
+typedef struct listSent list;
 
-struct binTree{
-	node *root;
-};
-typedef struct binTree tree;
-
-void initTree(tree *tree){
-	tree->root = NULL;
-}
-int searchID(tree *tree, int key){
-	if(tree->root==NULL){
-		return 0;
-	}
-	if(tree->root->tarefa.id == key){
-		return 1;
-	}
-	if(tree->root->tarefa.id > key){
-		tree->root = tree->root->left;
-		return searchID(tree, key);
-	}
-	if(tree->root->tarefa.id < key){
-		tree->root = tree->root->right;
-		return searchID(tree, key);
-	}
-	return 0;
+void initList(list *sent){
+	sent->head = NULL;
+	sent->tail = NULL;
 }
 
-node *addTask(node *root, node *new){
-	if(root==NULL){
-		root = new;
-		return new;
+void addTask(list *sent, int i){//declarar a Task no main e alocar na função
+	node *aux;
+	aux = (node *)malloc(sizeof(node));
+	aux->id = i;
+	printf("Informe a Descrição da tarefa: ");
+	scanf("%s",aux->note);
+	printf("Informe o tempo para a conclusão da tarefa: ");
+	scanf("%d",&aux->deadline);
+	aux->state = 0;
+
+	aux->next = aux->prev = NULL;
+
+	if(sent->head==NULL){
+		sent->head = aux;
+		sent->tail = aux;
 	}
-	if(root->tarefa.id>new->tarefa.id){
-		root->left = addTask(root->left,new);
+	else{
+		aux->prev = sent->tail;
+		sent->tail->next = aux;
+		sent->tail = aux;
 	}
-	if(root->tarefa.id<new->tarefa.id){
-		root->right = addTask(root->right,new);
+}
+void finishTask(list *sent, int key){
+	node *aux;
+	for(aux=sent->head;aux!=NULL;aux=aux->next){
+		if(aux->id == key){
+			aux->state = 1;
+			return;
+		}
 	}
-	return root;
+		printf("ID não encontrado\n");
 }
 
-void showTasks(node *root){
-	printf("showTasks");
-	if(root==NULL){
-		return;
+
+void removeTask(list *sent, int key){
+	node *aux;
+	for(aux=sent->head;aux!=NULL;aux=aux->next){
+		if(aux->id == key){
+			aux->prev->next = aux->next;
+			aux->next->prev = aux->prev;
+			free(aux);
+			return;
+		}
 	}
-	showTasks(root->left);
-	printf("%s ",&root->tarefa.note);
-	showTasks(root->right);
+		printf("ID não encontrado\n");
 }
+
+void printList(list *sent,int command){
+	node *aux;
+	if(command>3) return;
+	if(command<0) return;
+	if(command<=2){
+		for(aux=sent->head;aux!=NULL;aux=aux->next){
+			if(aux->state == 0){
+				printf("(%d) ",aux->id);
+				printf("%dh - ",aux->deadline);
+				printf("%s\n",aux->note);
+			}
+		}
+	}
+	if(command%2!=0){
+		for(aux=sent->head;aux!=NULL;aux=aux->next){
+			if(aux->state == 1){
+				printf("(%d) ",aux->id);
+				printf("%dh - ",aux->deadline);
+				printf("%s\n",aux->note);
+			}
+		}
+	}
+}
+
+
 // 		state = 0 (ATIVA)
 // 		state = 1 (CONCLUÍDA)
-// task addTask
 // task showTasks(any, state=1, state=0)
 // 		sort 1-> state = 0
 // 		if state = 0 -> deadline(0,inf)
@@ -88,36 +116,39 @@ void mainMenu(){
 	
 }
 int main(){
-	int command;
-	task tarefa;
-	tree *tree;
-	node *new;
-	int i;
-	tree->root = NULL;
+	list sent;
+	int command=999;
+	int i=0;
+	int key;
 
-//	initTree(tree);
+	initList(&sent);
 
-	for(i=0;i<=5;i++){
+	//for(i=0;i<=5;i++){
+	while(command!=0){
 	mainMenu();
 	scanf("%d",&command);
 	if(command == 1){
-		new = (node *)malloc(sizeof(task));
-		//tarefa=(task *)malloc(sizeof(task));
-	
-		tarefa.id = 1;
-		printf("Descrição da tarefa\n");
-		scanf("%s",&tarefa.note);
-		//tarefa.note = 'H';
-		printf("Deadline da tarefa\n");
-		scanf("%d",&tarefa.deadline);
-		//tarefa.deadline = 10;
-		tarefa.state = 0;
-	
-		new->tarefa = tarefa;
-		addTask(&tree->root, new);
+		i = i+1;
+		addTask(&sent, i);
 	}
 	if(command == 2){
-		showTasks(&tree->root);
+		printf("-----Modo de visualização-----\n");
+		printf("1 - Todas as Tarefas\n");
+		printf("2 - Tarefas Ativas\n");
+		printf("3 - Tarefas Concluídas\n");
+		scanf("%d",&command);
+		printList(&sent,command);
+		command = 999;
+	}
+	if(command == 3){
+		printf("Informe a ID da tarefa a ser finalizada\n");
+		scanf("%d",&key);
+		finishTask(&sent,key);
+	}
+	if(command == 4){
+		printf("Informe a ID da tarefa a ser removida\n");
+		scanf("%d",&key);
+		removeTask(&sent,key);
 	}
 	}
 	return 0;
