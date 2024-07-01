@@ -24,6 +24,7 @@ void initList(list *sent){
 
 void addTask(list *sent, int i){//declarar a Task no main e alocar na função
 	node *aux;
+	node *aux2=sent->head;
 	aux = (node *)malloc(sizeof(node));
 	aux->id = i;
 	printf("Informe a Descrição da tarefa: ");
@@ -39,10 +40,29 @@ void addTask(list *sent, int i){//declarar a Task no main e alocar na função
 		sent->tail = aux;
 	}
 	else{
-		aux->prev = sent->tail;
-		sent->tail->next = aux;
-		sent->tail = aux;
+		if(aux->deadline<=sent->head->deadline){
+			aux->next = sent->head;
+			sent->head->prev = aux;
+			sent->head = aux;
+		}
+		else{
+			while(aux->deadline>aux2->deadline){
+				aux2 = aux2->next;
+			}
+			aux->prev = aux2;
+			aux->next = aux2->next->next;
+			aux->next->prev = aux;
+
+			aux2->next = aux;
+			if(aux->next ==NULL){
+				sent->tail = aux;
+			}
+		
+//		aux->prev = sent->tail;
+//		sent->tail->next = aux;
+//		sent->tail = aux;
 	}
+}
 }
 void finishTask(list *sent, int key){
 	node *aux;
@@ -58,32 +78,10 @@ void finishTask(list *sent, int key){
 
 void removeTask(list *sent, int key){
 	node *aux;
-	if(sent->head == sent->tail){
-		aux = sent->head;
-		if(aux->id == key){
-			aux = sent->head;
-			sent->head = NULL;
-			sent->tail = NULL;
-			free(aux);
-			return;
-		}
-	}
 	for(aux=sent->head;aux!=NULL;aux=aux->next){
 		if(aux->id == key){
-			if(aux == sent->head){
-				sent->head = aux->next;
-				sent->head->prev = NULL;
-			}
-			else{
-				aux->prev->next = aux->next;
-			}
-			if(aux == sent->tail){
-				sent->tail = aux->prev;
-				sent->tail->next = NULL;
-			}
-			else{
-				aux->next->prev = aux->prev;
-			}
+			aux->prev->next = aux->next;
+			aux->next->prev = aux->prev;
 			free(aux);
 			return;
 		}
@@ -128,20 +126,15 @@ void printList(list *sent,int command){
 // void mainMenu 
 //
 // BONUS - TAD .h & .c // binary tree (id)
-void mainMenu(int command){
-	printf("\nDigite 1 para chamar o menu ");
-	scanf("%d",&command);
-
-	if(command == 1){
-		printf("\n-------Sistema de Gerenciamento de Tarefas v1.0-----------\n");
-		printf("Digite o número:\n");
-		printf("1 - Adicionar Tarefa\n");
-		printf("2 - Visualizar Tarefas\n");
-		printf("3 - Finalizar Tarefa\n");
-		printf("4 - Remover Tarefa\n");
-		printf("0 - Encerrar Programa\n");
-	}
-	else mainMenu(command);
+void mainMenu(){
+	
+	printf("-------Sistema de Gerenciamento de Tarefas v1.0-----------\n");
+	printf("Digite o número:\n");
+	printf("1 - Adicionar Tarefa\n");
+	printf("2 - Visualizar Tarefas\n");
+	printf("3 - Finalizar Tarefa\n");
+	printf("4 - Remover Tarefa\n");
+	printf("0 - Encerrar Programa\n");
 	
 }
 int main(){
@@ -154,14 +147,14 @@ int main(){
 
 	//for(i=0;i<=5;i++){
 	while(command!=0){
-	mainMenu(command);
+	mainMenu();
 	scanf("%d",&command);
 	if(command == 1){
 		i = i+1;
 		addTask(&sent, i);
 	}
 	if(command == 2){
-		printf("\n-----Modo de visualização-----\n");
+		printf("-----Modo de visualização-----\n");
 		printf("1 - Todas as Tarefas\n");
 		printf("2 - Tarefas Ativas\n");
 		printf("3 - Tarefas Concluídas\n");
@@ -170,12 +163,12 @@ int main(){
 		command = 999;
 	}
 	if(command == 3){
-		printf("\nInforme a ID da tarefa a ser finalizada\n");
+		printf("Informe a ID da tarefa a ser finalizada\n");
 		scanf("%d",&key);
 		finishTask(&sent,key);
 	}
 	if(command == 4){
-		printf("\nInforme a ID da tarefa a ser removida\n");
+		printf("Informe a ID da tarefa a ser removida\n");
 		scanf("%d",&key);
 		removeTask(&sent,key);
 	}
