@@ -1,0 +1,3 @@
+Passo 1: Escreva o código Nome.java
+Passo 2: Rode $ javac Nome.java
+Passo 3: Execute $ java Nome
