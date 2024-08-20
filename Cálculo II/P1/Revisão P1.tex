@@ -29,6 +29,24 @@
 		Uma função $F(x)$ é considerada primitiva de $f(x)$ em um intervalo I se para todo $x \in I$ temos $F'(x)=f(x)$.
 		\subsection{Propriedades}
 			$$G'(x)=(F(x)+k)' = F'(x)+0=F'(x)$$
-			
-		
+	\section{Integral Indefinida}
+		Integral indefinida é aquela que não tem limite de integração.\\
+		\subsection{Propriedades}
+			\begin{equation}
+			\int f(x).dx.K = K.\int f(x).dx
+			\end{equation}
+			\begin{equation}
+			\int [f(x)+g(x)].dx = \int f(x).dx + \int g(x).dx
+			\end{equation}
+		\subsection{Integrais imediatas}
+			\begin{enumerate}
+				\item $\int dx = x+K$
+				\item $\int x^-1.dx = \int \frac{1}{x}.dx = \ln x+K$ \\ \textit{Se fizermos a derivação do exemplo 4, dará uma constante}
+				\item $\int \sin x . dx = -\cos x +K$
+				\item $\int x^\alpha .dx = \frac{x^{\alpha+1}}{\alpha+1}+K$
+			\end{enumerate}
+		\subsection{Integrais de Multiplicação}
+			$$\int [f(x).g(x)]'.dx = \int[f'(x).g(x)+f(x).g'(x)].dx$$
+			$$f(x).g(x) = \int f'(x).g(x).dx + \int f(x).g'(x).dx$$
+			$$\int f'(x).g(x).dx = f(x).g(x) - \int f(x).g'(x).dx$$
 \end{document}
