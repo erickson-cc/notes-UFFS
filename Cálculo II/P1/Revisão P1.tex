@@ -49,4 +49,20 @@
 			$$\int [f(x).g(x)]'.dx = \int[f'(x).g(x)+f(x).g'(x)].dx$$
 			$$f(x).g(x) = \int f'(x).g(x).dx + \int f(x).g'(x).dx$$
 			$$\int f'(x).g(x).dx = f(x).g(x) - \int f(x).g'(x).dx$$
+				$$u = g(x)$$
+				$$du = g'(x).dx$$
+				$$dv = f'(x).dx$$			
+				$$v = f(x)$$
+			
+			
+			Para resolver a integral $\int 2x. \sin x .dx$:\\
+				$$u = 2x$$
+				$$du = 2.dx$$
+				$$dv = \sin x.dx$$
+				$$v = -\cos x$$
+			$$\int 2x. \sin x . dx = \int u . dv$$
+			como $\int f'(x).g(x).dx = f(x).g(x)-\int f(x).g'(x).dx$:
+			$$2x. - \cos x - \int ( - \cos x ).2.dx$$
+			$$u.v- \int v.du$$
+			$$\int \sin x.2x.dx = 2x. - \cos x - \int (- \cos x).2.dx$$
 \end{document}
