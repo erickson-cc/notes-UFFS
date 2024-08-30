@@ -1,6 +1,9 @@
 \documentclass{article}
 \usepackage[]{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \usepackage{amssymb}
+\usepackage[]{pxfonts}
 \usepackage[english]{babel}
 \usepackage{tikz}
 \usepackage[]{cancel}
@@ -30,7 +33,7 @@
 		\subsection{Propriedades}
 			$$G'(x)=(F(x)+k)' = F'(x)+0=F'(x)$$
 	\section{Integral Indefinida}
-		Integral indefinida é aquela que não tem limite de integração.\\
+		Integral indefinida é aquela que não tem limite de integração.
 		\subsection{Propriedades}
 			\begin{equation}
 			\int f(x).dx.K = K.\int f(x).dx
@@ -55,7 +58,7 @@
 				$$v = f(x)$$
 			
 			
-			Para resolver a integral $\int 2x. \sin x .dx$:\\
+			Para resolver a integral $\int 2x. \sin x .dx$:
 				$$u = 2x$$
 				$$du = 2.dx$$
 				$$dv = \sin x.dx$$
@@ -93,10 +96,99 @@
 				=e^x.x^2
 			\end{equation}
 			
-			\section{Método de integração por substituição ou mudança de variável de integração}
-			Sejam $F'(x)=f(x)$ e $g$ está contido no domínio de $F$, podemos definir a composição $F(g(x))$. Que segundo a regra da cadeia é resolvida por $F'(g(x)).g'(x)$
-			Exemplo:
-				$$F(g(x)) = sen(5x+2)$$
-				$$[F(g(x))]' = \cos (5x+2).5$$
-			\section{Integral Definida}
+	\section{Método de integração por substituição ou mudança de variável de integração}
+		Sejam $F'(x)=f(x)$ e $g$ está contido no domínio de $F$, podemos definir a composição $F(g(x))$. Que segundo a regra da cadeia é resolvida por $F'(g(x)).g'(x)$
+		Exemplo:
+			$$F(g(x)) = sen(5x+2)$$
+			$$[F(g(x))]' = \cos (5x+2).5$$
+	\section{Integral Definida}
+		Determine a área da região S limitada pelas curvas $y = x^2+1$; $y= 0$; $x=0$ e $x=2$.
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+				    axis lines = middle,
+				    xlabel = $x$,
+				    ylabel = $y$,
+				    ymin = 0,
+				    xmin = 0,
+				    xmax = 2,
+				    ymax = 5,
+				    grid = both,
+				    grid style = dashed,
+				    enlargelimits=0.1,
+				    samples=500, % Aumentar o número de amostras
+				]
+					\addplot[fill=blue!20, domain=0:2] {x^2+1} \closedcycle;
+					\addplot[color=blue, thick] {x^2+1}; % A função correta para a curva azul
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+		A teoria para achar a área da seção é criar infinitos retângulos com base mínima e altura $f(x)$
+		\subsection{Soma de Riemann}
+			\begin{center}
+				\begin{tikzpicture}
+					\begin{axis}[
+					    axis lines = middle,
+					    xlabel = $x$,
+				    	ylabel = $y$,
+					    ymin = 0,
+					    xmin = 0,
+					    xmax = 2,
+					    ymax = 5,
+					    grid = both,
+				    	grid style = dashed,
+					    enlargelimits=0.1,
+					    samples=500, % Aumentar o número de amostras
+					]
+						%\addplot[fill=blue!20, domain=0:2] {x^2+1} \closedcycle;
+						\addplot[color=black, thick] {x^2+1}; % A função correta para a curva azul
+						
+						% Número de subintervalos (ajuste conforme necessário)
+						\pgfmathsetmacro{\n}{10}
+
+						% Largura de cada subintervalo
+						\pgfmathsetmacro{\deltax}{0.05}
+
+						% Loop para criar as colunas
+						\foreach \i in {0,...,39}{
+						    \pgfmathsetmacro{\x}{\i*\deltax} % Extremo esquerdo do subintervalo
+						    \pgfmathsetmacro{\altura}{\x^2+1} % Altura da coluna
+						    \addplot[fill=blue!20,thin,domain={\x:\x+\deltax}]{\altura} \closedcycle;
+						    %\addplot[fill=blue!20, domain={\x}:\x+\deltax] {\x^2+1} \closedcycle;
+						     
+						}
+					\end{axis}
+				\end{tikzpicture}
+			\end{center}
+			Seja $P: a<x_1<x_2...<x_n=b$ uma partição uniforme do intervalo $[a,b]$. Dessa forma vamos construir $n$ retângulos de base $\Delta x = \frac{b-a}{n}$ e $h=f(C_i)$ onde $C_i \in (x_{i-1},x_i)$.\\
+			Desta forma:
+				$$A=f(C_1).\Delta x+f(C_2).\Delta x ... + f(C_i).\Delta x$$
+				$$A = \Delta x.[f(C_1)...f(C_i)]$$
+				$$A = \sum_{i=1}^{x}f(C_i).\Delta x$$
+			Caso exista $\lim_{x \to \infty}A$, este será denominado integral de $x\to \infty$.
+			Riemann (integral definida) da função $f$ é indicada por:
+				$$\int_{a}^{b}f(x).dx = \lim_{x\to +\infty}\sum_{i=1}^{h}f(C_i).\Delta x$$
+	\section{Teorema Fundamental do Cálculo}
+		Seja $f[a,b]\to \mathbb{R}$ uma função contínua e $F$ uma primitiva de $f$. Nestas condições:
+			$$\int_a^bf(x).dx = F(b)-F(a)$$
+		exemplo:
+			$$\int_0^2(x^2+1).dx=[\dfrac{x^3}{3}+x]_0^2=(\dfrac{2^3}{3}+2)-(\dfrac{0^3}{3}+0)=\dfrac{14}{3}$$
+		\subsection{Demonstração}
+			Seja $P: a=x_0<x_1...<x_n=b$ uma partição do intervalo $[a,b]$. Neste caso a Soma de Riemann da função $f$ é dada por:
+				$$S_n=\sum_{i=1}^n f(C_i).(x_i-x_{i-1}),C_i \in [x_{i-1},x_i]$$
+			Como $f$ é contínua, então, pelo \textbf{teorema do valor médio para derivadas}, temos que:\\
+				Se $f$ é contínua em $[a,b]$ entãoexiste $C \in ]a,b[$ tal que:
+				$$f'(C) = \dfrac{f(b)-f(a)}{b-a}$$
+			Em cada intervalo $[x_{i=1},x_i]$ existe $C_i$ tal que:
+				$$F'(C_i)=\dfrac{F(x_i)-F(x_{i-1}}{x_i-x_{i-1}}$$
+				$$F'(C_i)=f(C_i)$$
+			Logo:
+				$$Sn= \sum_{i=1}^n \dfrac{F(x_i)-F(x_{i-1}}{\cancel{x_i-x_{i-1}}}.\cancel{(x_i-x_{i-1})}$$
+				$$Sn = [F(x_1)-F(x_0)]+[(F(x_2)-F(x_1)]+...+[F(x_n)-F(x_{n-1})]$$
+				$$Sn = -F(x_0)+F(x_n)$$
+				$$Sn=F(b)-F(a)$$
+			Como:
+				$$\int_a^bf(x).dx = \lim_{n\to +\infty}Sn=\lim_{n \to +\infty}[F(b)-F(a)]$$
+				$$=F(b)-F(a)$$
+	\section{Integração Imprópria}
 \end{document}
