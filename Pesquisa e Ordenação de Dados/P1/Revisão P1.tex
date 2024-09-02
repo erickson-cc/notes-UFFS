@@ -1,4 +1,5 @@
 \documentclass[•]{article}
+\usepackage[]{amsmath}
 \title{Revisão P1 Pesquisa e Ordenação de Dados\\Giancarlo}
 \author{Erickson G. Müller}
 
@@ -20,5 +21,26 @@
 		\begin{center}
 			Dividir em elementos ordenados  e depois intercalar na ordem correta
 		\end{center}
-		
+	\section{Quick Sort}
+		Não precisa de memória extra(in-place).\\
+		Em tese $n \log n$\\
+		Pior caso = $n^2$(Quando já está ordenado).\\
+		Algoritmo de \textbf{Ordenação Instável}\\
+		Divisão e consquista.\\
+		i = posição que estou fazendo a comparação\\
+		k = 
+		se $i>pivo \to$ k fica parado e i vai para o próximo elemento\\
+		se $pivo>i \to$ elemento k troca com i, k e i vão para o próximo elemento\\
+		Quando i chega na posição do pivô $\to$ trocar o k pelo pivô
+		\subsection{regras}
+		Se o Elemento for maior que o pivô	: i anda, k fica parado\\
+		Se o Elemento for menor que o pivô: i anda, k anda\\
+		Se o Elemento for menor que a posição do k: troca elemento com o k, k anda
+		Passos:
+		\begin{enumerate}
+			\item Escolher o pivô (tradicionalmente o último elemento);
+			\item Particionamento (posicionar em relação ao pivô)
+			
+			
+		\end{enumerate}
 \end{document}
