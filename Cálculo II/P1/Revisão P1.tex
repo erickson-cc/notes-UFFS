@@ -191,4 +191,29 @@
 				$$\int_a^bf(x).dx = \lim_{n\to +\infty}Sn=\lim_{n \to +\infty}[F(b)-F(a)]$$
 				$$=F(b)-F(a)$$
 	\section{Integração Imprópria}
+		Em intervalos finitos\\
+		Se $f$ for contínua no intervalo $(a,b]$ e para todo $a<t<b$ existe a integral $\int_t^bf(x).dx$, então:
+		$$\int_a^bf(x).dx = \lim_{t \to a^+} \int _t^bf(x).dx$$
+		
+		\begin{center}
+			Desde que o limite exista em $\mathbb{R}$
+		\end{center}
+		
+		Se $f$ for contínua no interval $[a,b)$ e para todo $a<t<b$ exista a integral $\int_a^tf(x).dx$, então:
+		$$\int_a^bf(x).dx = \lim_{t \to b^-}\int_a^tf(x).dx$$
+		\begin{center}
+			Desde que o limite exista em $\mathbb{R}$
+		\end{center}
+		
+		exemplo:\\
+		Calcule a integral $\int_2^5\dfrac{1}{\sqrt[]{x-2}}$\\
+		Domínio de $f$ é $(2,+\infty)$
+		$$x-2>0 \to x>2$$
+		$f$ é contínua no intervalo $(2,5]$. Seja $2<t<5$:
+		$$\lim_{t \to 2^+} \int_t^5\dfrac{1}{\sqrt[•]{x-2}}.dx$$
+		$$u = x-2$$
+		$$du = 1.dx$$
+		
+		$$\int \dfrac{du}{\sqrt[•]{u}}=\dfrac{u^{\dfrac{1}{2}}{\dfrac{1}{2}}$$
+		$$=2.\sqrt[•]{u}=2.\sqrt[•]{x-2}$$
 \end{document}
