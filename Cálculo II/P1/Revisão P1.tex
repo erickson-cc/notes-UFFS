@@ -211,9 +211,34 @@
 		$$x-2>0 \to x>2$$
 		$f$ é contínua no intervalo $(2,5]$. Seja $2<t<5$:
 		$$\lim_{t \to 2^+} \int_t^5\dfrac{1}{\sqrt[•]{x-2}}.dx$$
-		$$u = x-2$$
-		$$du = 1.dx$$
-		
-		$$\int \dfrac{du}{\sqrt[•]{u}}=\dfrac{u^{\dfrac{1}{2}}{\dfrac{1}{2}}$$
-		$$=2.\sqrt[•]{u}=2.\sqrt[•]{x-2}$$
+		Sendo $u = x-2$ e $du = 1.dx$:
+		$$I=\int u^{-\dfrac{1}{2}}.du = \dfrac{u^{-\dfrac{1}{2}}}{\dfrac{1}{2}}$$
+		$$2\sqrt[•]{u}=2.\sqrt[•]{x-2}$$
+		$$\lim_{t\to 2^+}(2\sqrt[•]{5-2}-2\sqrt[•]{t-2})=2\sqrt[•]{3}$$
+%	\newpage
+	\section{Métodos de Integração}
+		\subsection{Integração de funções trigonométricas}
+			\begin{enumerate}
+				\item Determine $\int (2x-1).\sin(x^2-x).dx$:\\
+					Considerando $u = x²-x$ e $du = (2x-1).dx$
+					$$I = \int \sin u . du=-\cos (x^2-x)+c$$
+				\item Determine $\int \tan x.dx$:\\
+					$$\int \tan x .dx = \int \dfrac{\sin x}{\cos x}.dx$$
+					Considerando $u=\cos x$ e $du = -\sin x$
+					$$I = \int -u^{-1}.du=-\int -u^{-1}.du $$
+					$$-\ln |u|+c=-\ln |\cos x| +c=\ln |\cos x|^{-1}+c$$
+					\textit{Tentar entender por que $-\ln |\cos x| = \ln |\cos x|^{-1}$}\\
+					\textit{Propriedade de Logaritmos $\log x^n = n.\log x$}
+					$$I = \ln |\sec x|+c$$
+				\item Determine $\int \cot x.dx$::
+					$$\int \cot x.dx = \int \dfrac{\cos x}{\sin x}.dx$$
+					Considerando $u = \sin x$ e $du = \cos x.dx$
+					$$I = \int u^{-1}.du=\ln |u|+c = \ln |\sin x| + c$$
+				\item Determine $\int x^2.\cot x^3.dx$:\\
+					Considerando $u = x^3$ e $du = 3x^2.dx$
+					$$I = \int \cot u . \dfrac{du}{3}=\dfrac{1}{3}.\ln |\sin x^3| + c$$
+				\item Determine $\int \sec x.dx$:\\
+					$$\int \sec x.dx = \int \cos^{-1} x.dx$$
+					Considerando
+			\end{enumerate}
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  9 SEP 2024 21:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.6.3)  11 SEP 2024 23:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,17 +733,71 @@ File: ts1pxr.fd 2000/12/14 v1.0
 LaTeX Warning: Command \textbullet invalid in math mode on input line 213.
 
 Missing character: There is no à in font pxr!
-[7] (./Revis√£o P1.aux)
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 216.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 216.
+
+Missing character: There is no à in font pxr!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 216.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 216.
+
+Missing character: There is no à in font pxr!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+Missing character: There is no à in font pxr!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+Missing character: There is no à in font pxr!
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \textbullet invalid in math mode on input line 217.
+
+Missing character: There is no à in font pxr!
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 223.
+
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 223.
+
+
+Missing character: There is no ≤ in font pxr!
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
+[8] (./Revis√£o P1.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 25427 strings out of 476076
- 643457 string characters out of 5793776
- 3304213 words of memory out of 5000000
- 47121 multiletter control sequences out of 15000+600000
+ 25428 strings out of 476076
+ 643476 string characters out of 5793776
+ 3304204 words of memory out of 5000000
+ 47122 multiletter control sequences out of 15000+600000
  588859 words of font info for 125 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  99i,13n,107p,734b,2284s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -754,10 +808,10 @@ nts/pxsyb.pfb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpxmi.pfb></usr
 /share/texmf-dist/fonts/type1/public/pxfonts/rpxr.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palati
 no/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on "Revis√£o P1.pdf" (7 pages, 169464 bytes).
+Output written on "Revis√£o P1.pdf" (8 pages, 172740 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
