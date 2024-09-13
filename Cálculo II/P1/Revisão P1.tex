@@ -230,7 +230,7 @@
 					\textit{Tentar entender por que $-\ln |\cos x| = \ln |\cos x|^{-1}$}\\
 					\textit{Propriedade de Logaritmos $\log x^n = n.\log x$}
 					$$I = \ln |\sec x|+c$$
-				\item Determine $\int \cot x.dx$::
+				\item Determine $\int \cot x.dx$:
 					$$\int \cot x.dx = \int \dfrac{\cos x}{\sin x}.dx$$
 					Considerando $u = \sin x$ e $du = \cos x.dx$
 					$$I = \int u^{-1}.du=\ln |u|+c = \ln |\sin x| + c$$
@@ -239,6 +239,53 @@
 					$$I = \int \cot u . \dfrac{du}{3}=\dfrac{1}{3}.\ln |\sin x^3| + c$$
 				\item Determine $\int \sec x.dx$:\\
 					$$\int \sec x.dx = \int \cos^{-1} x.dx$$
-					Considerando
-			\end{enumerate}
-\end{document}
+					$$ \int \sec x.dx = ln |sec x+tg x|+c$$
+					
+				\item Determine $\int \csc x.dx$:\\
+					$$\int \csc x .dx = \ln|\csc x - \cot x|+c$$
+				
+				\item Determine $\int \dfrac{d\Theta}{\cos{(4\Theta -2)}}$:\\
+					Considerando $u = 4\Theta -2$, $du = 4.dx$,
+					$$I = \int \dfrac{1}{\cos(u)}.\dfrac{du}{4}=\dfrac{1}{4}.\int \sec(u).du$$
+					$$I=\dfrac{\ln sec(4\Theta-2)+tg(4\Theta -2)}{4}+c$$
+				\item $\int \sin^nx$ e $\int \cos^nx$:
+					Neste exemplo, consideramos $n$ um número inteiro positivo. Para determinar essas integrais, usamos as identidades:
+					$$\sin^2x+\cos^2x=1$$
+					$$\sin^2x=\dfrac{1-\cos{2x}}{2}$$
+					$$\cos^2x = \dfrac{1+\cos{2x}}{2}$$
+					Exemplo: Determine as integrais
+				\item $\int \cos^5x.dx$\\
+					Passo 1: Preparar o Integrando.
+					$$\int \cos^5x.dx=\int \cos^4x.\cos x.dx$$
+					$$\int \cos^5x.dx= \int (\cos^2x)^2.\cos x.dx$$
+					Passo 2: Usar a identidade $\sin^2x+\cos^2x=1$ no quadrado.
+					$$I=\int(1-\sin^2x)^2.\cos{x}.dx$$
+					$$I = \int (1-2.\sin^2x+\sin^4x).\cos{x}.dx$$
+					$$I=\int \cos{x}.dx - 2.\int {\cos{x}.\sin^2x.dx+\int \cos{x}.\sin^4x}.dx$$
+					Considerando $u = \sin{x}$ e $du = \cos{x}.dx$:
+					$$I = \int 1.du - 2.\int u^2.du +\int u^4.du$$
+					$$I = u-2.\dfrac{u^3}{3}+\dfrac{u^5}{5}=\sin{x}-\dfrac{2.\sin^3x}{3}+\dfrac{\sin^5x}{5}+c$$
+				\item Usando a segunda Identidade: $\int cos^2x.dx$\\
+					$$\int cos^2x.dx = \int \dfrac{1+\cos{2x}}{2}.dx$$
+					$$I = \dfrac{1}{2}.x +\dfrac{1}{2}.\int \cos{2x}.dx$$
+					Considerando $u = 2x$, $du = 2.dx$
+					$$I = \dfrac{x}{2}+\dfrac{1}{2}.\int \cos{u}.\dfrac{du}{2}$$
+					$$I = \dfrac{x}{2}+\dfrac{\sin(2x)}{4}+c$$
+				\end{enumerate}
+	\section{Integral de Forma}
+		$\int \sin^nx.\cos^mx.dx$, onde $n$ e $m$ são inteiros positivos.\\
+		Se $n$ ou $m$ for ímpar, usamos a identidade $\sin^2x+\cos^2x=1$. Caso Contrário usamos as identidades $\sin^2x=\dfrac{1-\cos{2x}}{2}$ ou $\cos^2x = \dfrac{1+\cos{2x}}{2}$.\\
+		Exemplo:\\
+		Calcule a integral $\int \sin^7x.\cos^4x.dx$
+		$$I = \int \sin{x}.(\sin^2x)^3.\cos^4x.dx$$
+		$$I = \int \sin{x}.(1-\cos^2x)^3.\cos^4x.dx$$
+		$$I = \int \sin{x}.(1-3.\cos^2x+3.\cos^4x-\cos^6x).\cos^4x.dx$$
+		$$I= \int \sin{x}.\cos^4x.dx-3\int \sin{x}.\cos^6x.dx+3\int \sin{x}.\cos^8x.dx-\int \sin{x}.\cos^{10}x.dx$$
+		Considerando $u = \cos{x}$ e $du = -\sin{x}.dx$
+		$$I = \int -u^4.du -3.\int-u^6.du +3.\int -u^8.du -\int -u^{10}.du$$
+		$$I=\dfrac{-\sin^5{x}}{5}+\dfrac{3.\sin^7x}{7}-\dfrac{3.\sin^9x}{9}+\dfrac{\sin^{11}x}{11}+c$$
+	\section{Fórmulas de recorrência}
+		$$\int \sin^nx.dx =-\dfrac{1}{n}.\sin^{n-1}x.\cos{x}+\dfrac{n-1}{n}.\int \sin^{n-2}x.dx$$
+		$$\int \cos^nx.dx = \dfrac{1}{n}.\cos^{n-1}x.\sin{x}+\dfrac{n-1}{n}.\int \cos^{n-2}x.dx$$
+
+ \end{document}
