@@ -1,5 +1,8 @@
 \documentclass[•]{article}
 \usepackage[]{amsmath}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
 \title{Revisão P1 Pesquisa e Ordenação de Dados\\Giancarlo}
 \author{Erickson G. Müller}
 
@@ -22,7 +25,12 @@
 		\subsection{Ordenação Não Estável}
 		\subsection{In place/In situ}
 			Os valores são permutados dentro da própria estrutura do vetor, não havendo necessidade de duplicar a memória.
-
+		\subsection{Ordenação Interna}
+			O arquivo a ser ordenado cabe dentro da memória principal (RAM), qualquer registro pode ser acessado imediatamente.
+		\subsection{Ordenação Externa}
+			O arquivo a ser ordenado não cabe na memória principal(RAM), os registros são acessados sequencialmente ou em grandes blocos.
+	\section{Insertion Sort}
+		
 	\section{Merge Sort}	
 		\begin{center}
 			Dividir em elementos ordenados  e depois intercalar na ordem correta
@@ -38,14 +46,37 @@
 		se $i>pivo \to$ k fica parado e i vai para o próximo elemento\\
 		se $pivo>i \to$ elemento k troca com i, k e i vão para o próximo elemento\\
 		Quando i chega na posição do pivô $\to$ trocar o k pelo pivô
-		\subsection{regras}
+		\subsection{Regras}
 		Se o Elemento for maior que o pivô	: i anda, k fica parado\\
 		Se o Elemento for menor que o pivô: i anda, k anda\\
 		Se o Elemento for menor que a posição do k: troca elemento com o k, k anda
 		Passos:
 		\begin{enumerate}
 			\item Escolher o pivô (tradicionalmente o último elemento);
-			\item Particionamento (posicionar em relação ao pivô)
+			\item Particionamento (posicionar em relação ao pivô)\\
+			
+\begin{tikzpicture}
+    \begin{axis}[
+        xlabel={Tamanho da Entrada (n)},
+        ylabel={Tempo de Execução},
+        xmin=1, xmax=10,
+        ymin=0, ymax=25,
+        grid=both,
+        legend pos=north west
+    ]
+
+    \addplot[domain=1:10, samples=100, color=gray]{x} node[pos=0.8,right]{$O(n)$};
+    \addplot[domain=1:5, samples=100, color=black]{x^2} node[pos=0.7,right]{$O(n^2)$};
+    \addplot[domain=1:10, samples=100, color=black]{ln(x)} node[pos=0.78,right]{$O(\log n)$};
+    \addplot[domain=1:10, samples=100, color=gray]{1} node[pos=0.65,right]{$O(1)$};
+    \addplot[domain=1:10, samples=100, color=black]{x* ln(x)} node[pos=0.6,right]{$O(n \log n)$};
+    \addplot[domain=1:5, samples=100, color=gray]{2^x} node[pos=0.6,right]{$O(2^n)$};
+    % Adicione mais curvas conforme necessário:
+    %\addplot[domain=1:10, samples=100, color=black]{2^x} node[pos=0.8,right]{$O(2^n)$};
+    %\addplot[domain=1:10, samples=100, color=black]{x*ln(x)} node[pos=0.8,right]{$O(n \log n)$};
+
+    \end{axis}
+\end{tikzpicture}
 			
 			
 		\end{enumerate}
