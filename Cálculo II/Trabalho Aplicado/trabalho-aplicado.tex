@@ -3,18 +3,21 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 \usepackage{amssymb}
-\usepackage[]{pxfonts}
+%\usepackage[]{pxfonts}
+\usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{tikz}
 \usepackage[]{cancel}
 \usepackage{listings}
 \usepackage{tcolorbox}
 \usepackage[ ]{tikz}
+\usepackage[ ]{graphicx}
 \tikzset{ram grid/.style = {black!100, very thick}}
 \tcbuselibrary{listings, skins}
 
 \title{Trabalho Aplicado 1}
 \author{Erickson Giesel Müller}
+\date{23 de Setembro de 2024}
 
 \begin{document}
 \definecolor{codebg}{HTML}{252525}
@@ -54,31 +57,29 @@
 	\section{Código}
 	\begin{mylist}
 import sympy
-	
-def somaRiemann(funcao, a, b, n):
-	x = sympy.Symbol('x')
-	f = sympy.sympify(funcao)
-	
-	delta_x = (b - a) / n #Largura dos retangulos
-		
-	area = 0
-	for i in range(n):
-		x_i = a + i * delta_x + delta_x / 2 #Ponto 
-medio dos retangulos
-		altura = f.subs(x, x_i)
-		area += altura * delta_x
-			
-	return area
 
-###Inputs
-funcao = str(input("escreva a funcao f(x): "))
-a = int(input("Insira o valor de a: "))
-b = int(input("Insira o valor de b: "))
-n = int(input("insira o valor de n: "))# Numero de retangulos
-	
-resultado = somaRiemann(funcao, a, b, n)
-print("A area aproximada usando a Soma de Riemann e: {:.3f}
-unidades de area".format(resultado))
+def somaRiemann(funcao, a, b, n):
+    x = sympy.Symbol('x')
+    f = sympy.sympify(funcao)
+
+    delta_x = (b - a) / n 
+    area = 0
+    for i in range(n): 
+        x_i = a + i * delta_x + delta_x / 2 
+        altura = f.subs(x, x_i)
+        area += altura * delta_x 
+    
+    return area
+
+
+funcao = input("escreva a funcao f(x): ")
+a = int(input("Insira o valor de a: ")) 
+b = int(input("Insira o valor de b: ")) 
+n = int(input("insira o valor de n: ")) 
+
+aprox_area = somaRiemann(funcao, a, b, n)
+print("A area aproximada usando a Soma de Riemann 
+e: {:.6f} u.a".format(aprox_area))
 
 	\end{mylist}
 	Para calcular a aproximação da área abaixo da curva, o código em python usou a biblioteca \textit{sympy}, que fornece diversas ferramentas de álgebra computacional. Para instalar a biblioteca, caso o usuário tenha o python instalado em seu computador, basta rodar no terminal o comando:
@@ -106,7 +107,7 @@ pip install sympy
 					    samples=500, % Aumentar o número de amostras
 					]
 						%\addplot[fill=blue!20, domain=0:2] {x^2+1} \closedcycle;
-						\addplot[color=black, thick] {x^2+1}; % A função correta para a curva azul
+						 % A função correta para a curva azul
 						
 						% Número de subintervalos (ajuste conforme necessário)
 						\pgfmathsetmacro{\n}{10}
@@ -116,12 +117,13 @@ pip install sympy
 
 						% Loop para criar as colunas
 						\foreach \i in {0,...,39}{
-						    \pgfmathsetmacro{\x}{\i*\deltax} % Extremo esquerdo do subintervalo
+						    \pgfmathsetmacro{\x}{\i*\deltax + \deltax/2} % Extremo esquerdo do subintervalo
 						    \pgfmathsetmacro{\altura}{\x^2+1} % Altura da coluna
-						    \addplot[fill=blue!20,thin,domain={\x:\x+\deltax}]{\altura} \closedcycle;
+						    \addplot[fill=blue!20,thin,domain={\x-\deltax/2:\x+\deltax/2}]{\altura} \closedcycle;
 						    %\addplot[fill=blue!20, domain={\x}:\x+\deltax] {\x^2+1} \closedcycle;
 						     
 						}
+						\addplot[color=black, thick] {x^2+1};
 					\end{axis}
 				\end{tikzpicture}
 			\end{center}
@@ -136,6 +138,18 @@ python t1-20230001178.py
 	\begin{mylist}
 a*x**n+b*x**(n-1)+c*x**(n-2)...+z
 	\end{mylist}
-	
+	Para representar o número $e$, deve-se digitar a letra maíuscula $E$, pois essa é a sintaxe da biblioteca \textit{sympy}.
 	\section{Resolução dos problemas:}
+		Considerando a função $f(x) = e{-x}+1$, calcular as aproximações das áreas no intervalo $[-1,1]$ com n subintervalos:
+		\subsection{n=4}
+			\includegraphics[scale=0.5]{images/n4.png}
+		\subsection{n=10}
+			\includegraphics[scale=0.5]{images/n10.png}
+		\subsection{n=50}
+			\includegraphics[scale=0.5]{images/n50.png}
+		\subsection{n=1000}
+			\includegraphics[scale=0.5]{images/n1000.png}
+	\section{Considerações Finais}
+		Analisando os resultados, percebemos que quanto maior o número de subintervalos, mais preciso será o resultado da aproximação em relação à integral. Isso acontece porque a àrea dos retângulos que está sendo calculada a uma distância $h_i$ da curva é reduzida conforme a largura da base dos retângulos diminui.
+		
 \end{document}
