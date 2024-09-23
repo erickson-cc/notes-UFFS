@@ -140,7 +140,7 @@ a*x**n+b*x**(n-1)+c*x**(n-2)...+z
 	\end{mylist}
 	Para representar o número $e$, deve-se digitar a letra maíuscula $E$, pois essa é a sintaxe da biblioteca \textit{sympy}.
 	\section{Resolução dos problemas:}
-		Considerando a função $f(x) = e{-x}+1$, calcular as aproximações das áreas no intervalo $[-1,1]$ com n subintervalos:
+		Considerando a função $f(x) = e^{-x}+1$, calcular as aproximações das áreas no intervalo $[-1,1]$ com n subintervalos:
 		\subsection{n=4}
 			\includegraphics[scale=0.5]{images/n4.png}
 		\subsection{n=10}
@@ -150,6 +150,14 @@ a*x**n+b*x**(n-1)+c*x**(n-2)...+z
 		\subsection{n=1000}
 			\includegraphics[scale=0.5]{images/n1000.png}
 	\section{Considerações Finais}
-		Analisando os resultados, percebemos que quanto maior o número de subintervalos, mais preciso será o resultado da aproximação em relação à integral. Isso acontece porque a àrea dos retângulos que está sendo calculada a uma distância $h_i$ da curva é reduzida conforme a largura da base dos retângulos diminui.
+		Analisando os resultados, percebemos que quanto maior o número de subintervalos, mais preciso será o resultado da aproximação em relação à integral. Isso acontece porque na àrea dos retângulos que está sendo calculada, há uma área de imprecisão das partes dos retângulos que estão à esquerda e à direita do ponto médio da base. Essa imprecisão é reduzida conforme a largura da base dos retângulos diminui, e estes pontos ficam cada vez mais próximos da curva. \\
+		Conforme a fórmula da Soma de Riemann, percebe-se que o resultado fornecido pelo programa fica cada vez mais próximo do valor exato da integral conforme o número de subintervalos aumentam.Também, quanto maior for número de subintervalos, mais sutil será a diferença se comparado com o resultado de um valor $n$ próximo, por esse motivo o resultado é entregue com 6 casas decimais.
+		$$\int_{a}^{b}f(x).dx = \lim_{x\to +\infty}\sum_{i=1}^{h}f(C_i).\Delta x$$
+		Utilizando os valores do exemplo acima:\\
+		$$y = e^{-x}+1$$
+		$$Area = \int_{-1}^{1} [e^{-x}+1].dx=[x-e^{-x}]_{-1}^{+1}$$
+		$$[1-e^{-1}]-[-1-e^1]=2+e-e^{-1}$$
+		$$Area \approx 4.35040238729 u.a$$
+		Portanto, para essa função, sob essas condições, o programa conseguiu atingir um resultado preciso com 1000 subintervalos.
 		
 \end{document}
