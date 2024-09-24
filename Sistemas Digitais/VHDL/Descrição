@@ -1,0 +1,14 @@
+# Main
+	a: in std_vector (2 downto 0);
+	b: in std_vector (2 downto 0);
+	carry_in: in std_vector (2 downto 0);
+	c: out std_vector (2 downto 0);
+	carry_out: out std_vector (2 downto 0);
+
+	carry_in[0]: 0;
+	carry_in[1] <= carry_out[0];
+	carry_in[2] <= carry_out[1];
+
+# Half Adder
+	c[n] <= a[n] XOR b[n] XOR carry_in[n];
+	carry_out[n] <= (a[n] AND b[n]) OR [(a[n] OR b[n]) AND carry_in[n]];
