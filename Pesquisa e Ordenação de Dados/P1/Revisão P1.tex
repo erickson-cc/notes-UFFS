@@ -29,7 +29,47 @@
 			O arquivo a ser ordenado cabe dentro da memória principal (RAM), qualquer registro pode ser acessado imediatamente.
 		\subsection{Ordenação Externa}
 			O arquivo a ser ordenado não cabe na memória principal(RAM), os registros são acessados sequencialmente ou em grandes blocos.
+	\section{Bubble Sort}
+		Compara pares de elementos adjacentes, dois de cada vez, colocando os dois em ordem. Se o elemento da esquerda é maior que o da direita, troca-os de posição.\\
+		São realizadas até $n-1$ iterações, em que cada uma delas:
+		\begin{enumerate}
+			\item Percorre a lista a partir do início
+			\item Compara cada elemento com o seu sucessor
+			\item Troca os elementos caso o sucessor seja menor que o elemento comparado
+		\end{enumerate}
+		O objetivo de cada iteração é levar o maior elemento para o final do vetor. Portanto, a parte ordenada fica à direita.\\
+		Complexidade: $O(n^2)$\\	
+		Memória: \textit{in place}(constante)\\
+		Estável.\\
+		Número de comparações: $\dfrac{n^2 - n}{2}$
+		
+	\section{Selection Sort}
+		Consiste em identificar o menor valor e trocar com o elemento de menor índice, e assim sucessivamente até que reste apenas o elemento de último índice. Durante o processo, dividir a lista em parte ordenada (à esquerda) e parte não ordenada (à direita).\\
+		São realizadas $n-1$ iterações, em que cada uma delas:
+		\begin{enumerate}
+			\item Seleciona o menor elemento da parte não ordenada.
+			\item Troca-o com o elemento de menor posição da parte não ordenada.
+			\item Incorpora esse elemento na parte ordenada.
+		\end{enumerate}
+		Complexidade: $O(n^2)$ em \textbf{todos} os casos.\\
+		Memória: \textit{in place}(constante).\\
+		Não é estável.\\
+		Recomendado para registros muito grandes, onde o custo da movimentação supera o custo das comparações (nessa ordenação, são feitas no máximo $n$ trocas).
 	\section{Insertion Sort}
+		Divide-se o vetor em parte ordenada (à esquerda) e parte não ordenada (à direita). A parte não ordenada funciona como uma fila para entrar na parte ordenada, o primeiro elemento da parte ordenada é removido e posicionado no local certo da parte ordenada, movendo todos os elementos que forem maiores que ele uma casa para a direita.\\
+		São realizadas até $n-1$ iterações, em que cada uma delas:
+		\begin{enumerate}
+			\item Pega o primeiro elemento da parte não ordenada.
+			\item Verifica qual seria sua posição de inserção na parte ordenada.
+			\item Desloca os elementos maiores para a direita até encontrar a posição.
+			\item P é inserido à esquerda do último elemento movido.
+		\end{enumerate}
+		Complexidade: $O(n^2)$ quando a lista for inversamente ordenada, pois cada iteração requer que todos os elementos sejam deslocados.\\
+		Memória: \textit{in place}.\\
+		Estável.\\
+		Número de comparações: $\dfrac{n^2-n}{2}$ (pior caso) ou $n-1$ (melhor caso).\\
+		Eficiente para listas quase ordenadas, ou quando for necessário inserir um elemento numa lista já ordenada.\\
+		Com a complexidade $O(n^2)$, o algoritmo é muito mais lento que o selection sort, pois executa o mesmo número de comparações, mas com mais trocas. Com a complexidade $O(n)$, o algoritmo é muito mais rápido que o selection sort.		
 		
 	\section{Merge Sort}	
 		\begin{center}
