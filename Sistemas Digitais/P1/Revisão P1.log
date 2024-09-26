@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.11)  19 SEP 2024 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.11)  26 SEP 2024 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -65,31 +65,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [1
 
 {C:/Users/EricksonMuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 33.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 33.
 
-[2] (Revisão P1.aux)
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+
+
+[3] (Revisão P1.aux)
  ***********
 LaTeX2e <2024-06-01>
 L3 programming layer <2024-05-08>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 472 strings out of 473937
- 9200 string characters out of 5723122
- 1929893 words of memory out of 5000000
- 23378 multiletter control sequences out of 15000+600000
- 562017 words of font info for 49 fonts, out of 8000000 for 9000
+ 476 strings out of 473937
+ 9251 string characters out of 5723122
+ 1932893 words of memory out of 5000000
+ 23382 multiletter control sequences out of 15000+600000
+ 562324 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,7n,50p,301b,205s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 35i,7n,50p,462b,205s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/EricksonMuller/AppData/Local/Pr
-ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/EricksonMuller
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Use
-rs/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
-cmr17.pfb>
-Output written on "Revisão P1.pdf" (2 pages, 75924 bytes).
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/EricksonMulle
+r/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Us
+ers/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "Revisão P1.pdf" (3 pages, 102319 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 47 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

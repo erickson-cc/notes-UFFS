@@ -17,6 +17,9 @@
 	\section{Sistema Digital}
 		Um aparato dotado de conjuntos finitos de \textbf{entradas} e \textbf{saídas} e capaz de processar informação representada sob forma \textbf{numérica}.
 	\section{Circuitos Combinacionais}
+		Não armazenam dados, exemplo: Circuito Somador.
+	\section{Circuitos Sequenciais}
+		Armazenam dados, exemplo: Circuito Contador.
 	\section{Níveis de Abstração}
 		Em ordem decrescente:
 		\begin{enumerate}
@@ -26,4 +29,25 @@
 			\item Nível de Circuito Elétrico: transistores, resistores, capacitores, indutores e fios.
 			\item Nível de Transistor.
 		\end{enumerate}
+	\section{Circuitos Contadores}
+		\textbf{Módulo do contador:} é o número de estados que o contador passa antes de retornar ao 0, é o número de valores que o contador pode ter, não o valor máximo. Para um circuito formado por $n$ flip-flops, teremos um contador de módulo máximo $2^n$.\\
+		\textbf{Contador Assíncrono:} Não tem a entrada de clock comum a todos os flip-flops, o sinal de clock não é aplicado a todos mas sim ao flip-flop que representa o bit de menor valor. Para montar um contador assíncrono colocamos o J e K na fonte, ligamos o clock de cada flip-flop à saída negada do flip-flop anterior e colocamos uma porta AND 111 para determinar quando o contador vai resetar.\\
+		\textbf{Contador Síncrono:} O sinal de clock é comum a todos os flip-flops do circuito. Para fazer um circuito contador síncrono, faz-se a tabela dos estados atuais, os estados seguintes, e compara-se para saber quais os valores das entradas JK dos flip-flops. Em seguida monta-se os mapas de karnaugh, e tiramos as expressões simplificadas de cada flip-flop em relação às saídas dos outros flip-flops.
+	\section{VHDL}
+		Lembrar que "$<$=" se manifesta no tempo seguinte e ":=" se manifesta instantaneamente. E acredito que quando usamos o := numa variável, não precisamos criar um signal antes do process mas sim uma variable após o process. Na dúvida, não colocar nem um nem outro.\\
+		\subsection{Representação de um process(A,B)}
+			\begin{enumerate}
+				\item \textbf{Algorítmica}:\\
+					if(B$<$A) then s$<=$ '1';\\
+					else s$<=$ '0';\\
+					end if;
+				
+				\item \textbf{Fluxo de Dados}:\\
+					s$<=$ '1' when B$<$A else '0';
+				
+				\item \textbf{Estrutural}:\\
+					Muito mais complicado, tem signal, tem component, tem port map.\\
+					U1: xor2 port map (A,B,L1);\\
+					U2: and2 port map (A,L!,S);
+			\end{enumerate}
 \end{document}
