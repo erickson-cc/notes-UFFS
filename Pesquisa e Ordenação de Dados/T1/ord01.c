@@ -4,7 +4,8 @@
  *	Pesquisa e Ordenação de Dados
  *	Erickson G. Müller
  *	Mat: 20230001178
- *
+ *	01 - Implemente uma ordenação ineficiente à sua escolha:
+ *	Ordenação: Selection Sort
  *
 */
 
@@ -99,7 +100,22 @@ void printVector(int *vector, int vectorLen){
 }
 
 ///////////////////////////////////
-	
+					/*
+	--Selection Sort--
+				 */
+void selectionSort(list *sent){
+	int menor;
+	nodelist *aux1, *aux2;
+	for(aux1=sent->head;aux1->next!=NULL;aux1=aux1->next){
+		menor = aux1->valor;
+		for(aux2=sent->head->next;aux2!=NULL;aux2=aux2->next){
+			if(aux2->valor<menor){
+				menor = aux2->valor;
+			}
+		}
+		//troca(A[1],A[menor])
+	}
+}
 int main(){
 	int vectorLen;
 	vectorLen = 20;
