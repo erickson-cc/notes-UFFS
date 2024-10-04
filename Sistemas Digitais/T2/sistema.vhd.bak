@@ -1,0 +1,8 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY sistema IS PORT (
+	SW: in STD_LOGIC
+	
+	);
+END ENTITY sistema;
