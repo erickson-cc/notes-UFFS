@@ -5,7 +5,7 @@
  *	Erickson G. Müller
  *	Mat: 20230001178
  *	01 - Implemente uma ordenação ineficiente a sua escolha:
- *	Ordenação: Bubble Sort
+ *	Ordenação: Selection Sort
  *
 */
 
@@ -101,15 +101,38 @@ void printVector(int *vector, int vectorLen){
 
 ///////////////////////////////////
 					/*
-	--Bubble Sort--
+	--Selection Sort--
 				 */
-void bubbleSort(list *sent){
-	nodelist *j, *i, *auxi, *auxj; //{i:último não ordenado};{j:comparação com o próximo}
-	int flag;
-	do{
+void selectionSort(list *sent){
+    nodelist *lord; // Último ordenado
+    nodelist *ford;
+    nodelist *r; // Antecessor do menor
+    nodelist *s; //item a ser selecionado
+    nodelist *menor;// menor da iteração
+    
+    r = NULL;
+    ford = NULL;
+    lord = sent->head;
+    for(lord;lord->next!=NULL;lord=lord->next){//Loop até ordenar por inteiro
+        menor = lord;
+        for(s=lord;s!=NULL;s=s->next){// Loop de cada varredura
+            if(s->next->valor>menor->valor){
+                r=s;
+                menor=s->next;
+            }
+        }
+        if(ford==NULL){
+            ford=menor;
+        }
 
-	}while(flag);
+        r->next=menor->next;
+        menor->next=lord;
+
+    }
+    sent->head = ford;
+    sent->tail = lord;
 }
+
 int main(){
 	int vectorLen;
 	vectorLen = 20;
@@ -126,6 +149,10 @@ int main(){
 	}
 	printf("\nLista encadeada não ordenada:\n");
 	printList(&sent);
+	printf("%d",sent.tail->valor);
 	
+	selectionSort(&sent);
+	printf("\n Lista encadeada ordenada:\n");
+	printList(&sent);
 	return 0;
 }
