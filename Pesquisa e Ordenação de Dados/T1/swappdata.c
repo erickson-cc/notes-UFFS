@@ -91,19 +91,7 @@ void generateVector(int randomMin, int randomMax, int *vector, int vectorLen){
 		vector[i] = randomNumber;
 	}
 }
-void listVector(list *sent){
-	nodelist *aux;
-	int vectorLen=0;
-	int *i=0;
-	for(aux=sent->head;aux!=NULL;aux=aux->next){
-		vectorLen++;
-	}
-	nodelist *vectorsort[vectorLen];
-	for(aux=sent->head;aux!=NULL;aux=aux->next){
-			vectorsort[*i]=aux;
-		(*i)++;
-	}
-}
+
 void printVector(int *vector, int vectorLen){
 	int i;
 	for(i=0;i<vectorLen;i++){
@@ -115,14 +103,32 @@ void printVector(int *vector, int vectorLen){
 					/*
 	--Selection Sort--
 				 */
+void selectionSort(list *sent){
+	nodelist *min;
+	nodelist *aux;
+	nodelist *lord;
+	min = sent->head;
+	aux = sent->head;
+	lord = sent->head;
+
+	while(lord!=NULL){
+		while(aux!=NULL){
+			if(min->valor>aux->valor){
+				min=aux;
+			}
+			aux=aux->next;
+		}
+		lord = min;
+		if 	
+}
 
 int main(){
 	int vectorLen;
 	vectorLen = 20;
 	int vector[vectorLen];
 	generateVector(-100, 100, vector, vectorLen);
-//	printf("\nVetor Inicial:\n");
-//	printVector(vector, vectorLen);
+	printf("\nVetor Inicial:\n");
+	printVector(vector, vectorLen);
 
 	list sent;	
 	createList(&sent);
@@ -132,9 +138,10 @@ int main(){
 	}
 	printf("\nLista encadeada não ordenada:\n");
 	printList(&sent);
+	printf("%d",sent.tail->valor);
 	
+	selectionSort(&sent);
 	printf("\n Lista encadeada ordenada:\n");
 	printList(&sent);
-	listVector(&sent);
 	return 0;
 }
