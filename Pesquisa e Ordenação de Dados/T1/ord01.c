@@ -76,12 +76,16 @@ struct tqueue{
 typedef struct tqueue nodefila;
 
 struct queueSent{
-	nodefila *head, *tail;
+	nodefila *head;
 };
 typedef struct queueSent fila;
 				//Operações Fila
 ///////////////////////////////////
+void enQueue(nodelist *listVector, fila *sent){
+	int i;
+	for(i=0;i<20;i++){
 
+}
 				//Operações Vetor
 void generateVector(int randomMin, int randomMax, int *vector, int vectorLen){
 	int randomNumber;
@@ -107,17 +111,32 @@ void printVector(int *vector, int vectorLen){
 		printf(" %d ", vector[i]);
 	}
 }
-
+void printNodeVector(nodelist *listVector, int vectorLen){
+	int i;
+	for(i=0;i<vectorLen;i++){
+		printf(" %d ", listVector[i].valor);
+	}
+}
 ///////////////////////////////////
 					/*
 	--Selection Sort--
 				 */
 void selectionSort(nodelist *listVector){
 	int i;
+	int j;
+	int index; //Armazena o Índice do menor da parte não ordenada
 	nodelist menor;
-	for(i=0;i<sizeof(listVector)/sizeof(listVector[0]);i++){
-		menor.valor = listVector[i].valor;
-		menor.next = listVector[i].next;
+	menor = listVector[0];
+	for(i=0;i<19;i++){
+		menor = listVector[i];
+		for(j=i+1;j<20;j++){
+			if(menor.valor>listVector[j].valor){
+				menor = listVector[j];
+				index = j;
+			}
+		}
+		listVector[index]=listVector[i];
+		listVector[i]=menor;
 	}
 }	
 
@@ -143,7 +162,10 @@ int main(){
 	
 	printf("\n Lista encadeada ordenada:\n");
 	printList(&sent);
-	vectorizeList(&sent, listVector);
-	selectionSort(listVector);
+
+	vectorizeList(&sent, listVector);//Transforma a Lista em Vetor
+	selectionSort(listVector);// Ordena o Vetor
+	printf("\n Vetor ordenado:\n");
+	printNodeVector(listVector,20);
 	return 0;
 }
