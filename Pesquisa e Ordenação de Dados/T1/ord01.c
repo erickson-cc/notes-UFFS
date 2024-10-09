@@ -77,15 +77,37 @@ typedef struct tqueue nodefila;
 
 struct queueSent{
 	nodefila *head;
+	nodefila *tail;
 };
 typedef struct queueSent fila;
 				//Operações Fila
 ///////////////////////////////////
-void enQueue(nodelist *listVector, fila *sent){
-	int i;
-	for(i=0;i<20;i++){
 
+void enQueue(nodelist *listVector, fila *fsent){
+	int i;
+	nodefila *aux;
+	fsent->head = NULL;
+	fsent->tail = NULL;
+	for(i=0;i<20;i++){
+		aux = (nodefila *)malloc(sizeof(nodefila));
+		aux->valor = listVector[i].valor;
+		aux->next = NULL;
+		if(fsent->head==NULL){
+			fsent->head = aux;
+		}
+		else{
+			fsent->tail->next = aux;
+		}
+		fsent->tail = aux;
+
+	}
 }
+void printFila(fila *fsent){
+	nodefila *aux;
+	for(aux=fsent->head;aux!=NULL;aux=aux->next){
+		printf(" %d ",aux->valor);
+	}
+}	
 				//Operações Vetor
 void generateVector(int randomMin, int randomMax, int *vector, int vectorLen){
 	int randomNumber;
@@ -149,9 +171,10 @@ int main(){
 	generateVector(-100, 100, vector, vectorLen);
 //	printf("\nVetor Inicial:\n");
 //	printVector(vector, vectorLen);
-
+	
+	fila fsent;
 	list sent;	
-	createList(&sent);
+	createList(&sent);	
 	int i;
 	for(i=0;i<vectorLen;i++){
 		// o loop está fora da função pois appendtoList não é uma função de transformar vetor em lista
@@ -167,5 +190,10 @@ int main(){
 	selectionSort(listVector);// Ordena o Vetor
 	printf("\n Vetor ordenado:\n");
 	printNodeVector(listVector,20);
+
+	enQueue(listVector,&fsent);//Transforma o vetor em fila
+	printf("\n Fila ordenada:\n");
+	printFila(&fsent);				   //
+
 	return 0;
 }
