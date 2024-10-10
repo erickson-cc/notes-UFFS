@@ -88,13 +88,13 @@ typedef struct queueSent fila;
 				//Operações Fila
 ///////////////////////////////////
 
-void enQueue(nodelist *listVector, fila *fsent, int vectorLen){
+void enQueue(nodelist *listVector, fila *fsent){
 //Função transforma um Vetor em Fila
 	int i;
 	nodefila *aux;
 	fsent->head = NULL;//createFila()
 	fsent->tail = NULL;//createFila()
-	for(i=0;i<vectorLen;i++){
+	for(i=0;i<20;i++){
 		aux = (nodefila *)malloc(sizeof(nodefila));
 		aux->valor = listVector[i].valor;
 		aux->next = NULL;
@@ -156,23 +156,22 @@ void printNodeVector(nodelist *listVector, int vectorLen){
 					/*
 	--Selection Sort--
 					*/
-void selectionSort(nodelist *listVector, int vectorLen){
+void selectionSort(nodelist *listVector){
 	int i;
 	int j;
 	int index; //Armazena o Índice do menor da parte não ordenada
 	nodelist menor;
-	for(i=0;i<vectorLen-1;i++){
-		index = i;
-		for(j=i+1;j<vectorLen;j++){
-			if(listVector[index].valor>listVector[j].valor){
+	menor = listVector[0];
+	for(i=0;i<19;i++){
+		menor = listVector[i];
+		for(j=i+1;j<20;j++){
+			if(menor.valor>listVector[j].valor){
+				menor = listVector[j];
 				index = j;
 			}
 		}
-		if(i!=index){
-			menor = listVector[index];
-			listVector[index]=listVector[i];
-			listVector[i]=menor;
-		}
+		listVector[index]=listVector[i];
+		listVector[i]=menor;
 	}
 }
 ///////////////////////////////////
@@ -180,18 +179,14 @@ void selectionSort(nodelist *listVector, int vectorLen){
 int main(){
 	//Declarações
 	int i;
-	//
-	int minNum=-100;//Número Mínimo
-	int maxNum=100;//Número Máximo
 	int vectorLen=20;//Comprimento do Vetor
-	//
 	int vector[vectorLen];//Vetor de ints
 	nodelist listVector[vectorLen];//Vetor de nodelists
 	fila fsent;//Sentinela da Fila
 	list sent;//Sentinela da Lista
 	
-	//1-Impressão do vetor
-	generateVector(minNum, maxNum, vector, vectorLen);
+	//1-Criação do vetor
+	generateVector(-100, 100, vector, vectorLen);
 //	printf("\nVetor Inicial:\n"); //TESTE
 //	printVector(vector, vectorLen);// TESTE
 	
@@ -208,12 +203,12 @@ int main(){
 	vectorizeList(&sent, listVector);//Transforma a Lista em Vetor
 	
 	//4-Ordenação do vetor
-	selectionSort(listVector,vectorLen);// Ordena o Vetor
+	selectionSort(listVector);// Ordena o Vetor
 //	printf("\n Vetor ordenado:\n");//TESTE
 //	printNodeVector(listVector,20);//TESTE
 	
 	//5-Passar do Vetor para a Fila
-	enQueue(listVector,&fsent,vectorLen);//Transforma o vetor em fila
+	enQueue(listVector,&fsent);//Transforma o vetor em fila
 //	printf("\n Fila ordenada:\n");//TESTE
 //	printFila(&fsent);//TESTE
 
