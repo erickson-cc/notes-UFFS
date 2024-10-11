@@ -5,7 +5,7 @@
  *	Erickson G. Müller
  *	Mat: 20230001178
  *	02 - Implemente a Ordenação Eficiente do Algoritmo quicksort.
- *	Ordenação: Quick Sort
+ *	Ordenação: Radix Sort
  *
 */
 
@@ -156,40 +156,47 @@ void printNodeVector(nodelist *listVector, int vectorLen){
 					/*
 	--Quick Sort--
 					*/
-void troca(nodelist *pos1, nodelist *pos2){
-	nodelist aux;
-	aux = *pos1;
-	*pos1 = *pos2;
-	*pos2 = aux;
-}
 
-int particiona(nodelist *listVector,int inicio,int fim){
-	int pv;
-	int k;
+void counting(nodelist *listVector, int vectorLen, int pos){
+	nodelist aux[vectorLen];
+	int count[10];
+	int digit;
 	int i;
-
-	pv = fim;
-	k = inicio;
-	for(i=inicio;i<fim;i++){
-		if(listVector[i].valor<=listVector[pv].valor){
-			troca(&listVector[i], &listVector[k]);
-			k++;
+	for(i=0;i<10;i++){
+		count[i]=0;
+	}
+	for(i=0;i<vectorLen;i++){
+		digit = (listVector[i].valor+count[i-1])%10;
+	}
+	for(i=vectorLen-1;i>=0;i--){
+		digit = (listVector[i].valor/pos)%10;
+		count[digit]--;
+		aux[count[digit]] = listVector[i];
+	}
+	for(i=0;i<vectorLen;i++){
+		listVector[i] = aux[i];
+	}
+}
+int buscaMaior(nodelist *listVector, int vectorLen){
+	int maior;
+	int i;
+	maior = 0;
+	for(i=0;i<vectorLen;i++){
+		if(listVector[i].valor>maior){
+			maior = listVector[i].valor;
 		}
 	}
+	return maior;
+}
+void radixSort(nodelist *listVector, int vectorLen){
+	int pos;
+	int max;
+	max = buscaMaior(listVector, vectorLen);
+	for(pos=1;listVector[max].valor/pos>0;pos*=10){
+		counting(listVector, vectorLen, pos);
+	}
+}
 
-	if(listVector[k].valor>listVector[pv].valor){
-		troca(&listVector[k], &listVector[pv]);
-	}
-	return k;
-}
-void quickSort(nodelist *listVector, int inicio, int fim){
-	if(fim>inicio){
-		int posPivo;
-		posPivo = particiona(listVector, inicio, fim);
-		quickSort(listVector, inicio, posPivo-1);
-		quickSort(listVector, posPivo+1, fim);
-	}
-}
 ///////////////////////////////////
 
 int main(){
@@ -207,30 +214,30 @@ int main(){
 	
 	//1-Criação do vetor
 	generateVector(minNum, maxNum, vector, vectorLen);
-//	printf("\nVetor Inicial:\n"); //TESTE
-//	printVector(vector, vectorLen);// TESTE
-	
+	printf("\nVetor Inicial:\n"); //TESTE
+	printVector(vector, vectorLen);// TESTE
+
 	//2-Criação da Lista
 	createList(&sent);	
 	for(i=0;i<vectorLen;i++){
 		// o loop está fora da função pois appendtoList não é uma função de transformar vetor em lista
 		appendtoList(&sent,vector[i]);
 	}
-//	printf("\nLista encadeada não ordenada:\n");//TESTE
-//	printList(&sent);//TESTE
+	printf("\nLista encadeada não ordenada:\n");//TESTE
+	printList(&sent);//TESTE
 	
 	//3-Passar da Lista para o Vetor
 	vectorizeList(&sent, listVector);//Transforma a Lista em Vetor
 	
 	//4-Ordenação do vetor
-	quickSort(listVector, 0, vectorLen);// Ordena o Vetor
-//	printf("\n Vetor ordenado:\n");//TESTE
-//	printNodeVector(listVector,20);//TESTE
+	radixSort(listVector, vectorLen);// Ordena o Vetor
+	printf("\n Vetor ordenado:\n");//TESTE
+	printNodeVector(listVector,20);//TESTE
 	
 	//5-Passar do Vetor para a Fila
 	enQueue(listVector,&fsent,vectorLen);//Transforma o vetor em fila
-//	printf("\n Fila ordenada:\n");//TESTE
-//	printFila(&fsent);//TESTE
+	printf("\n Fila ordenada:\n");//TESTE
+	printFila(&fsent);//TESTE
 
 	return 0;
 }
