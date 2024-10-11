@@ -4,8 +4,8 @@
  *	Pesquisa e Ordenação de Dados
  *	Erickson G. Müller
  *	Mat: 20230001178
- *	02 - Implemente a Ordenação Eficiente do Algoritmo quicksort.
- *	Ordenação: Radix Sort
+ *	01 - Implemente uma ordenação ineficiente a sua escolha:
+ *	Ordenação: Selection Sort
  *
 */
 
@@ -94,7 +94,7 @@ void enQueue(nodelist *listVector, fila *fsent, int vectorLen){
 	nodefila *aux;
 	fsent->head = NULL;//createFila()
 	fsent->tail = NULL;//createFila()
-	for(i=0;i<vectorLen;i++){//CALCULAR O TAMANHO DO VETOR
+	for(i=0;i<vectorLen;i++){
 		aux = (nodefila *)malloc(sizeof(nodefila));
 		aux->valor = listVector[i].valor;
 		aux->next = NULL;
@@ -154,60 +154,36 @@ void printNodeVector(nodelist *listVector, int vectorLen){
 }
 ///////////////////////////////////
 					/*
-	--Radix Sort--
+	--Selection Sort--
 					*/
-
-void counting(nodelist *listVector, int vectorLen, int pos){
-	nodelist aux[vectorLen];
-	int count[10];
-	int digit;
-	int i;
-	for(i=0;i<10;i++){//Inicializa o vetor count
-		count[i]=0;
-	}
-	for(i=0;i<vectorLen;i++){//Conta os dígitos
-		digit = (listVector[i].valor/pos)%10;
-		count[digit]++;
-	}
-	for(i=1;i<10;i++){//Soma acumulada do vetor count
-		count[i] = count[i]+count[i-1];
-	}
-	for(i=vectorLen-1;i>=0;i--){
-		digit = (listVector[i].valor/pos)%10;
-		count[digit]--;
-		aux[count[digit]] = listVector[i];
-	}
-	for(i=0;i<vectorLen;i++){
-		listVector[i] = aux[i];
-	}
-}
-int buscaMaior(nodelist *listVector, int vectorLen){
-	int maior;
-	int i;
-	maior = 0;
-	for(i=0;i<vectorLen;i++){
-		if(listVector[i].valor>maior){
-			maior = listVector[i].valor;
+void selectionSort(nodelist *listVector, int vectorLen){
+//Vai procurando o menor valor e posicionando no primeiro index não ordenado 
+	int i;//ultimo ordenado
+	int j;//comparação
+	int index; //Armazena o Índice do menor valor da parte não ordenada
+	nodelist menor;// funciona como um aux
+	for(i=0;i<vectorLen-1;i++){
+		index = i;//último ordenado
+		for(j=i+1;j<vectorLen;j++){
+			if(listVector[index].valor>listVector[j].valor){
+				index = j;
+			}
+		}
+		if(i!=index){//Faz a troca
+			menor = listVector[index];
+			listVector[index]=listVector[i];
+			listVector[i]=menor;
 		}
 	}
-	return maior;
 }
-void radixSort(nodelist *listVector, int vectorLen){
-	int pos;
-	int maior;
-	maior = buscaMaior(listVector, vectorLen);
-	for(pos=1;maior/pos>0;pos=pos*10){
-		counting(listVector, vectorLen, pos);
-	}
-}
-
 ///////////////////////////////////
 
 int main(){
 	//Declarações
 	int i;
 	//
-	int maxNum=200;//Número Máximo
+	int minNum=-100;//Número Mínimo
+	int maxNum=100;//Número Máximo
 	int vectorLen=20;//Comprimento do Vetor
 	//
 	int vector[vectorLen];//Vetor de ints
@@ -215,32 +191,32 @@ int main(){
 	fila fsent;//Sentinela da Fila
 	list sent;//Sentinela da Lista
 	
-	//1-Criação do vetor
-	generateVector(0, maxNum, vector, vectorLen);
-	printf("\nVetor Inicial:\n"); //TESTE
-	printVector(vector, vectorLen);// TESTE
-
+	//1-Impressão do vetor
+	generateVector(minNum, maxNum, vector, vectorLen);
+	printf("\nVetor Inicial:\n"); //DEMONSTRAÇÃO
+	printVector(vector, vectorLen);//DEMONSTRAÇÃO
+	
 	//2-Criação da Lista
 	createList(&sent);	
 	for(i=0;i<vectorLen;i++){
 		// o loop está fora da função pois appendtoList não é uma função de transformar vetor em lista
 		appendtoList(&sent,vector[i]);
 	}
-	printf("\nLista encadeada não ordenada:\n");//TESTE
-	printList(&sent);//TESTE
+	printf("\nLista encadeada não ordenada:\n");//DEMONSTRAÇÃO
+	printList(&sent);//DEMONSTRAÇÃO
 	
 	//3-Passar da Lista para o Vetor
 	vectorizeList(&sent, listVector);//Transforma a Lista em Vetor
 	
 	//4-Ordenação do vetor
-	radixSort(listVector, vectorLen);// Ordena o Vetor
-	printf("\n Vetor ordenado:\n");//TESTE
-	printNodeVector(listVector,20);//TESTE
+	selectionSort(listVector,vectorLen);// Ordena o Vetor
+	printf("\n Vetor ordenado:\n");//DEMONSTRAÇÃO
+	printNodeVector(listVector,20);//DEMONSTRAÇÃO
 	
 	//5-Passar do Vetor para a Fila
 	enQueue(listVector,&fsent,vectorLen);//Transforma o vetor em fila
-	printf("\n Fila ordenada:\n");//TESTE
-	printFila(&fsent);//TESTE
+	printf("\n Fila ordenada:\n");//DEMONSTRAÇÃO
+	printFila(&fsent);//DEMONSTRAÇÃO
 
 	return 0;
 }

@@ -4,7 +4,7 @@
  *	Pesquisa e Ordenação de Dados
  *	Erickson G. Müller
  *	Mat: 20230001178
- *	02 - Implemente a Ordenação Eficiente do Algoritmo quicksort.
+ *	03 – Implemente a ordenação linear radix sort.
  *	Ordenação: Radix Sort
  *
 */
@@ -172,19 +172,19 @@ void counting(nodelist *listVector, int vectorLen, int pos){
 	for(i=1;i<10;i++){//Soma acumulada do vetor count
 		count[i] = count[i]+count[i-1];
 	}
-	for(i=vectorLen-1;i>=0;i--){
+	for(i=vectorLen-1;i>=0;i--){//Posiciona os nodos no vetor aux
 		digit = (listVector[i].valor/pos)%10;
-		count[digit]--;
+		count[digit]--;//Posição no aux
 		aux[count[digit]] = listVector[i];
 	}
-	for(i=0;i<vectorLen;i++){
+	for(i=0;i<vectorLen;i++){//Passa o vetor aux para o vetor inicial
 		listVector[i] = aux[i];
 	}
 }
 int buscaMaior(nodelist *listVector, int vectorLen){
 	int maior;
 	int i;
-	maior = 0;
+	maior = 0;//Radix ordena a partir do 0
 	for(i=0;i<vectorLen;i++){
 		if(listVector[i].valor>maior){
 			maior = listVector[i].valor;
@@ -194,9 +194,9 @@ int buscaMaior(nodelist *listVector, int vectorLen){
 }
 void radixSort(nodelist *listVector, int vectorLen){
 	int pos;
-	int maior;
+	int maior;//Maior valor do vetor de nodelist
 	maior = buscaMaior(listVector, vectorLen);
-	for(pos=1;maior/pos>0;pos=pos*10){
+	for(pos=1;maior/pos>0;pos=pos*10){//Chama o counting até o dígito de maior valor
 		counting(listVector, vectorLen, pos);
 	}
 }
@@ -217,8 +217,8 @@ int main(){
 	
 	//1-Criação do vetor
 	generateVector(0, maxNum, vector, vectorLen);
-	printf("\nVetor Inicial:\n"); //TESTE
-	printVector(vector, vectorLen);// TESTE
+	printf("\nVetor Inicial:\n"); //DEMONSTRAÇÃO
+	printVector(vector, vectorLen);//DEMONSTRAÇÃO
 
 	//2-Criação da Lista
 	createList(&sent);	
@@ -226,21 +226,21 @@ int main(){
 		// o loop está fora da função pois appendtoList não é uma função de transformar vetor em lista
 		appendtoList(&sent,vector[i]);
 	}
-	printf("\nLista encadeada não ordenada:\n");//TESTE
-	printList(&sent);//TESTE
+	printf("\nLista encadeada não ordenada:\n");//DEMONSTRAÇÃO
+	printList(&sent);//DEMONSTRAÇÃO
 	
 	//3-Passar da Lista para o Vetor
 	vectorizeList(&sent, listVector);//Transforma a Lista em Vetor
 	
 	//4-Ordenação do vetor
 	radixSort(listVector, vectorLen);// Ordena o Vetor
-	printf("\n Vetor ordenado:\n");//TESTE
-	printNodeVector(listVector,20);//TESTE
+	printf("\n Vetor ordenado:\n");//DEMONSTRAÇÃO
+	printNodeVector(listVector,20);//DEMONSTRAÇÃO
 	
 	//5-Passar do Vetor para a Fila
 	enQueue(listVector,&fsent,vectorLen);//Transforma o vetor em fila
-	printf("\n Fila ordenada:\n");//TESTE
-	printFila(&fsent);//TESTE
+	printf("\n Fila ordenada:\n");//DEMONSTRAÇÃO
+	printFila(&fsent);///DEMONSTRAÇÃO
 
 	return 0;
 }
