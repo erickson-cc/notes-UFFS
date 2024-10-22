@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.21)  18 OCT 2024 20:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.21)  21 OCT 2024 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -721,31 +721,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--51
 
  []
 
-[2] (./Revis찾o P2.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 78--82
+
+ []
+
+[3]
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 102.
+
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 102.
+
+
+Missing character: There is no � in font pxr!
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 129--133
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--143
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--146
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 169--174
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--178
+
+ []
+
+[6] [7] (./Revis찾o P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 24751 strings out of 476076
- 625926 string characters out of 5793775
- 1935187 words of memory out of 5000000
- 46451 multiletter control sequences out of 15000+600000
- 585848 words of font info for 118 fonts, out of 8000000 for 9000
+ 24760 strings out of 476076
+ 626048 string characters out of 5793775
+ 1938187 words of memory out of 5000000
+ 46457 multiletter control sequences out of 15000+600000
+ 586998 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,6n,107p,734b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,8n,107p,734b,609s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/pxfonts/pxex.pfb></usr/share/texmf-
 dist/fonts/type1/public/pxfonts/pxsy.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/pxfonts/pxsyb.pfb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpxmi.p
-fb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpxr.pfb></usr/share/texmf
--dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/ur
-w/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.p
-fb>
-Output written on "Revis찾o P2.pdf" (2 pages, 66559 bytes).
+lic/pxfonts/pxsyb.pfb></usr/share/texmf-dist/fonts/type1/public/pxfonts/pxsyc.p
+fb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpcxr.pfb></usr/share/texm
+f-dist/fonts/type1/public/pxfonts/rpxi.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/pxfonts/rpxmi.pfb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpxr.
+pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
+f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
+rw/palatino/uplri8a.pfb>
+Output written on "Revis찾o P2.pdf" (7 pages, 98674 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 87 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

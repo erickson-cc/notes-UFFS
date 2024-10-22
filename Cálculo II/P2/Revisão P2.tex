@@ -24,7 +24,7 @@
 			\item Verificação de Continuidade de funções.
 			\item Derivadas parciais e aplicações.
 			\item Gradiente.
-			\item Multiplicadores de Lagrange.
+			\item Multiplicadores de Lagranje.
 			\item Integração dupla.
 			\item Integração tripla
 			
@@ -51,4 +51,166 @@
 			$$h(t)= f(g(t))=f(x(t),y(t))$$
 		é diferenciável $\forall t \in B$ e $\dfrac{dh}{dt}$ é dada por:
 			$$\dfrac{dh}{dt} = \dfrac{\varphi f}{\varphi x}. \dfrac{dx}{dt}+\dfrac{\varphi f}{\varphi y}.\dfrac{dy}{dt}$$
+		Exemplo: sejam $h(t)=f(x(t),y(t))$, $f(x,y)=5xy-y^2$ e $x(t) = 2t$, $y(t)=5t+3$\\
+		Verificar que neste caso vale (*). Usando (*)\\
+		$$\dfrac{dh}{dt} = 5y.2+(5x-2y).5$$
+		$$=5.(5t+3).2+(5(2t)-2(5t+3)).5$$
+		$$=50.t+30+(10t-10t-6).5 = 50t$$
+		$$\to h(t) = f(2t,5t+3)$$
+		$$=5.(2t)(5t+3)-(5t+3)^2$$
+		$$=50t^2+30t-25t^2-30t-9$$
+		$$= 25t^2-9$$
+		$$h'(t) = 50t$$
+		confere\\
+		\textbf{Proposição 2:} Sejam A e B conjuntos abertos em $\mathbb{R}^2$, e sejam $z=f(u,v)$, $u=u(x,y)$ e $v=v(x,y)$ funções diferenciáveis, então a função composta
+		
+	\section{Teorema de Weierstrass} 
+		Seja $A \subset \mathbb{R}^2$ um domínio fechado e limitado, $f:A \to \mathbb{R}$ definida por $z=f(x,y)$ uma função contínua em A. Então existem $P_1$, $P_2 \in A$ tais que $f(P_1) \leq f(P) \leq f(P_2), \forall P \in A$\\
+		\textbf{Exemplo:} Seja dada a função $f(x,y)=y^3-x^2y+4y$. Determine o valor de máximo e o valor de mínimo de f sobre o conjunto A delimitado pelo triângulo de vértices $M(-2,0)$, $N(0,2)$, $0(0,-2)$  \textit{FIGURA 1}.
+		\textbf{Observação:}
+		\begin{itemize}
+			\item Pelo Teorema de Weierstrass, f admite máximo e mínimo global sobre A.
+			\item Para determinarmos os candidatos a extremos máximo e mínimo, vamos analisar separadamente o interior de A e a fronteira de A.
+			\item Os candidatos a extremos que estão localizados no interior de A estão entre os pontos críticos da função. Isto é: onde $\dfrac{\varphi f}{\varphi x}(x,y)=0$ e $\dfrac{\varphi f}{\varphi y}(x,y)=0$ ou onde essas derivadas parciais não existem.
+		\end{itemize}
+		Determinar os candidatos a extremos que estão no interior de A.
+		$$\dfrac{\varphi f}{\varphi x}(x,y)=-2xy$$
+		$$\dfrac{\varphi f}{\varphi y}(x,y)= 3y^2-x^2+4$$
+		logo\\
+		$\dfrac{\varphi f}{\varphi x}=0$ e $\dfrac{\varphi f}{\varphi y}= 0$\\
+		$-2xy=0$ e $3y^2 -x^2+4=0$\\
+		$$-2xy=0 \to xy=0 $$
+		logo $ x=0$ ou $y=0$
+		se $x=0 \to 3y^{2-0^2}+4=0$, $\nexists y \in \mathbb{R}$\\
+		se $y=0 \to 3.0^2-x^2+4=0\to x= \pm 2$\\%ajustar
+		Pontos críticos (candidatos a extremos): $(-2,0),(2,0)$.\\
+		Nenhum dos dois pontos está no interior de A. Logo não são candidatos a extremos.\\
+		Determinar os candidatos a extremos que estão na fronteira de A.
+		$$\overline{MN} = (-2,0),(0,2) \to y = ax+b$$
+		$$0 = a.(-2) +b$$
+		$$-2a+2=0\to a = 1$$
+		e
+		$$2=a.0+b \to b=2$$
+		$$y=x+2, -2\leq x \leq 0$$
+		
+		$$\overline{MO}=(-2,0),(0,-2)$$
+		$$0=a(-2)+b \to -2a - 2 = 0 $$
+		e
+		$$-2 = a.0+b \to b = -2 \to a = -1$$
+		$$y = -x-2, -2\leq x \leq 0$$
+		
+		Sobre o segmento $\overline{MN}: y=x², -2 \leq x \leq 0$:\\
+		substituindo na função:
+		$$f(x,y) = f(x,x+2)$$
+		$$= (x+2)^3-x^2.(x+2)+4(x+2)$$
+		$$= x^3+6x^2+12x+8-x^3-2x^2+4x+8$$%(a+b)³=a³+3a²b+3ab²+b³
+		$$=4x^2+16x+16, -2\leq x \leq 0$$% o x varia de -2 até 0
+		Para determinarmos os candidatos a extremos sobre $\overline{MN}$ usamos os conceitos de Cálculo I.
+		$$f_1(x)=4x^2+16x+16$$
+		$$f'_1(x)=8x+16=0 \to 8x+16=0 \to x=-2$$
+		$x=-2$ não é ponto interior do segmento $\overline{MN}$. Logo os pontos críticos sobre o segmento $\overline{MN}$ não serão apenas seus extremos $x=-2$ e $x=0$.
+		\textbf{Candidatos a extremos:} (-2,0), (0,2)\\
+		quando $x= -2$ e $y=0$.\\
+		quando $x=0$ e $y=2$.\\
+		$$\overline{ON}: x=0, -2 \leq y \leq 2$$
+		$$\overline{MN}: y= x+2$$
+		\textbf{Segmento $\overline{ON}$:} $x=0, -2 \leq y \leq -2$\\
+		Substituindo na função f.
+		$$f(0,y) = y^3-0^2.y+4y = y^3+4y$$
+		$$f_2(y) = y^3+4y$$
+		$$f'_2(y) = 3y^2 +4 = 0 $$
+		$\nexists y$ pois são dois quadrados e não tem como ser menor que 0.\\
+		Logo, neste segmento, os candidatos a extremos serão: $(0,-2), (0,2)$
+		\textbf{Segmento $\overline{MO}$:}$y=-x-2,-2 \leq x \leq 0$ \\
+		Substituindo na função f:\\
+		$$f(x,-x-2)=(-x-2)^3-x^2(-x-2)+4(-x-2)$$
+		$$=-x^3-6x^2-12x-8+x^3+2x^2-4x-8$$
+		$$=4x^2-16x-16 = f_3(x)$$
+		$$f'_3(x)=-8x-16=0 \to 8x+16 = 0 \to x=-2$$
+		que está no extremo.\\
+		São candidatos a extremos sobre $\overline{MO}$: $(-2,0),(0,-2)$\\
+		Quadro de Análise \textit{FIGURA 2}\\
+		
+		\textbf{Exemplo:} A temperatura T em qualquer ponto $(x,y)$ do plano é dada por $T(x,y) = 3y^2+x^2-x$. Qual é a temperatura máxima e mínima sobre o disco fechado de raio 2 centrado na origem do sistema ortogonal cartesiano $p=(0,0)$?\\
+		Região A = $\{(x,y) \in \mathbb{R}^2; x^2+y^2 \leq 4\}$\textit{FIGURA 3}\\
+		\textbf{Interior de A: }\\
+		Pontos Críticos\\
+		$$\dfrac{\varphi f}{\varphi x}(x,y)=2x-1=0 \to x=\dfrac{1}{2}$$%derivada de f com relação a x
+		$$\dfrac{\varphi f}{\varphi y}(x,y)=6y=0 \to y=0$$
+		$(\dfrac{1}{2},0)$ está no interior de A.\\
+		\textbf{Fronteira de A:}\\
+		Pontos Críticos\\
+		$$x^2+y^2 =2^2$$
+		$$y^2=4-x^2, -2 \leq x \leq 2$$
+		Substituindo na função f:\\
+		$$T(x,y) = 3.(4-x^2)+x^2-x$$
+		$$= 12-3x^2+x^2-x = -2x^2-x+12$$
+		$$T_1(x) = -2x^2 -x +12$$
+		$$T'_1(x) = -4x-1=0 \to -4x-1=0 \to x = -\dfrac{1}{4}$$
+		Se $x = -\dfrac{1}{4}\to y^2 = 4-(\dfrac{-1}{4})^2= 4-\dfrac{1}{16}= \dfrac{63}{16}$
+		$$y = \dfrac{\pm \sqrt[]{63}}{4}$$
+		Sobre a fronteira de A, candidatos a extremos:
+			\begin{enumerate}
+				\item $(-\dfrac{1}{4},\dfrac{\sqrt[]{63}}{4})$
+				\item $(-\dfrac{1}{4},-\dfrac{\sqrt[]{63}}{4})$
+				\item $ (-2,0)$
+				\item $(2,0)$
+			\end{enumerate}
+		extremos do intervalo \textit{-2 e 2}, $x=2\to y^2=0$, $x=2 \to y^2 =0 \to y = 0$\\
+		Quadro de Análise \textit{FIGURA 4}
+		
+	\section{Máximos e Mínimos Condicionados}
+		Considere os problemas:
+		\begin{itemize}
+			\item min $f(x,y) = x^2+y^2$ \textit{problema de otimização irrestrito/livre}
+			\item min $f(x,y) = x^2 +y^2$\\
+			sujeito a $x+y=1$  \textit{problema de otimização restrita/condicional}
+		\end{itemize}
+		\textit{FIGURA 5}]\\
+		Problemas envolvendo Funções de duas variáveis e uma restrição:\\
+		Considere o problema:\\
+		max $f(x,y)$\\
+		sujeito a $g(x,y) = 0$\\
+		
+		\textbf{Proposição}: Seja $f(x,y)$ uma função diferenciável sobre um domínio U. Seja $g(x,y)$ uma função com derivadas parciais contínuas em U. Tal que o gradiente de $g(x,y)$ não pode ser vetor nulo ($\nabla g(x,y) \neq (0,0)$). Gradiente é o vetor formado pelas derivadas parciais.\\
+		$\forall (x,y) \in V$, onde $V = \{(x,y) \in U , g(x,y)=0\}$\\
+		Uma condição necessária para que $(x_0,y_0) \in U$ seja extremo local de f em V é que:\\
+		$$\nabla f(x_0,y_0) = \lambda \nabla g(x_0,y_0)$$
+		para algum $\lambda \in \mathbb{R}$\\
+		\textbf{OBS:} Podemos dizer que os pontos de máximo ou de mínimo condicionados de $f$ devem satisfazer as seguintes condições:
+		$$g(x,y) = 0, \dfrac{\varphi f}{\varphi x} (x,y) = \lambda \dfrac{\varphi g}{\varphi x}(x,y)$$
+		e (*)
+		$$\dfrac{\varphi f}{\varphi y}(x,y) = \lambda \dfrac{\varphi g}{\varphi y} (x,y)$$
+		para algum $\lambda$ real.\\
+		\textbf{OBS:} O $\lambda \in \mathbb{R}$ que torna (*) compatível é denominado de multiplicador de Lagranje.
+		O método de Lagranje consiste em definir uma função de 3 variáveis.
+		$$L(x,y,\lambda)=f(x,y)-\lambda g(x,y)$$
+		Nesse caso a equação (*) é equivalente à equação gradiente $\nabla L (x,y,\lambda)=0$\\
+		Equação gradiente:
+		$$\nabla L (x,y,\lambda) = ( \dfrac{\varphi L}{\varphi x}, \dfrac{\varphi L}{\varphi y}, \dfrac{\varphi L}{\varphi \lambda})=(\dfrac{\varphi f}{\varphi x}-\lambda \dfrac{\varphi g}{\varphi x}, \dfrac{\varphi f}{\varphi y}- \lambda \dfrac{\varphi g}{\varphi y}, g(x,y))=(0,0,0)$$
+		Com isso os candidatos a extremos de $f$ sujeitos à restrição $g(x,y) = 0$ são exatamente os pontos críticos de L.\\
+		\textbf{Exemplo:} Uma casa retangular deve ser construída em um terreno triangular de forma que a casa tenha área máxima. Se o terreno tiver o formato \textit{FIGURA 6}, quais deverão ser as dimensões da casa?\\
+		Dimensões do terreno: Triângulo reto de base 30 e altura 10.\\
+		\textbf{Solução:}Vamos colocar a situação problema num sistema ortogonal cartesiano. \textit{FIGURA 7}.//
+		\textbf{Problema modelado:}\\
+		max $A(x,y) = x.y$\\
+		sujeito a $ 3y+x-30=0$\\
+		$\to$ Equação de Lagranje
+		$$L(x,y,\lambda)=xy-\lambda(3y+x-30)$$
+		$$\nabla L(x,y,\lambda) = (y-\lambda,x-3\lambda,-(3y+x-30))=0$$
+		$\nabla L = 0 \to $
+		\begin{itemize}
+			\item $y-\lambda =0 \to y= \lambda$
+			\item $x-3\lambda = 0 \to x = 3\lambda$
+			\item $3y+3x-30 = 0 \to 3\lambda+3\lambda-30 = 0$
+		\end{itemize}
+		logo\\
+		$6\lambda =30 \to \lambda = 5 \to x = 15$ e $y=5$\\
+		Logo a solução do problema será:
+		$$A(15,5) = 15.5=75m^2$$
+		\textbf{Analogamente}, podemos ter problemas da forma:\\
+		max/min $f(x,y,z)$\\
+		sujeito a $g(x,y,z)=0$\\
+		Neste caso a equação de Lagrange será:
+		$$L(x,y,z,\lambda) = f(x,y,z) - \lambda g(x,y,z)$$
  \end{document}
