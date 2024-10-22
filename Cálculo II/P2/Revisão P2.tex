@@ -62,7 +62,53 @@
 		$$= 25t^2-9$$
 		$$h'(t) = 50t$$
 		confere\\
-		\textbf{Proposição 2:} Sejam A e B conjuntos abertos em $\mathbb{R}^2$, e sejam $z=f(u,v)$, $u=u(x,y)$ e $v=v(x,y)$ funções diferenciáveis, então a função composta
+		\textbf{Proposição 2:} Sejam A e B conjuntos abertos em $\mathbb{R}^2$, e sejam $z=f(u,v)$, $u=u(x,y)$ e $v=v(x,y)$ funções diferenciáveis, então a função composta $h(x,y) = f(u(x,y),v(x,y))$ é diferenciável.
+		$$\dfrac{\varphi h}{\varphi x} = \dfrac{\varphi f}{\varphi u} . \dfrac{\varphi u}{\varphi x} +\dfrac{\varphi f}{\varphi v}. \dfrac{\varphi v}{\varphi x}$$
+		$$\dfrac{\varphi h}{\varphi y} = \dfrac{\varphi f}{\varphi u}.\dfrac{\varphi u}{\varphi y}+\dfrac{\varphi f}{\varphi v}.\dfrac{\varphi v}{\varphi y}$$
+		%Tinha algo aqui que terei que conferir no livro
+		\textbf{Exemplo:} Sejam $f(u,v) =2u^3-3v+3	2$, $w(x,y)=2x-y$ e $v(x,y)=2x - xy^2$. Determine $\dfrac{\varphi f}{\varphi x}$ e $\dfrac{\varphi f}{\varphi y}$:
+		$$\to \dfrac{\varphi f}{\varphi x}(x,y)=\dfrac{\varphi f}{\varphi u}.\dfrac{\varphi u}{\varphi x} + \dfrac{\varphi f}{\varphi v}. \dfrac{\varphi v}{\varphi x}$$	
+		$$= 6u^2.2-5.(2-y^2)= 12.(2x-y)^2-5.(2-y^2)$$		
+		
+		$$\to \dfrac{\varphi f}{\varphi y}(x,y)= \dfrac{\varphi f}{\varphi u}.\dfrac{\varphi u}{\varphi y}+ \dfrac{\varphi f}{\varphi v}.\dfrac{\varphi v}{\varphi y}$$
+		$$= 6u^2.(-1)-5.(-2xy)= -6.(2x-y)^2+10xy$$
+		
+		%Ver no livro a generalização da regra da cadeia
+	\section{Derivadas Parciais Sucessivas}
+		Seja $z=f(x,y)$, já sabemos como construir as funções $\dfrac{\varphi f}{\varphi x}, \dfrac{\varphi f}{\varphi y}$. Da mesma forma, podemos construir as funções:
+		$$\dfrac{\varphi ^2 f}{\varphi x^2} = \dfrac{\varphi}{\varphi x}.(\dfrac{\varphi f}{\varphi x})$$
+		$$\dfrac{\varphi^2f}{\varphi y . \varphi x}= \dfrac{\varphi}{\varphi y}.(\dfrac{\varphi f}{\varphi x})$$
+		$$\dfrac{\varphi ^3f}{\varphi y^2.\varphi x} = \dfrac{\varphi}{\varphi y}.(\dfrac{\varphi}{\varphi y}.(\dfrac{\varphi f}{\varphi x}))$$
+		\textbf{Exemplo:} Dada a função $f(x,y) = 5x^2y-y^3x^2+9$. Determine as seguintes funções derivadas:
+		\begin{enumerate}
+			\item $\dfrac{\varphi^2f}{\varphi x^2}$
+			\item $\dfrac{\varphi ^2 f}{\varphi y \varphi x}$
+			\item $\dfrac{\varphi ^3f}{\varphi y^2\varphi x}$
+		\end{enumerate}
+		1.
+		$$\dfrac{\varphi f}{\varphi x} = 10xy-2y^3x$$
+		$$\dfrac{\varphi ^2f}{\varphi x^2} = \dfrac{\varphi}{\varphi x}.(\dfrac{\varphi f}{\varphi x}) = 10y - 2y^3$$
+		2.
+		$$\dfrac{\varphi ^2f}{\varphi y \varphi x}=\dfrac{\varphi}{\varphi y}.(\dfrac{\varphi f}{\varphi x})=10-6xy^2$$
+		3.
+		$$\dfrac{\varphi ^3 f}{\varphi y^2 \varphi x}=\dfrac{\varphi}{\varphi y}.(\dfrac{\varphi}{\varphi y}.(\dfrac{\varphi f}{\varphi x})) = -12xy$$
+		
+		
+	\section{Teorema de Schwartz}
+		Seja $f:A \subset \mathbb{R}^2\to \mathbb{R}$, $A$ aberto. Se $f$ for de classe $C^2$ em $A$, então:
+		$$\dfrac{\varphi ^2 f}{\varphi x \varphi y}(x,y) = \dfrac{\varphi ^2 f}{\varphi y \varphi x}(x,y), \forall (x,y) \in A$$
+		\textbf{Exemplo:} Dada a função $f(x,y)= 4x^3y^4+y^2$.\\
+		Verifique se $\dfrac{\varphi ^2 f}{\varphi x \varphi y}(x,y) = \dfrac{\varphi ^2 f}{\varphi y \varphi x}$:
+		$$\dfrac{\varphi f}{\varphi x} = 12x^2.y^4$$
+		$$\dfrac{\varphi ^2 f}{\varphi y \varphi x} =\dfrac{\varphi}{\varphi y} .(\dfrac{\varphi f}{\varphi x}) = 48 x^2y^3$$
+		ou
+		$$\dfrac{\varphi f}{\varphi y} = 16 x^3y^3+2y$$
+		$$\dfrac{\varphi ^2 f}{\varphi x \varphi y} = \dfrac{\varphi}{\varphi x}.(\dfrac{\varphi f}{\varphi y}) = 48x^2y^3$$
+	\section{Máximos e Mínimos de Funções de Duas Variáveis}
+		\textbf{Definição:} Seja $z=f(x,y)$ uma função de duas variáveis, então:
+		\begin{enumerate}
+			\item $(x_0,y_0) \in D(f)$ é um ponto de \textbf{máximo local} de $f$, se existir uma bola aberta $B = B((x_0,y_0),r)$ tal que $f(x,y) \leq f(x_0,y_0) , \forall (x,y) \in B \bigcap D(f)$
+		\end{enumerate}
 		
 	\section{Teorema de Weierstrass} 
 		Seja $A \subset \mathbb{R}^2$ um domínio fechado e limitado, $f:A \to \mathbb{R}$ definida por $z=f(x,y)$ uma função contínua em A. Então existem $P_1$, $P_2 \in A$ tais que $f(P_1) \leq f(P) \leq f(P_2), \forall P \in A$\\

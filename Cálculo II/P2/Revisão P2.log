@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.21)  21 OCT 2024 21:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024/Arch Linux) (preloaded format=pdflatex 2024.9.21)  22 OCT 2024 20:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,62 +726,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--56
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 78--82
-
- []
-
-[3]
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 102.
-
-
-
-LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 102.
-
-
-Missing character: There is no � in font pxr!
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 121--126
+[2] [3]
+Overfull \hbox (0.48248pt too wide) in paragraph at lines 107--107
+[]\OT1/pxr/bx/n/14.4 M[]aximos e M[]^^Pnimos de Fun[][]oes de Duas Vari[]aveis 
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--138
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Underfull \hbox (badness 10000) in paragraph at lines 124--128
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 169--174
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 148.
+
+
+
+LaTeX Warning: Command \texttwosuperior invalid in math mode on input line 148.
+
+
+Missing character: There is no � in font pxr!
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 175--178
+Underfull \hbox (badness 10000) in paragraph at lines 167--172
 
  []
 
-[6] [7] (./Revis찾o P2.aux)
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 175--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--189
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 215--220
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
+
+ []
+
+[8] [9] (./Revis찾o P2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -790,7 +796,7 @@ L3 programming layer <2024-02-20>
 Here is how much of TeX's memory you used:
  24760 strings out of 476076
  626048 string characters out of 5793775
- 1938187 words of memory out of 5000000
+ 1939187 words of memory out of 5000000
  46457 multiletter control sequences out of 15000+600000
  586998 words of font info for 121 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -804,10 +810,10 @@ ublic/pxfonts/rpxmi.pfb></usr/share/texmf-dist/fonts/type1/public/pxfonts/rpxr.
 pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texm
 f-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/palatino/uplri8a.pfb>
-Output written on "Revis찾o P2.pdf" (7 pages, 98674 bytes).
+Output written on "Revis찾o P2.pdf" (9 pages, 105738 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 55 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
