@@ -1,0 +1,36 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY controlador IS PORT (
+	------ Variáveis ------
+	-- A: in / Vai abrir o portão
+	-- F: in / Vai fechar o portão
+		-- A xor F = Motor funcionando
+	-- SA <= porta
+	-- SF <= not porta
+	-- SF = SA when porta = x
+	-- B: in 
+		-- if AF == 11
+	-- S: in
+	-- Clock: in
+		KEY: in STD_LOGIC_VECTOR(3 downto 0);
+			-- 3 = B
+			--	1 = S
+			-- 0 = 0
+		LEDG: out STD_LOGIC_VECTOR(7 downto 0)
+		
+	);
+END ENTITY controlador;
+
+ARCHITECTURE behave OF controlador IS
+	--TYPE Tipo_estado IS (A, B, C);
+	--SIGNAL nome_estado: Tipo_estado;
+	BEGIN
+		LEDG(7) <= KEY(3);
+		LEDG(1) <= KEY(1);
+		LEDG(0) <= KEY(0);
+		
+		--PROCESS(Reset, Clock);
+		--BEGIN
+		-- if (xyz) then	
+END ARCHITECTURE;
