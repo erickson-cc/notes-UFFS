@@ -46,81 +46,67 @@ ENTITY portao IS PORT (
 	KEY2: in STD_LOGIC;
 	KEY1: in STD_LOGIC;
 	KEY0: in STD_LOGIC;
-			-- KEY(3) = B
-			-- KEY(2) = S
-			-- KEY(1) = Reset
-			-- KEY(0) = Clock
 
 	--LEDG: out STD_LOGIC_VECTOR(7 downto 0)
 	LEDG7: out STD_LOGIC;
 	LEDG6: out STD_LOGIC;
 	LEDG1: out STD_LOGIC;
 	LEDG0: out STD_LOGIC
-			-- LEDG(7) = F
-			-- LEDG(6) = A
-			-- LEDG(1) = SF
-			-- LEDG(0) = SA		
+
 	);
 END ENTITY portao;
 
 ARCHITECTURE behave OF portao IS
-	--TYPE Tipo_estado IS (A, B, C);
-	--SIGNAL nome_estado: Tipo_estado;
-	-- Fazer um process (reset, clock) e outro process da lógica da saída (pg 17, 18)
-	-- Criar um signal para o F e A 
-	--signal SF;-- := LEDG(1);
-	--signal SA;--:= LEDG(0);
-	--signal F; -- := LEDG(7);
-	--signal A; -- := LEDG(6);
-	--TYPE tipo_estado IS (Ab,c1,c2,c3,Fc);
-	--signal estado := F1;
-
 	TYPE tipo_estado IS (Ab,c1,c2,c3,Fc);
 	signal estado : tipo_estado;
 	signal A: STD_LOGIC;
 	signal F: STD_LOGIC;
 	BEGIN
-		process(KEY1, KEY0) begin -- Reset e Clock 
+		process(KEY3, KEY1, KEY0) begin -- Reset e Clock 
+		-- Process Referente à transição de estados do sistema --
 			if(KEY1 = &apos;1&apos;) then --Reset
 				estado &lt;= Fc;
-			elsif(KEY0&apos;EVENT AND KEY0 = &apos;0&apos;) then
+			elsif(KEY3&apos;EVENT AND KEY3 = &apos;1&apos;) then
 				case estado is
 					when Fc =&gt;
-						if A = &apos;1&apos; and F = &apos;0&apos; then
-							estado &lt;= c1;
-						else
-							estado &lt;= Fc;
-						end if;
+						estado &lt;= c1;
 					when c1 =&gt;
-						if A = &apos;1&apos; and F = &apos;0&apos; then
+					when c2 =&gt;
+					when c3 =&gt;
+					when Ab =&gt;
+						estado &lt;= c3;
+
+				end case;
+			elsif(KEY0&apos;EVENT AND KEY0 = &apos;1&apos;) then
+				case estado is
+					when Fc =&gt;
+
+					when c1 =&gt;
+						if A = &apos;1&apos; then
 							estado &lt;= c2;
-						elsif F = &apos;1&apos; and A = &apos;0&apos; then
+						elsif F = &apos;1&apos; then
 							estado &lt;= Fc;
 						else
 							estado &lt;= c1;
 						end if;
 					when c2 =&gt;
-						if A = &apos;1&apos; and F = &apos;0&apos; then
+						if A = &apos;1&apos; then
 							estado &lt;= c3;
-						elsif F = &apos;1&apos; and A = &apos;0&apos; then
+						elsif F = &apos;1&apos; then
 							estado &lt;= c1;
 						else
 							estado &lt;= c2;
 						end if;
 					when c3 =&gt;
-						if A = &apos;1&apos; and F = &apos;0&apos; then
+						if A = &apos;1&apos; then
 							estado &lt;= Ab;
-						elsif F = &apos;1&apos; and A = &apos;0&apos; then
+						elsif F = &apos;1&apos; then
 							estado &lt;= c2;
 						else
 							estado &lt;= c3;
 						end if;
 					when Ab =&gt;
-						if F = &apos;1&apos; and A = &apos;0&apos; then
-							estado &lt;= c3;
-						else
-							estado &lt;= Ab;
-						end if;
+
 					
 				end case;
 			end if;	
@@ -129,14 +115,81 @@ ARCHITECTURE behave OF portao IS
 --
 --
 --
-		process(estado) begin
-			A &lt;= &apos;1&apos;;
-			LEDG1 &lt;= &apos;1&apos; when estado = Fc else &apos;0&apos;;
-			LEDG0 &lt;= &apos;1&apos; when estado = Ab else &apos;0&apos;;
+
+		process(estado, KEY3) begin
+		-- Process Referente à Lógica de Saída do sistema
+			if(KEY3&apos;EVENT AND KEY3 = &apos;1&apos;) then -- Botão B
+				case estado is
+					when Fc =&gt;
+						A &lt;= &apos;1&apos;;
+						F &lt;= &apos;0&apos;;
+					when c1 =&gt;
+					when c2 =&gt;
+					when c3 =&gt;
+					when Ab =&gt;
+						A &lt;= &apos;0&apos;;
+						F &lt;= &apos;1&apos;;
+				end case;
+			else
+				case estado is
+					when Fc =&gt;
+						if(KEY2 = &apos;1&apos;) then
+							A&lt;= not A;
+							F&lt;= not F;
+						else
+							LEDG1&lt;= &apos;1&apos;;
+							LEDG0&lt;= &apos;0&apos;;
+							A &lt;= &apos;0&apos;;
+							F &lt;= &apos;0&apos;;
+						end if;
+					when c1 =&gt;
+						if(KEY2 = &apos;1&apos;) then
+							A&lt;= not A;
+							F&lt;= not F;
+						elsif A = &apos;1&apos; then
+							LEDG1&lt;= &apos;1&apos;;
+						else
+							LEDG1&lt;= &apos;0&apos;;
+						end if;
+					when c2 =&gt;
+						if(KEY2 = &apos;1&apos;) then
+							A&lt;= not A;
+							F&lt;= not F;
+						else
+							LEDG0&lt;= &apos;0&apos;;
+							LEDG1&lt;= &apos;0&apos;;
+						end if;
+					when c3 =&gt;
+						if(KEY2 = &apos;1&apos;) then
+							A&lt;= not A;
+							F&lt;= not F;
+						elsif F = &apos;1&apos; then
+							LEDG0 &lt;= &apos;1&apos;;
+						else
+							LEDG0 &lt;= &apos;0&apos;;
+						end if;
+					when Ab =&gt;
+						LEDG1 &lt;= &apos;0&apos;;
+						LEDG0&lt;= &apos;1&apos;;
+						A &lt;= &apos;0&apos;;
+						F &lt;= &apos;0&apos;;
+
+				end case;
+			end if;	
 		end process;
+			LEDG7 &lt;= F;
+			LEDG6 &lt;= A;
 
+END ARCHITECTURE;
 
-END ARCHITECTURE;</string>
+--PROBLEMAS
+----------- 1-&gt; O botão S não desativa após o primeiro clock
+----------- 2-&gt; O botão S vai para o SF ou SA quando está no clock 1 ou 3
+----------- 3-&gt; Quando acionado o botão S no clock 1, para retornar para o 
+----------- SF ou SA, ainda assim leva 3 ticks de clock, quando deveria ser 1
+----------- 4-&gt; Ainda é necessário transformar o S em um signal, para armazenar
+----------- o sinal do botão físico sem precisar ficar segurando e soltar manualmente
+----------- 5-&gt; Botão S quando está em Fc ou Ab</string>
         </entry>
         <entry>
           <string>externalOutputs</string>
@@ -147,7 +200,7 @@ END ARCHITECTURE;</string>
           <int>6</int>
         </entry>
       </elementAttributes>
-      <pos x="280" y="320"/>
+      <pos x="280" y="480"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -161,7 +214,7 @@ END ARCHITECTURE;</string>
           <string>B</string>
         </entry>
       </elementAttributes>
-      <pos x="120" y="320"/>
+      <pos x="120" y="480"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -175,7 +228,7 @@ END ARCHITECTURE;</string>
           <string>S</string>
         </entry>
       </elementAttributes>
-      <pos x="160" y="340"/>
+      <pos x="160" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -189,7 +242,7 @@ END ARCHITECTURE;</string>
           <string>Reset</string>
         </entry>
       </elementAttributes>
-      <pos x="200" y="360"/>
+      <pos x="200" y="520"/>
     </visualElement>
     <visualElement>
       <elementName>In</elementName>
@@ -203,7 +256,7 @@ END ARCHITECTURE;</string>
           <string>Clock</string>
         </entry>
       </elementAttributes>
-      <pos x="240" y="380"/>
+      <pos x="240" y="540"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -217,7 +270,7 @@ END ARCHITECTURE;</string>
           <string>F</string>
         </entry>
       </elementAttributes>
-      <pos x="480" y="320"/>
+      <pos x="480" y="480"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -231,7 +284,7 @@ END ARCHITECTURE;</string>
           <string>A</string>
         </entry>
       </elementAttributes>
-      <pos x="520" y="340"/>
+      <pos x="520" y="500"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -245,7 +298,7 @@ END ARCHITECTURE;</string>
           <string>SF</string>
         </entry>
       </elementAttributes>
-      <pos x="560" y="360"/>
+      <pos x="560" y="520"/>
     </visualElement>
     <visualElement>
       <elementName>Out</elementName>
@@ -259,41 +312,41 @@ END ARCHITECTURE;</string>
           <string>SA</string>
         </entry>
       </elementAttributes>
-      <pos x="600" y="380"/>
+      <pos x="600" y="540"/>
     </visualElement>
   </visualElements>
   <wires>
     <wire>
-      <p1 x="120" y="320"/>
-      <p2 x="280" y="320"/>
+      <p1 x="120" y="480"/>
+      <p2 x="280" y="480"/>
     </wire>
     <wire>
-      <p1 x="400" y="320"/>
-      <p2 x="480" y="320"/>
+      <p1 x="400" y="480"/>
+      <p2 x="480" y="480"/>
     </wire>
     <wire>
-      <p1 x="160" y="340"/>
-      <p2 x="280" y="340"/>
+      <p1 x="160" y="500"/>
+      <p2 x="280" y="500"/>
     </wire>
     <wire>
-      <p1 x="400" y="340"/>
-      <p2 x="520" y="340"/>
+      <p1 x="400" y="500"/>
+      <p2 x="520" y="500"/>
     </wire>
     <wire>
-      <p1 x="200" y="360"/>
-      <p2 x="280" y="360"/>
+      <p1 x="200" y="520"/>
+      <p2 x="280" y="520"/>
     </wire>
     <wire>
-      <p1 x="400" y="360"/>
-      <p2 x="560" y="360"/>
+      <p1 x="400" y="520"/>
+      <p2 x="560" y="520"/>
     </wire>
     <wire>
-      <p1 x="400" y="380"/>
-      <p2 x="600" y="380"/>
+      <p1 x="240" y="540"/>
+      <p2 x="280" y="540"/>
     </wire>
     <wire>
-      <p1 x="240" y="380"/>
-      <p2 x="280" y="380"/>
+      <p1 x="400" y="540"/>
+      <p2 x="600" y="540"/>
     </wire>
   </wires>
   <measurementOrdering/>
