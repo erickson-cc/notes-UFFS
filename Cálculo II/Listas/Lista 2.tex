@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{amsfonts}
 \usepackage{graphicx} % Required for inserting images
 
 \title{Cálculo II\\Lista 2 - Funções de Várias Variáveis}
@@ -19,12 +20,36 @@
 			$$R_T = 1300x-50x^2+20xy+1700y+12xy-20y^2$$
 			$$R_T = 32xy-50x^2-20y^2+1300x+1700y$$
 		\item 3.a \\$z=3-x-y$ %é um plano inclinado infinito
-			$$D=$$
-%		\item 3.b
-%		\item 3.c
-%		\item 3.d
-%		\item 3.j
-%		\item 4(b,c,e,i,j,n,p)
+			$$D(z)=\mathbb{R}^2$$% todo o plano xy
+			$$Im(z) = \mathbb{R}$$ %toda a linha z
+		\item 3.b \\$f(x,y) = 1+x^2+y^2$
+			$$D(f(x,y)) = \mathbb{R}^2$$
+			$$Im(f(x,y)) = [1,\infty)$$
+		
+		\item 3.c \\$z=\sqrt[ ]{9-(x^2+y^2)}$
+		\\$x^2+y^2\leq 3^2$
+		\\$x^2+y^2-9 \leq 0$
+		$$D(z)=\{(x,y) \in \mathbb{R}^2 / x^2+y^2 \leq 9\}$$
+		\\$\sqrt[•]{9-(x^2+y^2)} \to \sqrt[]{9-9}= 0$
+		\\$x^2+y^2 \geq 0 \to \sqrt[]{9-0} = 3$
+		$$Im(z) = [0,3]$$
+		\item 3.d
+		\\$w = e^{x^2+y^2+z^2}$
+		$$D(w) = \mathbb{R}^3 $$		
+		$$Im(w) = [1, \infty)$$
+		\item 3.j
+		\\$f(x,y) = 4-x^2-y^2$
+		$$D(f(x,y)) = \mathbb{R}^2$$
+		$$Im(f(x,y)) = (-\infty,4]$$
+		\item 4.b
+		\\$w = \dfrac{1}{x^2+y^2+z^2}$
+		
+%		\item 4.c 
+%		\item 4.e
+%		\item 4.i 
+%		\item 4.j
+%		\item 4.n
+%		\item 4.p
 %		\item 5(b)
 %		\item 7(a,d,e)
 %		\item 8
