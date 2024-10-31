@@ -57,7 +57,7 @@ ENTITY portao IS PORT (
 END ENTITY portao;
 
 ARCHITECTURE behave OF portao IS
-	TYPE tipo_estado IS (Ab,c1,c2,c3,Fc);
+	TYPE tipo_estado IS (Ab,c1,c2,Fc);
 	signal estado : tipo_estado;
 	signal A: STD_LOGIC;
 	signal F: STD_LOGIC;
@@ -69,18 +69,19 @@ ARCHITECTURE behave OF portao IS
 			elsif(KEY3&apos;EVENT AND KEY3 = &apos;1&apos;) then
 				case estado is
 					when Fc =&gt;
-						estado &lt;= c1;
+						--estado &lt;= c1;
 					when c1 =&gt;
 					when c2 =&gt;
-					when c3 =&gt;
 					when Ab =&gt;
-						estado &lt;= c3;
+						--estado &lt;= c3;
 
 				end case;
 			elsif(KEY0&apos;EVENT AND KEY0 = &apos;1&apos;) then
 				case estado is
 					when Fc =&gt;
-
+						if A = &apos;1&apos; then
+							estado &lt;= c1;
+						end if;
 					when c1 =&gt;
 						if A = &apos;1&apos; then
 							estado &lt;= c2;
@@ -91,22 +92,17 @@ ARCHITECTURE behave OF portao IS
 						end if;
 					when c2 =&gt;
 						if A = &apos;1&apos; then
-							estado &lt;= c3;
+							estado &lt;= Ab;
 						elsif F = &apos;1&apos; then
 							estado &lt;= c1;
 						else
 							estado &lt;= c2;
 						end if;
-					when c3 =&gt;
-						if A = &apos;1&apos; then
-							estado &lt;= Ab;
-						elsif F = &apos;1&apos; then
-							estado &lt;= c2;
-						else
-							estado &lt;= c3;
-						end if;
-					when Ab =&gt;
 
+					when Ab =&gt;
+						if F = &apos;1&apos; then
+							estado &lt;= c2;
+						end if;
 					
 				end case;
 			end if;	
@@ -116,69 +112,65 @@ ARCHITECTURE behave OF portao IS
 --
 --
 
-		process(estado, KEY3) begin
+		process(estado, KEY3, KEY2) begin
 		-- Process Referente à Lógica de Saída do sistema
-			if(KEY3&apos;EVENT AND KEY3 = &apos;1&apos;) then -- Botão B
+			if(KEY2 = &apos;1&apos;) then
+				case estado is
+					when Fc =&gt;
+					when c1 =&gt;
+						A&lt;= not A;
+						F&lt;= not F;
+					when c2 =&gt;
+						A&lt;= not A;
+						F&lt;= not F;
+					when Ab =&gt;
+				end case; 
+			elsif(KEY3 = &apos;1&apos;) then
 				case estado is
 					when Fc =&gt;
 						A &lt;= &apos;1&apos;;
 						F &lt;= &apos;0&apos;;
 					when c1 =&gt;
+
 					when c2 =&gt;
-					when c3 =&gt;
+
 					when Ab =&gt;
 						A &lt;= &apos;0&apos;;
 						F &lt;= &apos;1&apos;;
-				end case;
-			else
+				end case; 
+			elsif(KEY0&apos;EVENT and KEY0 = &apos;1&apos;) then
+
 				case estado is
 					when Fc =&gt;
-						if(KEY2 = &apos;1&apos;) then
-							A&lt;= not A;
-							F&lt;= not F;
-						else
-							LEDG1&lt;= &apos;1&apos;;
-							LEDG0&lt;= &apos;0&apos;;
-							A &lt;= &apos;0&apos;;
-							F &lt;= &apos;0&apos;;
-						end if;
-					when c1 =&gt;
-						if(KEY2 = &apos;1&apos;) then
-							A&lt;= not A;
-							F&lt;= not F;
-						elsif A = &apos;1&apos; then
-							LEDG1&lt;= &apos;1&apos;;
-						else
-							LEDG1&lt;= &apos;0&apos;;
-						end if;
-					when c2 =&gt;
-						if(KEY2 = &apos;1&apos;) then
-							A&lt;= not A;
-							F&lt;= not F;
-						else
-							LEDG0&lt;= &apos;0&apos;;
-							LEDG1&lt;= &apos;0&apos;;
-						end if;
-					when c3 =&gt;
-						if(KEY2 = &apos;1&apos;) then
-							A&lt;= not A;
-							F&lt;= not F;
-						elsif F = &apos;1&apos; then
-							LEDG0 &lt;= &apos;1&apos;;
-						else
-							LEDG0 &lt;= &apos;0&apos;;
-						end if;
-					when Ab =&gt;
-						LEDG1 &lt;= &apos;0&apos;;
-						LEDG0&lt;= &apos;1&apos;;
-						A &lt;= &apos;0&apos;;
-						F &lt;= &apos;0&apos;;
+						if F = &apos;1&apos; then F&lt;= &apos;0&apos;; end if;
+						--if(KEY3 = &apos;1&apos;) then
 
-				end case;
-			end if;	
+						--else
+							A&lt;= &apos;0&apos;;
+							F &lt;= &apos;0&apos;;
+						--end if;
+					when c1 =&gt;
+
+					when c2 =&gt;
+
+					when Ab =&gt;
+						if A = &apos;1&apos; then A&lt;= &apos;0&apos;; end if;
+						--if(KEY3 = &apos;1&apos;) then
+
+						--else
+							A&lt;= &apos;0&apos;;
+							F &lt;= &apos;0&apos;;
+					--	end if;
+					end case;
+
+			end if;
 		end process;
-			LEDG7 &lt;= F;
-			LEDG6 &lt;= A;
+			LEDG1&lt;= &apos;1&apos; when estado = Fc else &apos;0&apos;;
+			LEDG0&lt;= &apos;1&apos; when estado = Ab else &apos;0&apos;;
+			LEDG7 &lt;= F when estado = c1 or estado = c2 else &apos;0&apos;;
+--			LEDG7 &lt;= F when estado = c2;--
+			LEDG6 &lt;= A when estado = c1 or estado = c2 else &apos;0&apos;;
+--			LEDG6 &lt;= A when estado = c2;
 
 END ARCHITECTURE;
 
