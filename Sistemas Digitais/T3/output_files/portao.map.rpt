@@ -1,5 +1,5 @@
 Analysis & Synthesis report for portao
-Fri Oct 25 00:49:51 2024
+Thu Oct 31 23:12:07 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -10,7 +10,16 @@ Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |portao|estadoAnterior
+  9. State Machine - |portao|estado
+ 10. User-Specified and Inferred Latches
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -36,20 +45,20 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Oct 25 00:49:51 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Oct 31 23:12:07 2024      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; portao                                     ;
 ; Top-level Entity Name              ; portao                                     ;
 ; Family                             ; Cyclone II                                 ;
-; Total logic elements               ; N/A until Partition Merge                  ;
-;     Total combinational functions  ; N/A until Partition Merge                  ;
-;     Dedicated logic registers      ; N/A until Partition Merge                  ;
-; Total registers                    ; N/A until Partition Merge                  ;
-; Total pins                         ; N/A until Partition Merge                  ;
-; Total virtual pins                 ; N/A until Partition Merge                  ;
-; Total memory bits                  ; N/A until Partition Merge                  ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                  ;
-; Total PLLs                         ; N/A until Partition Merge                  ;
+; Total logic elements               ; 24                                         ;
+;     Total combinational functions  ; 19                                         ;
+;     Dedicated logic registers      ; 10                                         ;
+; Total registers                    ; 10                                         ;
+; Total pins                         ; 22                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -149,22 +158,183 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+; portao.vhd                       ; yes             ; User VHDL File  ; C:/Users/aluno/Documents/notes-UFFS/Sistemas Digitais/T3/portao.vhd ;         ;
++----------------------------------+-----------------+-----------------+---------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary          ;
++---------------------------------------------+--------+
+; Resource                                    ; Usage  ;
++---------------------------------------------+--------+
+; Estimated Total logic elements              ; 24     ;
+;                                             ;        ;
+; Total combinational functions               ; 19     ;
+; Logic element usage by number of LUT inputs ;        ;
+;     -- 4 input functions                    ; 10     ;
+;     -- 3 input functions                    ; 7      ;
+;     -- <=2 input functions                  ; 2      ;
+;                                             ;        ;
+; Logic elements by mode                      ;        ;
+;     -- normal mode                          ; 19     ;
+;     -- arithmetic mode                      ; 0      ;
+;                                             ;        ;
+; Total registers                             ; 10     ;
+;     -- Dedicated logic registers            ; 10     ;
+;     -- I/O registers                        ; 0      ;
+;                                             ;        ;
+; I/O pins                                    ; 22     ;
+; Embedded Multiplier 9-bit elements          ; 0      ;
+; Maximum fan-out node                        ; KEY[0] ;
+; Maximum fan-out                             ; 10     ;
+; Total fan-out                               ; 99     ;
+; Average fan-out                             ; 1.94   ;
++---------------------------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |portao                    ; 19 (19)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 22   ; 0            ; |portao             ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |portao|estadoAnterior                                                                                ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; Name              ; estadoAnterior.Fc ; estadoAnterior.c3 ; estadoAnterior.c2 ; estadoAnterior.c1 ; estadoAnterior.Ab ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+; estadoAnterior.Ab ; 0                 ; 0                 ; 0                 ; 0                 ; 0                 ;
+; estadoAnterior.c1 ; 0                 ; 0                 ; 0                 ; 1                 ; 1                 ;
+; estadoAnterior.c2 ; 0                 ; 0                 ; 1                 ; 0                 ; 1                 ;
+; estadoAnterior.c3 ; 0                 ; 1                 ; 0                 ; 0                 ; 1                 ;
+; estadoAnterior.Fc ; 1                 ; 0                 ; 0                 ; 0                 ; 1                 ;
++-------------------+-------------------+-------------------+-------------------+-------------------+-------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------+
+; State Machine - |portao|estado                                        ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; estado.Fc ; estado.c3 ; estado.c2 ; estado.c1 ; estado.Ab ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+; estado.Ab ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; estado.c1 ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; estado.c2 ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; estado.c3 ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; estado.Fc ; 1         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LEDG[6]$latch                                      ; Selector0           ; yes                    ;
+; LEDG[7]$latch                                      ; Selector0           ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 10    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |portao|Selector6          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |portao|Selector2          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Fri Oct 25 00:49:50 2024
+    Info: Processing started: Thu Oct 31 23:12:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off portao -c portao
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10500): VHDL syntax error at portao.vhd(36) near text ";";  expecting ":", or "," File: C:/Users/aluno/Documents/notes-UFFS/Sistemas Digitais/T3/portao.vhd Line: 36
-Error (10500): VHDL syntax error at portao.vhd(38) near text ")";  expecting ":", or "," File: C:/Users/aluno/Documents/notes-UFFS/Sistemas Digitais/T3/portao.vhd Line: 38
-Info (12021): Found 0 design units, including 0 entities, in source file portao.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4621 megabytes
-    Error: Processing ended: Fri Oct 25 00:49:51 2024
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info (12021): Found 2 design units, including 1 entities, in source file portao.vhd
+    Info (12022): Found design unit 1: portao-behave
+    Info (12023): Found entity 1: portao
+Info (12127): Elaborating entity "portao" for the top level hierarchy
+Warning (10492): VHDL Process Statement warning at portao.vhd(36): signal "SW" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(149): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(152): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(162): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(165): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(175): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at portao.vhd(178): signal "estadoAnterior" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at portao.vhd(139): inferring latch(es) for signal or variable "LEDG", which holds its previous value in one or more paths through the process
+Warning (10873): Using initial value X (don't care) for net "LEDG[5..2]" at portao.vhd(15)
+Info (10041): Inferred latch for "LEDG[6]" at portao.vhd(139)
+Info (10041): Inferred latch for "LEDG[7]" at portao.vhd(139)
+Warning (13012): Latch LEDG[6]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estadoAnterior.Fc
+Warning (13012): Latch LEDG[7]$latch has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal estadoAnterior.Fc
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[2]" is stuck at GND
+    Warning (13410): Pin "LEDG[3]" is stuck at GND
+    Warning (13410): Pin "LEDG[4]" is stuck at GND
+    Warning (13410): Pin "LEDG[5]" is stuck at GND
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 10 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[0]"
+    Warning (15610): No output dependent on input pin "SW[4]"
+    Warning (15610): No output dependent on input pin "SW[5]"
+    Warning (15610): No output dependent on input pin "SW[6]"
+    Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "SW[8]"
+    Warning (15610): No output dependent on input pin "SW[9]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+Info (21057): Implemented 46 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 8 output pins
+    Info (21061): Implemented 24 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4643 megabytes
+    Info: Processing ended: Thu Oct 31 23:12:07 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

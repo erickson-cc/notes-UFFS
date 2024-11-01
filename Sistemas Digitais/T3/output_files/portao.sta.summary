@@ -2,4 +2,52 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow Model Setup 'estado.c1'
+Slack : -1.085
+TNS   : -2.061
+
+Type  : Slow Model Setup 'KEY[0]'
+Slack : -0.960
+TNS   : -5.017
+
+Type  : Slow Model Hold 'estado.c1'
+Slack : -2.733
+TNS   : -5.325
+
+Type  : Slow Model Hold 'KEY[0]'
+Slack : -2.081
+TNS   : -3.697
+
+Type  : Slow Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.469
+TNS   : -13.689
+
+Type  : Slow Model Minimum Pulse Width 'estado.c1'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Setup 'KEY[0]'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast Model Setup 'estado.c1'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Fast Model Hold 'estado.c1'
+Slack : -1.547
+TNS   : -3.037
+
+Type  : Fast Model Hold 'KEY[0]'
+Slack : -1.072
+TNS   : -2.358
+
+Type  : Fast Model Minimum Pulse Width 'KEY[0]'
+Slack : -1.222
+TNS   : -11.222
+
+Type  : Fast Model Minimum Pulse Width 'estado.c1'
+Slack : 0.500
+TNS   : 0.000
+
 ------------------------------------------------------------

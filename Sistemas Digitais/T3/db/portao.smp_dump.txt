@@ -1,0 +1,16 @@
+
+State Machine - |portao|estadoAnterior
+Name estadoAnterior.Fc estadoAnterior.c3 estadoAnterior.c2 estadoAnterior.c1 estadoAnterior.Ab 
+estadoAnterior.Ab 0 0 0 0 0 
+estadoAnterior.c1 0 0 0 1 1 
+estadoAnterior.c2 0 0 1 0 1 
+estadoAnterior.c3 0 1 0 0 1 
+estadoAnterior.Fc 1 0 0 0 1 
+
+State Machine - |portao|estado
+Name estado.Fc estado.c3 estado.c2 estado.c1 estado.Ab 
+estado.Ab 0 0 0 0 0 
+estado.c1 0 0 0 1 1 
+estado.c2 0 0 1 0 1 
+estado.c3 0 1 0 0 1 
+estado.Fc 1 0 0 0 1 

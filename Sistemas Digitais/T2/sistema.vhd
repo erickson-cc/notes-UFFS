@@ -1,35 +1,61 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
+Trabalho Sistemas
+Thais Zanella<thaistzanella@gmail.com>
+​
+Você​
+library ieee;
+use ieee.std_logic_1164.all;
 
-ENTITY sistema IS PORT (
-	LEDR: out STD_LOGIC_VECTOR (9 downto 0);
-	SW: in STD_LOGIC_VECTOR (9 downto 0)
-	-- SW(9): Botão de modo seguro{0:inativo}{1:ativo}
-	-- SW(8): Janela{0:fechada}{1:aberta}
-	-- SW(7): Porta {0:fechada}{1:aberta}
-	
-	-- SW(3): sensor CAIXA A bit 1
-	-- SW(2): sensor CAIXA A bit 0
-	
-	-- SW(1): sensor CAIXA B bit 1
-	-- SW(0): sensor CAIXA B bit 0
-	
-	
-	-- LEDR(9): Sinal de Alerta {SW(9)andSW(8)}
-	-- LEDR(8): Sinal Janela ABERTA {SW(8)}
-	-- LEDR(7): Sinal Porta ABERTA {SW(7)}
-	-- LEDR(3): Eletroválvula {SW(3)}
-	-- LEDR(1): Bomba {SW(3)orSW(2)}nand{SW(1)andSW(0)}
-	);
-END ENTITY sistema;
+entity portao is
+port( 
+SA: out std_logic;
+SF: out std_logic;
+S_out: out std_logic;
+S_in: in std_logic;
+B: in std_logic;
+Clock: in std_logic;
+A: in std_logic;
+F: in std_logic
+);
+end entity portao;
 
-ARCHITECTURE behave OF sistema IS
-	BEGIN
-		LEDR(9) <= SW(9) and (SW(8) or SW(7));
-		LEDR(8) <= SW(8);
-		LEDR(7) <=2 SW(7);
-		
-		LEDR(3) <= not SW(3);
-		LEDR(1) <= (SW(3) or SW(2)) and (SW(1)nand SW(0));
-		
-END ARCHITECTURE;
+architecture behavior of portao is
+type tipo_estado IS (F1, F2, F3);
+signal proximo_estado: tipo_estado;
+begin
+process(B)
+begin
+if (B = '1') then
+if (SF = '1') then
+A <= '1';
+F <= '0';
+SF <= '0';
+elsif (SA = '1') then
+A <= '0';
+F <= '1';
+SA <= '0';
+end if;
+end if;
+end process;
+
+process (Clock)
+begin
+if (Clock'EVENT AND Clock = '1') then
+case proximo_estado is
+when F1 =>
+proximo_estado <= F2;
+when F2 =>
+proximo_estado <= F3;
+when F3 =>
+if (A = '1') then
+SA <= '1';
+A <= '0';
+elsif (F = '1') then 
+SF <= '1';
+F <= '0';
+end if;
+proximo_estado <= F1;
+end case;
+end if; 
+end process;
+
+end architecture behavior;

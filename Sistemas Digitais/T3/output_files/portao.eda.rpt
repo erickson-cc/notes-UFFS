@@ -1,5 +1,5 @@
 EDA Netlist Writer report for portao
-Thu Oct 24 23:56:29 2024
+Thu Oct 31 23:12:16 2024
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Oct 24 23:56:29 2024 ;
+; EDA Netlist Writer Status ; Successful - Thu Oct 31 23:12:16 2024 ;
 ; Revision Name             ; portao                                ;
 ; Top-level Entity Name     ; portao                                ;
 ; Family                    ; Cyclone II                            ;
@@ -84,12 +84,12 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
-    Info: Processing started: Thu Oct 24 23:56:29 2024
+    Info: Processing started: Thu Oct 31 23:12:16 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off portao -c portao
 Info (204026): Generated files "portao.vho", "portao_fast.vho", "portao_vhd.sdo" and "portao_vhd_fast.sdo" in directory "C:/Users/aluno/Documents/notes-UFFS/Sistemas Digitais/T3/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4519 megabytes
-    Info: Processing ended: Thu Oct 24 23:56:29 2024
+    Info: Processing ended: Thu Oct 31 23:12:16 2024
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
