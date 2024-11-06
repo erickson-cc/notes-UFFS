@@ -42,9 +42,37 @@
 		$$Im(f)=[0,1]$$
 		
 		\textbf{Exemplo:} em cada caso, determine o domínio da função, faça também a representação geométrica do domínio:
+	%Tem mais algo aqui
+	\section{Limite e Continuidade}
+	Abaixo algumas definições.
+		\subsection{Bola Aberta}
+			Dado um ponto $P_0(x_0,y_0)$ e um número positivo $r$, a bola aberta de centro em $P_0$ e raio $r$ é dada pelo conjunto de pontos $P=(x,y) \in \mathbb{R}^2$ tais que a distância de $P \to P_0$ é \textbf{menor} que o raio $r$.
+			$$B(P_0,r) = \{(x,y)\in \mathbb{R}^2 / \sqrt[•]{(x-x_0)^2+(y-y_0)^2} \subset r\}$$
+		\subsection{Ponto Interior e Conjunto Aberto}
+			Seja o conjunto $A \subset \mathbb{R}^n$, dizemos que $P \in A$ é um ponto interior de $A$ se existir uma \textbf{bola aberta} centrada em $P$ totalmente contida em $A$.\\
+			Se todos os pontos de $A$ forem interiores, dizemos que $A $ é um \textbf{conjunto aberto}.\\
+			Simplificando, o ponto $P$ não pode estar na borda nem fora de $A$.
+		\subsection{Conjunto/Domínio Conexo}
+			Um domínio $D\subset\mathbb{R}^n$ é dito conexo se dados dois pontos quaisquer em $D$, eles podem ser ligados por uma poligonal contida em $D$.\\
+			Simplificando, uma linha/curva que vc pode passar por dentro de um domínio sem que ela seja interrompida por um "buraco".
+			\begin{enumerate}
+				\item Simplesmente conexo: quando todo o domínio não apresenta buracos.
+				\item Apenas conexo: apresenta buracos
+				\item Não-conexo: quando o domínio não é totalmente conectado por inteiro.
+			\end{enumerate}
+		\subsection{Ponto de Fronteira}
+			Seja $A \subset \mathbb{R}^2$. Um ponto $P \in \mathbb{R}^2$ é dito um ponto de fronteira de $A$ se toda bola aberta centrada em $P$ contiver pontos de $A$ e pontos que não estão em $A$.\\
+			O conjunto de todos os pontos de fronteira do conjunto $A$ é chamado fronteira de $A$.\\
+			Se todos os pontos de fronteira de $A$ permanecem a $A$. Dizemos que $A$ é fechado.\\
+		Observamos que essa definição também é valida para um conjunto $A \subset \mathbb{R}^n, n >2$.
+		\subsection{Conjunto Fechado}
+			Um conjunto $A$, se ele contiver todos os seus pontos de fronteira.
+		\subsection{Pontos de Acumulação}
+			Toda bola centrada nele tem uma infinidade de pontos no conjunto.
+	%Proximo conteúdo Limite de uma Função de Duas Variáveis.
 	
 	%aula que eu faltei abaixo
-	\subsection{Regra da Cadeia}
+	\section{Regra da Cadeia}
 		Vamos definir a regra da cadeia para o caso de funções de várias variáveis.\\
 		Proposição 1: Sejam A e B conjuntos abertos do $\mathbb{R}^2$ e $\mathbb{R}$, respectivamente, e sejam $f:A \to \mathbb{R}$ e $g:B \to \mathbb{R}^2$ tais que $g(t) = (x(t),y(t)) \in A$ para todo $t \in B$. Nestas condições, se $g$ for diferenciável em $B$ e $f(x,y)$ possuir derivadas parciais de 1ª ordem contínuas em $A$.\\
 		Então, a função composta:\\
