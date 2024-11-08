@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>External</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Width</string>
+          <int>7</int>
+        </entry>
+        <entry>
+          <string>Code</string>
+          <string>LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+
+ENTITY blackjack IS PORT(
+	hit: in STD_LOGIC;
+	stay: in STD_LOGIC;
+	start: in STD_LOGIC;
+	cards: in STD_LOGIC;</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="240"/>
+    </visualElement>
+  </visualElements>
+  <wires/>
+  <measurementOrdering/>
+</circuit>
