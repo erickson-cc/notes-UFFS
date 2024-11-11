@@ -336,4 +336,49 @@ $\\
 		sujeito a $g(x,y,z)=0$\\
 		Neste caso a equação de Lagrange será:
 		$$L(x,y,z,\lambda) = f(x,y,z) - \lambda g(x,y,z)$$
+	\section{Integração Múltipla}
+		Nos permitem realizar o cálculo de áreas e volumes e determinarmos algumas grandezas físicas, tais como massa e momento de inércia.
+		\subsection{Integração Dupla - Volume}		
+			Considere uma função $z=f(x,y)$ cujo $D(f) \subset R$, sendo $R$ uma área fechada e limitada do plano $xy$.\\
+			Traçando retas paralelas aos eixos $x$ e $y$, recobrimos a região $R$ por pequenos retângulos. Ou seja, visto de cima, podemos analizar a região da função $z$ com uma região quadriculada sobre sua região ortogonalmente ao seu domínio.\\
+			Considerando apenas os retângulos $R_k$ que estão totalmente contidos em R, numerando-os de $1$ até $n$. Em cada retângulo $R_k$, escolhemos um ponto $(x_k,y_k)$ e formamos a soma.
+			$$\sum_{k=1}^n f(x_k,y_k). \Delta A_k$$
+			Onde $\Delta A_k=\Delta x_k.\Delta y_k$ é a área do retângulo $R_k$.\\
+			Suponhamos que mais retas paralelas ao plano $xy$ são traçadas, tornando as dimensões $\Delta x_k$ e $\Delta y_k$ cada vez menores. Fazemos isso de tal maneira que a diagonal máxima dos retângulos $R_k$ tende a zero enquanto o valor $n$ tende ao infinito. Assim, a integral dupla de $f(x,y)$ sobre a região $R$ é determinada pela expressão:
+			$$\lim_{n \to \infty} \sum_{k=1}^n f(x_k,y_k). \Delta A_k$$
+			Denotamos:
+			$$\int \int_R f(x,y).dA$$
+			ou
+			$$\int \int_R f(x,y).dx.dy$$
+			A integral dupla de $f$ sobre a área $R$ é:
+			$$\int \int_R f(x,y).dA = \lim_{m,n\to \infty} \sum_{i=1}^m \sum_{j=1}^n f(x_{ij}^*,y_{ij}^*).\Delta A$$
+			Onde $(x_{ij}^*,y_{ij}^*)$ é o ponto de amostragem de cada retângulo. Caso escolhermos o canto superior direito de cada retângulo para representar o ponto de amostragem, essa coordenada seria $(x_i,y_j)$.\\
+			Observamos que:
+				\begin{itemize}
+					\item A região $R$ é denominada \textit{Região de integração}.
+					\item A soma $\sum_{k=1}^n f(x_k,y_k). \Delta A_k$ é chamada soma de Riemann de $z=f(x,y)$ sobre $R$.
+					\item O limite $\lim_{n \to \infty} \sum_{k=1}^n f(x_k,y_k). \Delta A_k$ deve ser independente da escolha das retas que subdividem a região $R$ e dos pontos $(x_k,y_k)$ tomados nos retângulos $R_k$.
+					\item A existência do limite $\lim_{n \to \infty} \sum_{k=1}^n f(x_k,y_k). \Delta A_k$ depende da função $z=f(x,y)$ e também da região $R$. Em nosso estudo, vamos supor que o contorno da região $R$ é formado por um número finito de arcos de curvas \textit{suaves}. Isto é, de arcos de curvas que não contêm pontos angulosos. Nesse caso, se $f$ é contínua sobre $R$, temos a garantia da existência da integral dupla.
+				\end{itemize}
+			A soma de Riemann no cálculo de funções de uma variável consistia em formar infinitos retângulos para encontrar a área abaixo de uma curva.\\
+%			\subsection{Integração Dupla - Volume}
+			Veremos agora que, quando $z = f(x,y) \geq 0$, a integral dupla pode ser interpretada como um \textbf{volume}.\\
+			Suponhamos que $z=f(x,y) \geq 0$ (ou seja, está sobre a região $R$). Vemos que o produto $f(x_k,y_k).\Delta A_k$ representa o volume de um prisma reto, cuja base é o retângulo $R_k$ e cuja altura é $f(x_k,y_k)$.\\
+			A soma de Riemann $\sum_{k=1}^n f(x_k,y_k). \Delta A_k$ repreesnta uma aproximação do volume da porção do espaço compreendida abaixo do gráfico de $z=f(x,y)$ e acima da região $R$ do plano $xy$.\\
+			Assim, quando $f(x,y) \geq 0$, a $\int \int_R f(x,y).dx.dy$ nos dá o volume do sólido delimitado superiormente pelo gráfico da função $f(x,y)$ e com base $R$.
+		\subsection{Integrais Iteradas}
+			Supoinha que $f$ seja uma função de duas variáveis que é integrável no retângulo $R = [a,b].[c,d]$. Usaremos a notação $\int_c^d f(x,y).dy$ significando que $x$ é mantido e $f(x,y)$ é integrada em relação a $y$ em $c \to d$. Esse procedimento é chamado de integração parcial em relação a $y$.(Observe a semelhança com a derivada parcial). Como $\int_c^d f(x,y).dy$ é um número que depende do valor de $x$, ele define uma função de $x$.
+			$$A(x) = \int _c^d f(x,y).dy$$
+			Se agora integrarmos a função $A$ com relação à variável $x$ em $a \to b$, obteremos:
+			$$\int_a^b A(x).dx = \int_a^b [\int_c^d f(x,y).dy].dx$$
+			A integral do lado direito da quação é chamada de \textbf{Integral Iterada}. Em geral, os colchetes são obitios. Assim:
+			$$\int_a^b [\int_c^d f(x,y).dy].dx=\int_a^b \int_c^d f(x,y).dy.dx$$
+			Significa que primeiro integramos com relação a $y$ e depois em relação a $x$ (de dentro pra fora da equação). Não faz diferença se alterarmos a ordem conforme equação abaixo:
+			\\\textit{Teorema de Fubini}
+			$$\int_a^b \int_c^d f(x,y).dy.dx = \int_c^d \int_a^b f(x,y).dx.dy$$
+			Existe um caso especial que ocorre quando $f(x,y)$ pode ser fatorado como o produto de uma função $f(x)$ por uma função $f(y)$. Podemos separar as duas integrais, pois cada uma delas se torna constante na integral da outra.
+			$$\int \int_R f(x,y).dA = \int_c^d\int_a^b g(x).h(y).dx.dy$$
+			$$= \int_c^dh(y).[\int_a^bg(x).dx].dy = \int_c^dh(y).dy \int_a^bg(x).dx$$
+			onde $R = [a,b].[c,d]$
+		\subsection{Integração Tripla}
  \end{document}
