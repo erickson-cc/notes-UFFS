@@ -2,7 +2,7 @@ public class Weapon extends Item{
 	private int damage;
 	private boolean onehanded;
 	// Construtor
-	Weapon(int id, String name, int space, float weight, boolean stackable, int damage, boolean onehanded){
+	Weapon(int id, String name, int space, double weight, boolean stackable, int damage, boolean onehanded){
 		super(id,name,space,weight,stackable);
 		this.damage = damage;
 		this.onehanded = onehanded;
@@ -27,7 +27,7 @@ public class Weapon extends Item{
 		this.space = space;
 	}
 	@Override
-	public void setWeight(float weight){
+	public void setWeight(double weight){
 		this.weight = weight;
 	}
 	@Override
@@ -54,7 +54,7 @@ public class Weapon extends Item{
 		return this.space;
 	}
 	@Override
-	public float getWeight(){
+	public double getWeight(){
 		return this.weight;
 	}
 	@Override

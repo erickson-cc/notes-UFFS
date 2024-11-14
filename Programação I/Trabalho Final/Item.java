@@ -2,10 +2,10 @@ abstract class Item{
 	protected int id;
 	protected String name;
 	protected int space;
-	protected float weight;
+	protected double weight;
 	protected boolean stackable;
 	// Constructor
-	Item(int id, String name, int space, float weight, boolean stackable){
+	Item(int id, String name, int space, double weight, boolean stackable){
 		this.id = id;
 		this.name = name;
 		this.space = space;
@@ -16,12 +16,12 @@ abstract class Item{
 	abstract void setId(int id);
 	abstract void setName(String name);
 	abstract void setSpace(int space);
-	abstract void setWeight(float weight);
+	abstract void setWeight(double weight);
 	abstract void setStackable(boolean stackable);
 	// Getters
 	abstract int getId();
 	abstract String getName();
 	abstract int getSpace();
-	abstract float getWeight();
+	abstract double getWeight();
 	abstract boolean getStackable();
 }

@@ -1,12 +1,12 @@
 public class Food extends Item implements Consumable{
-	private float stamina;
+	private double stamina;
 	// Constructor
-	Food(int id, String name, int space, float weight, boolean stackable, float stamina){
+	Food(int id, String name, int space, double weight, boolean stackable, double stamina){
 		super(id, name, space, weight, stackable);
 		this.stamina = stamina;
 	}
 	// Setters 
-	public void setStamina(float stamina){
+	public void setStamina(double stamina){
 		this.stamina = stamina;
 	}
 	@Override
@@ -22,7 +22,7 @@ public class Food extends Item implements Consumable{
 		this.space = space;
 	}
 	@Override
-	public void setWeight(float weight){
+	public void setWeight(double weight){
 		this.weight = weight;
 	}
 	@Override
@@ -30,7 +30,7 @@ public class Food extends Item implements Consumable{
 		this.stackable = stackable;
 	}
 	// Getters
-	public float getStamina(){
+	public double getStamina(){
 		return this.stamina;
 	}
 	@Override
@@ -46,7 +46,7 @@ public class Food extends Item implements Consumable{
 		return this.space;
 	}
 	@Override
-	public float getWeight(){
+	public double getWeight(){
 		return this.weight;
 	}
 	@Override

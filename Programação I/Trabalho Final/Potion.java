@@ -1,22 +1,22 @@
 public class Potion extends Item implements Consumable{
-	private float health;
-	private float strenght;
-	private float speed;
+	private double health;
+	private double strenght;
+	private double speed;
 	// Constructor
-	Potion(int id, String name, int space, float weight, boolean stackable, float health, float strenght, float speed){
+	Potion(int id, String name, int space, double weight, boolean stackable, double health, double strenght, double speed){
 		super(id, name, space, weight, stackable);
 		this.health = health;
 		this.strenght = strenght;
 		this.speed = speed;
 	}
 	// Setters
-	public void setHealth(float health){
+	public void setHealth(double health){
 		this.health = health;
 	}
-	public void setStrenght(float strenght){
+	public void setStrenght(double strenght){
 		this.strenght = strenght;
 	}
-	public void setSpeed(float speed){
+	public void setSpeed(double speed){
 		this.speed = speed;
 	}
 	@Override
@@ -32,7 +32,7 @@ public class Potion extends Item implements Consumable{
 		this.space = space;
 	}
 	@Override
-	public void setWeight(float weight){
+	public void setWeight(double weight){
 		this.weight = weight;
 	}
 	@Override
@@ -40,13 +40,13 @@ public class Potion extends Item implements Consumable{
 		this.stackable = stackable;
 	}
 	// Getters
-	public float getHealth(){
+	public double getHealth(){
 		return this.health;
 	}
-	public float getStrenght(){
+	public double getStrenght(){
 		return this.strenght;
 	}
-	public float getSpeed(){
+	public double getSpeed(){
 		return this.speed;
 	}
 	@Override
@@ -62,7 +62,7 @@ public class Potion extends Item implements Consumable{
 		return this.space;
 	}
 	@Override
-	public float getWeight(){
+	public double getWeight(){
 		return this.weight;
 	}
 	@Override
