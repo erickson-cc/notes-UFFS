@@ -89,7 +89,7 @@ void freeMemory(hashnode **hashTable, int M){
 	hashnode *aux2;
 	for(i=0;i<M;i++){
 		aux = hashTable[i];
-		while(aux2!=NULL){
+		while(aux!=NULL){
 			aux2 = aux;
 			aux = aux->next;
 			free(aux2);

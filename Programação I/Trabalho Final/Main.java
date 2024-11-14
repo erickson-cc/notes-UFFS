@@ -9,7 +9,13 @@ import java.util.Scanner;
 
 public class Main{
 	public static void Main(String[] args){
-	Food c1 = new Food(23,"oi",4,21,true,25);
-	Weapon c2 = new Weapon(123,"Arma",2,40,false,100,false);
+	//Food
+	Food f1 = new Food(23,"oi",4,21,true,25);
+	//Weapon
+	Weapon w1 = new Weapon(123,"Arma",2,40,false,100,false);
+	//Potion
+	Potion p1 = new Potion(99,"Potion",3,41,true,50,0,0);
+
+	Item[] store = {f1,w1,p1};
 	}
 }
