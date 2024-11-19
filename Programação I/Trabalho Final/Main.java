@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 public class Main{
 	public static void main(String[] args){
+	Scanner sc = new Scanner(System.in);
+	int cmd = 999;
+	int i;
+	int selected = -1;
 	//Item(id,name,space,weight,stackable)
 	//Food					(stamina)
 	Food f1 = new Food(111,"Peixe Assado",1,0.33,true,12);
@@ -53,7 +57,47 @@ public class Main{
 
 	s0.setItem(20,p1);s0.setItem(21,p2);s0.setItem(22,p3);s0.setItem(23,p4);s0.setItem(24,p5);	
 	s0.setItem(25,p6);s0.setItem(26,p7);s0.setItem(27,p8);s0.setItem(28,p9);s0.setItem(29,p0);	
-	s0.printStore();
-	
+	//s0.printStore();
+	Menu menu  = new Menu();
+	Player player = new Player(15);//todos os itens ocupam pelo menos 1 slot
+	while(cmd != 0){
+		menu.Main();
+		cmd = sc.nextInt();
+		if(cmd==1){
+			menu.Store();
+			cmd = sc.nextInt();
+			if(cmd == 1) s0.printStore();
+			if(cmd == 2) s0.printFood();
+			if(cmd == 3) s0.printWeapon();
+			if(cmd == 4) s0.printPotion();
+			if(cmd==0) break;
+			menu.Select();
+			cmd = sc.nextInt();
+			if(cmd==0){
+				cmd=-1;//Retorna para o menu da loja
+			}
+			else{
+				for(i=0;i<=s0.invLen();i++){
+					if(s0.getItem(i).id == cmd){
+						selected = i;	
+						break;
+					}
+					else{
+						selected = -1;
+					}
+				}
+				if(selected != -1){
+					menu.Action(s0, selected);
+					cmd = sc.nextInt();
+					if(cmd == 1){
+						player.addItem(s0.getItem(selected));
+					}
+				}
+			}
+		}
+		if(cmd==2){
+			player.printInventory();
+		}
+	}
 	}
 }
