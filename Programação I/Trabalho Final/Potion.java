@@ -1,4 +1,5 @@
 public class Potion extends Item implements Consumable{
+	/* Classe poção que irá aumentar os atributos do jogador */
 	private double health;
 	private double strenght;
 	private double speed;

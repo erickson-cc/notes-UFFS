@@ -1,0 +1,6 @@
+[Erickson@Host Trabalho Final]$ javadoc -d doc -subpackages doc
+Loading source files for package doc/...
+Constructing Javadoc information...
+error: No public or protected classes found to document.
+1 error
+[Erickson@Host Trabalho Final]

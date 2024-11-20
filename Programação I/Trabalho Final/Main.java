@@ -1,6 +1,6 @@
 /* Sistema de Inventário
- * Cada usuário terá 15 slots e conseguirá carregar até 35kg de peso
- * A estamina do usuário é float de 0 a 100.
+ * @author Erickson G. M*uller
+ * @version 0.1
  */
 import java.util.Scanner;
 
@@ -8,6 +8,8 @@ import java.util.Scanner;
 
 
 public class Main{
+	/* Classe principal
+	 */
 	public static void main(String[] args){
 	Scanner sc = new Scanner(System.in);
 	int cmd = 999;
@@ -63,7 +65,7 @@ public class Main{
 	while(cmd != 0){
 		menu.Main();
 		cmd = sc.nextInt();
-		if(cmd==1){
+		if(cmd==1){// MOstrar a Loja de Itens
 			menu.Store();
 			cmd = sc.nextInt();
 			if(cmd == 1) s0.printStore();
@@ -95,9 +97,32 @@ public class Main{
 				}
 			}
 		}
-		if(cmd==2){
+		if(cmd==2){// Mostrar o Inventário
 			player.printInventory();
+			menu.Select();
+			cmd = sc.nextInt();
+			if(cmd==0) cmd = -1;
+			else{
+				for(i=0;i<=player.getLen();i++)
+					if(player.inventory[i].id == cmd){
+						selected=i;
+						break;
+					}
+					else{
+						selected = -1;
+					}
+			}
+			if(selected != -1){
+				menu.InventoryAction(player, selected);
+				cmd = sc.nextInt();
+				if(cmd==1){
+					player.removeItem(s0.getItem(selected));
+				}
+				if(cmd==2){
+					player.removeItem(s0.getItem(selected));
+				}
 		}
 	}
 	}
+}
 }

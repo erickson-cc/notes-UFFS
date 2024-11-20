@@ -1,4 +1,6 @@
 abstract class Item{
+	/* Classe abstrata que tratará dos itens que serão armazenados nos inventários ou na loja
+	 */
 	protected int id;
 	protected String name;
 	protected int space;
@@ -25,3 +27,4 @@ abstract class Item{
 	abstract double getWeight();
 	abstract boolean getStackable();
 }
+
