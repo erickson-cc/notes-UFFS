@@ -1,5 +1,5 @@
 LIBRARY ieee;
-
+USE iee.numeric_std.all;
 USE ieee.std_logic_1164.ALL;
 
 
@@ -16,10 +16,11 @@ ENTITY blackjack IS PORT (
 	RANDOM_CARDS: in STD_LOGIC;
 	CARDS: in STD_LOGIC_VECTOR (3 downto 0);
 
-	SW: in STD_LOGIC_VECTOR(9 downto 0);
-	KEY: in STD_LOGIC_VECTOR(3 downto 0);
-
-   LEDG: out STD_LOGIC_VECTOR(7 downto 0)
+	VEZ_DO_PLAYER: out STD_LOGIC;
+	VEZ_DO_DEALER: out STD_LOGIC;
+	LED_EMPATE: out STD_LOGIC;
+	LED_PERDEU: out STD_LOGIC;
+	LED_GANHOU: out STD_LOGIC;
 
 
    );
@@ -30,187 +31,151 @@ END ENTITY blackjack;
 ARCHITECTURE behave OF blackjack IS
 
    TYPE tipo_estado IS (
-	inicio,
-	player_recebe_1,
-	player_recebe_2,
-	player_choice,
-	player_hit,
-	player_stay,
-	dealer_recebe_1,
-	dealer_recebe_2,
-	dealer_choice,
-	dealer_hit,
-	compara,
-	empate,
-	perdeu,
-	ganhou
+	inicio,--
+	player_recebe_1,--
+	player_recebe_2,--
+	player_choice,--
+	player_hit,--
+	dealer_recebe_1,--
+	dealer_recebe_2,--
+	dealer_choice,--
+	dealer_hit,--
+	compara,--
+	empate,--
+	perdeu,--
+	ganhou--
 	);
+--	function puxar_carta(carta: STD_LOGIC_VECTOR(4 downto 0); nova: STD_LOGIC_VECTOR(3 downto 0); As: STD_LOGIC)
+--		return STD_LOGIC_VECTOR is
+--			variable result: STD_LOGIC_VECTOR(4 downto 0);
 
-   signal estado : tipo_estado;
-   --signal estadoAnterior : tipo_estado;
+	signal estado : tipo_estado;
+--	signal carta: STD_LOGIC_VECTOR(4 downto 0) := "00000";
 
    BEGIN
 
        process(CLOCK, START)
-
-           begin
+	variable carta_manual : STD_LOGIC_VECTOR(3 downto 0) := "0000";--if not random_cards
+	variable carta_int : integer range 0 to 20 := 0;
+           BEGIN
 
                if(START = '1') then
 
                    estado <= inicio;
 							--downrising_edge(KEY(0))
-               elsif(KEY(0)'EVENT AND KEY(0) = '0') then
+               elsif(CLOCK'EVENT AND CLOCK = '0') then
 
                    case estado is
+			when Start =>
+				estado <= player_recebe_1;
 
+			when player_recebe_1 =>
+				estado <= dealer_recebe_1;
 
-                       when Ab =>
-                                estadoAnterior <= estado;
+			when dealer_recebe_1 =>
+				estado <= player_recebe_2;
 
-                           if(SW(3)  = '1') then
-                             
-                               estado <= c1;
-                               
-                           end if;
+			when player_recebe_2 =>
+				estado <= dealer_recebe_2;
 
-                       when c1 =>
+			when dealer_recebe_2 =>
+				estado <= player_choice;
 
-                        estadoAnterior <= estado;
+			when player_choice =>
+				if(HIT = '1' and STAY = '0') then
+					estado <= player_hit;
+				elsif(STAY = '1' and HIT = '0') then
+					estado <= dealer_choice;
+				end if;
 
+			when player_hit =>
+				if(player_hand > 21) then
+					estado <= perdeu;
+				else
+					estado <= player_choice;
+				end if;
+			when dealer_choice => --Espera dealer
+				if(dealer_hand < 17) then
+					estado <= dealer_hit;
+				else
+					estado <= compara;
+				end if;
 
-                        if estadoAnterior = Ab then
-                            if(SW(2)  = '1') then
-   estado <= Ab;
-   
-                            else
+			when dealer_hit =>
+				if(dealer_hand > 21) then
+					estado <= compara;
+				else
+					estado <= dealer_choice;
+				end if;
+				
+			when compara => -- Talvez tirar esse estado e comparar no player-stay
+				if(dealer_hand > 21) then
+					estado <= ganhou;
+				elsif(dealer_hand = player_hand) then
+					estado <= empate;
+				elsif(dealer_hand > player_hand) then
+					estado <= perdeu;
+				end if;
 
-                                estado <= c2;
-                            end if;
-
-                        else
-                            if(SW(2)  = '1') then
-   estado <= c2;
-   
-                            else
-
-                                estado <= ab;
-end if;
-                        end if;
-
-                       when c2 =>
-                        estadoAnterior <= estado;
-
-
-                       if estadoAnterior = c1 then
-                           if(SW(2)  = '1') then
-                               estado <= c1;
-                       
-                           else
-
-                               estado <= c3;
-                           end if;
-                   
-                       else
-                           if(SW(2)  = '1') then
-                               estado <= c3;
-                       
-                           else
-
-                               estado <= c1;
-                           end if;
-                       end if;
-                       when c3 =>estadoAnterior <= estado;
-
-
-                       if estadoAnterior = c2 then
-                           if(SW(2)  = '1') then
-                               estado <= c2;
-                       
-                           else
-
-                               estado <= FC;
-                           end if;
-                   
-                       else
-                           if(SW(2)  = '1') then
-                               estado <= Fc;
-                       
-                           else
-
-                               estado <= c2;
-                           end if;
-
-                        end if;
-
-                       when Fc =>
-                        estadoAnterior <= estado;
-
-                           if(SW(3) = '1') then
-
-                               estado <= c3;
-
-                           end if;
-
+			when empate => estado <= estado;
+			when ganhou => estado <= estado;
+			when perdeu => estado <= estado;
                     end case;
- 
-                end if;
+	    end if;-- if do clock
 
        end process;
 
+       process(estado)
 
-  process (estado)
-  BEGIN
-  case estado is
-  when Ab =>
-  LEDG(6) <= '0'; -- MotorA desligado
-  LEDG(7) <= '0'; -- MotorF desligado
-  LEDG(0) <= '1'; -- Sa ligado
-  LEDG(1) <= '0'; -- Sf desligado
-   
-  when c1 =>
-  if (estadoAnterior = Ab) then
-  LEDG(7) <= '1'; -- MotorF ligado
-  LEDG(6) <= '0'; -- MotorA desligado
-  elsif (estadoAnterior = c2) then
-  LEDG(6) <= '1'; -- MotorA ligado
-  LEDG(7) <= '0'; -- MotorF desligado
-  end if;
-   
-  LEDG(0) <= '0'; -- Sa desligado
-  LEDG(1) <= '0'; -- Sf desligado
-   
-  when c2 =>
+           BEGIN
+                   case estado is
+			when Start =>
 
-                if (estadoAnterior = c1) then
-                    LEDG(7) <= '1'; -- MotorF ligado
-                    LEDG(6) <= '0'; -- MotorA desligado
-                elsif (estadoAnterior = c3) then
-                    LEDG(6) <= '1'; -- MotorA ligado
-                    LEDG(7) <= '0'; -- MotorF desligado
-                end if;
+			when player_recebe_1 =>
+				VEZ_DO_PLAYER <= '1';
+				VEZ_DO_DEALER <= '0';
+			when dealer_recebe_1 =>
+				VEZ_DO_DEALER <= '1';
 
-                LEDG(0) <= '0'; -- Sa desligado
-                LEDG(1) <= '0'; -- Sf desligado
+			when player_recebe_2 =>
+				VEZ_DO_PLAYER <= '1';
+				VEZ_DO_DEALER <= '0';
 
-   
-  when c3 =>
-if (estadoAnterior = FC) then
-LEDG(7) <= '0'; -- MotorF desligado
-LEDG(6) <= '1'; -- MotorA ligado
-elsif (estadoAnterior = c2) then
-LEDG(6) <= '0'; -- MotorA desligado
-LEDG(7) <= '1'; -- MotorF ligado
-end if;
- 
-  LEDG(0) <= '0'; -- Sa desligado
-  LEDG(1) <= '0'; -- Sf desligado
-   
-  when Fc =>
+			when dealer_recebe_2 =>
 
-  LEDG(6) <= '0'; -- MotorA desligado
-  LEDG(7) <= '0'; -- MotorF desligado
-  LEDG(0) <= '0'; -- Sa desligado
-  LEDG(1) <= '1'; -- Sf desligado
-  end case;
-  end process;
+			when player_choice =>
+				VEZ_DO_PLAYER <= '1';
+				VEZ_DO_DEALER <= '0';
+
+			when player_hit =>
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+
+			when dealer_choice => --Espera dealer
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '1';
+
+			when dealer_hit =>
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+				
+			when compara => 
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+
+			when empate => 
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+				LED_EMPATE <= '1';
+			when ganhou =>
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+				LED_GANHOU <= '1';
+			when perdeu =>
+				VEZ_DO_PLAYER <= '0';
+				VEZ_DO_DEALER <= '0';
+				LED_PERDEU <= '1';
+                    end case;
+
+       end process;
 end architecture;
