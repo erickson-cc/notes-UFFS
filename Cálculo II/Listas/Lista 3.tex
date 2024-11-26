@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage[]{pxfonts}
 
 \begin{document}
 \begin{itemize}
@@ -40,5 +41,15 @@
 	$\dfrac{1}{2}[\dfrac{3x^3}{3}-\dfrac{16x^2}{2}+20x]|_1^2$\\
 	$=\dfrac{1}{2}[(\dfrac{3.8}{3}-\dfrac{16.4}{2}+20.2)-(\dfrac{3.1}{3}-\dfrac{16.1}{2}+20.1)]$\\
 	$=\dfrac{1}{2}.[8-32+40-1+8-20]=\dfrac{3}{2}$
+	\item 21 (Errei e vou refazer)\\
+	$\int \int_R (1+x+y).dx.dy$\\
+	$=\int_1^2\int_{-2x+3}^{-3x+5}(1+x+y).dy.dx$\\
+	$=\int_1^2 [y+xy+\dfrac{y^2}{2}]|_{-2x+3}^{-3x+5}.dx$\\
+	$=\int_1^2 [(-3x+5)+x(-3x+5)+(\dfrac{9x^2-15x+25}{2})-(-2x+3)-x.(-2x+3)-(\dfrac{4x^2-12x+9}{2})].dx$\\
+	$\int_1^2 [-3x+5+2x-3+x(-3x+2x+5-3)+\dfrac{9x^2-4x^2-15x+12x+25-9}{2}].dx$
+	$\int_1^2[2-x^2+x+\dfrac{5x^2-3x+16}{2}].dx$ \\
+	$=\int_1^2\dfrac{3x^2-x+20}{2}.dx = \dfrac{1}{2}\int_1^2 (3x^2-x+20).dx$\\
+	$\dfrac{1}{2}[\dfrac{3x^3}{3}-\dfrac{x^2}{2}+20x]|_1^2$\\
+	$=\dfrac{1}{2}[8-1-\dfrac{4-1}{2}+40-20]=\dfrac{1}{2}.\dfrac{14-3+40}{2}=\dfrac{51}{4}$ serasetacerto
 \end{itemize}
 \end{document}
