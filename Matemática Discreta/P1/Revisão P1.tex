@@ -1,10 +1,12 @@
-\documentclass[•]{article}
+\documentclass[]{article}
+\usepackage[]{amsmath}
+\usepackage[]{amsfonts}
 \title{Revisão Prova 1\\Matemática Discreta\\Neri}
 \author{Erickson G. Müller}
 
 \begin{document}
 	\maketitle
-	\section{Conteúdos}
+	\section*{Conteúdos}
 		\begin{enumerate}
 			\item Proposições logicamente equivalentes
 			\item Lógica proposicional
@@ -26,8 +28,88 @@
 	\newpage
 	A matemática pode ser dividida em dois \textbf{domínios}: o \textit{contínuo} e o \textit{discreto}. A matemática contínua estuda conceitos infinitos em seu objetivo, utilizando o sistema de números reais. A matemática discreta utiliza um domínio de números que não estão conectados da mesma forma que os números reais. É uma comparação semelhante à diferença entre o sinal analógico e o digital.\\
 	
-	A matemática discreta exige do aluno que sejam desenvolvidas demonstrações (provas), para isso existem diversos \textbf{esquemas de provas} que se aplicam a cada caso. O autor do livro recomenda elaborar as provas escrevendo a primeira e a última sentença, e ir desenvolvendo em direção ao meio até que ambas se encontrem.\\
-	
-	
+	A matemática discreta exige do aluno que sejam desenvolvidas demonstrações (provas), para isso existem diversos \textbf{esquemas de provas} que se aplicam a cada caso. O autor do livro recomenda elaborar as provas escrevendo a primeira e a última sentença, e ir desenvolvendo em direção ao meio até que ambas se encontrem.
+\newpage
+	\section{Correção da Prova do Semestre Passado}
+		\subsection{}Para provar que qualquer intervalo fechado $[a,b]$ é equipotente a $\mathbb{R}$, podemos seguir o roteiro abaixo:
+		\begin{enumerate}
+			\item Prove que qualquer intervalo fechado $[a,b]$ é equipotente ao intervalo $[0,1]$. Isto pode ser feito mostrando que $f:[0,1] \to [a,b]$ onde $f(x) = xb+(1-x)a$ é uma bijeção.
+			\item A seguir, prove que o intervalo $[0,1]$ e $\mathbb{R}$ são equipotentes.
+		\end{enumerate}
+		\begin{itemize}
+			\item Faça o item 1.
+			\item Explique por que o roteiro acima é suficiente.
+			\item Mostre que é uma bijeção a função $g: [0,1]\to \mathbb{R}$ dada por:\\
+			$g(x) = \dfrac{1}{2}$, se $x=0$\\
+			$g(x) = \dfrac{1}{n+2}$, se existe $n \in \mathbb{N}$ tal que $x = \dfrac{1}{n}$\\
+	$g(x) = x$, se $x \notin \{\dfrac{1}{n}|n>0\} \bigcup \{0\}$
+		\end{itemize}
+		\subsection{} Agora que você sabe fazer a questão 4 da lista, é fácil explira por que qualquer intervalo fechado não é enumerável, já que $\mathbb{R}$ não é enumerável. Mas e \textbf{mostrar que qualquer intervalo fechado é um conjunto infinito}, você sabe fazer?. Se conseguir escrever uma demonstração clara, ganha mais um ponto e meio.
+		\subsection{} A questão 3 da lista pedia para você demonstrar que se $A$ é enumerável e $B$ é finito, então $A \bigcup B$ também é enumerável. Mas se $B$ não for enumerável, pode acontecer de $A \bigcup B$ não ser enumerável. Mostre um exemplo em que isto ocorre. Lempre que você tem que convencer que o conjunto $A \bigcap B$ não é enumerável.
+		\subsection{}Prove por indução que se $\#A = n$, então $P(A) =2^n$.(Tem no livro do Menezes).
+		\newpage
+		\subsection{}Considere a sequência dada por recorrência ao lado:\\
+		$a0 = $ número incógnito\\
+		$a1 = $ número incógnito\\
+		$a2 = $ número incógnito\\
+		$a3 = $ número incógnito\\
+		$an = 8a_{n-2} - 16a_{n-4}+3^n$ se $n \geq 4$\\
+		\begin{itemize}
+			\item Encontre uma solução particular para a recorrência desta sequência. (lempre, ela tem que ter a foram $a_n = a.3^n$.
+%			\item Eu s
+		\end{itemize}
+	\section{Respostas}
+	\begin{itemize}
+		\item 1.a\\
+			Demonstrar bijeção em\\
+			$f:[0,1] \to [a,b]$\\			
+			$_{x \to f(x) =xb+(1-x)a}$\\
+%			Provar que f é injetora e sobrejetora
+			$$f(x) = xb+(1-x)a$$
+			$$f(x) = xb +xa +a$$
+			$$f(x) = x(b-a)+a$$
+			Demonstrar injetividade\\
+			Suponha que $f(m)=f(n)$\\
+			então:
+			$$f(m)=m(b-a)+a$$
+			$$f(n) =n(b-a)+a$$
+			$$f(m)=f(n) =>$$
+			$$m(b-a)+a = n(b-a)+a$$
+			$$m=n$$
+			Logo, se $f(m)=f(n)$, então $m=n$.\\
+			Assim, $f$ é injetora.\\
+			Demonstrar sobrejetividade\\
+			Nessa situação, precisamos encontrar um $x \in [0,1]$ para cada $y \in [a,b]$ de tal forma que $f(x) = y$\\
+			Assim, considere $y \in [a,b]$.\\
+			Tome:\\
+			$y = x.(b-a)+a$\\
+			$y-a = x.(b-a)$
+			$$x = \dfrac{y-a}{b-a}$$
+			Observe que $x$ de fato pertence ao interval $[0,1]$, pois se $y =a, x=0$ e se $y=b, x=1$\\
+			e se $a<y<b$, então\\
+			$$y-a < b-a$$
+			e $\dfrac{y-a}{b-a}<1$
+			$$0<\dfrac{y-a}{b-a}<1 \to o<x<1$$
+			$$x \in [0,1]$$
+			e Então, se $x = \dfrac{y-a}{b-a}$\\
+			$f(x) = x(b-a) + a$\\
+			$\dfrac{y-a}{b-a}.(b-a) +a$\\
+			$y-a +a = y$\\
+			$y=y$\\
+			Assim, $f$ é bijetora.
+		\item 1.b\\
+			Demonstrar bijeção entre $\mathbb{R} \to [0,1]$ e entre $[0,1] \to [a,b]$\\
+			Vamos supor que:\\
+			$\varphi: [a,									 \to [0,1]$ e $\psi: [0,1] \to \mathbb{R}$ sejam bijeções.\\
+			Então a função composta $\psi o \varphi : [a,b] \to \mathbb{R}$ são equipotentes.
+		\item 2\\
+			Existem 4 tipos de intervalos fechados:\\
+			$[a,b] = \{x \int \mathbb{R}/a\leq x \leq b\}$\\
+			$[a,\infty) = \{x \int \mathbb{R}/a\leq x \}$\\
+			$(-\infty ,b] = \{x \int \mathbb{R}/x \leq b\}$\\
+			$(-\infty,\infty) = \mathbb{R}$\\
+			Um conjunto $A$ é infinito quando existe uma bijeção\\
+			$\varphi B \to A$ onde $B  \subset A$ e $B \not = A$
+	\end{itemize}
 
 \end{document}
