@@ -1,0 +1,87 @@
+\documentclass[•]{article}
+%\usepackage[]{amsmath}
+%\usepackage{tikz}
+%\usepackage{pgfplots}
+
+\title{Revisão P2 Pesquisa e Ordenação de Dados\\Giancarlo}
+\author{Erickson G. Müller}
+
+\begin{document}
+	\maketitle
+	\section*{Conteúdos}
+		\begin{enumerate}
+			\item Busca Linear e Binária
+			\item Tabela Hash
+			\item Árvore B
+			\item Árvore B+
+			\item Compressão de Dados
+		\end{enumerate}
+	\newpage
+	
+	\section{Busca Linear e Binária}
+		A \textbf{busca linear} acontece em um vetor ou lista encadeada.
+		\begin{itemize}
+			\item Melhor caso: $O(1)$
+			\item Pior caso: $O(n)$
+			\item Caso médio: $O(\frac{n+1}{2})$
+		\end{itemize}
+		A \textbf{busca binária} só pode ser implementada em vetores ordenados. Que ocorre através de \textbf{divisão e conquista}. Partindo do meio do vetor, divide-o até encontrar ou não o elemento.
+		\begin{itemize}
+			\item Melhor caso: $O(1)$
+			\item Pior caso: $O(\log n)$
+			\item Caso médio: $O(\log n)$
+		\end{itemize}
+		
+	\section{Tabela Hash}
+		Em tabelas hash, a complexidade de busca é sempre $O(1)$. Também chamada de tabela de dispersão ou tabela de espalhamento, a tabela hash armazena uma ou mais chaves(e seus valores associados) em um vetor. Os elementos ficam dispostos de forma \textbf{não ordenada}.\\
+		Espalha-se os dados em uma grande tabela usando uma função cujo objetivo é evitar que esses dados caiam no mesmo índice da tabela (colisão). A função \textit{hashing} transforma cada chave em um inteiro equivalente a um dos índices da tabela hash.\\
+		Em caso de colisões, pode-se criar uma lista encadeada em cada índice da tabela:
+		\subsection{Tratamento de Colisões}
+			\begin{itemize}
+%			
+%
+				\item \textbf{Endereçamento aberto}: Em caso de colisão, a chave é adicionada em outra posição da tabela, facilitando a busca. Em contrapartida, há a necessidade de implementar algoritmo auxiliar para calcular a posição na tabela, a seguir alguns algoritmos:
+				\begin{enumerate}
+					\item Sondagem linear: será adicionado na próxima posição livre da tabela (Ao $K$ da função hashing será adicionado um $j$).
+					\item Sondagem quadrática: para evitar a formação de cluster primários, similar à sondagem linear, contudo, ao $K$ da função hashing será adicionado um $j^2$.
+					\item Hashing duplo: utiliza uma segunda função hash para gerar um resultado diferente. 
+				\end{enumerate}\newpage
+				\textbf{Inserção em endereçamento aberto}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(n)$, quando todas as chaves são mapeadas para posições ocupadas.
+				\end{itemize}
+				\textbf{Busca em endereçamento aberto}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(m)$, pois terá que testar todas as posições até encontrar a chave.
+				\end{itemize}
+				\textbf{Remoção em endereçamento aberto}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(m)$, pois pode ser necessário testar todas as posições para encontrar a chave.
+				\end{itemize}
+%				
+%
+				\item \textbf{Encadeamento separado}: Hashing aberto, cada posição da tabela aponta para o início de uma lista encadeada. Necessita de memória adicional àquela que foi alocada para a tabela.
+				\textbf{Inserção em encadeamento separado}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(1)$, se a lista não for ordenada.
+				\end{itemize}
+				\textbf{Busca em encadeamento separado}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(n)$, quando todas as chaves estão na mesma posição do vetor e a chave procurada estiver no final da lista.
+				\end{itemize}
+				\textbf{Remoção em encadeamento separado}
+				\begin{itemize}
+					\item Melhor caso: $O(1)$
+					\item Pior caso: $O(n)$, quando todas as chaves estão na mesma posição do vetor e a chave procurada estiver no final da lista.
+				\end{itemize}				
+				Podemos reparar que as operações com encadeamento separados são menos complexas no pior caso que as operações com endereçamento aberto. A pior desvantagem é memória adicional que é alocada dinamicamente nas listas encadeadas, em vez de aproveitar ao máximo a memória destinada à tabela.
+			\end{itemize}
+%
+%	
+	\section{Árvore Binária}	
+\end{document}
