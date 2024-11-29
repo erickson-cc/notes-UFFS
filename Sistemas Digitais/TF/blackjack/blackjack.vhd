@@ -5,12 +5,13 @@ ENTITY blackjack IS PORT (
 
 
    ------ Variáveis ------
+
 	HIT: in STD_LOGIC;-- SW(1) = Reset, SW(2) = S, SW(3) = B
     STAY: in STD_LOGIC;
     START: in STD_LOGIC;
     CLK: in STD_LOGIC;
     CARDS: in STD_LOGIC_VECTOR(3 downto 0);
-    RANDOM_CARDS: in STD_LOGIC;-- Key(0) = Clock-- TIRAR
+    RANDOM_CARDS: in STD_LOGIC;-- Key(0) = Clock
 
     WIN : out  STD_LOGIC;
     LOSE : out  STD_LOGIC;
@@ -23,9 +24,6 @@ ENTITY blackjack IS PORT (
 
 END ENTITY blackjack;
 
-
-
-
 ARCHITECTURE behave OF blackjack IS
     TYPE tipo_estado IS (reset,recebePlayer1,recebeDealer1,recebePlayer2,recebeDealer2,esperaPlayer,hitPlayer,esperaDealer,hitDealer,compara,ganhouP, perdeuP, empate);
     signal estado : tipo_estado;
@@ -35,49 +33,6 @@ ARCHITECTURE behave OF blackjack IS
     signal dealerCards :  integer range 1 to 13; 
     signal dealerSoma : integer range 0 to 10 := 0 ;   
     signal cardArray :  integer range 1 to 52; 
-    function vec2int (
-        card: intj
-    )
-    function int2display (
-        card_hand: in integer range 0 to 13)
-        return std_logic_vector is 
-        variable display : std_logic_vector (6 downto 0);   
-        begin
-            case card_hand is 
-            when 0 => display := "1111110";
-            when 1 => display := "1110000";  --AS
-            when 2 => display := "1011011";  -- 2  --a,b,c,d,e,f,g
-            when 3 => display := "1001111";  -- 3
-            when 4 => display := "1100110";  -- 4
-            when 5 => display := "1101101";  -- 5
-            when 6 => display := "1111101";  -- 6
-            when 7 => display := "0000111";  -- 7
-            when 8 => display := "1111111";  -- 8
-            when 9 => display := "1101111";  -- 9
-            when 10 => display := "1110111";  --A
-            when 11 => display := "1111100";  --B
-            when 12 => display := "0111001";  --C
-            when 13 => display := "1011110";  --D
-    
-        end case;   
-        return std_logic_vector(display);
-    end;
-    function displayHand_dezena(
-        card_hand: in integer range 0 to 30)
-        return std_logic_vector is
-            variable display_dezena : std_logic_vector (6 downto 0);
-        begin
-            if(card_hand < 10) then
-                display_dezena := "1111110";
-            elsif(card_hand <20) then
-                display_dezena := "1110000";
-            elsif(card_hand < 30) then
-                display_dezena := "1011011";
-            else -- quando 30
-                display_dezena := "1001111";
-            end if;
-        return std_logic_vector(display_dezena);
-    end;
 
      BEGIN
 
@@ -193,15 +148,30 @@ ARCHITECTURE behave OF blackjack IS
                     end case;
  
                 end if;
+
         end process;
 
         process(ESTADO,playerCards)--Process de saída(conferir o que vai aqui)
             begin
-                CARDDISPLAY <= int2display(playerCards);
-                SUMDISPLAY1 <= int2display(playerSoma mod 10);
-                SUMDISPLAY2 <=  displayHand_dezena(playerSoma);
                 if (CLK'EVENT AND CLK = '0') then
-                    --player
+                    case playerCards is --And estado != compara & perdeu & ganhou & empate
+                    -- when 01 => CARDDISPLAY <= "1110000";  --AS
+                        when 02 => CARDDISPLAY <= "1011011";  -- 2  --a,b,c,d,e,f,g
+                        when 03=> CARDDISPLAY <= "1001111";  -- 3
+                        when 04 => CARDDISPLAY <= "1100110";  -- 4
+                        when 05 => CARDDISPLAY <= "1101101";  -- 5
+                        when 06 => CARDDISPLAY <= "1111101";  -- 6
+                        when 07 => CARDDISPLAY <= "0000111";  -- 7
+                        when 08 => CARDDISPLAY <= "1111111";  -- 8
+                        when 09 => CARDDISPLAY <= "1101111";  -- 9
+                        when 10 => CARDDISPLAY <= "1110111";  --A
+                        when 11 => CARDDISPLAY <= "1111100";  --B
+                        when 12 => CARDDISPLAY <= "0111001";  --C
+                        when 13 => CARDDISPLAY <= "1011110";  --D
+
+                        when others => CARDDISPLAY <= "0000000";
+                    end case; --encerra caso
+
                     --Criar um case SumDisplay
                         --Irá mostrar a soma das cartas do player em 2 displays de 7 segmentos
                     --Talvez criar um case sumDisplay para o dealer
@@ -215,7 +185,7 @@ ARCHITECTURE behave OF blackjack IS
                         when recebePlayer2 => --Adicionar playerCards ao playerSoma, verificar randomCards
                         when recebeDealer2 => --Adicionar dealerCards ao dealerSoma, verificar randomCards
                         when esperaPlayer => --x
-                        when hitPlayer => -- Adicionar ao playerSoma, verificar randomCards
+                        when hitPlayer => -- Adicionar playerCards ao playerSoma, verificar randomCards
                         when esperaDealer => --x
                         when hitDealer => -- Adicionar dealerCards ao dealerSoma, verificar randomCards
                         when compara => --x
@@ -223,17 +193,7 @@ ARCHITECTURE behave OF blackjack IS
                         when ganhouP => -- Ligar LED Vitória
                         when perdeuP => -- Ligar LED DERROTA
                     end case;
-                    if(playerSoma<10) then
-                        SUMDISPLAY1 <= "1111110";
-                    elsif(playerSoma>=10 AND playerSoma<20) then
-                        SUMDISPLAY1 <= "1110000";
-                    elsif(playerSoma>=20 AND playerSoma<30) then
-                        SUMDISPLAY1 <= "1011011";
-                    elsif(playerSoma = 30) then
-                        SUMDISPLAY1 <= "1001111";
-                    else 
-                        SUMDISPLAY1 <= "0000000";
-                    end if;
+
             end if;
 
         end process;
@@ -264,7 +224,3 @@ end behave;
 -- Criar a lógica do sumDisplay1 e sumDisplay2
 -- Fazer while do hitDealer
 -- Criar a lógica de cartas restantes do baralho.
--- NÃO SERÁ TESTADO
---      CARTAS MAIORES QUE 13
---      CARTAS REPETIDAS
--- Binário para decimal 

@@ -1,0 +1,16 @@
+
+State Machine - |blackjack|estado
+Name estado.empate estado.perdeuP estado.ganhouP estado.compara estado.hitDealer estado.esperaDealer estado.hitPlayer estado.esperaPlayer estado.recebeDealer2 estado.recebePlayer2 estado.recebeDealer1 estado.recebePlayer1 estado.reset 
+estado.reset 0 0 0 0 0 0 0 0 0 0 0 0 0 
+estado.recebePlayer1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+estado.recebeDealer1 0 0 0 0 0 0 0 0 0 0 1 0 1 
+estado.recebePlayer2 0 0 0 0 0 0 0 0 0 1 0 0 1 
+estado.recebeDealer2 0 0 0 0 0 0 0 0 1 0 0 0 1 
+estado.esperaPlayer 0 0 0 0 0 0 0 1 0 0 0 0 1 
+estado.hitPlayer 0 0 0 0 0 0 1 0 0 0 0 0 1 
+estado.esperaDealer 0 0 0 0 0 1 0 0 0 0 0 0 1 
+estado.hitDealer 0 0 0 0 1 0 0 0 0 0 0 0 1 
+estado.compara 0 0 0 1 0 0 0 0 0 0 0 0 1 
+estado.ganhouP 0 0 1 0 0 0 0 0 0 0 0 0 1 
+estado.perdeuP 0 1 0 0 0 0 0 0 0 0 0 0 1 
+estado.empate 1 0 0 0 0 0 0 0 0 0 0 0 1 
