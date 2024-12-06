@@ -1,142 +1,209 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-
+USE ieee.numeric_std.ALL;
 ENTITY blackjack IS PORT (
 
-
    ------ Variáveis ------
-	HIT: in STD_LOGIC;-- SW(1) = Reset, SW(2) = S, SW(3) = B
-    STAY: in STD_LOGIC;
-    START: in STD_LOGIC;
-    CLK: in STD_LOGIC;
-    CARDS: in STD_LOGIC_VECTOR(3 downto 0);
-    RANDOM_CARDS: in STD_LOGIC;-- Key(0) = Clock-- TIRAR
 
-    WIN : out  STD_LOGIC;
-    LOSE : out  STD_LOGIC;
-    TIE : out  STD_LOGIC;
-    CARDDISPLAY : out  STD_LOGIC_VECTOR(6 downto 0);
-    SUMDISPLAY1 : out  STD_LOGIC_VECTOR(6 downto 0);-- Mostra a casa decimal de maior valor
-    SUMDISPLAY2 : out  STD_LOGIC_VECTOR(6 downto 0) -- Mostra a casa decimal das unidades
+     KEY: in STD_LOGIC_VECTOR(3 downto 0);
 
+        -- KEY(1) = START
+        -- KEY(0) = CLOCK        
+
+    SW: in STD_LOGIC_VECTOR(9 downto 0);
+
+        -- SW(9) = HIT
+        -- SW(8) = STAY
+        -- SW CARDS (BINÁRIO)
+
+    LEDR : out STD_LOGIC_VECTOR(9 downto 0); -- derrota
+    LEDG : out STD_LOGIC_VECTOR(7 downto 0); -- vitória
+
+    HEX0 : out STD_LOGIC_VECTOR(6 downto 0); -- CARDDISPLAY2 UNIDADE
+    HEX1 : out STD_LOGIC_VECTOR(6 downto 0); -- CARDDISPLAY1 DEZENA
+    HEX2 : out STD_LOGIC_VECTOR(6 downto 0); -- SUMDISPLAY2 Mostra a casa da unidade
+    HEX3 : out STD_LOGIC_VECTOR(6 downto 0) -- SUMDISPLAY1 Mostra a casa da dezena
    );
-
 END ENTITY blackjack;
-
-
-
 
 ARCHITECTURE behave OF blackjack IS
     TYPE tipo_estado IS (reset,recebePlayer1,recebeDealer1,recebePlayer2,recebeDealer2,esperaPlayer,hitPlayer,esperaDealer,hitDealer,compara,ganhouP, perdeuP, empate);
-    signal estado : tipo_estado;
-   -- signal estadoAnterior : tipo_estado;
-    signal playerCards :  integer range 1 to 13; 
-    signal playerSoma : integer range 0 to 30 := 0;
-    signal dealerCards :  integer range 1 to 13; 
-    signal dealerSoma : integer range 0 to 10 := 0 ;   
-    signal cardArray :  integer range 1 to 52; 
-    function vec2int (
-        card: intj
-    )
+    signal estado : tipo_estado := reset;
+    signal playerSoma : integer range 0 to 50 := 0;
+    signal dealerSoma : integer range 0 to 50:= 0 ;   
+    signal cardArray :  integer range 0 to 52:= 0;
+    signal pCard : integer range 0 to 13:= 0;
+    signal dCard : integer range 0 to 13:= 0;
+
     function int2display (
         card_hand: in integer range 0 to 13)
         return std_logic_vector is 
         variable display : std_logic_vector (6 downto 0);   
-        begin
+
+        begin 
             case card_hand is 
-            when 0 => display := "1111110";
-            when 1 => display := "1110000";  --AS
-            when 2 => display := "1011011";  -- 2  --a,b,c,d,e,f,g
-            when 3 => display := "1001111";  -- 3
-            when 4 => display := "1100110";  -- 4
-            when 5 => display := "1101101";  -- 5
-            when 6 => display := "1111101";  -- 6
-            when 7 => display := "0000111";  -- 7
-            when 8 => display := "1111111";  -- 8
-            when 9 => display := "1101111";  -- 9
-            when 10 => display := "1110111";  --A
-            when 11 => display := "1111100";  --B
-            when 12 => display := "0111001";  --C
-            when 13 => display := "1011110";  --D
-    
-        end case;   
+                when 0 => display := "1000000";
+                when 1 => display := "1111001";  --AS
+                when 2 => display := "0100100";  -- 2 
+                when 3 => display := "0110000";  -- 3
+                when 4 => display := "0011001";  -- 4
+                when 5 => display := "0010010";  -- 5
+                when 6 => display := "0000010";  -- 6
+                when 7 => display := "1111000";  -- 7
+                when 8 => display := "0000000";  -- 8
+                when 9 => display := "0010000";  -- 9
+                when 10 => display := "0001000";  --A
+                when 11 => display := "0000011";  --B
+                when 12 => display := "1000110";  --C
+                when 13 => display := "0100001";  --D
+            when others => display := "1111111";
+            end case;   
         return std_logic_vector(display);
     end;
+
     function displayHand_dezena(
         card_hand: in integer range 0 to 30)
         return std_logic_vector is
-            variable display_dezena : std_logic_vector (6 downto 0);
+        variable display_dezena : std_logic_vector (6 downto 0);
+
         begin
             if(card_hand < 10) then
-                display_dezena := "1111110";
-            elsif(card_hand <20) then
-                display_dezena := "1110000";
+                display_dezena := "1000000";
+            elsif(card_hand < 20) then
+                display_dezena := "1111001";
             elsif(card_hand < 30) then
-                display_dezena := "1011011";
-            else -- quando 30
-                display_dezena := "1001111";
+                display_dezena := "0100100";
+            elsif (card_hand = 30) then
+                display_dezena := "0110000";
+            else
+                display_dezena := not"0000000";
             end if;
         return std_logic_vector(display_dezena);
     end;
 
      BEGIN
-
-        process(CLK)--Process referente à troca de estados
-
+        process(KEY(0))--Process referente à troca de estados
+            variable preSomaPlayer : integer range 0 to 50 := 0;
+            variable preSomaDealer : integer range 0 to 50 := 0;
+            variable playerCards :  integer range 0 to 13:= 0; 
+            variable dealerCards :  integer range 0 to 13:= 0; 
+            
             begin
+                        
+                If(KEY(1) = '0') then -- Reset
+                    estado <= reset;           
 
-                if(START = '1') then -- Reset
-
-                    estado <= reset;
-
-							
-                elsif(CLK'EVENT AND CLK = '0') then -- Clock
+                elsif(KEY(0)'EVENT AND KEY(0) = '0') then -- Clock
 
                     case estado is
-
                         when reset =>
-                            --estadoAnterior <= estado;
-                            estado <=recebePlayer1;
-                            --if(RANDOM_CARDS = '1') then
+                            preSomaPlayer := 0;
+                            preSomaDealer := 0;
+                            playerCards := 0;
+                            dealerCards := 0; 
+                            playerSoma <= 0;
+                            dealerSoma <= 0 ;
+                            estado <=recebePlayer1;
 
-                            --else
-
-                    
-                            --end if;
                         when recebePlayer1 =>
-                            estado <= recebeDealer1;
+                                                
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                playerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaPlayer + 11) <=21) then
+                                    playerCards := 11;
+                                else 
+                                    playerCards := 1;
+                                end if;
+                            else
+                                playerCards := to_integer(unsigned(SW(3 downto 0)));
+                           end if;
+                                                      
+                           preSomaPlayer:= preSomaPlayer+playerCards;
+                           estado <= recebeDealer1;
 
                         when recebeDealer1 =>
+                                                
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                dealerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaDealer + 11) <=21) then
+                                    dealerCards := 11;
+                                else 
+                                    dealerCards := 1;
+                                end if;
+                            else
+                                dealerCards := to_integer(unsigned(SW(3 downto 0)));
+                            end if;
+                                                      
+                            preSomaDealer := preSomaDealer+dealerCards;
                             estado <= recebePlayer2;
 
                         when recebePlayer2 =>
+                                                
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                playerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaPlayer + 11) <=21) then
+                                    playerCards := 11;
+                                else 
+                                    playerCards := 1;
+                                end if;
+                            else
+                                playerCards := to_integer(unsigned(SW(3 downto 0)));
+                            end if;
+                                                      
+                            preSomaPlayer:= preSomaPlayer+playerCards;
                             estado <= recebeDealer2;
 
                         when recebeDealer2 =>
+                                                                                       
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                dealerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaDealer + 11) <=21) then
+                                    dealerCards := 11;
+                                else 
+                                    dealerCards := 1;
+                                end if;
+                            else
+                                dealerCards := to_integer(unsigned(SW(3 downto 0)));
+                            end if;
+                                                
+                            preSomaDealer := preSomaDealer+dealerCards;
                             estado <= esperaPlayer;
 
                         when esperaPlayer =>
-
-                            if(HIT = '1') then 
-                                estado <= hitPlayer;
-                                --recebe carta
-                                
+                            if(SW(9) = '1') then 
+                                estado <= hitPlayer;                                
 
                             end if;
-                            if(STAY = '1') then 
+                            if(SW(8) = '1') then 
                                 estado <= esperaDealer;
-                            
+
                             end if;
 
                         when hitPlayer =>
-                            if(RANDOM_CARDS = '1') then -- 
+                                                
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                playerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaPlayer + 11) <=21) then
+                                    playerCards := 11;
+                                else 
+                                    playerCards := 1;
+                                end if;
+                            else
+                                playerCards := to_integer(unsigned(SW(3 downto 0)));
+                           end if;
+                                                      
+                            preSomaPlayer := preSomaPlayer+playerCards;
 
-                                end if;
-                            if(playerSoma>21) then -- se eu e o dealer tiver mais de 21 eu perco ou da empate
+                            if(playerSoma>21) then
                                 estado <= perdeuP;
 
-            				elsif(playerSoma=21) then
-			            		estado <=esperaDealer;
+                            elsif(playerSoma=21) then
+                                estado <= ganhouP;
 
                             elsif(playerSoma<=21) then 
                                 estado <= esperaPlayer;
@@ -144,40 +211,41 @@ ARCHITECTURE behave OF blackjack IS
                             end if;   
 
                         when esperaDealer =>
-
                             if(dealerSoma<17) then 
-                                estado <= hitdealer;--por que precisa desse processo? vai ter que ficar dando clock, da pra fazer de uma vez
-                                --recebe carta
-                                
-
+                                estado <= hitdealer;
                             end if;
+
                             if(dealerSoma>=17) then 
                                 estado <= compara;
-                            
                             end if;
 
                         when hitDealer =>
-                            if(RANDOM_CARDS = '1') then
-    
-    
-    
-                        
-                            end if;
+                                                
+                            if((SW(3 downto 0) = "1011") or (SW(3 downto 0) = "1100") or (SW(3 downto 0) = "1101")) then
+                                dealerCards := 10;
+                            elsif(SW(3 downto 0) = "0001") then
+                                if((preSomaDealer + 11) <=21) then
+                                    dealerCards := 11;
+                                else 
+                                    dealerCards := 1;
+                                end if;
+                            else
+                                dealerCards := to_integer(unsigned(SW(3 downto 0)));
+                            end if;
+                                                
+                            preSomaDealer := preSomaDealer + dealerCards;
+
                             if(dealerSoma>21) then 
                                 estado <= ganhouP;
-                                  
-
                             end if;
+
                             if(dealerSoma<=21) then 
                                 estado <= esperaDealer;
-                            
                             end if;
-                            
-                        when compara =>
 
-                            if((dealerSoma = 21 and dealerSoma /= playerSoma) or (dealerSoma < 21 and dealerSoma > playerSoma)) then 
+                        when compara =>
+                            if((dealerSoma = 21 and dealerSoma /= playerSoma) or (dealerSoma < 21 and dealerSoma > playerSoma)) then
                                 estado <= perdeuP;
-                                  
                             elsif((playerSoma = 21 and dealerSoma /= playerSoma) or (playerSoma < 21 and playerSoma > dealerSoma) ) then --or (playerSoma < 21 and dealerSoma > 21)???????
                                 estado <= ganhouP;
                             else 
@@ -186,85 +254,120 @@ ARCHITECTURE behave OF blackjack IS
 
                         when empate =>
                             estado <= reset;
+
                         when ganhouP =>
                             estado <= reset;
+
                         when perdeuP =>
                             estado <= reset;
-                    end case;
- 
+
+                        end case;
                 end if;
+                playerSoma<= preSomaPlayer;
+                dealerSoma<= preSomaDealer;
+                pCard <= playerCards;
+                dCard <= dealerCards;
         end process;
 
-        process(ESTADO,playerCards)--Process de saída(conferir o que vai aqui)
+        process(ESTADO) --Process de saída
+
             begin
-                CARDDISPLAY <= int2display(playerCards);
-                SUMDISPLAY1 <= int2display(playerSoma mod 10);
-                SUMDISPLAY2 <=  displayHand_dezena(playerSoma);
-                if (CLK'EVENT AND CLK = '0') then
-                    --player
-                    --Criar um case SumDisplay
-                        --Irá mostrar a soma das cartas do player em 2 displays de 7 segmentos
-                    --Talvez criar um case sumDisplay para o dealer
-                        --Será demonstrado no estado de comparação.
-
-                    --case estado is (USAR AQUI PARA ADICIONAR CARTAS)
-                    case estado is
-                        when reset =>  --Zerar variáveis, desligar LED
-                        when recebePlayer1 => --Adicionar playerCards ao playerSoma, verificar randomCards
-                        when recebeDealer1 => --Adicionar dealerCards ao dealerSoma, verificar randomCards
-                        when recebePlayer2 => --Adicionar playerCards ao playerSoma, verificar randomCards
-                        when recebeDealer2 => --Adicionar dealerCards ao dealerSoma, verificar randomCards
-                        when esperaPlayer => --x
-                        when hitPlayer => -- Adicionar ao playerSoma, verificar randomCards
-                        when esperaDealer => --x
-                        when hitDealer => -- Adicionar dealerCards ao dealerSoma, verificar randomCards
-                        when compara => --x
-                        when empate => -- Ligar LED empate
-                        when ganhouP => -- Ligar LED Vitória
-                        when perdeuP => -- Ligar LED DERROTA
-                    end case;
-                    if(playerSoma<10) then
-                        SUMDISPLAY1 <= "1111110";
-                    elsif(playerSoma>=10 AND playerSoma<20) then
-                        SUMDISPLAY1 <= "1110000";
-                    elsif(playerSoma>=20 AND playerSoma<30) then
-                        SUMDISPLAY1 <= "1011011";
-                    elsif(playerSoma = 30) then
-                        SUMDISPLAY1 <= "1001111";
-                    else 
-                        SUMDISPLAY1 <= "0000000";
-                    end if;
-            end if;
-
-        end process;
-	
-        process (estado)
-            BEGIN
                 case estado is
+                    when reset =>
+   
+                        LEDR <= "0000001111";
+                        LEDG <= "10000000";
+                        HEX0 <= int2display(0);
+                        HEX1 <= int2display(0);
+                        HEX2 <= int2display(0);
+                        HEX3 <= int2display(0);
+
+                    when recebePlayer1 =>
+                    
+                        LEDR <= "1000001111";
+                        LEDG <= "00000000";
+                        HEX1 <= "1111111";
+                        HEX0 <= int2display(to_integer(unsigned(SW(3 downto 0))));
+                        HEX2 <= int2display(playerSoma mod 10);
+                        HEX3 <= displayHand_dezena(playerSoma);
+
+                    when recebeDealer1 =>
+                           
+                        LEDG <= "00000000";
+                        LEDR <= "0100001111";
+                        HEX0 <= int2display(to_integer(unsigned(SW(3 downto 0))));
+                        HEX1 <= "1111111";
+                        HEX2 <= int2display(playerSoma mod 10);
+                        HEX3 <= displayHand_dezena(playerSoma);
+
+                    when recebePlayer2 =>
+
+                        LEDG <= "00100000";
+                        LEDR <= "0000001111";
+                        HEX0 <= int2display(to_integer(unsigned(SW(3 downto 0))));
+                        HEX1 <= "1111111";
+                        HEX2 <= int2display(playerSoma mod 10);
+                        HEX3 <= displayHand_dezena(playerSoma);
+
+                    when recebeDealer2 =>
+
+                        LEDR <= "0000001000";
+                        HEX1 <= "1111111";
+                        HEX2 <= int2display(playerSoma mod 10);
+                        HEX3 <= displayHand_dezena(playerSoma);
+                        HEX0 <= int2display(to_integer(unsigned(SW(3 downto 0))));
+
+                    when esperaPlayer =>
+
+                        LEDR <= "0000010000";
+                        HEX0 <= int2display(to_integer(unsigned(SW(3 downto 0))));
+                        HEX1 <= "1111111";
+                        HEX2 <= int2display(playerSoma mod 10);
+                        HEX3 <= displayHand_dezena(playerSoma);
+
+                    when hitPlayer =>
+
+                        HEX0 <= int2display(pCard);
+                        LEDR <= "0001000000";
+                        HEX1 <= "1111111";
+
+                    when esperaDealer =>
+
+                        LEDR <= "0010000000";
+
+                    when hitDealer =>
+
+                        HEX1 <= "1111111";
+                        LEDR <= "0100000000";
+                        HEX0 <= int2display(dCard);
+
+                    when compara =>
+
+                        LEDR <= "1000000000";
+
                     when perdeuP =>
-                        LOSE <= '1';
-                        WIN <= '0';
-                        TIE <= '0';
+
+                        LEDR <= "1111111111";
+                        LEDG <= "00000000";
+                        HEX0 <= int2display(dealerSoma mod 10);
+                        HEX1 <=  displayHand_dezena(dealerSoma);
+
                     when ganhouP =>
-                        LOSE <= '0';
-                        WIN <= '1';
-                        TIE <= '0';
+
+                        LEDR <= "0000000000";
+                        LEDG <= "11111111";
+                        HEX0 <= int2display(dealerSoma mod 10);
+                        HEX1 <=  displayHand_dezena(dealerSoma);
+
                     when empate =>
-                        LOSE <= '0';
-                        WIN <= '0';
-                        TIE <= '1';
-		when others =>
-		       LOSE <= '0';
-                        WIN <= '0';
-                        TIE <= '0';
-                end case;
-        end process;
+
+                        LEDR <= "1111111111";
+                        LEDG <= "11111111";
+                        HEX0 <= int2display(dealerSoma mod 10);
+                        HEX1 <=  displayHand_dezena(dealerSoma);
+
+                end case; 
+
+                               
+    end process;
 end behave;
--- Fazer números aleatórios
--- Criar a lógica do sumDisplay1 e sumDisplay2
--- Fazer while do hitDealer
--- Criar a lógica de cartas restantes do baralho.
--- NÃO SERÁ TESTADO
---      CARTAS MAIORES QUE 13
---      CARTAS REPETIDAS
--- Binário para decimal 
