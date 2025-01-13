@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage[]{amsmath}
+%\usepackage[]{pxfonts}
+\usepackage[english]{babel}
+
+\title{Revisão Prova 1 de\\Organização de Computadores\\Luciano L. Caimi}
+\author{Erickson Giesel Müller}
+\date{}
+
+\begin{document}
+	\maketitle
+	\section*{Conteúdos}
+		\begin{enumerate}
+			\item Arquitetura Von Neumann
+			\item Arquitetura Harvard
+			\item Arquitetura RISC
+			\item Arquitetura CISC
+			
+			\item Pipeline
+			\item Hierarquia de memória
+				\begin{enumerate}
+				 	\item Cache
+				 	\item Memória Principal RAM
+				 	\item Memória Virtual
+				 	\item Armazenamento de Massa
+				\end{enumerate}
+		\end{enumerate}
+		
+	\section{Memória Cache}
+		\subsection{Cache com Mapeamento Direto}
+			Para calcular a linha da memória cache:
+			$$i = j \mod m$$
+			onde:\\
+			$i$ é o número da linha na memória cache\\
+			$j$ é o número de blocos na memória RAM\\
+			$m$ é o número de blocos na memória cache\\
+			Todas as relações de endereço são em potência de 2. Assim, conseguimos encontrar a linha na memória cache, mas, em uma operação de busca, ainda precisamos saber em qual \underline{bloco} está a informação, para isso usamos duas informações de controle:			
+		\subsection{Bit de Válido}
+			Indica se a entrada do cache está escrita com alguma informação.
+		\subsection{Bit de Tag}
+			Complementa o cálculo de endereço com a sintaxe $[tag]j \mod m$. Os bits de tag informam em qual parte da memória cache está a informação de acordo com a linha calculada.
+\end{document} 
