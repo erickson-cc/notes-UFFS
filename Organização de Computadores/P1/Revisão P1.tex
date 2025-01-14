@@ -25,7 +25,17 @@
 				 	\item Armazenamento de Massa
 				\end{enumerate}
 		\end{enumerate}
+	\section{Arquitetura CISC}
+		A arquitetura CISC apresenta instruções complexas que demandam um \textbf	{grande número de ciclos} para serem executadas. Dezenas de modos de endereçamento, instruções de tamanhos variados e referência a operandos na memória principal.\\
+		Nas arquiteturas CISC fica mais difícil implementar o pipeline. A unidade de controle é microprogramada. Menos instruções por ciclo.
 		
+	\section{Arquitetura RISC}
+		Instruções mais simples, demandando u mnúmero \textbf{fixo} de ciclos de máquina para a sua execução. Uso de poucos e simples modos de endereçamento. Poucos formatos de instruções.\\
+		Apenas instruções de load/store referenciam operandos na memória principal. Cada fase de processamento da instrução tem a duração fixa igual a um ciclo de máquina. O formato fixo das instruções facilita o pipeline. As instruções são executadas, na sua maioria, em apenas um ciclo de máquina.\\
+		A unidade de controle é em geral hardwired, ou seja, não há microprograma para interpretar as instruções. Arquitetura orientada a registrador, todas as operações aritiméticas são realizadas entre registradores.\\
+		A desvantagem de usar uma arquitetura com um único ciclo é que o ciclo do clock se torna ineficiente, pois este deve ser do tamanho da instrução mais lenta. Isso é um grande problema quando se considera instruções mais complexas como por exemplo multiplicação de ponto flutuante.
+	
+	\section{Pipeline}
 	\section{Memória Cache}
 		\subsection{Cache com Mapeamento Direto}
 			Para calcular a linha da memória cache:
