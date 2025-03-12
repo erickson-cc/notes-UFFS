@@ -1,0 +1,71 @@
+\documentclass[ ]{article}
+\title{Revisão P1 de Prog II\\Giancarlo Salton e Neimar Assmann}
+\author{Erickson G. Müller}
+\date{24 de junho}
+\begin{document}
+	\maketitle
+	\newpage
+	
+	\section*{Conteúdos}
+		\begin{enumerate}
+			\item WWW
+			\item Front-end (HTML, CSS, Jquery, Javascript)
+			\item Back-end (Node Express)
+
+
+		\end{enumerate}
+	\section{World Wide Web, clientes e servidores}
+		\subsection{Web 1.0}
+			Estático, não era possível fazer upload.
+		\subsection{Web 2.0}
+			Comunicação com o usuário direto pelo navegador.
+		\subsection{Web 3.0}
+			Cookies, IAs
+		\subsection{Web 4.0}
+			Sistemas Operacionais da Web, Interação total, IOT. Integração do celular com localização. Integração do mundo físico com o virtual.
+	\section{Arquitetura Cliente/Servidor}
+		Sistema distribuído no qual um ou mais clientes (navegador) solicitam serviços e recursos a um ou mais servidores. O cliente solicita e o servidor processa a solicitação, realiza a tarefa solicitada (como acessar um banco de dados ou retornar a página HTML) e envia uma resposta ao cliente.\\
+		\textbf{Exemplo de clientes:} Mozilla Firefox, Google Chrome, Outlook.\\
+		\textbf{Exemplo de Servidores:} Nginx, em caso de p2p, o usuário é ao mesmo tempo um cliente e um servidor...\\
+		 A comunicação entre cliente e servidor geralmente é realizada por meio de protocolos como: HTTP/HTTPS, FTP, SMTP, etc.\\ \\
+		 Funcionamento:\\
+		 \textbf{Solicitação(Request):} O cliente envia uma solicitação ao servidor usando um protocolo definido.\\
+		 \textbf{Resposta(Response):} O servidor processa a solicitação e envia uma resposta de volta ao cliente.
+	\section{Arquitetura em Camadas}
+		As camadas interagem entre si, e isso promove uma modularidade, permitindo que diferentes partes do sistema sejam desenvolvidas, testadas e modificadas independentemente. A ideia é separar preocupações diferentes.\\
+		Sistema XYZ:
+		\begin{itemize}
+			\item UI
+			\item Camada de Lógica de Negócios
+			\item Camada de Dados
+		\end{itemize}
+	\section{Servidores Web}
+		São servidores que hospedam páginas e serviços para usuários. Além de receber as requests e fazer a response, também fazem o gerênciamento de conexões e a execução de aplicações (como scripts em PHP e Javascript).\\
+	\section{Processo de Renderização}
+		\begin{enumerate}
+			\item Carregamento do HTML: O navegador faz uma solicitação via HTTP para o servidor web e recebe o documento HTML. O HTML é lido e interpretado para construir o DOM eque é uma representação do modelo de árvore.
+			\item Carregamento do CSS
+			\item Layout(ou Reflow)
+			\item Pintura: Colocar na tela do usuário
+			\item Composição: A página é dividida em camadas que são compostas e exibidas no navegador.
+			\item Execução de Javascript
+		\end{enumerate}
+	\section{Frameworks de Renderização}
+		São conjunto de ferramentas ou bibliotecas que auxiliam na renderização de interfaces para o usuário.
+	\section{Linguagens e Protocolo de Comunicação}
+		\subsection{Protocolo HTTP/HTTPS}
+			Transferem dados entre um cliente e servidor web.  Operam nas portas 80 (HTTP) e 443 (HTTPS). O HTTPS é uma versão segura do HTTP, pois utiliza criptografia para proteger a comunicação.\\
+			\textbf{Principais métodos:}
+			\begin{itemize}
+				\item Get
+				\item Post
+				\item Put
+				\item Delete
+				\item Patch, Options, Head, Connect, Trace...
+			\end{itemize}
+	\section{IP e Domínio}
+		Ao acessar um site, o navegador usa um serviço de DNS (transformar um link em um IP); Em seguida o cliente faz o request em cima do IP.
+	\section{Autenticação vs Autorização}
+		\textbf{Autenticação:} Logar em alguma rede.\\
+		\textbf{Autorização:} Conceder a um usuário autenticado a permissão para acessar certos níveis de acesso. \textbf{Exemplo}: o usuário cadastrado como docente consegue alterar as notas dos usuários alunos.
+\end{document}
