@@ -1,0 +1,39 @@
+\documentclass[ ]{article}
+\title{Revisão Prova 1\\ Prof. Dênio Duarte}
+\author{Erickson G. Müller}
+
+\begin{document}
+	\maketitle
+	\newpage
+	\section{Dados}
+		Também chamado de atributo, o dado é a menor característica de um objeto. Os dados têm um domínio e um tipo associados.
+	\section{Banco de Dados}
+		Coleção de dados relacionados entre si que representam aspectos do minimundo.
+		\subsection{Formato Relacional}
+			Mais rígido
+		\subsection{Formato Semi-Estruturado}
+			Organizado com documentos, geralmente JSON
+	\section{Dados Armazenados no Disco Rígido}
+		\begin{itemize}
+			\item Trilha: "Anel" do disco
+			\item Setor Geométrico: Seção do disco (formato de pizza)
+			\item Setor: Parte da trilha dentro de um setor geométrico.
+			\item Bloco: Seção da trilha
+		\end{itemize}
+		Os dados são posicionados dentro do bloco, a agulha vai girando de trilha em trilha até encontrar o dado correspondente. No disco rígido, o tempo de escrita é o mesmo da leitura.\\
+		Embora o SSD  não tenha seek time e rotational time, o tempo de escrita é diferente do tempo de busca.
+	\section{Modelos de Dados}
+		Os modelos de dados são as formas como os dados são estruturados para os programas acessarem:
+		\begin{itemize}
+			\item Hierárquico
+			\item Redes
+			\item Relacional
+			\item Orientado a objetos
+			\item Objeto-Relacional
+			\item Semi-Estruturado
+		\end{itemize}
+		\subsection{Modelo Relacional}
+			Organizado em tabelas, essas tabelas relacionam entre si através das chaves.
+		\subsection{SGBD NoSQL}
+			Dados volumosos, não é estritamente estruturado, não é um modelo de dados, mas sim uma classe com diversos modelos (orientado a colunas, orientado a documentos, orientado a grafos...).
+\end{document}
