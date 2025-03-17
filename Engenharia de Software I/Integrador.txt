@@ -1,0 +1,18 @@
+.*Automatização de Rotas para Mobilidade Urbana -- Auto Viação
+.Aplicativo de Notificações --  CASAN/CELESC
+.SIGAA ou algo parecido --  UFFS
+.(WAZE para patinetes públicos) -- Empresas que disponibilizam patinetes
+				%provavelmente não conseguiremos entrevista
+	Limite de velocidade
+	Tráfego
+	Disponibilidade de patinetes públicos
+	Tempo de uso restante
+	locais para carregamento 
+.Gestão de Estacionamento Rotativo com visualização de disponibilidade de vagas -- Qualquer empresa
+.Pesquisa de preço para um mercado usando alguma API -- Mercados, farmácias, prefeituras
+.Sistema web para consulta de processos jurídicos -- Advogados
+.Aplicativo para biblioteca (Cadastro, renovação etc...) -- Bibliotecas
+.Controle de produtos de um supermercado (Lote, Data vencimento, taxa de movimentação) -- Mercados
+
+Próximo passo:
+	Fazer a elicitação de requisitos com a empresa
