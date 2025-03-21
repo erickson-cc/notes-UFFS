@@ -34,6 +34,35 @@
 		\end{itemize}
 		\subsection{Modelo Relacional}
 			Organizado em tabelas, essas tabelas relacionam entre si através das chaves.
+	\section{Sistema Gerenciador de Banco de Dados}
+		\subsection{Segurança}
+			O SGBD vai fazer uma proteção sobre os dados, impedindo que sejam acessados por outros meios que não sejam através do SGBD.
+		\subsection{Dicionário}
+			Os metadados adicionam flexibilidade, são descrições sobre os dados. Os metadados descrevem como cada objeto é estruturado dentro do banco de dados.
 		\subsection{SGBD NoSQL}
 			Dados volumosos, não é estritamente estruturado, não é um modelo de dados, mas sim uma classe com diversos modelos (orientado a colunas, orientado a documentos, orientado a grafos...).
+	\section{Arquitetura de Três Camadas}
+		\begin{itemize}
+			\item Visão externa: dados descritos para a aplicação, são apresentadas de forma modelada para cada usuário paramétrico.
+			\item Esquema conceitual: dados descritos para os desenvolvedores, vistos conforme a tabela SQL.
+			\item Esquema interno:	 dados na forma em que estão armazenaados, visto pelos bytes ocupados pelos dados.
+		\end{itemize}
+		\subsection{Independência Lógica de Dados}
+			Alterar o nível conceitual sem impactar a camada externa.
+		\subsection{Independência Física de Dados}
+			Alterar a camada interna sem alterar o esquema conceitual.
+		\subsection{Integridade Semântica}
+			Regras de domínio, integridade, cardinalidade, tamanho de dados, etc. 
+	\section{ACID}
+		Atomica, Consistente, Isolada, Duradoura.
+	\section{BASE}
+		Usada no NoSQL: Basic, Available, Soft, Estate.
+	\section{Projeto de Banco de Dados}
+		Para projetar o nosso SGBD, iremos usar três níveis de abstração: Conceitual, Lógico e Físico.
+		\subsection{Modelo Conceitual}
+			Após a elicitação de requisitos, será feito um modelo conceitual dos dados. Os nomes dos atributos serão escritos em português.
+		\subsection{Modelo Lógico}
+			Escolher qual o modelo de dados  será aplicado. Os nomes dos atributos serão escritos em computês.
+		\subsection{Modelo Físico}
+			
 \end{document}
