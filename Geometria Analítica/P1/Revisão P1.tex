@@ -1,0 +1,65 @@
+\documentclass[ ]{article}
+
+\usepackage[ ]{amsmath}
+\usepackage[ ]{amssymb}
+\usepackage[ ]{tikz}
+
+\title{Revisão P1 Geometria Analítica\\Prof. Edson}
+\author{Erickson G. Müller}
+
+\begin{document}
+	\maketitle
+	\newpage
+	
+	\section*{Conteúdos}
+		\begin{itemize}
+			\item Vetores
+			\item Produto Escalar e Produto Vetorial
+			\item Equação de Retas ($\mathbb{R}^2$ e $\mathbb{R}^3$)
+			\begin{itemize}
+				\item Retas Paralelas
+				\item Retas Concorrentes
+				\item Retas Reversas
+			\end{itemize}
+			\item Estudo Relativo de Posições Entre Retas
+			\item Equações de Planos
+			\begin{itemize}
+				\item Planos Paralelos
+				\item Planos Concorrentes
+			\end{itemize}
+			\item Posições Relativas Entre Planos
+			\item Distâncias
+			\begin{itemize}
+				\item entre Pontos
+				\item entre Retas
+				\item entre Planos
+			\end{itemize}
+			\item Cônicas
+				\begin{itemize}
+					\item Elipse
+					\item Hipérbole
+					\item Parábola
+				\end{itemize}
+		\end{itemize}
+	\section{Retas}
+		Sejam $A$ e $B$ dois pontos quaisquer. Vamos escolher $A$ como origem do segmento e $B$ como a extremidade do segmento.\\
+		Representação Geométrica:
+		\begin{tikzpicture}
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (3,0);
+			\draw[->] (A) -- (B);
+			\node at (A) [left] {A};
+			\node at (B) [right] {B};
+		\end{tikzpicture}\\
+		Notação: $AB$\\ \\
+		$BA$ é o \textbf{segmento orientado} com origem em $B$ e extremidade em $A$.\\
+		Representação Geométrica:
+		\begin{tikzpicture}
+			\coordinate (A) at (0,0);
+			\coordinate (B) at (3,0);
+			\draw[->] (B) -- (A);
+			\node at (A) [left] {A};
+			\node at (B) [right] {B};
+		\end{tikzpicture}
+		\subsection{Igualdade}
+\end{document}
