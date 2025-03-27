@@ -58,4 +58,32 @@
 			\subsection{Lei de Moore}
 				A cada nó tecnológico, a largura do canal do transistor diminui, mantendo o mesmo custo de fabricação, tornando o processador mais eficiente por área. Portanto, o tamanho do transistor diminui, a quantidade de transistores aumentam e a frequência do clock acelera.\\
 				Devido a isso, surgiu o problema do \textit{powerwall}, os processadores começaram a esquentar mais e precisou surgir métodos de dissipar a frequência do processador.	
+	\section{Arquitetura de Von Neumann}
+		Von Neumann apresenta \textbf{4 proposições}:
+		\begin{itemize}
+			\item Unidades Funcionais
+			\begin{itemize}
+				\item CPU - Unidade de Controle + ULA + Registradores
+				\item Memória Principal - Instruções e Dados
+				\item Dispositivo de Entrada e Saída
+			\end{itemize}
+			\item Aritmética Binária
+			\item Ciclo de Instrução Repetitivo
+			\item Programa Armazenado em Memória			
+		\end{itemize}
+		\subsection{Ciclo de Instrução}
+			\begin{enumerate}
+				\item Buscar a instrução na Memória Principal (FI - \textit{fetch instruction})
+				\item Decodificar a Instrução (DI - \textit{decode instruction})
+				\item Calcular os Operandos (CO)
+				\item Buscar Operandos da Instrução (FO - \textit{fetch operands})
+				\item Executar Instrução (EI)
+				\item Armazena o Resultado (WO - \textit{write operands}
+			\end{enumerate}
+		\textbf{Gargalo da Arquitetura de Von Neumann:} Como a aquitetura apresenta uma memória que armazena tanto os dados quanto as instruções. O ciclo de instrução não pode fazer o FI e o FO ao mesmo tempo.\\
+		Para solucionar o gargalo, os dados e as instruções saem da memória principal para o barramento de dados e vão para a cache L1 seguindo a seguinte ordem:
+		$$MP \to L3 \to L2 \to L1$$
+%		\textit{A cache L1 é a única que separa dados e instruções}
+	\section{Arquitetura do Conjunto de Instruções}
+		
 \end{document} 
