@@ -7,3 +7,7 @@ Trabalho será entregue no github (colocar o link do SIGAA)
 # Aula 1
 Requisito do usuário, dados são a menor caaracterística de um objeto, definição de banco de dados. Formato relacional (modelo de dados em tabelas), formato semi-estruturado (organizado a documento; .json)
 Sistema de arquivos vs SGBD
+# Aula 2
+Modelo ER, NoSQL, Relacionamentos, tipos de atributos, cardinalidade
+# Aula 3
+Grau, entidade fraca, entidade associativa
