@@ -22,3 +22,8 @@ objeto orientado a testes
 # Aula 2
 viabilidade técnica, viabilidade econômica, viabilidade operacional, viabilidade de cronograma
 dia 04/04 não terá aula
+# Aula 3
+Elaboração de Roteiro de Perguntas:
+    Fazer a introdução informando que o trabalho não é um produto pronto e que não deveser fornecida informação confidencial informação confidencial
+    Perguntar pensando no caminho feliz mas também fazer questões sobre a possibilidade de exceções no processo de trabalho da empresa
+    
