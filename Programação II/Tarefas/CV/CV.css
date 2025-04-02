@@ -1,0 +1,44 @@
+body{
+	max-width: 600px;
+}
+p{
+	background-color: yellow;
+	text-align: center;
+}
+a {
+	color: green;
+}
+a:hover{
+	color: orange;
+}
+a:active{
+		color: yellow;
+	}
+table th{
+	font-size: 18px;
+}
+
+table td{
+	color: DarkGrey;
+	background-color: CornflowerBlue;
+}
+li.par{
+	color:DarkOrange;
+}
+li.impar{
+	color:DarkOrchid;
+}
+img.HTMLPNG{
+	max-width: 150px;
+	max-height: 150px;
+	display: block;
+	margin-left: auto;
+	margin-right:auto;
+}
+ul{
+	align: center;
+}
+.half{
+	max-width: 50%;
+	box-sizing:border-box;
+}
