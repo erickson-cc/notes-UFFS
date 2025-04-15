@@ -62,4 +62,253 @@
 			\node at (B) [right] {B};
 		\end{tikzpicture}
 		\subsection{Igualdade}
+	\newpage %A AULA QUE EU ESQUECI O CADERNO
+	\section{Identidade de Lagrange}
+		$$|u.v|^2 +(u.v)^2=|u|^2.|v|^2$$
+		Com isso, temos:
+		$$|u.v|^2=|u|^2.|v|^2-(u.v)^2$$
+		Por outro lado,
+		$$u.v=|u|.|v|.\cos(\theta)$$
+		Substituindo a acima pela equação acima dela:
+		$$|u.v|^2=|u|^2.|v|^2-(|u|.|v|.\cos(\theta))^2=|u|^2.|v|^2-|u|^2.|v|^.\cos^2(\theta)$$
+		$$\to |u.v|^2 = |u|^2.|v|^2.(1-\cos^2(\theta))^2$$
+		$$=|u|^2.|v|^2.\sin^2(\theta)$$
+		
+		Logo $|u.v|^2 = (|u|.|v|.\sin(\theta))^2$, se $0 \leq \theta \leq \pi$
+		$$|u.v| = |u|.|v|.\sin(\theta)$$ %lagrange
+		
+		
+		\subsection{Interpretação Geométrica}
+			Pensando num paralelograma formado pelos vetores $v$ e $u$ e o ângulo $\theta$:
+			%Imagem do paralelograma
+			Área de um paralelograma é \textit{Base} x \textit{Altura}. Usando propriedades geométricas:
+			$$h=|v|.\sin(\theta)$$
+			Portanto, $A=b.h \to |u|.|v|.\sin(\theta)\to |u.v|$
+			$$A=|u.v|$$%Área de um paralelogramo de dois vetores
+			
+			Exemplos:
+			\begin{enumerate}
+				\item Encontre a área do paralelogramo gerado pelos pontos:\\
+				\begin{itemize}
+					\item $A=(0,0,0)$
+					\item $B=(2,0,0)$
+					\item $C=(1,1,0)$
+					\item $D=(3,1,0)$
+$$				A=	\begin{vmatrix}
+					       	i & j & k\\
+						2 & 0 & 0\\
+						1 & 1 & 0
+					\end{vmatrix} $$
+					$$=2.k$$
+					$$= (0,0,2)$$
+					$$|u.v| = \sqrt[]{0^2+0^2+2^2}$$
+					$$A= 2$$%ua
+
+				\end{itemize}
+				\item Encontre a área do triângulo de vértice:\\
+				\begin{itemize}
+					\item $A=(1,1,0)$
+					\item $B=(3,3,0)$
+					\item $C=(2,4,0)$
+				\end{itemize}
+				Área de um triângulo é a metade da área de um paralelograma
+				$$\overrightarrow{u}=\overrightarrow{AB}= B-A = (3,3,0)-(1,1,0)=(2,2,0)$$
+				$$\overrightarrow{v}=\overrightarrow{AC} = C-A = (2,4,0)-(1,1,0)=(1,3,0)$$
+
+				$$A = \begin{vmatrix}
+					i&j&k\\
+					2&2&0\\
+					1&3&0
+				\end{vmatrix}$$
+				
+				$$u.v=4k = (0,0,4)$$
+				$$|u.v|=\sqrt[ ]{0^2+0^2+4^2}=4$$
+				$$A = \dfrac{|u.v|}{2}=2$$
+				\item Determine um vetor $\overrightarrow{x}$ tal que  $|x|=\sqrt[]{6}$ e $x.(i+k)=2.(i+j-k)$\\
+				Seja $x = (a,b,c)$, então:
+				$$a^2+b^2+c^2=6$$
+				$$x.(i+k)=(a,b,c).((1,0,0)+(0,0,1)) = (a,b,c).(1,0,1)$$
+				$$=\begin{vmatrix}
+					i & j & k \\
+					a &b &c\\
+					1 &0 &1
+				\end{vmatrix}$$
+				$$=b.i+c.j-bk-aj=bi+(c-a)j-bk$$
+				$$=2(i+j-k)$$
+				$$=2i+2j-2k$$
+				
+				Logo $b=2$ e $c-a = 2$ ou $c=a+2$\\
+				Considerando $a^2+b^2+c^2 = 6$:\\
+				$$a^2+2^2+(a+2)^2=6$$
+				$$a^2+4+a^2+4.a+4 = 6$$
+				$$2.a^2+4.a+8 = 6$$
+				$$a^2+2a+1=0$$
+				$$(a+1)^2 = 0$$
+				$$(a+1)=0$$
+				Deste modo, $a=-1 , b=2 , c=1$
+				\item Determine um vetor $\overrightarrow{u}$ tal que $|\overrightarrow{u}|=9$ e $\overrightarrow{u}$ é ortogonal a $\overrightarrow{v}= (1,2,1)$ e $\overrightarrow{w}(2,1,0)$
+				Deste modo:
+					$$|u|=9$$
+					$$u \perp v$$
+					$$u \perp w$$
+					Para ser ortogonal a dois vetores, $u$ é um múltiplo de $v.w$.\\
+					$$v.w = \begin{vmatrix}
+						i &j&k\\
+						1&2&1\\
+						2&1&0
+					\end{vmatrix}$$
+					$$v.w=2j+k--4k-i= -i+2j-3k = (-1,2,-3)$$
+					$$|v.w| = \sqrt[ ]{(-1)^2+(2)^2(-3)^2} = \sqrt[ ]{1+4+9}$$
+					$$|v.w| = \sqrt[ ]{14}$$%Lembrar que esse . não é multiplicação, nas sim vxw (v vetorial w)
+					Versor de  $v.w$ é dado como:
+					$$\dfrac{1}{|v.w|}.(v.w)=\dfrac{1}{\sqrt[]{14}}.(-1,2,-3)=\overrightarrow{u}$$
+					$$u= (\dfrac{-1}{\sqrt[ ]{14}}, \dfrac{2}{\sqrt[ ]{14}}, \dfrac{-3}{\sqrt[ ]{14}})$$
+				Note que $\overrightarrow{u}$ tem a mesma direção e sentido de $\overrightarrow{v}.\overrightarrow{w}$ com $|\overrightarrow{u}|=1$
+				$$\overrightarrow{x}=9.\overrightarrow{u} = 9.(\dfrac{-1}{\sqrt[ ]{14}}, \dfrac{2}{\sqrt[ ]{14}}, \dfrac{-3}{\sqrt[ ]{14}})$$
+				$$\overrightarrow{x} = (\dfrac{-9}{\sqrt[ ]{14}}, \dfrac{18}{\sqrt[ ]{14}}, \dfrac{-27}{\sqrt[ ]{14}})$$
+				$$|\overrightarrow{x}| = |9.\overrightarrow{u}|=9.1=9$$
+			\end{enumerate}
+	\section{Produto Misto}
+	O produto misto serve para achar o volume de um paralelepípedo formado por 3 vetores.\\
+	Sejam $\overrightarrow{u}$, $\overrightarrow{v}$ e $\overrightarrow{w}$ vetores. O produto misto de $\overrightarrow{u}$, $\overrightarrow{v}$ e $\overrightarrow{w}$ é definido por:
+	$$[\overrightarrow{u},\overrightarrow{v},\overrightarrow{w}]= (\overrightarrow{u}.\overrightarrow{v}).\overrightarrow{w}$$
+		\subsection{Interpretação Geométrica}
+			%Imagem de um paralelepipedo determinado por 3 vetores, uma linha pontilhada determinando a altura h
+			%página 100 do livro
+			Pensando num paralelepipedo formado pelos vetores $\overrightarrow{u}$, $\overrightarrow{v}$ e $\overrightarrow{w}$. A área desse paralelepípedo é \textit{Área da Base} x \textit{Altura}. A base do paralelepípedo é o paralelogramo gerado pelos vetores $u$ e $ v$.\\
+			Logo, \textit{Área da base} = $|u.v|$\\
+			Por outro lado, temos :
+			$$\cos(\Phi) = \dfrac{h}{|w|}$$
+			$\Phi$ é o ângulo entre $|w|$ e $h$.
+			Então $h=|w|\cos(\Phi)$, se $0 \leq \Phi \leq \dfrac{\pi}{2}$\\
+			Daí, o volume $V = A.h = |u.v|.|w|.\cos(\Phi)$
+			$$V=|(u.v).w|$$
+			$$V= |[u,v,w]|$$
+			Sabemos que $[u,v,w] =(u.v).w$. Sejam:
+			\begin{itemize}
+				\item $\overrightarrow{u} =(x_1,y_1,z_1)$
+				\item $\overrightarrow{v} =(x_2,y_2,z_2)$
+				\item $\overrightarrow{w}= (x_3,y_3,z_3)$
+			\end{itemize}
+			$$\overrightarrow{u}.\overrightarrow{v}= \begin{vmatrix}
+			i&j&k\\
+			x_1&y_1&z_1\\
+			x_2&y_2&z_2
+			\end{vmatrix}
+			= i.(y_1.z_2-y_2.z_1)+j.(x_2.z_1-x_1.z_2)+k.(x_1.y_2-x_2.y_1)$$
+			$$= i. \begin{vmatrix}
+			y_1 & y_2\\
+			z_1&z_2
+			\end{vmatrix}
+			+ j.
+			\begin{vmatrix}
+				x_2&x_1\\
+				z_2&z_1
+			\end{vmatrix}
+			+k.
+			\begin{vmatrix}
+				x_1&x_2\\
+				y_1&y_2
+			\end{vmatrix}
+			$$
+			
+			$$= (
+			\begin{vmatrix}
+			y_1 & y_2\\
+			z_1&z_2
+			\end{vmatrix}
+			,
+			\begin{vmatrix}
+				x_2&x_1\\
+				z_2&z_1
+			\end{vmatrix}
+			,
+			\begin{vmatrix}
+				x_1&x_2\\
+				y_1&y_2
+			\end{vmatrix}
+			)$$			
+		Logo, $[u,v,w] = (u.v).w$
+		$$=(
+			\begin{vmatrix}
+			y_1 & y_2\\
+			z_1&z_2
+			\end{vmatrix}
+			,
+			\begin{vmatrix}
+				x_2&x_1\\
+				z_2&z_1
+			\end{vmatrix}
+			,
+			\begin{vmatrix}
+				x_1&x_2\\
+				y_1&y_2
+			\end{vmatrix}
+			).
+			(x_3,y_3,z_3)
+		$$
+		$$=
+			x_3.
+			\begin{vmatrix}
+			y_1 & y_2\\
+			z_1&z_2
+			\end{vmatrix}
+			+ y_3.
+			\begin{vmatrix}
+				x_2&x_1\\
+				z_2&z_1
+			\end{vmatrix}
+			+z_3.
+			\begin{vmatrix}
+				x_1&x_2\\
+				y_1&y_2
+			\end{vmatrix}
+			$$	
+			Por outro lado, repare que:\\
+					$$
+					\begin{vmatrix}
+						x_1 & y_1 & z_1\\
+						x_2 & y_2 & z_2\\
+						x_3 & y_3 & z_3
+					\end{vmatrix}
+					= (y_1.z_2-y_2.z_1).x_3 + (x_2.z_1-x_1.z_2).y_3+(x_1.y_2-x_2.y_1).z_3
+					$$
+			Logo, $ [u,v,w] = 
+				\begin{vmatrix}
+					x_1&y_1&z_1\\
+					x_2&y_2&z_2\\
+					x_3&y_3&z_3
+				\end{vmatrix}						
+			$ em que:
+			\begin{itemize}
+				\item $\overrightarrow{u} = (x_1,y_1,z_1)$
+				\item $\overrightarrow{v} = (x_2,y_2,z_2)$
+				\item $\overrightarrow{w} = (x_3,y_3,z_3)$
+			\end{itemize}
+		\subsection{Propriedades do Produto Misto}
+			Tudo isso é comprovável manuseando os produto mistos usando o formato de determinantes.
+			\begin{enumerate}
+				\item Se $u$, $v$ e $w$ são linearmente dependentes, ou seja, exietem $ \alpha, \beta \in \mathbb{R}$; $w=\alpha.u + \beta.v$. Então $[u,v,w]=0$.
+				\item $[u+u',v,w] = [u,v,w]+[u',v,w]$
+				\item $[\alpha . u,v,w] = [u,\alpha .v, w] = [u,v, \alpha w]$
+				\item $ [u,v,w] = -[u,w,v]=[v,w,u]=-[v,u,w]=[w,u,v]$ %Justificativas
+			\end{enumerate}
+			Explicando a primeira que é mais importante:
+			$$[u,v,w]=[u,v,\alpha u +\beta v] = [u,v,\alpha u]+[u,v,\beta v]$$
+			$$\alpha.[u,v,u]+\beta.[u,v,v]$$
+			$$
+				\alpha.
+				\begin{vmatrix}
+					x_1&y_1&z_1\\
+					x_2&y_2&z_2\\
+					x_1&y_1&z_1
+				\end{vmatrix}		
+				+ \beta
+				\begin{vmatrix}
+					x_1&y_1&z_1\\
+					x_2&y_2&z_2\\
+					x_2&y_2&z_2
+				\end{vmatrix}								
+			$$
+			$$= \alpha . 0 + \beta.0$$
 \end{document}
