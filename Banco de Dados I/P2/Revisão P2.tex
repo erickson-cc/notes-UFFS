@@ -1,0 +1,46 @@
+\documentclass[ ]{article}
+\title{Revisão Prova 2\\ Prof. Dênio Duarte}
+\author{Erickson G. Müller}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Projeto de Banco de Dados}
+	Após a elicitação de requisitos, o projeto de banco de dados possui 3 fases:
+	\begin{enumerate}
+		\item Modelagem Conceitual
+		\item Modelagem Lógica
+		\item Modelagem Física
+	\end{enumerate}
+	
+	\subsection{Modelo Conceitual}
+		Independe do modelo de dados do SGBD.
+	\subsection{Modelo Lógico}
+		Escolhe-se um modelo de dados.
+		\subsubsection{Modelo Relacional}
+			Os dados são organizados em forma de tabelas (Relações).
+			\begin{itemize}
+				\item tabela: objeto
+				\item colunas: atributos
+				\item linhas: tuplas
+			\end{itemize}			
+			Cada tupla é considerada um elemento, o atributo representa a menor informação do objeto.\\
+			Ademais, podemos ter duas visões de uma tabela: o esquema e a instância. O \textbf{esquema} representa a estrutura dos dados e seus atributos dentro da tabela. Já a \textbf{instância} representa a coleção de tuplas daquela tabela em determinado momento.
+		\subsubsection{Restrições do Modelo Relacional}
+			\begin{enumerate}
+				\item \textbf{Domínio}: Tipo de dados e tamanho de atributo de uma tabela.
+				\item \textbf{Valores Nulos}:  Permite identificar atributos como opcionais.
+				\item \textbf{Chave}: Os atributos de uma tabela devem ser únicas e não podem se repetir entre as tuplas. Uma super-chave é um conjunto de atributos que caracterizam unicamente uma tupla da tabela, todos os atributos de uma tablea forma uma super-chave até o momento que, ao retirar qualquer atributo desta super-chave, esta para de identificar unicamente as tuplas. Uma chave é uma super-chave mínima.
+				\item \textbf{Integridade Referencial}: Mantém a integridade das relações entre as tuplas. Uma chave estrangeira deve sempre apontar para um atributo chave.
+			\end{enumerate}
+		\subsubsection{Notação para representar um esquema com algumas restrições}
+			\begin{itemize}
+				\item \textbf{Atributo obrigatório}: sem símbolo especial.
+				\item \textbf{Atributo opcional}: sublinhado com pontilhado.
+				\item \textbf{Atributo chave primária}: sublinhado tradicional.
+				\item \textbf{Atributo chave}: asterisco após o nome.
+				\item \textbf{Atributo chave estrangeira}: nome(att(nomeTabReferenciada)
+			\end{itemize}
+	\subsection{Modelo Físico}
+
+\end{document}
