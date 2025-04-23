@@ -3,6 +3,7 @@
 \usepackage[ ]{amsmath}
 \usepackage[ ]{amssymb}
 \usepackage[ ]{tikz}
+\usetikzlibrary{decorations.markings}
 
 \title{Revisão P1 Geometria Analítica\\Prof. Edson}
 \author{Erickson G. Müller}
@@ -61,7 +62,144 @@
 			\node at (A) [left] {A};
 			\node at (B) [right] {B};
 		\end{tikzpicture}
-		\subsection{Igualdade}
+		\begin{itemize}
+			\item \textbf{Igualdade}: Dizemos que dois segmentos orientados $AB$ e $CD$ são iguais se $A = C$ e $B = D$.
+			\item \textbf{Segmento Orientado Nulo}: Dizemos que o segmento orientado $AB$ é nulo se $A=B$.
+			\item \textbf{Segmento Orientado Oposto}: Dado um segmento orientado $AB$, o segmento orientado oposto será dado por $-(AB)=BA$.
+		\end{itemize}
+		\subsection{Comprimento de um Segmento Orientado}
+			O comprimento de um segmento orientado é a medida do segmento geométrico em relação a uma unidade de medida fixada. O comprimento do segmento orientado nunca é nulo.\\
+			\begin{tikzpicture}
+				\def\unidade{1cm}
+				\draw[thick, -latex] (0,-1) coordinate (A) node[left] {$A$} -- (3*\unidade,-1) coordinate (B) node[right] {$B$};
+				\foreach \i in {0,1,2,3} {
+					\draw[dashed] (\i*\unidade,-1.2) -- (\i*\unidade,-0.8);
+				}
+				\draw[thick, -latex] (0,0) -- (\unidade,0) node[midway, below] {$u$};
+			\end{tikzpicture}
+			$|AB| = 3u$
+			
+		\subsection{Direção Entre Dois Segmentos Orientados}
+			Sejam dois segmentos orientados $AB$ e $CD$. Dizemos que $AB$ tem a mesma direção de $CD$ se ambas as retas são \textbf{coincidentes} ou \textbf{paralelas}.\\
+			
+			
+			\textbf{Coincidentes:}
+			\begin{tikzpicture}
+				\draw[thick,-latex](1,0) coordinate (A) node[above]{A} -- (4,0) coordinate (B) node[above]{B};
+				\draw[thick,-latex](5,0) coordinate (C) node[above]{C} -- (9,0) coordinate (D) node[above]{D};
+				\draw[thin](0,0) -- (9.4,0);
+			\end{tikzpicture}
+			\\
+			
+			
+			\textbf{Paralelas:}
+			\begin{tikzpicture}
+				\draw[thick,-latex](1,0) coordinate (A) node[above]{A} -- (4,0) coordinate (B) node[above]{B};
+				\draw[thick,-latex](4,-0.5) coordinate (C) node[above]{C} -- (1,-0.5) coordinate (D) node[above]{D};
+			\end{tikzpicture}
+			
+		\subsection{Sentido Entre Dois Segmentos Orientados}
+			Dois segmentos orientados $AB$ e $CD$ \textbf{de mesma direção} podem ter o mesmo sentido ou sentidos opostos conforme abaixo:\\
+			
+			
+			\textbf{Mesmo Sentido:}
+			\begin{tikzpicture}
+				\draw[thick,-latex](1,0) coordinate (A) node[above]{A} -- (4,0) coordinate (B) node[above]{B};
+				\draw[thick,-latex](1,-0.5) coordinate (C) node[above]{C} -- (5,-0.5) coordinate (D) node[above]{D};
+			\end{tikzpicture}\\
+			
+
+			\textbf{Sentidos Opostos:}
+			\begin{tikzpicture}
+				\draw[thick,-latex](0,0) coordinate (A) node[above]{A} -- (4,1) coordinate (B) node[above]{B};
+				\draw[thick,-latex](4,0) coordinate (C) node[above]{C} -- (0,-1) coordinate (D) node[above]{D};
+			\end{tikzpicture}\\
+		\subsection{Equipolência}
+			Dois segmentos orientados são \textbf{equipolentes} se tiverem o mesmo \textbf{comprimento}, \textbf{direção} e \textbf{sentido}.\\
+			Notação de equipolência: $AB \sim CD$\\
+			\textbf{Propriedades de Segmentos Equipolentes:}
+			\begin{itemize}
+				\item \textbf{Reflexiva}: $AB \sim BA$.
+				\item \textbf{Simétrica}: se $AB \sim CD$ então $BA \sim DC$.
+				\item \textbf{Transitiva}: se $AB \sim CD$ e $CD \sim EF$ então $AB \sim EF$.
+			\end{itemize}
+			Dados um segmento orientado $AB$ e um ponto $C$, existe um único ponto $D$ tal que $AB \sim CD$.
+			
+	\section{Vetores}
+		Sendo $AB$ um segmento orientado fixo, o vetor $AB$ é o conjunto de todos os segmentos orientados $CD$ tais que $CD \sim AB$.
+		$$\overrightarrow{v} = AB = {CD,CD \sim AB}$$
+		em que $AB$ é fixo.\\
+		Dado um vetor $\overrightarrow{v}$ e um ponto $A$, por meio de seus representantes existe um único ponto $B$ tal que $A+ \overrightarrow{v} = B$.\\
+		Notação $\overrightarrow{v} = B-A$
+		\subsection{Igualdade de Vetores}
+			Dizemos que dois vetores $AB$ e $CD$ são iguais quando $AB$ e $CD$ são equipolentes.\\
+			\textbf{Propriedades de Vetores:}
+			\begin{itemize}
+				\item $A + \overrightarrow{o} = A$
+				\item $A- \overrightarrow{v} = A + (-\overrightarrow{v})$
+				\item $A+ \overrightarrow{v} = B + \overrightarrow{v} \to A=B$
+				\item $A + \overrightarrow{v} = A + \overrightarrow{w} \to \overrightarrow{v} = \overrightarrow{w}$
+				\item $A+(B-A)=B$
+				\item $B-A = -(A-B)$
+			\end{itemize}
+
+		\subsection{Operações com Vetores: Adição}
+			Dados os vetores $\overrightarrow{u}$ e $\overrightarrow{v}$, pelos seus representantes,conforme a figura abaixo:
+			\begin{tikzpicture}
+				\coordinate (A) at (0,0);
+				\coordinate (B) at (1,2);
+				\coordinate (C) at (3,0);
+				\coordinate (D) at (4,2);
+				
+				\draw[->] (A) -- (B) node[midway, left] {$\overrightarrow{u}$};
+				\draw[->] (A) -- (C) node[midway, below] {$\overrightarrow{v}$};
+				\draw[dotted] (B) -- (D);
+				\draw[dotted] (C) -- (D);
+				\draw[->, red, -latex] (A) -- (D) node[midway, above]{$\overrightarrow{w}$};				
+				
+				\node at (A) [left] {A};
+				\node at (B) [above] {B};
+				\node at (C) [right] {C};
+				\node at (D) [right] {D};
+			\end{tikzpicture}
+			$\overrightarrow{w}= \overrightarrow{u}+\overrightarrow{v}$, sendo $BD \sim AC$ e $AB \sim CD$
+			\textbf{Propriedades da Soma de Vetores:}
+			\begin{itemize}
+				\item \textbf{Comutativa}: $\overrightarrow{u}+\overrightarrow{v}=\overrightarrow{v}+\overrightarrow{u}$
+				\item \textbf{Associativa}: $(\overrightarrow{u}+\overrightarrow{v})+\overrightarrow{w}=\overrightarrow{u}+(\overrightarrow{v}+\overrightarrow{w})$
+				\item \textbf{Elemento Neutro}: $\overrightarrow{u}+\overrightarrow{o} = \overrightarrow{u}$
+				\item \textbf{Elemento Oposto}: Dado $\overrightarrow{u}$, existe um único $\overrightarrow{v}$ tal que $\overrightarrow{u}+\overrightarrow{v}=\overrightarrow{o}$, nesse caso $\overrightarrow{v}=- \overrightarrow{u}$
+			\end{itemize}
+			\begin{center}			
+				Dados $\overrightarrow{u}$ e $\overrightarrow{v}$, temos que $\overrightarrow{u}-\overrightarrow{v}=\overrightarrow{u}+(-\overrightarrow{v})$\\
+				\begin{tikzpicture}
+					\coordinate (A) at (0,0);
+					\coordinate (v) at (1,1);
+					\coordinate (-v) at (-1,-1);
+					\coordinate (u) at (3,0);
+					\coordinate (u-v) at (2,-1);
+					
+					\draw[->, thick] (A) node[left] {A} -- (u) node[midway, above] {$\overrightarrow{u}$};
+					\draw[->,red] (A) -- (-v) node[midway,left]{$-\overrightarrow{v}$};
+					\draw[->, thick] (A) -- (v) node[midway,left]{$\overrightarrow{v}$};
+					\draw[->, thin] (A) -- (u-v) node[midway, right]{$\overrightarrow{u}-\overrightarrow{v}$};
+					\draw[dotted] (-v) -- (u-v) -- (u);
+				\end{tikzpicture}
+			\end{center}
+		\subsection{Operações com Vetores: Multiplicação de um Vetor por um Número Real}
+			
+
+
+
+
+
+
+
+		
+		
+		
+		
+		
 	\newpage %A AULA QUE EU ESQUECI O CADERNO
 	\section{Identidade de Lagrange}
 		$$|u.v|^2 +(u.v)^2=|u|^2.|v|^2$$
