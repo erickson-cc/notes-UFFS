@@ -1,0 +1,12 @@
+cidade(_siglac_, uf, nomec)
+bairro(_siglac(cidade)_, _siglab_, cep, nomeb)
+estatmon(_siglab(bairro)_, _siglac(bairro)_, _codesmon_, logr, nro, compl, autor, datacriaesmon)
+predio(_siglab(bairro)_, _siglac(bairro)_, _codpre_, logr, nro, compl, datacriaest)
+
+espaberto(_siglab(bairro)_, siglac(bairro)_, _codeab_, logr, nro, compl)
+facilidade(_codfac_, descrfac)
+infra(_codeab(espaberto)_, _codfac(facilidade)_, ..descrinfra..)
+
+avaliaespab(_idaea_, _codeab(espaberto)_, _siglab(bairro)_, _siglac(bairro)_, ..nome.., estrelas, ..comentario..)
+avaliaestmon(_idaem_, _codesmon(estatmon)_, _siglab(bairro)_, _siglac(bairro)_, ..nome.., estrelas, ..comentario..)
+avaliapredio(_idap_, _codpre(predio)_, _siglab(bairro)_, _siglac(bairro)_, ..nome.., estrelas, ..comentario..)

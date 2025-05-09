@@ -1,0 +1,9 @@
+filme(_codf_, titulo, anolanc, duracao) 
+usuario(_email_, nome, logdro, nro, compl, cep)
+copia(_codc_, estado,..comentariocop.., codf(filme))
+
+avaliacao(_codf(filme)_, _email(user)_, estrelas, ..comentarioav..)
+reserva(_codc(copia)_, _email(usuario)_, _datahora_, devolucao)
+
+#CORRIGIDO
+
