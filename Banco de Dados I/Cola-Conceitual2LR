@@ -1,0 +1,54 @@
+[T]1,1 - <R> - ?,N[S]
+Caso 1: Temos o modelo conceitual de uma relação 1 para N
+
+Criamos uma tabela para cada entidade, a tabela que tiver o lado N recebe a chave estrangeira da tabela única, também recebe os atributos do relacionamento.
+T(_t_,...) S(_s_,t(T),r)
+
+
+[T]0,1 - <R> - ?,N[S]
+Caso 2: Temos um modelo conceitual de uma relação 1 para Ne em que o lado 1 é opcional (0,1) [o lado ?,N não importa]
+T(_t_,...) S(_s_,..t(T)..,r)
+
+Criamos uma tabela para cada entidade, a tabela que tiver o lado N recebe a chave estrangeira da tabela única, também recebe os atributos do relacionamento. A única diferença é que esses atributos são opcionais, portanto são sublinhados em pontilhado.
+
+
+[T]1,1 - <R> = ?,N[S]
+Caso 3: Temos o modelo conceitual de uma relação 1 para N em que o lado N é um entidade fraco
+
+Criamos uma tabela para cada entidade, a tabela que tiver o lado N recebe a chave estrangeira da tabela única, também recebe os atributos do relacionamento. Porém, a chave estrangeira faz parte da chave primária da tabela.
+T(_t_,...) S(_s_,_t(T)_,r)
+
+
+
+
+
+[T]?,N - <R> - ?,N[S]
+Caso 4: Temos o modelo conceitual de uma relação N para N
+
+Criamos uma tabela para cada entidade, criamos uma tabela para o relacionamento e inserimos as chaves primarias para as duas entidades dentro desta.
+T(_t_,...) S(_s_,...) R(_t(T)_,_s(S),r)
+
+
+
+
+
+[T]1,1 - <R> - 1,1[S]
+Caso 5: Temos o modelo conceitual de uma relação 1 para 1
+
+Criamos uma única tabela fusionada ou criamos uma tabela para cada entidade.
+T(_t_,..., s*) ou T(_t_,...) S(_s_, ..., t(T))
+
+
+[T]1,1 - <R> - 0,1[S]
+Caso 6: Temos o modelo conceitual de uma relação 1 para 1 em que uma entidade é opcional
+Criamos uma única tabela fusionada, mas o atributo da entidade agregada é opcional ou criamos uma tabela para cada entidade.
+T(_t_,..., ..s*..) ou T(_t_,...) S(_s_, ..., :(T))
+
+
+
+
+Caso 7: Auto relacionamento 1 para 1
+t(_t_,...) R(_t1(T)_,_t2(T)_)
+
+Caso 8: Auto relacionamento 1 para N
+t(_t_,..., t1(T)) R(_t1(T)_,_t2(T)_)

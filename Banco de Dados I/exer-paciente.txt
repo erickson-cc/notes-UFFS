@@ -1,0 +1,34 @@
+create table paciente(
+	cpf varchar(11) not null,
+	nome varchar(30) not null,
+	dtnasc date not null,
+	ncid integer null,
+	uf varchar(2) not null,
+	obs text,
+	constraint pk_cpf primary_key (cpf)
+);
+
+create table especialidade(
+	codesp integer not null,
+	descr text not null,
+	constraint pk_codesp primary_key (codesp)
+);
+
+create table medico(
+	crm varchar(12) not null,
+	nome varchar(30) not null,
+	dtnasc date not null,
+	uf varchar(2) not null,
+	code integer,
+	constraint pk_crm primary_key (crm),
+	constraint fk_code foreign_key (code) references especialidade(codesp)
+);
+
+create table consulta(
+	crm varchar(12) not null,
+	cpf varchar(11) not null,
+	datac date not null,
+	horac timestamp not null,
+	constraint fk_crm foreign_key (crm) references medico(crm),
+	constraint fk_cpf foreign_key (cpf) references paciente(cpf)
+);

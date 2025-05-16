@@ -1,0 +1,31 @@
+postgres=#create user denio password 'denio@';
+CREATE ROLE
+entrar no user denio
+postgres=> create database x;
+error: permission denied to create database
+
+postgres=> \c postgres postgres
+
+postgres=# create database clinica owner=denio;
+CREATE DATABASE
+postgres=# \c clinica denio
+password for user denio:
+
+clinica=> create table x (a integer);
+CREATE TABLE 
+clinica=> drop table x;
+
+clinica=> \c postgres denio;
+postgres=> create table x (a integer);
+não consegue
+
+postgres=> \c postgres postgres;
+postgres=> create table x (a integer);
+CREATE TABLE
+
+para mostrar uma lista de banco de dados
+postgres=> \l
+
+query das tabelas
+postgres=> \d
+postgres=> \d <nome da tabela>
