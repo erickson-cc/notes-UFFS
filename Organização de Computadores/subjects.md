@@ -8,3 +8,6 @@ Arquitetura do Conjunto de Instruções, opcode(o que fazer), operands(onde est�
 # Aula 04/06
 Conflitos em pipeline: estruturais, dados e controle. Solução implementada por software, solução implementada por hardware (detectar o conflito e inserir bolhas no pipeline) e solução por hardware (detectar o conflito e fazer o forwarding do dado).
 No caso de dependência de controle, é possível usar: stalls, delayed branch, predicated execution, multipath execution (superescalar) e branch prediction.
+
+# Aula 11/06
+Subsistema de memória
