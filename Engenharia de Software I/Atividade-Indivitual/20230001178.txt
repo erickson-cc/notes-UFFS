@@ -1,0 +1,28 @@
+Nome: Erickson G. Müller
+Mat: 20230001178
+Data: 13/06/2025
+
+1-)Quais os tipos de testes a empresa realiza?
+Testes unitários: São a base da estrutura de testes.
+Testes de integração: Usados para avaliar a interação entre os diferentes módulos ou serviços.
+Testes End-to-End: São os testes de sistema, onde simulamos o uso dos nossos usuários. Estes testes automatizados replicam ações reais do usuário. Testes de Segurança.
+
+2-)Como são realizados cada um dos tipos de testes?
+Para testes unitários, verifica-se uma única função ou componente de forma isolada de todo o resto do sistema. Por exemplo, se um desenvolvedor cria uma função apra formatar uma data, ele também cria um teste que chama essa função com diferentes entradas e verifica se a saída é exatamenta a esperada (teste de caixa preta). Esses testes são executados automática e continuamente. Eles são executados no sistema de integração contínua Sandcastle, toda vez que um desenvolvedor tenta enviar um novo código para o repositório principal. Se algum teste unitário falhar, o envio do código é bloqueado até que o problema seja corrigido. Isso garante que nenhuma nova alteração quebre a funcionalidade existente em nível de componente.
+Para testes de integração, após as unidades serem testadas, verifica-se se elas funcionam bem conjuntas. Esses testes são geralmente escritos por desenvolvedores com o apoio dos engenheiros de QA. Eles focam nas interfaces e na comunicação entre diferentes módulos ou microsserviços. Assim como os tstes unitários, também são integrados no ambiente interno de CI. Eles são um pouco mais lentos pois envolvem múltiplos componentes, então podem ser executados como parte do pipeline de pré-envio de código ou em builds noturnos.
+
+3-)Quais documentos/artefatos são criados para planejar e controlar a execução dos testes realizados? Apresentar exemplo.
+Os principais documentos são:
+Plano de Teste, funciona como um mapa para todo o esforço de teste de um projeto ou de uma nova funcionalidade. Seu propósito é definir o escopo, a abordagem, os recursos e o cronograma de todas as atividades de teste. Alinha as expectativas entre QA, desenvolvedores e gerentes de produto. 
+Caso de Teste, um artefado tático que descreve os passos para validar uma funcionalidade específica. Pode ser um script automatizado ou um documento para um testador manual. Serve para fornecer instruções detalhadas e passo a passo para garantir que uma funcionalidade se comporte conforme o esperado. Permite que qualquer pessoa da equipe execute o teste e obtenha um resultado consistente.
+
+4-)Quais as ferramentas (staks) que são utilizadas?
+Para controle de versão e CI/CD utilizamos Mercurial e SandCastle.
+Automação de Testes unitários: Webdriver(Selenium), Appium, Jest/Pytest.
+
+5-)O que você mudaria nos procedimentos da swua empresa para ter um processo de testes mais eficiente e confiável?
+Apesar de nosso processo ser robusto, sempre há espaço para melhorias, Eu focaria em duas áreas principais:
+
+Utilizar inteligência artificial para testes e para otimizar a seleção de testes. Em vez de rodar suítes de regressão massivas, poderíamos usar modelos preditivos que, com base nas alterações de código, selecionam o subconjunto mínimo de testes com a maior probabilidade de encontrar bugs. Isso reduziria drasticamente o tempo de feedback para os desenvolvedores e o custo computacional.
+
+Eu fortaleceria ainda mais a mentalidade de "shift-left", envolvendo os QAs ainda mais cedo no ciclo de vida do desenvolvimento. Isso incluiria a participação em revisões de design e arquitetura para identificar potenciais problemas de testabilidade e qualidade antes mesmo da primeira linha de código ser escrita. Promoveria a criação de ferramentas que permitissem aos desenvolvedores simular dependências de serviços complexos em seus ambientes locais, facilitando a execução de testes de integração mais abrangentes de forma autônoma. Isso aumentaria a qualidade do código "na fonte" e reduziria a quantidade de bugs que chegam aos estágios finais de teste.
