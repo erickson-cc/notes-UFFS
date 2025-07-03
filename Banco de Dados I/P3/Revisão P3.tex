@@ -1,0 +1,37 @@
+\documentclass[ ]{article}
+\title{Revisão Prova 3\\ Prof. Dênio Duarte}
+\author{Erickson G. Müller}
+
+\begin{document}
+	\maketitle
+	\newpage
+	\section{Conteúdos}
+		\begin{itemize}
+			\item Álgebra Relacional
+			\item Operadores Unários
+			\item Operadores Binários
+			\item Álgebra Estendida
+			\item Dependências Funcionais
+			\item Primeira Forma Normal
+			\item Segunda Forma Normal
+			\item Normalização de Boyce-Codd
+		\end{itemize}
+	Um operador de uma álgebra retorna uma relação\\
+	Não existe NULL na álgebra relacional
+	\section{Operadores Primitivos}
+		\begin{itemize}
+			\item Projeção (unário)
+			\item Seleção (unário)
+			\item Cartesiano (binário)
+			\item Join (binário) [left, right, full]
+			\item União (binário)
+			\item Intersecção (binário)
+			\item Diferença (binário)
+			\item Divisão (binário)
+			\item Agregação (grupo)
+		\end{itemize}
+		Precisa-se fazer primeiro a seleção e depois a projeção, na maioria dos casos.
+		$$\pi_{(nome, pop)}(\omega_{(area>500)}(cidade)$$
+	\section{Divisão}
+		A divisão vai dividir uma tabela para outra. Para tal, os atributos de uma tabela a ser dividida deve estar contida na tabela a dividir.
+\end{document}
