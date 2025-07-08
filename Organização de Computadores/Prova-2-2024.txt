@@ -1,0 +1,22 @@
+Prova 2024
+
+1. Assembly
+
+2. Verdadeiro/Falso
+	a. trocar posições OR e ADD
+	b. trocar posições ADD e AND
+	c. inserir operação NOP entre ADD e XOR
+
+3. Programa + Valores Iniciais
+	a. Indicar os conflitos de dados e de controle
+	b. Evolução das instruções de todo o programa no pipeline
+	c. Reorganize o programa para minimizar os conflitos
+
+4. 
+	a. Quantidade de blocos na memória principal
+	b. Número do bloco do endereço 2CACB3_16
+	c. Quantidade de bits (mapeamento direto)
+	c. Linha de destino de 2CACB3_16
+	d. Quantidade de bits (mapeamento associativo por conjuntos
+	d. Conjunto de destino 
+

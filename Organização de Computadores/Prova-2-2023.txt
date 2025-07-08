@@ -1,0 +1,21 @@
+Prova 2023
+
+1.
+	a. Número do bloco de endereço ABCD_16
+	b. Divisão do endereço na cache (mapeamento direto)
+	b. Linha de destino do endereço ABCD_16
+	c. Divisão do endereço na cache (mapeamento associativo)
+	c. Conjunto de destino do endereço ABCD_16
+	d. Rótulos idênticos (mapeamento associativo por conjuntos)
+	d. em linhas
+	d. em linhas de conjuntos diferentes
+
+2. Ações do controlador da cache em mapeamento associativo com 4 conjuntos
+
+3. Bolhas e eliminações em código asm no pipeline de 5 estágios
+
+4. Adiantamento (forwarding)
+	a. Marcar o caminho percorrido em dada instrução
+	a. Descrever o que acontece no pipeline no forwarding
+	b. Marcar o caminho percorrido em dada instrução
+	b. Descrever o que acontece no pipeline no forwarding
