@@ -1,0 +1,5 @@
+trocar o nome das tabelas que relacionam N:N
+Pedido_Itens -> status entrega (não solicitado, solicitado não entregue, solicitado entregue, entregue_devolvido, ...)
+Demanda_Item -> status_licitação (licitado ou nao licitado) 0 e 1
+
+Status entrega
