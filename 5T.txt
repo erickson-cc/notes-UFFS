@@ -1,5 +1,5 @@
-2N BD II - Denio
-3N Tópicos XL - Pavan
-4N Álgebra Linear - Lúcia
-5N LFA - Braulio
-6N Sistemas Operacionais - Marco
+2N BD II - Denio 310 B
+3N Tópicos XL - Pavan 305 B
+4N Álgebra Linear - Lúcia 309 B
+5N LFA - Braulio 303 B
+6N Sistemas Operacionais - Marco 310 B
