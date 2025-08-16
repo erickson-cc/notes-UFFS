@@ -1,0 +1,42 @@
+\documentclass[ ]{article}
+\usepackage[ ]{indentfirst}
+\title{Revisão P1\\Sistemas Operacionais}
+\author{Erickson Müller}
+\date{03 de outubro}
+
+\begin{document}
+	\maketitle
+	\section*{Conteúdos}
+		\begin{enumerate}
+			\item Processos
+			\item Threads
+			\item Impasses
+			\item Gerenciamento de memória
+		%	\item Tratamento de entrada e saída
+		\end{enumerate}
+	\newpage
+	\section{Processos}
+	
+		O sistema operacional tem o modo kernel/supervisor e o modo usuário.
+		
+		Árvore de processos. O sistema operácional usa a hierariquia de processos para reservar a memória, carregar as partes do processo.
+		
+		O primeiro processo da árvore inicia o sistema operacional
+		
+		Os processos podem criar algum processo filho para caso necessite abrir outro programa para executar o comando.
+		
+		O pipe é um canal de comunicação entre dois processos.
+		
+		\subsection{Modelo em quatro partes}
+		O espaço de endereçamento da memória de um processo é dividido em quatro partes:
+			\begin{enumerate}
+				\item Code/Text
+				\item Data
+				\item Heap/Lacuna
+				\item Stack/Pilha
+			\end{enumerate}
+	\section{Threads}
+	\section{Impasses}
+	\section{Gerenciamento de Memória}
+%z	\section{Entrada e Saída}
+\end{document}
