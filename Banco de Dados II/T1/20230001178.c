@@ -2,6 +2,34 @@
 #include <stdlib.h>
 #include <string.h>
 
+//struct strAtr{
+//	char nome[15];
+//	char tipo;
+//	int tamanho;
+//};
+//typedef struct strAtr atributo;
+//
+//struct strHeader{
+//	atributo *campo;
+//};
+//typedef strHeader header;
+
+//int existeArquivo(const char* filename){
+//
+//    char directory[LEN_DB_NAME_IO];
+//    strcpy(directory, connected.db_directory);
+//    strcat(directory, filename);
+//    FILE* fptr = fopen(directory, "r");
+//
+//    if (fptr != NULL){
+//        fclose(fptr);
+//
+//        return 1;
+//    }
+//
+//    return 0;
+//}
+
 int main(){
 	// Armazenar nos bytes iniciais o esquema de dados
 	// HEADER:
@@ -18,19 +46,19 @@ int main(){
 	// 	val1	val2	val3	val4
 	// 	val1	val2	val3	val4
 	// 	val1	val2	val3	val4
-
-	struct strAtr{
-		char nome[15];
-		char tipo;
-		int tamanho;
-	};
-	typedef struct strAtr atributo;
 	
-	struct strHeader{
-		atributo *campo;
-	};
-	typedef strHeader header;
+	
+	// variável char que imprime o documento no terminal
+	char ch;
+	// Cria o ponteiro para o arquivo
+	FILE *fptr;
+	fptr = fopen("customer.dat", "r");
+	while ((ch = fgetc(fptr)) != EOF){
+		printf("%c", ch);
+	}
 
+	//fprintf(fptr, "%s", "teste");
+	fclose(fptr);
 
 
 

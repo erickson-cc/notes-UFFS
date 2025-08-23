@@ -8,7 +8,7 @@
 	\maketitle
 	\section*{Conteúdos}
 		\begin{enumerate}
-			\item Processos
+			\item Processosl
 			\item Threads
 			\item Impasses
 			\item Gerenciamento de memória
@@ -17,7 +17,7 @@
 	\newpage
 	\section{Processos}
 	
-		O sistema operacional tem o modo kernel/supervisor e o modo usuário.
+		O sistema operacional tem o modo kernel/supervisor e o modo usuário, o único ator que roda em modo kernel é o SO.
 		
 		Árvore de processos. O sistema operácional usa a hierariquia de processos para reservar a memória, carregar as partes do processo.
 		
@@ -27,6 +27,12 @@
 		
 		O pipe é um canal de comunicação entre dois processos.
 		
+		Um processo é a instanciação de um arquivo executável.
+		\subsection{Preemptividade}
+			A multiprogramação permite executar múltiplos processos "ao mesmo tempo", na realidade todos os processos são executados em um ciclo de \textit{50ms} por vez. O \textit{timer} da cpu é responsável por calcular esse ciclo, o timer é uma parte de hardware que tem um clock de 1hz e vai decrescendo de 50 até 0.
+			
+			Em sistemas operacionais, uma troca de contexto (também conhecido como chaveamento ou mudança de contexto) é o processo computacional de armazenar e restaurar o estado (contexto) de uma CPU de forma que múltiplos processos possam compartilhar uma única instância de CPU.
+			
 		\subsection{Modelo em quatro partes}
 		O espaço de endereçamento da memória de um processo é dividido em quatro partes:
 			\begin{enumerate}
@@ -37,6 +43,6 @@
 			\end{enumerate}
 	\section{Threads}
 	\section{Impasses}
-	\section{Gerenciamento de Memória}
+	\section{Gerenciamento de Memória}'
 %z	\section{Entrada e Saída}
 \end{document}
