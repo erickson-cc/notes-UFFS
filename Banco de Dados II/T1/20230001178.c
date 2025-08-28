@@ -2,12 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 
-//struct strAtr{
-//	char nome[15];
-//	char tipo;
-//	int tamanho;
-//};
-//typedef struct strAtr atributo;
+struct strAtr{
+	char nome[16];
+	char tipo;
+	char tamanho;
+};
+typedef struct strAtr atributo;
 //
 //struct strHeader{
 //	atributo *campo;
@@ -59,38 +59,44 @@ int main(int argc, char *argv[]){
 	char ch;
 	// Cria o ponteiro para o arquivo
 	FILE *fptr;
-	fptr = fopen(tablename, "r");
+	fptr = fopen(tablename, "rb");// read binary
 	if (fptr == NULL) {
 		printf("Erro: Não foi possível abrir o arquivo %s\n", tablename);
 		return 0;
 	}
+	atributo atributos[10];
+	int count = 0;
 
-	while ((ch = fgetc(fptr)) != EOF){
-		// Colocar aqui dentro a interação com o arquivo
-		int i;
-		char metaname[15];
-		char metatype;
-		char metasize[4];
-		//printf("%c", ch);
-		for(i=0;i<15;i++){
-			metaname[i] = fptr[i];
+	while (count<10){
+		atributo currAtributo;
+		// Lê os 15 primeiro bytes do atributo (nome)
+		if (fread(currAtributo.nome, sizeof(char), 15, fptr) != 15) {
+			break;
 		}
-		for(i;i<16;i++){
-			metatype = fptr[i];
-		}
-		for(i;i<20;i++){
-			metasize[i] = fptr[i];
-		}
-		printf("%s", metaname);
-		printf("%c", metatype);
-		printf("%s", metasize);
+		currAtributo.nome[15] = '\0'; // Adiciona um null terminator
 
+		// Lê o byte do tipo
+		if (fread(currAtributo.tipo, sizeof(char), 1, fptr) != 1){
+			break;
+		}
+		// Lê o byte do tamanho
+		if (fread(currAtributo.tamanho, sizeof(char), 4, fptr) != 4){
+			break;
+		}
+
+		strcpy(atributos[count].nome, currAtributo.nome);
+		strcpy(atributos[count].tipo, currAtributo.tipo);
+		strcpy(atributos[count].tamanho, currAtributo.tamanho);
+		count++;
+	}
+	printf("Header da tabela: '%s'\n\n", tablename);
+	for(int i =0; i<count;i++){
+		printf("Título: %s\n", atributos[i].nome);
+		printf("Tipo: %s\n", atributos[i].tipo);
+		printf("Tamanho: %s\n", atributos[i].tamanho);
 	}
 
 	//fprintf(fptr, "%s", "teste");
 	fclose(fptr);
-
-
-
 	return 1;
 }
