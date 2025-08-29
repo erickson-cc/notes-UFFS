@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.4.3)  21 AUG 2025 22:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  28 AUG 2025 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -417,27 +417,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--214
 
  []
 
+<images/Hierarquia_de_Chomsky.png, id=32, 431.36156pt x 335.00156pt>
+File: images/Hierarquia_de_Chomsky.png Graphic file (type png)
+<use images/Hierarquia_de_Chomsky.png>
+Package pdftex.def Info: images/Hierarquia_de_Chomsky.png  used on input line 2
+15.
+(pdftex.def)             Requested size: 301.95103pt x 234.49948pt.
 
 
 [5]
-Overfull \hbox (0.50064pt too wide) in paragraph at lines 242--243
+
+[6 <./images/Hierarquia_de_Chomsky.PNG>]
+Overfull \hbox (0.50064pt too wide) in paragraph at lines 248--249
 []\OT1/cmr/m/n/10 N~ao h^^Sa re-stri^^Xc~ao nen-huma, logo pode ser for-mado po
 r qual-quer con-catena^^Xc~ao: 
  []
 
 
 
-[6] (./Revisão P1.aux)
+[7]
+
+[8] (./Revisão P1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11892 strings out of 475171
- 247814 string characters out of 5767096
- 612471 words of memory out of 5000000
- 34707 multiletter control sequences out of 15000+600000
+ 11899 strings out of 475171
+ 248086 string characters out of 5767095
+ 613471 words of memory out of 5000000
+ 34714 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,7n,107p,418b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -450,10 +460,10 @@ share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P1.pdf" (6 pages, 540416 bytes).
+Output written on "Revisão P1.pdf" (8 pages, 555783 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 94 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

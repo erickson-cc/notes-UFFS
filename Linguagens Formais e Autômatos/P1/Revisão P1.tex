@@ -212,6 +212,8 @@
 			$a\to ^1 b$ se $a\to b$\\
 %			$a \to ^{n+1} z$ se $a \to^n y e$
 	\section{Hierarquia de Chomsky}
+	\includegraphics[scale=0.7]{images/Hierarquia_de_Chomsky.png}
+	
 	Linguagens de tipo 3 (regulares) são resolvidas por gramáticas regulares
 	
 	O formalismo que resolve problemas de linguagens regulares é o \textbf{autômato finito}
@@ -234,7 +236,11 @@
 	\subsection{Gramáticas Sensíveis ao Contexto}
 		%Podemos definir o N que dá nome à regra não apenas como u
 		Não inclui o Epsilon, portanto o menor tamanho das produções é 1\\
-		$ |(N \cup T)^{+}|::= _{\leq} |(N \cup T)^*|$, o menor igual não se aplica na regra <S>. Ou seja, $<S> ::= \epsilon$
+		$ (N \cup T)^{+}::= (N \cup T)^*$, sendo que $ |(N \cup T)^{+}| \leq |(N \cup T)^*|$.
+		% o menor igual não se aplica na regra $<S>$. Ou seja, $<S> ::= \epsilon$
+		
+		A exceção à comparação dos tamanhos é quando. $<S> ::= \epsilon$
+
 		
 		$<S>$ não pode aparecer no lado direito de $P$.
 		
@@ -242,5 +248,164 @@
 		Não há restrição nenhuma, logo pode ser formado por qualquer concatenação:
 		
 		$(N\cup T)^+ ::= (N\cup T)^*$
-	
+	\section{Exemplos}
+		$L(g) = \{ x | x \in (0,1)^*$, onde o número de ocorrências de $1$ é ímpar$\}$
+		\begin{itemize}
+		
+			
+			
+			\item Considerando que $A::= a|aA|\epsilon$
+			
+			%\item Regra:
+			
+			\item $<S>::= 0<S> | 1<A>$ nessa regra o número de ocorrências de 1 é par., portanto estamos na iminência de substituir o  S por uma de suas produções.
+		
+			\item $A::= 0<A>|1<S>|\epsilon$ criamos essa regra para poder encerrar a frase. O S é chamado para impedir que o número de ocorrências do símbolo 1 seja par.
+		\end{itemize}
+		
+		Agora,
+		
+		$L(g) = \{ x | x \in (0,1)^{+}$, onde o número de ocorrências de $1$ é par$\}$
+		\begin{itemize}
+		
+			
+			\item Considerando que $A::= a|aA|\epsilon$
+			
+			%\item Regra:
+			
+			\item $<S>::= 0<B> | 1<A>$ Tamanho da cadeia maior que 0
+		
+			\item $A::= 0<A>|1<B>$ 
+			
+			\item $B ::= 0 <B>| 1<A>| \epsilon$
+		\end{itemize}
+		
+		Outro,
+		
+		$L(g) = \{ x | x \in (0,1)^{+}$, onde o número de ocorrências de $0$ é ímpar e $1$ é par$\}$
+		\begin{itemize}
+			\item Considerando que $A::= a | aA | \epsilon$
+			
+%			\item $<S>::= 0 <C>|1<B>$
+			
+			\item $<S> ::= 0<C>|1<B>$ Se 0 for par e 1 for par.
+			\item $<B> ::= 0 <D> | 1<S>$ Se 0 for par e 1 for ímpar.
+			\item $<C> ::= 0 <S> | 1<D> | \epsilon$ Se 0 for ímpar e 1 for par.
+			\item $<D> ::= 0 <B> | 1<C>$ Se 0 for ímpar e 1 for ímpar.
+			
+		\end{itemize}
+		\newpage
+		Outro,
+		
+		$L(g) = \{ x | x \in (0,1)^{+}$, onde $|x|$ é par se x inicia por 0, senão $|x|$ é ímpar$\}$
+		\begin{itemize}
+			\item $<S>::= 0<A>|1<C>$ Inicial
+			\item $<A>::= 0<B>|1<B>$ Se inicia por 0 e $|x|$ é ímpar
+			\item $<B>::= 0<A>|1<A>|\epsilon$ Se inicia por 0 e $|x|$ é par
+			\item $<C>::= 0<D>|1<D>$ se inicia por 1 e $|x|$ é par
+			\item $<D>::= 0<C>|1<C>|\epsilon$ se inicia por 1 e $|x|$ é ímpar
+%			\item $<>::= 0<>|1<>$
+		\end{itemize}
+		Correção do professor
+		
+		\begin{itemize}
+			\item $<S>::= 0<A>|1<B>$ Inicial
+			\item $<A>::= 0<B>|1<B>$ Se inicia por 0 e $|x|$ é ímpar ou se inicia por 1 e $|x|$ é par.
+			\item $<B>::= 0<A>|1<A>|\epsilon$ Se inicia por 0 e $|x|$ é par ou se inicia por 1 e $|x|$ é ímpar.
+		\end{itemize}
+		Outro,
+		
+		$L(g) = \{ x | x \in (a,b,c)^{+}$, onde $|a|+|c|$ é par se $x$ inicia por $b$, senão $|b|$ é ímpar. $x$ não possui $c$ concatenados. $\}$
+
+		\begin{itemize}
+			\item $<S>::= a<D> | b<A> | c<E> $ Inicial
+			\item $<A>::= a<B> | b<A> | c<C> | \epsilon$ se x inicia por \textbf{b} e $c+a$ é \textbf{par} e a anterior não é \textbf{c}.
+			\item $<B>::= a<A> | b<B> | c<C> $ se x inicia por \textbf{b} e $c+a$ é \textbf{ímpar} e a anterior não é \textbf{c}.
+			\item $<C>::= a<B> | b<C> | \epsilon $ se x inicia por \textbf{b} e $c+a$ é \textbf{par} e a anterior é \textbf{c}.
+			\item $<>::= $ se x não inicia por \textbf{b} e $|b|$ é \textbf{ímpar}
+			\item $<D>::= a<D> | b<> | c<> $ se x não inicia por \textbf{b} e $|b|$ é \textbf{par} e a anterior não é c
+			\item $<D>::= a<D> | b<> $ se x não inicia por \textbf{b} e $|b|$ é \textbf{par} e a anterior é c
+		\end{itemize}
+		
+		Correção do professor:
+		
+		\begin{itemize}
+			\item $S::= a<E> | b<A> | c<F>$
+			\item $A::= a<B> | b<A> |c<c>| \epsilon$ a+c é par e !c
+			\item $B::= a<A> |b<B> |c<D>$
+			\item
+			% S > b A
+			% S > b a
+			% S > b b
+			% S > b c
+			% S > b \epsilon
+				% sabemos que A::= a|b|c|\epsilon
+			% S > b a 
+			% S > b a a
+			% S > b a b
+			% S > b a c
+			% S > b a B
+				% B::=a|b|c
+			% S > b c 
+			% S > b c a
+			% S > b c b
+			% S > b c c NÃO PODE
+			% S > b c C
+				% portanto C ::= a|b
+			% S > b a c
+			% S > b a a B
+			% S > b a a a
+			% S > b a a b
+			% S > b a a c
+			% S > b a a \epsilon
+
+			% S > b a b (a,b,c)
+			% S > b a c (a,b,\epsilon)
+				%D::= a|b|\epsilon
+			% S > b c a (a,b,c\epsilon)
+				%portanto C::= a<A> | b
+			% S > b c b (a, b, c)
+				% portanto C::= a<A> | b<B>
+
+
+
+			% S > b A
+			% S > b a B
+			% S > b a c D
+			% S > b a c b (a,b,c,\epsilon)
+			% S > b a c b A
+				
+
+				% criar a regra E
+				% S > a E
+				% S > a (a,b,c)
+				% S > a a (a,b,c)
+				% portanto E::= a<E>|b|c
+				% S > a b (a,b,c,\epsilon)
+
+				% criar a regra F
+				% F::=a|b|c|\epsilon
+				% S > a b F
+				% S > a b (a,b,c,\epsilon)
+				% F::=a<F>|b|c|\epsilon
+				% S > a c (a,b)
+				% criar a regra G
+				% G::=a|b
+				% S> a c a (a,b,c)
+				% portanto G::= a<E>|b
+				% S> a c b (a,b,c,\epsilon)
+				% portanto G::= a<E>|b<F>
+
+
+				% S > a c b c a (a,b,c,\epsilon)
+				% portanto H::= a<F> | b | \epsilon
+				% S > a c b c b (a,b,c)
+				% portanto H::= a<F>|b<E>|\epsilon
+
+				% se começa com C
+				% S > c (a,b,\epsilon)
+				% portanto S::= a<E> | b<A> | c<G>
+k
+
+		\end{itemize}
 \end{document}
