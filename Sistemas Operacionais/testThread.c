@@ -24,7 +24,7 @@ int main(void) {
    for(i=0; i<N; i++) {
       int *j = malloc(sizeof(int));
       *j = i;
-      pthread_create(&tids[i], NULL, mythread, (void *)j);
+      pthread_create(&tids[i], NULL, mythread, (void *)j); // Cria uma thread(&tids[i] é o identificador da thread)
    }
    /* We will now wait for each thread to<\n>
     * terminate */
@@ -41,10 +41,10 @@ int id;
    id = *((int *) data);
    
    printf("\n I am thread %d \n", id);
-   sleep(1);
+   sleep(1); // Dormir por 1 segundo
    /* We can return a pointer. Whatever pointer
     * we return can later be retrieved using the
     * pthread_join function */
-   pthread_exit(NULL);
+   pthread_exit(NULL); // chamado para terminar thread
 }
 

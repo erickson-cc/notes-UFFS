@@ -1,4 +1,5 @@
 \documentclass[ ]{article}
+\usepackage[ ]{graphicx}
 \usepackage[ ]{indentfirst}
 \title{Revisão P1\\Sistemas Operacionais}
 \author{Erickson Müller}
@@ -33,6 +34,8 @@
 			
 			Em sistemas operacionais, uma troca de contexto (também conhecido como chaveamento ou mudança de contexto) é o processo computacional de armazenar e restaurar o estado (contexto) de uma CPU de forma que múltiplos processos possam compartilhar uma única instância de CPU.
 			
+			Cada thread tem  sua própria pilha.
+			
 		\subsection{Modelo em quatro partes}
 		O espaço de endereçamento da memória de um processo é dividido em quatro partes:
 			\begin{enumerate}
@@ -41,7 +44,21 @@
 				\item Heap/Lacuna
 				\item Stack/Pilha
 			\end{enumerate}
+			
+		Pilha e Heap crescem em sentidos opostos.
+		\subsection{Modelo em três partes}
+		O espaço de endereçamento da memória de um processo é dividido em três partes:
+			\begin{enumerate}
+				\item Code/Text
+				\item Stack/Pilha
+				\item Heap + Data
+			\end{enumerate}
+			
+		Pilha e Heap crescem em sentidos opostos.
 	\section{Threads}
+		\subsection{Região Crítica}
+		\includegraphics[scale=0.8]{images/critical_section.jpg}
+%		Exclusão mútua com espera ociosa:
 	\section{Impasses}
 	\section{Gerenciamento de Memória}'
 %z	\section{Entrada e Saída}
