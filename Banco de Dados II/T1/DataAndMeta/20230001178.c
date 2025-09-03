@@ -16,6 +16,7 @@ struct strAtt{
 	int id; // atributo.id = tabela.id
 	char nome[21]; // 21 usei 21 para caber o \0 mas talvez não precise
 	char tipo;
+	// char isKey; // 1 is a primary key
 	char opcionalidade;
 	int tamanho;
 };
