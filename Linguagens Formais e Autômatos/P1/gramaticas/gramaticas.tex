@@ -1,0 +1,107 @@
+\documentclass[ ]{article}
+\usepackage[]{amsfonts}
+\usepackage[]{amsmath}
+
+
+
+\begin{document}
+
+\textbf{1}
+
+	$L(G) = \{ \alpha | \alpha \in (a,b,c)^+$, onde a soma de $a$'s e $c$'s é par se $\alpha$ inicia por $b$, senão $|\alpha|$ é ímpar$\}$
+	
+	$S ::= a<A>| b<C> | c <A> $ % Inicial
+	
+	$A ::= a <B> | b<B> | c<B> | \varepsilon$ % inicia por a ou c (|alpha| é ímpar)
+	
+	$B ::= a <A> | b<A> | c<A>$
+	
+	$C ::= a<D> | b<C> | c<D> | \varepsilon$ % inicia por b (a+c é ímpar)
+	
+	$D ::= a<C> | b<D> | c<C>$
+	
+	
+\textbf{2}
+
+	$L(G) = \{\alpha | \alpha \in a^x b^yc^z$ onde $x+z$ é ímpar e $x,y,z>0 \}$
+	
+	$S::= a <A>$
+	
+	$A::= a<B> |b<C>$ %x+z ímpar
+	
+	$B::= a<A>| b<D>$ %x+z par
+	
+	$C::= b<C> | c<E> $ % x+z ímpar
+	
+	$D::= b<D> | c<F> $ % x+y par
+	
+	$E::= c<F>$ % x+y par
+	
+	$F::= c<E> | \varepsilon$ %x+y ímpar
+	
+\textbf{3}
+
+	$L(G) = \{ \alpha | \alpha \in (a,b,c)^+$, onde a soma de $a$'s e $c$'s é par se $\alpha$ inicia por $b$, senão $|\alpha|$ é ímpar e $c$ nunca antecede $a\}$
+	
+	$S::= a<E> | b<A> | c<G>$
+	
+%inicia por b
+	$A::= a<B> | b<A> | c<D> | \varepsilon$ % a+c é par, !c
+	
+	$B::= a<A> |b<B> | c<C>$ % a+c é ímpar, !c
+	
+	$C::= b<A>|c<D> | \varepsilon$% a+c é par, c
+	
+	$D::= b<A>|c<C> $ % a+c é ímpar, c
+
+%inicia por a
+	$E::= a<F> | b<F> | c<H> | \varepsilon$ % alpha é ímpar, !c
+	
+	$F::= a<E> | b<E> | c<G>$ % alpha é par, !c
+	
+	$G::= b<F> | c<H>| \varepsilon$ % alpha é ímpar, c
+	
+	$H::= b<E> | c<G>$ %alpha é par, c
+	
+	\newpage
+
+%\textbf{4}
+%
+%	$L(G) = \{ \alpha | \alpha \in (0...9, +,-,'.',',')^+$e $d \in \mathbb{R}\}$
+%
+%	$NUMEROS::= 0 | 1 | 2 | 3 | 4  | 5 | 6 | 7 | 8 | 9 $
+%	
+%	$POSITIVOS::=  1 | 2 | 3 | 4  | 5 | 6 | 7 | 8 | 9 $
+%	
+%	$SINAIS ::= + | -$
+%	
+%	$PONTO ::= .$
+%	
+%	$VIRGULA ::= ,$
+%	
+%	$ZERO::= 0$
+%	
+%	$S::= SINAIS <A> | ZERO<> | POSITIVOS<A>$
+%	% Faltou diferenciaro  número de dígitos para procurando ponto quando começa com positivo e quando começa com sinal. Portanto os dois não podem direcionar para A em S.
+%	% vou comentar essa resposta para prestar atenção na explicação do professor
+%	
+%% comecou com sinal
+%	$A::= ZERO<B> | POSITIVOS<Q0>|VIRGULA<DECIMAL>$
+%	
+%	$Q0::= NUMEROS<PP>|PONTO <Q1>| VIRGULA<DECIMAL>$
+%	
+%	$Q1::= NUMEROS<Q2>$
+%
+%	$Q2::= NUMEROS<Q3>$	
+%
+%	$Q3::= NUMEROS<Q4>$
+%	
+%	$Q4::= PONTO <Q1> | VIRGULA<DECIMAL>$	
+%	
+%	$PP ::= NUMEROS<PP2>|PONTO<Q1>| VIRGULA<DECIMAL>$
+%	
+%	$PP2 ::= PONTO<Q1> | VIRGULA<DECIMAL>$
+%	$B::= VIRGULA <DECIMAL>$
+%	
+%	$DECIMAL::= NUMEROS<DECIMAL>$
+\end{document}
