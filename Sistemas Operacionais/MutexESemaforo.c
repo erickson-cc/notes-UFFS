@@ -19,13 +19,13 @@ pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 #define N 2 // number of threads
 
-sem_t s;
+sem_t s; // Semáforo
 
 
-int x = 0; 
+int x = 0; // Região crítica
 
 int main(void) {
-   pthread_t tids[N];
+   pthread_t tids[N]; // define as 2 threads
    int i=0;
 
    sem_init(&s, 0, 1); // inicializa o semáforo com valor 1
@@ -33,7 +33,7 @@ int main(void) {
    for(i=0; i<N; i++) {
       int *j = malloc(sizeof(int));
       *j = i;
-      pthread_create(&tids[i], NULL, mythread, (void *)j);
+      pthread_create(&tids[i], NULL, mythread, (void *)j); // cria as thread
    }
    /* We will now wait for each thread to<\n>
     * terminate */
@@ -56,18 +56,18 @@ int id;
    // demonstração tratamento exclusão mútua utilizando mutex
    while(x < 10) {
 
-      pthread_mutex_lock(&count_mutex);
+      pthread_mutex_lock(&count_mutex); // lock no mutex
       
-      x++;
+      x++; // incrementa a variável global
       gettimeofday(&tv, &tz);
       tm=localtime(&tv.tv_sec);
       printf("(USING MUTEX)  Thread ID %d: x is now %d (%d:%02d:%02d:%d).\n",id, x, tm->tm_hour, tm->tm_min, tm->tm_sec, (int)tv.tv_usec);
       /* We will now release the mutex so that
        * another thread gets the chance to run. */
       
-      pthread_mutex_unlock(&count_mutex);
+      pthread_mutex_unlock(&count_mutex); // libera o mutex
 
-      sleep(1);
+      sleep(1); // podemos alterar para um tempo aleatório para ver as threads disputando
    }
     
    // demonstração tratamento exclusão mútua utilizando semáforo
@@ -85,7 +85,7 @@ int id;
       sem_post(&s); // operação UP
       
 
-      sleep(1);
+      sleep(1); // podemos alterar para um tempo aleatório para ver as threads disputando
 
    }
 

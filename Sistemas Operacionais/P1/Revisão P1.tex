@@ -57,9 +57,24 @@
 		Pilha e Heap crescem em sentidos opostos.
 	\section{Threads}
 		\subsection{Região Crítica}
+		
+		Condições para a solução de uma \textbf{exclusão mútua}:
+		\begin{itemize}
+			\item Nunca dois processos simultaneamente em uma
+região crítica.
+			\item Nenhuma afirmação/exigência sobre
+velocidades ou números de CPUs.
+			\item Nenhum processo executando fora de sua
+região crítica pode bloquear outros processos
+			\item Nenhum processo deve esperar eternamente
+para entrar em sua região crítica (deadlock??)
+		\end{itemize}
+		
 		\includegraphics[scale=0.8]{images/critical_section.jpg}
 %		Exclusão mútua com espera ociosa:
 	\section{Impasses}
+	
+		Em semáforos, o consumidor "acorda" o produtor e vice-versa, para impedir o deadlock.
 	\section{Gerenciamento de Memória}'
 %z	\section{Entrada e Saída}
 \end{document}

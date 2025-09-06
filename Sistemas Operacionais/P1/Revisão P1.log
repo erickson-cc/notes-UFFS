@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  29 AUG 2025 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  5 SEP 2025 20:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -110,45 +110,49 @@ Overfull \hbox (6.52734pt too wide) in paragraph at lines 33--34
 ro-ces-sos "ao mesmo tempo",
  []
 
-<images/critical_section.jpg, id=10, 430.60875pt x 542.025pt>
+
+
+[2]
+<images/critical_section.jpg, id=14, 430.60875pt x 542.025pt>
 File: images/critical_section.jpg Graphic file (type jpg)
 <use images/critical_section.jpg>
-Package pdftex.def Info: images/critical_section.jpg  used on input line 60.
+Package pdftex.def Info: images/critical_section.jpg  used on input line 73.
 (pdftex.def)             Requested size: 344.48746pt x 433.62057pt.
 
-Overfull \hbox (14.48746pt too wide) in paragraph at lines 60--62
+Overfull \hbox (14.48746pt too wide) in paragraph at lines 73--75
 [][] 
  []
 
 
 
-[2]
+[3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
-[3 <./images/critical_section.jpg>]
+[4 <./images/critical_section.jpg>]
 
-[4] (./Revisão P1.aux)
+[5] (./Revisão P1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1336 strings out of 475171
- 21857 string characters out of 5767095
+ 1344 strings out of 475171
+ 21988 string characters out of 5767095
  410411 words of memory out of 5000000
- 24366 multiletter control sequences out of 15000+600000
- 563130 words of font info for 50 fonts, out of 8000000 for 9000
+ 24371 multiletter control sequences out of 15000+600000
+ 563773 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  57i,7n,65p,358b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-i10.pfb>
-Output written on "Revisão P1.pdf" (4 pages, 120501 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
+share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "Revisão P1.pdf" (5 pages, 139917 bytes).
 PDF statistics:
- 43 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

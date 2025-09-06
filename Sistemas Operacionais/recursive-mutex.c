@@ -14,7 +14,7 @@ void *mythread(void *data);
 
 pthread_mutex_t count_mutex;//= PTHREAD_MUTEX_INITIALIZER;
 
-pthread_mutexattr_t   mta;
+pthread_mutexattr_t   mta; // recebe os atributos do mutex
 
 #define N 2 // number of threads
 
@@ -26,10 +26,11 @@ int main(void) {
    pthread_t tids[N];
    int i=0;
 
-   // Exemplo de como inicializar um mutex recursivo
+   // Exemplo de como INICIALIZAR um mutex recursivo
    pthread_mutexattr_init(&mta);
    pthread_mutexattr_settype(&mta, PTHREAD_MUTEX_RECURSIVE);
    pthread_mutex_init(&count_mutex, &mta);
+   // Agora o mutex é recursivo
 
 
 
@@ -63,7 +64,8 @@ int id;
      
       print_global(id);
 
-      pthread_mutex_unlock(&count_mutex);
+      pthread_mutex_unlock(&count_mutex); // Ainda estamos na região crítica
+					  // vai pedir um lock
 
       sleep(1);
    }
@@ -77,11 +79,11 @@ int id;
 
 void print_global(int id){
     
-     pthread_mutex_lock(&count_mutex);
+     pthread_mutex_lock(&count_mutex); // dar um lock no mutex
 
-     printf("(USING MUTEX)  Thread ID %d: x is now %d \n",id, x);
+     printf("(USING MUTEX)  Thread ID %d: x is now %d \n",id, x); // dar um print no x
 
-     pthread_mutex_unlock(&count_mutex);
+     pthread_mutex_unlock(&count_mutex); // unlock
 
 
 }
