@@ -17,7 +17,7 @@ pthread_mutex_t count_mutex = PTHREAD_MUTEX_INITIALIZER;
 
 
 
-#define N 2 // number of threads
+#define N 5 // number of threads
 
 sem_t s; // Semáforo
 
