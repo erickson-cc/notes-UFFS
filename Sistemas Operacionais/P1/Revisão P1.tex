@@ -73,8 +73,19 @@ para entrar em sua região crítica (deadlock??)
 		\includegraphics[scale=0.8]{images/critical_section.jpg}
 %		Exclusão mútua com espera ociosa:
 	\section{Impasses}
-	
-		Em semáforos, o consumidor "acorda" o produtor e vice-versa, para impedir o deadlock.
+		\textit{recurso, introdução a deadlocks, algoritmo do avestruz, detecção e recuperação de deadlocks, evitando deadlocks, prevenção de deadlocks, outras questões}
+		
+		Em semáforos, o consumidor "acorda" o produtor e vice-versa, para impedir o deadlock.	
+		
+		Os recursos são executados nessa ordem, solicitar -> usar -> liberar.
+		\subsection{Condições para Deadlock}
+		\begin{enumerate}
+			\item Condição de exclusão mútua
+			\item Condição de posse e espera
+			\item Condição de não preempção
+			\item Condição de espera circular
+		\end{enumerate}
+		Deadlocks não acontecem em sistemas preemptivos, pois basta salvar o processo e retornar posteriormente.
 	\section{Gerenciamento de Memória}'
 %z	\section{Entrada e Saída}
 \end{document}

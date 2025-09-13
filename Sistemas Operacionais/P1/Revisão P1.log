@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  5 SEP 2025 20:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  12 SEP 2025 22:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -126,6 +126,12 @@ Overfull \hbox (14.48746pt too wide) in paragraph at lines 73--75
 
 
 [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+Overfull \hbox (4.11508pt too wide) in paragraph at lines 76--77
+\OT1/cmr/m/it/10 pera^^Xc~ao de dead-locks, evi-tando dead-locks, pre-ven^^Xc~a
+o de dead-locks, out-ras quest~oes 
+ []
+
+
 
 [4 <./images/critical_section.jpg>]
 
@@ -149,7 +155,7 @@ ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 r17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/
 share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P1.pdf" (5 pages, 139917 bytes).
+Output written on "Revisão P1.pdf" (5 pages, 144579 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
