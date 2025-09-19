@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  28 AUG 2025 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  18 SEP 2025 20:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -310,33 +310,69 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 topaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+automata.code.tex
+File: tikzlibraryautomata.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+shapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multip
+art.code.tex
+File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodepartlowerbox=\box63
+\pgfnodeparttwobox=\box64
+\pgfnodepartthreebox=\box65
+\pgfnodepartfourbox=\box66
+\pgfnodeparttwentybox=\box67
+\pgfnodepartnineteenbox=\box68
+\pgfnodeparteighteenbox=\box69
+\pgfnodepartseventeenbox=\box70
+\pgfnodepartsixteenbox=\box71
+\pgfnodepartfifteenbox=\box72
+\pgfnodepartfourteenbox=\box73
+\pgfnodepartthirteenbox=\box74
+\pgfnodeparttwelvebox=\box75
+\pgfnodepartelevenbox=\box76
+\pgfnodeparttenbox=\box77
+\pgfnodepartninebox=\box78
+\pgfnodeparteightbox=\box79
+\pgfnodepartsevenbox=\box80
+\pgfnodepartsixbox=\box81
+\pgfnodepartfivebox=\box82
+)))
+(/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrary
+positioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count291
-\l__pdf_internal_box=\box63
+\l__pdf_internal_box=\box83
 )
 (./Revisão P1.aux)
 \openout1 = `"Revisão P1.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count292
 \scratchdimen=\dimen194
-\scratchbox=\box64
+\scratchbox=\box84
 \nofMPsegments=\count293
 \nofMParguments=\count294
 \everyMPshowfont=\toks30
@@ -355,15 +391,15 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 10.
+(Font)              <12> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 10.
+(Font)              <8> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 10.
+(Font)              <6> on input line 12.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 33.
+(Font)              <5> on input line 35.
 
 
 [1
@@ -375,45 +411,45 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <images/aula-1.png, id=20, 4668.44125pt x 2644.88126pt>
 File: images/aula-1.png Graphic file (type png)
 <use images/aula-1.png>
-Package pdftex.def Info: images/aula-1.png  used on input line 110.
+Package pdftex.def Info: images/aula-1.png  used on input line 112.
 (pdftex.def)             Requested size: 420.14159pt x 238.02904pt.
 
-Overfull \hbox (75.14159pt too wide) in paragraph at lines 110--111
+Overfull \hbox (75.14159pt too wide) in paragraph at lines 112--113
  [] 
  []
 
 
 
 [3 <./images/aula-1.png>]
-Overfull \hbox (28.06624pt too wide) in paragraph at lines 120--120
+Overfull \hbox (28.06624pt too wide) in paragraph at lines 122--122
 []\OT1/cmr/bx/n/14.4 Defini^^Xc~ao for-mal de gram^^Satica ger-a-tiva e deriva^
 ^Xc~ao 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--128
+Underfull \hbox (badness 10000) in paragraph at lines 126--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--143
+Underfull \hbox (badness 10000) in paragraph at lines 140--145
 
  []
 
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 155--159
+Underfull \hbox (badness 10000) in paragraph at lines 157--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--167
+Underfull \hbox (badness 10000) in paragraph at lines 162--169
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--214
+Underfull \hbox (badness 10000) in paragraph at lines 211--216
 
  []
 
@@ -421,14 +457,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--214
 File: images/Hierarquia_de_Chomsky.png Graphic file (type png)
 <use images/Hierarquia_de_Chomsky.png>
 Package pdftex.def Info: images/Hierarquia_de_Chomsky.png  used on input line 2
-15.
+17.
 (pdftex.def)             Requested size: 301.95103pt x 234.49948pt.
 
 
 [5]
 
 [6 <./images/Hierarquia_de_Chomsky.PNG>]
-Overfull \hbox (0.50064pt too wide) in paragraph at lines 248--249
+Overfull \hbox (0.50064pt too wide) in paragraph at lines 250--251
 []\OT1/cmr/m/n/10 N~ao h^^Sa re-stri^^Xc~ao nen-huma, logo pode ser for-mado po
 r qual-quer con-catena^^Xc~ao: 
  []
@@ -437,33 +473,61 @@ r qual-quer con-catena^^Xc~ao:
 
 [7]
 
-[8] (./Revisão P1.aux)
+[8]
+<images/AFD-interruptor.png, id=46, 371.13657pt x 75.28125pt>
+File: images/AFD-interruptor.png Graphic file (type png)
+<use images/AFD-interruptor.png>
+Package pdftex.def Info: images/AFD-interruptor.png  used on input line 422.
+(pdftex.def)             Requested size: 222.68365pt x 45.16908pt.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. D
+id you specify a point identical to the center of node ``S''? on input line 471
+.
+
+
+Package pgf Warning: Returning node center instead of a point on node border. D
+id you specify a point identical to the center of node ``S''? on input line 471
+.
+
+<images/AFD-tabular-grafica.png, id=47, 427.5975pt x 313.9228pt>
+File: images/AFD-tabular-grafica.png Graphic file (type png)
+<use images/AFD-tabular-grafica.png>
+Package pdftex.def Info: images/AFD-tabular-grafica.png  used on input line 474
+.
+(pdftex.def)             Requested size: 299.31621pt x 219.74446pt.
+
+
+[9 <./images/AFD-interruptor.png>]
+
+[10 <./images/AFD-tabular-grafica.png>] (./Revisão P1.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11899 strings out of 475171
- 248086 string characters out of 5767095
- 613471 words of memory out of 5000000
- 34714 multiletter control sequences out of 15000+600000
+ 12575 strings out of 475171
+ 270924 string characters out of 5767095
+ 647457 words of memory out of 5000000
+ 35377 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 102i,7n,107p,418b,780s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,8n,107p,432b,779s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P1.pdf" (8 pages, 555783 bytes).
+c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+/usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on "Revisão P1.pdf" (10 pages, 609904 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 109 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 

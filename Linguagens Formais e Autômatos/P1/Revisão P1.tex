@@ -1,6 +1,8 @@
 \documentclass[]{article}
 \usepackage[ ]{indentfirst}
 \usepackage{tikz}
+\usetikzlibrary{automata, positioning}
+
 \usepackage[ ]{graphicx}
 \title{Revisão P1\\Linguagens Formais e Autômatos}
 \author{Erickson G. Müller}
@@ -405,7 +407,72 @@
 				% se começa com C
 				% S > c (a,b,\epsilon)
 				% portanto S::= a<E> | b<A> | c<G>
-k
 
 		\end{itemize}
+	\section{Autômato Finito}
+		Reconhecimento de padrões em processamento de texto (cadeias).
+%		\begin{tikzpicture}
+%			\node (on) [draw, ellipse] {on};
+%			\node (off) [left=of on] {off};
+%			\node (on) [right=of off] {off};
+%			\draw [->] (on) -- (off);
+%			\draw [->] (processo) -- (objeto);
+%		\end{tikzpicture}
+
+		\includegraphics[scale=0.6]{images/AFD-interruptor.png}		
+		
+		Podem ser determinísticos ou não determinísticos.
+		
+		Se $w \in L$
+		\begin{itemize}
+			\item AFD
+			\item AFND
+		\end{itemize}
+		
+		Definição formal		
+		\begin{itemize}
+			\item $K \to$ conjunto de estados.
+			\item $\Sigma \to$ alfabeto da linguagem.
+			\item $\delta \to \kappa _x \Sigma \to \kappa$.
+			\item $q_o \to \in \kappa$ estado inicial.
+			\item $F \to $ estado final.
+		\end{itemize}
+		
+		Determinismo: $\delta(q,a) \to p$
+		
+		Indeterminismo: $\delta(q,a) \to p | r | s$
+		
+		$$\kappa _x \Sigma \to \kappa$$
+		
+		Estado |$^\Sigma$ Transição \textit{a transição é rotulada por um símbolo do alfabeto da linguagem}
+		
+		$\alpha \in L$ se $\delta (q_o, \alpha) \to^* p \wedge p \in F$ Alcançamos um estado $p$ e esse estado é final.
+		
+		$L(AF) = \{ \alpha | \delta(q,\alpha) \to p \wedge p \in F\}$
+		\subsection{exemplo}		
+		$L(G) =\{ \alpha | \alpha \in (a,b)^+$ onde números de $a$'s é ímpar$\}$
+		
+		$S::= a<A> | b<S> | a$ % podemos encerrar no S
+		
+		$A::= a<S> | b<A> |\varepsilon$
+		
+		\subsection{Diagrama de transição e Tabela de transição}
+		Considerando a gramática $L(G) =\{ \alpha | \alpha \in (a,b)^+$ onde números de $a$'s é ímpar$\}$
+		
+\begin{tikzpicture}[node distance=2cm, on grid, auto]
+    % Define os nós com a opção 'state' para circulá-los
+    \node[state] (S) {S};
+    \node[state, right of=S] (A) {A};
+    \node[state, left of = S] (C) {C};
+
+    % Adiciona a transição de S para A
+    \path[->] (S) edge node {} (A);
+    \path[->] (S) edge node {} (C);
+    \path[->] (S) edge node {} (S);
+\end{tikzpicture}
+
+		\includegraphics[scale=0.7]{images/AFD-tabular-grafica.png}
+		
+		no estado $q^2$, quando for $1$ o tracinho significa que é um $\varepsilon$
+
 \end{document}
