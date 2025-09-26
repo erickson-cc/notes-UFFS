@@ -284,6 +284,18 @@ $
 	\textbf{f}
 	
 	$L(G) = \{ x | x \in (a,b,c,d)^+$onde a soma de $a$'s e $c$'s é ímpar se $x$ começa com $a$ ou a soma de $a$'s e $d$'s é par se $x$ começa por $b$; se $x$ inicia por $c$ ou $d$ não existe restrição$\}$
+	
+	$S::= a<A> | b<C> | c<E> | d<E> $ % inicio
+	
+	$A::= a<B> | b<A> | c<B> | d<A> | \varepsilon$ % inicia por a & a+c é ímpar
+	
+	$B::= a<A> | b<B> | c<A> | d<B>$ % inicia por a & a+c é par
+	
+	$C::= a<D> | b<C> | c<C> | d<D> | \varepsilon$ % inicia por b & a+d é par
+
+	$D::= a<C> | b<D> | c<D> | d<C>$ % inicia por b & a+d é ímpar	
+	
+	$E::= a<E> | b<E> | c<E> | d<E> | \varepsilon$
 	\section*{Lista 2 - Autômatos Finitos}
 		\textbf{a}
 		
@@ -310,4 +322,45 @@ $
 		$F::= a<F> | b<F> | a | b$
 		
 		\includegraphics[scale=0.5]{../images/automato-exemplo-2.png}
+		
+	\section*{Lista de exercícios nova}
+		\subsection{4 - autômatos finitos}
+		\textbf{d} % Corrigida pelo professor
+		
+		$S::= 0<B> | 1<A> | 1 | \varepsilon$
+		
+		$A::= 0<B> | \varepsilon$
+		
+		$B::= 0<C> | 0 | 1<D>$
+		
+		$C::= 0<B> | 1<A> | 1$
+		
+		$D::= 1<C> | 1$
+		
+		\begin{center}
+		AFND\\
+		
+		\begin{tabular}{ c c c }
+  & 0 & 1 \\ 
+ $\to$S & B & A,X \\  
+ *X & - & - \\
+ *A & B & - \\
+ B & C, X & D\\
+ C& B & A,X\\
+ D & - & C, X
+		\end{tabular}
+		\end{center}
+		
+		\begin{center}
+		AFD\\
+		
+		\begin{tabular}{ c c c }
+   & 0 & 1 \\ 
+ $\to$*S & B & [AX] \\  
+ B & [CX] & D\\
+ *[AX] & B & - \\
+ *[CX] & B & [AX]\\
+ D & - & [CX]
+ 		\end{tabular}
+		\end{center}
 \end{document}

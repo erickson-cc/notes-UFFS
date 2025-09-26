@@ -474,5 +474,82 @@
 		\includegraphics[scale=0.7]{images/AFD-tabular-grafica.png}
 		
 		no estado $q^2$, quando for $1$ o tracinho significa que é um $\varepsilon$
-
+		\subsection{Expressões regulares}
+		
+		$(0,1)^*$
+		
+		Cadeias que terminam por 01
+		$$(0+1)^*.0.1$$
+		
+		Cadeias com exatamente 2 $0$'s
+		$$1^*01^*01^*$$
+		
+		Cadeias com tamanho par
+		$$((0+1)(0+1))^*$$		
+		
+		
+		Cadeias com tamanho ímpar
+		$$(0+1)((0+1)(0+1))^*$$
+		
+		\subsection{Eliminação de epsilon Transições}
+		
+		$A::= 0<A> | \varepsilon <B>$
+		
+		$B::= 1<B> | \varepsilon<C>$
+		
+		$C::= 2<C> | \varepsilon$
+		
+		\includegraphics[scale=0.24]{images/eliminacao-de-transicoes.png}
+		
+		Conjuntos das produções
+		
+		$A=\{ A,B,C\}$
+		
+		$B=\{B,C\}$
+		
+		$C=\{C\}$
+				
+		$A ::= 0<A> | 1<B> | 2<C> | \varepsilon$
+		
+		$B::= 1<B> | 2<C> | \varepsilon$
+		
+		$C::= 2<C> | \varepsilon$
+		
+		\includegraphics[scale=0.24]{images/eliminadas-transicoes.png}
+		
+		\subsection{Transformação de AFND para AFD}
+		
+		$S::= 0<S> | 1<A> | A$
+		
+		$A::= 0<C> | B$
+		
+		$B::= 1<B> | 0<A> | 0$
+		
+		$C::= 1<A> | B$
+		
+		\begin{center}
+		Identificar os $\varepsilon$
+		\end{center}
+		
+		$S::= 0<S> | 1<A> | \varepsilon<A>$
+		
+		$A::= 0<C> | \varepsilon <B>$
+		
+		$B::= 1<B> | 0<A> | 0$
+		
+		$C::= 1<A> | \varepsilon<B>$
+		
+		\begin{center}
+		Eliminar
+		\end{center}
+		
+		%$S::= 0<S> | 1<A> | 0 <C> | B$
+		$S::= 0<S> | 1<A> | 0<C> |1<B> | 0 <A> | \varepsilon$
+		
+		$A::= 0<C> | 1<B> | 0 <A> | \varepsilon$
+		
+		$B::= 1<B> | 0 <A> | \varepsilon$
+		
+		$C::= 1<A> | 1<B> | 0<A> | \varepsilon$
+		
 \end{document}

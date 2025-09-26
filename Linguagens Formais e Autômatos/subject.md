@@ -2,6 +2,7 @@ Avaliação
 
 Unidade 1:
     Prova 1 (100%)
+    não cai eliminação de epsilon-transições
 Unidade 2:
     Prova 2 (70%)
     Projeto Prático (30%)
