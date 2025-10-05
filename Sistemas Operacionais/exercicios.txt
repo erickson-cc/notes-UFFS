@@ -1,0 +1,86 @@
+1- Está correto. O valor x conta como um peso da loteria e os bilhetes são distribuídos com o mesmo peso para todos os processos.
+corr: Cada bilhete, assumindo uma distribuição uniforme, possui a mesma probabilidade de ser sorteado.
+
+2- 
+while(TRUE){
+	while(turn!=0){
+		critical_region();
+	}
+	turn = 1;
+	noncritical_region();
+}
+while(TRUE){
+	while(turn!=1){
+		critical_region();
+	}
+	turn = 2;
+	noncritical_region();
+}
+while(TRUE){
+	while(turn!=2){
+		critical_region();
+	}
+	turn = 3;
+	noncritical_region();
+}
+while(TRUE){
+	while(turn!=3){
+		critical_region();
+	}
+	turn = 0;
+	noncritical_region();
+}
+corr: pode ser implementado criando um único bloco de código que se adapta através da variável n. Criando a equação de qual é o próximo processo (turn).
+
+3- Não previne pois existe um loop entre dois processos e os recursos X e T
+corr: previne pois não existe loop entre processos. Além de ser preemptiva ("assume-se que as threads acessam os recursos com frequência, mas sempre por um tempo finito"). Além de seguir aquela regra de acessar os recuros numa ordem crescente (as transições abaixo só vão para um lado).
+z->w
+(x->t->w | x->w)
+y->x->t
+
+
+4- 	0011 1000 0110 1111
+		pag: (111000)_{2} = (56)_{10}
+		desl: (1101111)_{2} = (111)_{10}
+
+	1001 0000 0001 1011
+		pag: (10010000)_{2} = (144)_{10}
+		desl: (11011)_{2} = (27)_{10}
+
+5-
+	F - a questão descreve o funcionamento do escalonamento preemptivo. O escalonamento não-preemptivo, também chamado de coperativo, depende da ação do usuário para decidir qual processo a cpu vai destinar recursos.
+	F - a questão descreve o funcionamento do kernel monolítico.Na arquitetura microkernel, apenas os serviços essenciais rodam no núcleo (kernel), enquanto outros serviços (como sistemas de arquivos e drivers) são executados como processos em modo de usuário e podem ser carregados sob demanda.
+	V
+	F - A paginação elimina a fragmentação externa. A fragmentação interna aloca uma série de páginas, essas utilizam todo o conteúdo, com exceção da última. A fragmentação externa é segmento (?).
+
+6- 
+void take_forks(int id){
+	sem_wait(&mutex);
+	state[id] = HUNGRY;
+	test(id);
+	sem_post(&mutex); // sai da região crítica (passa de 0 para 1)
+	sem_wait(&s[id]);
+}
+
+void test(int id){
+	if(state[id]==HUNGRY && state[left(id)]!=EATING &&
+	state[right(id)]!=EATING){
+		state[id]=EATING;
+		sem_post(&S[id]);
+	}
+}
+
+void put_forks(int id){
+	// o filósofo é o único olhando para a mesa para devolver os garfos.
+}
+ 7- 
+void *mythread(void *data) {
+	while(global < MAX) {
+		pthread_mutex_lock(&count_mutex);
+		global++;
+		printf("Thread ID%ld: global is now %d.\n", pthread_self(), global);
+		pthread_mutex_unlock(&count_mutex); // desbloquear para não travar os mutex
+		sleep(2);
+	}
+	pthread_exit(NULL);
+}
