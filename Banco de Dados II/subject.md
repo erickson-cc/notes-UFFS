@@ -40,3 +40,8 @@ hashin extensível:
     2 variáveis de controle (global e local)
     global indica o máximo de bits a considerar iniciando com 1 (máximo de buckets)
     local indica quantos bits o bucket considera (tamanho dos buckets)
+
+# Stored Procedures
+ 
+# Tablespace
+    
