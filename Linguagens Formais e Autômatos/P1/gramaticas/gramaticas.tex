@@ -425,9 +425,11 @@ $
             & a & b \\
             \midrule % Linha intermediária do booktabs (espaçamento reduzido)
 			$\to S$ & $[A,C]$ & $[B,C]$\\
-			$[A,C]$ & $[F,K]$ & \\
-
-
+			$[A,C]$ & $*[F,K]$ & $[B,C]$\\
+			$[B,C]$ & $[A,C]$ & $*[B,C,F,K]$\\
+			$*[F,K]$ & $*[F,K]$ & $*[F,K]$\\
+			$*[B,C,F,K]$ & $*[A,C,F,K]$ & $*[B,C,F,K]$\\
+			$*[A,C,F,K]$ & $*[A,C,F,K]$ & $*[B,C,F,K]$\\
             \bottomrule % Linha inferior do booktabs
         \end{tabular}
     \end{minipage}
@@ -435,7 +437,54 @@ $
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\newpage
 		\textbf{c}
+		
+		$S ::= aA | bB$
+		
+		$A ::= aS | aC | a$
+		
+		$B ::= bS | bD | b$
+		
+		$C ::= aB$
+		
+		$D ::= bA$
+		
+\begin{center}
+    % Minipage para o AFND
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFND}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|c|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+            & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to S$ & $A$ & $B$\\
+		$A$ & $S,C,F$ & -\\
+		$B$ & - & $S,D,F$\\
+		$C$ & $B$ & -\\
+		$D$ & - & $A$\\
+		$F$ & - & -\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}%
+    \hfill % Espaço horizontal entre as minipages
+    % Minipage para o AFD
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFD}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+            & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+\end{center}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+		\newpage
 		\textbf{d} % Corrigida pelo professor
 		
 		$S::= 0<B> | 1<A> | 1 | \varepsilon$

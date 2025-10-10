@@ -1,0 +1,84 @@
+\documentclass[]{article}
+\usepackage[ ]{indentfirst}
+\usepackage{tikz}
+\usetikzlibrary{automata, positioning}
+\usepackage{booktabs}
+\usepackage[ ]{array}
+
+\usepackage[ ]{graphicx}
+\title{Revisão P2\\Linguagens Formais e Autômatos}
+\author{Erickson G. Müller}
+\date{}
+
+\begin{document}
+\maketitle
+\section*{Conteúdos}
+
+\section{Minimização de Autômatos Finitos}
+Um autômato finito é mínimo se não possui \textbf{estados inacessíveis, mortos e equivalentes}.\\
+Considerando o seguinte AFND, vamos reconhecer esses estados\\
+\begin{minipage}[t]{0.43\textwidth}
+\centering
+\begin{tabular}{|c|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+            & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to *A $ & $G$ & $B$\\
+		$B$ & $F$ & $E$\\
+		$C$ & $C$ & $G$\\
+		$*D$ & $A$ & $H$\\
+		$E$ & $E$ & $A$\\
+		$F$ & $B$ & $C$\\
+		$*G$ & $G$ & $F$\\
+		$H$ & $H$ & $D$\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+\end{minipage} 
+\hfill
+\begin{minipage}{0.43\textwidth}   
+$A\to \{ G,B,F,E,C,A$ \textit{acess}\\
+$B\to \{F,E,C,A,B,G$\\
+$C\to \{C,G,B,F,E,A$\\
+$D \to \{A,H,G,B,F,E,C,D$\\
+$E \to \{ E,A,G,B,F,C$\\
+$F\to \{ B,C,F,E,A,G$\\
+$G\to \{ G,F,B,C,E,A$\\
+$H \to \{ H,D,A,C,G,B,F,E$\\
+\end{minipage}
+    
+O algoritmo para encontrar os estados inacessíveis começa com uma lista-chave de todos os estados seguidos dos estados que são possíveis de ser alcançado através daquele. Exemplo $A \to \{ G, B$; Todos os estados que estão à direita compartilham o estados que se podem acessar com o estado à esquerda.
+
+A segunda parte do algoritmo consiste em adicionar esses estados que podem ser acessados em duas transições através dos estados que podem ser acessados diretamente. Exemplo $A \to \{ G, B,F, E$, e assim em ciclo até completar todos os estados.
+
+Por fim, temos que os estados inalcançáveis são $D$ e $H$.
+
+Os estados que são mortos são aqueles que não alcançam, por nenhum fecho transitivo, um estado final. Portanto são os estados
+
+Os estados são equivalentes quando, para cada símbolo, levam ao mesmo tipo de estados. Por exemplo, o $A$ e o $G$ são equivalentes pois $G$ e $G$ são estados finais e $B$ e $F$ são estados não finais.
+
+\begin{minipage}[t]{0.43\textwidth}
+\begin{tabular}{|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+            $F$ & $K-F $\\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$A,G$ & $B,C,E,F$\\
+		$[A,G]$ & $[B,C],[C,E]$\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.43\textwidth}
+\begin{tabular}{|c|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+             & $a$ & $b$\\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to *[AG]$ & $[AG]$ & $[BF]$\\
+		$[BF]$ & $[BF]$ & $[CF]$\\
+		$[CE]$ & $[CE]$ & $[AG]$\\
+		
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+\end{minipage} 
+
+	\subsection{Exercícios de minimização}
+\end{document}
