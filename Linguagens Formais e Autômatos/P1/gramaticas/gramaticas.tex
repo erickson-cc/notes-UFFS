@@ -6,7 +6,6 @@
 \usepackage[ ]{graphicx}
 \usepackage{booktabs}
 
-
 \begin{document}
 
 \textbf{1}
@@ -325,7 +324,7 @@ $
 		
 		\includegraphics[scale=0.5]{../images/automato-exemplo-2.png}
 		\newpage
-	\section*{Lista de exercícios nova}
+	\section*{Lista de exercícios nova - Erickson G. Müller}
 		\subsection{4 - autômatos finitos}
 
 		\textbf{a}
@@ -463,7 +462,7 @@ $
 		$B$ & - & $S,D,F$\\
 		$C$ & $B$ & -\\
 		$D$ & - & $A$\\
-		$F$ & - & -\\
+		$*F$ & - & -\\
             \bottomrule % Linha inferior do booktabs
         \end{tabular}
     \end{minipage}%
@@ -477,7 +476,12 @@ $
             \toprule % Linha superior do booktabs
             & a & b \\
             \midrule % Linha intermediária do booktabs (espaçamento reduzido)
-
+		$\to S$ & $A$ & $B$\\
+		$A$ & $*[S,C,F]$ & -\\
+		$*[S,C,F]$ & $[A,B]$ & $B$\\
+		$B$ & - & $*[S,D,F]$\\
+		$[A,B]$ & $*[S,C,F]$ & $*[S,D,F]$\\
+		$*[S,D,F]$ & $A$ & $[A,B]$\\
             \bottomrule % Linha inferior do booktabs
         \end{tabular}
     \end{minipage}
@@ -524,7 +528,102 @@ $
  		\end{tabular}
 		\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\newpage
 		\textbf{e}
+		
+		$S ::= aA | bB | a$
+		
+		$A ::= aS | bC$
+		
+		$B ::= aC | bS$
+		
+		$C ::= aB | bA | b$
+		
+\begin{center}
+    % Minipage para o AFND
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFND}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|c|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+            & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to S$ & $A,F$ & $B$\\
+		$A$ & $S$ & $C$\\
+		$B$ & $C$ & $S$\\
+		$C$ & $B$ & $A,F$\\
+		$*F$ & $-$ & $-$\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}%
+    \hfill % Espaço horizontal entre as minipages
+    % Minipage para o AFD
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFD}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+            & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to S$ & $*[A,F]$ & $B$\\
+		$*[A,F]$ & $S$ & $C$\\
+		$B$ & $C$ & $S$\\
+		$C$ & $B$ & $*[A,F]$\\
+		$*F$ & - & -\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+\end{center}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		\textbf{f}
+		
+		$S ::= aA | bB | b | cS | c | \varepsilon$
+		
+		$A ::= aS | a | bC | cA$
+
+		$B ::= aA | cB | cS | c$
+
+		$C ::= aS | a | cA | cC$
+		
+\begin{center}
+    % Minipage para o AFND
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFND}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|c|c|c|c|} % Colunas com linhas verticais
+            \toprule % Linha superior do booktabs
+            & a & b & c\\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to *S$ & $A$ & $B,F$ & $S,F$\\
+		$A$ & $S,F$& $C$ & $A$\\
+		$B$ & $A$ & - & $B,S,F$\\
+		$C$ & $S,F$ & - &$A,C$\\
+		$F$ & - & - & -\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}%
+    \hfill % Espaço horizontal entre as minipages
+    % Minipage para o AFD
+    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFD}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+            & a & b & c\\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		$\to *S$ & $A$ & $[B,F]$ & $[S,F]$\\
+		$A$ & $[S,F]$ & $C$ & $ A$\\
+		$[B,F]$ & $A$ & $-$ & $[B,S,F]$\\
+		$[S,F]$ &  $A$ & $[B,F]$ & $[S,F]$\\
+		$C$ & $[S,F]$ & - & $[A,C]$\\
+		$[B,S,F]$ & $A$ & $[B,F]$ & $[B,S,F]$\\
+		$[A,C]$ & $[S,F]$ & $C$ & $[A,C]$\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+\end{center}
 \end{document}

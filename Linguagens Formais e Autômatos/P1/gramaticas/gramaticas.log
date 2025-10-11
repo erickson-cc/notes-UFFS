@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  10 OCT 2025 00:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  10 OCT 2025 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -165,20 +165,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./gramaticas.aux)
 \openout1 = `gramaticas.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count287
@@ -201,13 +201,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -218,13 +218,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
-65.
+64.
 
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 165.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 164.
 
 
 [2]
@@ -234,16 +234,16 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 File: ../images/automato-exemplo-1.png Graphic file (type png)
 <use ../images/automato-exemplo-1.png>
 Package pdftex.def Info: ../images/automato-exemplo-1.png  used on input line 3
-12.
+11.
 (pdftex.def)             Requested size: 226.97241pt x 291.33772pt.
 <../images/automato-exemplo-2.png, id=23, 805.50937pt x 430.60875pt>
 File: ../images/automato-exemplo-2.png Graphic file (type png)
 <use ../images/automato-exemplo-2.png>
 Package pdftex.def Info: ../images/automato-exemplo-2.png  used on input line 3
-26.
+25.
 (pdftex.def)             Requested size: 402.7537pt x 215.30383pt.
 
-Overfull \hbox (72.7537pt too wide) in paragraph at lines 326--327
+Overfull \hbox (72.7537pt too wide) in paragraph at lines 325--326
 [][] 
  []
 
@@ -255,17 +255,17 @@ Overfull \hbox (72.7537pt too wide) in paragraph at lines 326--327
 <images/4-a-afnd.png, id=32, 511.15968pt x 563.85657pt>
 File: images/4-a-afnd.png Graphic file (type png)
 <use images/4-a-afnd.png>
-Package pdftex.def Info: images/4-a-afnd.png  used on input line 342.
+Package pdftex.def Info: images/4-a-afnd.png  used on input line 341.
 (pdftex.def)             Requested size: 153.34908pt x 169.15826pt.
 
-Overfull \hbox (18.8409pt too wide) in paragraph at lines 368--379
+Overfull \hbox (18.8409pt too wide) in paragraph at lines 367--378
  [][] 
  []
 
 
 
 [6 <./images/4-a-afnd.png>]
-Overfull \hbox (37.01236pt too wide) in paragraph at lines 423--435
+Overfull \hbox (37.01236pt too wide) in paragraph at lines 422--434
  [][] 
  []
 
@@ -275,20 +275,27 @@ Overfull \hbox (37.01236pt too wide) in paragraph at lines 423--435
 
 [8]
 
-[9] (./gramaticas.aux)
+[9]
+Overfull \hbox (7.28679pt too wide) in paragraph at lines 614--627
+ [][] 
+ []
+
+
+
+[10] (./gramaticas.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2303 strings out of 475171
- 34959 string characters out of 5767095
- 430480 words of memory out of 5000000
- 25297 multiletter control sequences out of 15000+600000
+ 2304 strings out of 475171
+ 34967 string characters out of 5767095
+ 433480 words of memory out of 5000000
+ 25298 multiletter control sequences out of 15000+600000
  562673 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 57i,9n,65p,274b,239s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,9n,65p,274b,240s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -297,10 +304,10 @@ mr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb>
-Output written on gramaticas.pdf (9 pages, 258033 bytes).
+Output written on gramaticas.pdf (10 pages, 261097 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
