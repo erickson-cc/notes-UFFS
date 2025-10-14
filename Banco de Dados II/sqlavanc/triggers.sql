@@ -1,0 +1,11 @@
+select current_user;
+select now();
+select version();
+select 1+1;
+select random();
+select random() from generate_series(1,10);
+select random()::int;
+select random()::int from generate_series(1,10);
+select random()*10 from generate_series(1,10);
+select (random()*10)::int from generate_series(1,10);
+select md5('teste');
