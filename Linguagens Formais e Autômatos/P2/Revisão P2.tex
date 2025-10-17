@@ -13,6 +13,11 @@
 \begin{document}
 \maketitle
 \section*{Conteúdos}
+	\begin{itemize}
+		\item Minimização de AF
+		\item Árvores de Derviação
+		\item Máquinas Reconhecedoras
+	\end{itemize}
 
 \section{Minimização de Autômatos Finitos}
 Um autômato finito é mínimo se não possui \textbf{estados inacessíveis, mortos e equivalentes}.\\
@@ -81,4 +86,165 @@ Os estados são equivalentes quando, para cada símbolo, levam ao mesmo tipo de 
 \end{minipage} 
 
 	\subsection{Exercícios de minimização}
+\section{Árvores de Derivação}
+	Gramática de operadores:
+	$$E::= E+E | E*E | (E)| a$$
+	Árvores ilustram o processo de derivação a partir do símbolo inicial para construir uma gramática.
+	
+	\subsection{Reconhecimento Sintático}
+		\begin{itemize}
+			\item Ascendente mais à esquerda
+			\item Ascendente mais à direita
+			\item Descendente mais à esquerda
+			\item Descendente mais à direita
+		\end{itemize}
+		Segue exemplo de uma construção de árvore por abordagem descendente mais à direita para a construção de $a+a*a$. Perceba que a sentença $a+a*a$ pode ser formada pelos nós-folhas da árvore.
+		\begin{center}
+		\includegraphics[scale=0.5]{Images/arvore-descendente.png}		
+		\end{center}
+		
+		Em uma abordagem ascendente, a maquina reconhecedora vai identificar qual é a redução que pode ser feita, ao contrário da descendente que verifica a produção por derivação. Por exemplo, na ascendente mais à esquerda começaríamos com a sentença $a+a*a$.  No primeiro símbolos podemos reduzir a produção $a$ em uma produção $E$.
+		
+		Se uma gramática G tem mais de uma árvore de derivação para uma mesma sentença, então  G é chamada de gramática \textbf{ambígua}. Uma linguagem livre de contexto para a qual toda gramática  livre de contexto é ambígua é denominada linguagem livre de contexto inerentemente ambígua.
+		
+		A ordem de produções por derivação mais à esquerda é o contrário da ordem de produções por redução mais à direita, e o mesmo se aplica ao contrário.
+		
+		\newpage		
+		\textbf{Exemplo:}
+		
+		Usando uma gramática de operadores que não é ambígua:
+		
+		$E::= E+T | T$
+% 				1   	2
+		
+		$T::= T*F | F$
+%			   3		4
+
+		$F::= (E)| a$
+% 			   5	    6
+
+		
+		$$a*(a+ (a*a))$$
+		
+		Sequência de montagem da árvore.
+		\begin{enumerate}
+			\item \textbf{Descendente mais à esquerda:} 234651246452346
+			\item \textbf{Descendente mais à direita:} 2351452364624646
+			\item \textbf{Ascendente mais à esquerda:} 6464264632541532
+			\item \textbf{Ascendente mais à direita:} 643254642156432
+		\end{enumerate}
+		\begin{minipage}[t]{0.43\textwidth}
+		\includegraphics[scale=0.65]{Images/arvore-nao-ambigua.png}
+		\end{minipage}
+		\hfill
+		\begin{minipage}[t]{0.43\textwidth}
+		Na ascendente, a árvore fica idêntica apenas com os nós-folhas alinhados no último nível da altura da árvore. Perceba como a sentença $a*(a+(a*a))$ está presente nos nós-folhas dessa árvore.
+		\end{minipage}
+		\newpage
+		
+\section{Eliminação de símbolos inúteis (improdutivos e inalcançáveis)}
+
+	$S::= ASB|BSA|SS|aS|\varepsilon$
+	
+	$A::= ABS | B$
+	
+	$B::= BSSA|A$
+	
+	A primeira produção produtiva (que possui apenas símbolos terminais) é o $\varepsilon $, Logo o $S$ é uma produção produtiva. Em seguida vamos marcar todos os símbolos terminais e o não-terminal $S$ em todas as produções. As produções que estão totalmente marcadas ($SS$) são também produtivas.
+	
+	As produções que não estão totalmente marcadas não são produções produtivas, portanto podem ser descartadas: $ASB, BSA, ABS, B, BSSA, A$. Assim a gramática reduzida é $S::= SS|aS|\varepsilon$
+	\\ \\ 
+	
+	$S::= aS | SB | SS | \varepsilon$
+	
+	$A::= ASB | c$
+	
+	$B::= b$
+	Marcamos os terminais $\varepsilon, a,c,b$. Percebemos que $S, A, B$ são produções produtivas, portanto podemos marcar todas as produções. Concluindo que não existem produções improdutivas.
+	
+	\textbf{Exemplo:}
+	
+	$S::=aSa | FbD$
+	
+	$D::= Dd |fF|c$
+	
+	$F::=aA|CA|\varepsilon$
+	
+	$E ::= BC | eE | EB$
+	
+	$B ::= bB | FE$
+	
+	$F ::= fF | Dd$
+	
+	$C ::= cCb | AcA$
+	
+	Primeiro passo, marcamos as produções produtivas ($\varepsilon, c$). Percebemos que $D$ e $F$ são produtivos. Em seguida vamos marcar todos os símbolos terminais e os não-terminais produtivos.
+	
+	\begin{minipage}[t]{0.43\textwidth}
+	$S::=\textbf{a}S\textbf{a} | \textbf{F}\textbf{b}\textbf{D}$
+	
+	$\textbf{D}::= \textbf{D}\textbf{d} |\textbf{f}\textbf{F}|\textbf{c}$
+	
+	$\textbf{A}::=\textbf{a}\textbf{A}|C\textbf{A}|*\varepsilon*$
+	
+	$E ::= BC | \textbf{e}E | EB$
+	
+	$B ::= \textbf{b}B | \textbf{F}E$
+	
+	$\textbf{F} ::= \textbf{f}\textbf{F} | \textbf{D}\textbf{d}$
+	
+	$C ::= \textbf{c}\textbf{C}\textbf{b} | \textbf{A}\textbf{c}\textbf{A}$
+	\end{minipage}
+	
+	\hfill
+	
+	\begin{minipage}[t]{0.43\textwidth}
+	$\textbf{S}::=\textbf{a}\textbf{S}\textbf{a} | \textbf{F}\textbf{b}\textbf{D}$
+	
+	$\textbf{D}::= \textbf{D}\textbf{d} |\textbf{f}\textbf{F}|\textbf{c}$
+	
+	$\textbf{A}::=\textbf{a}\textbf{A}|C\textbf{A}|*\varepsilon*$
+	
+	$E ::= BC | \textbf{e}E | EB$
+	
+	$B ::= \textbf{b}B | \textbf{F}E$
+	
+	$\textbf{F} ::= \textbf{f}\textbf{F} | \textbf{D}\textbf{d}$
+	
+	$\textbf{C} ::= \textbf{c}\textbf{Cb} | \textbf{A}\textbf{c}\textbf{A}$
+	\end{minipage}
+	
+	Logo, $E$ e $B$ não são produtivos.
+	
+		$\textbf{S}::=\textbf{a}\textbf{S}\textbf{a} | \textbf{F}\textbf{b}\textbf{D}$
+	
+	$\textbf{D}::= \textbf{D}\textbf{d} |\textbf{f}\textbf{F}|\textbf{c}$
+	
+	$\textbf{A}::=\textbf{a}\textbf{A}|C\textbf{A}|*\varepsilon*$
+	
+	$\textbf{F} ::= \textbf{f}\textbf{F} | \textbf{D}\textbf{d}$
+	
+	$\textbf{C} ::= \textbf{c}\textbf{Cb} | \textbf{A}\textbf{c}\textbf{A}$
+	
+	Agora resta-nos encontrar os alcançáveis.
+	
+	$S\to \{ S,F,D$
+	
+	$D\to \{ D, F$
+	
+	$A \to \{ A,C$
+	
+	$F \to \{ F,D$
+	
+	$C \to \{C, A$
+	
+	Assim S, F e D são as únicas que têm produções alcancáveis e produtivas,
+	
+			$\textbf{S}::=\textbf{a}\textbf{S}\textbf{a} | \textbf{F}\textbf{b}\textbf{D}$
+	
+	$\textbf{D}::= \textbf{D}\textbf{d} |\textbf{f}\textbf{F}|\textbf{c}$
+	
+	$\textbf{F} ::= \textbf{f}\textbf{F} | \textbf{D}\textbf{d}$
+	
+	
 \end{document}
