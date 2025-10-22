@@ -96,3 +96,28 @@ Ciclo de Desenvolvimento:
         Tratamento de sistemas enviesados
         Ex: Classe A tem 10K amostras e Classse B tem 100 Amostras.
 
+# Perceptron
+    Rede neural, Foi a precursora da IA, criado em 1958,
+    Bias(viés)
+    Machine Learning é basicamente uma média ponderada de várias entradas com várias saídas
+    Função de ativação f(z) | "Relu" = max(0,z)
+# Forward Pass
+    x1 -- (N1) -> Z=w1x1+w2x2+b -> f(z) -> ŷ -> erro Loss
+    x2 -- (N2) ´
+    
+    ŷ: estimativa
+
+    x1norm = (x1-xmin)/(xmax-xmin)
+    ŷorig=ymin+ŷnorm * (ymax-ymin)
+
+    Amostra 1 (x1nom = 0.0, x2.nom = 0.0, ynom=0)
+    z =0.2*0+0.3*0+0.1=0.1
+    ŷnom=max(0,0.1)=0.1
+    ŷorig = 50+0.1*20=52cm
+    erro = ŷcm -ycm = 52-50
+    MSE = 2^2 +(-2)^2 +(-3,5)^2 +(-1)^2+(-8)^2 = 17,06
+    MSE_{norm} = 17,05/20^2
+
+    ÉPOCA: calcular o forward pass de todas as amostras, calcular o gradiente, desnormalizar, calcular o erro, calcular a média do erros (MSE), normalizar a média dos erros (MSE_{norm})
+# Khan
+    
