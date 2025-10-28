@@ -1,0 +1,3 @@
+Em dispositivos não-voláteis, acesso sequencial é mais rápido que acesso randômico
+buffer: porção da memória principal que armazena cópias dos blocos do disco
+--- parei no slide 54 ---
