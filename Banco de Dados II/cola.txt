@@ -1,3 +1,8 @@
 Em dispositivos não-voláteis, acesso sequencial é mais rápido que acesso randômico
 buffer: porção da memória principal que armazena cópias dos blocos do disco
---- parei no slide 54 ---
+Organização de arquivos em HEAP: o registro é inserido em qualquer lugar que tiver espaço, facilita a escrita é dificulta a consulta
+Organização de arquivos SEQUENCIAL: ordenado baseado em algum atributo chave da tupla, facilita a consulta e dificulta a escrita
+Organização de arquivos em HASHING: faz-se o hashing do atributo chave, facilita a consulta e facilita a escrita
+pin_count: conta o número de processos que estão acessando aquele bloco. Contador de uso da página.
+dirty_bit: registra se o bloco foi modificado desde que foi retirado do disco.
+a LRU é a política de troca mais usada pelos SGBDs, embora o MRU tenha ganhado no teste de acesso sequencial 1-15 x2
