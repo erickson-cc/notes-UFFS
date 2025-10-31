@@ -4,6 +4,7 @@
 \usetikzlibrary{automata, positioning}
 \usepackage{booktabs}
 \usepackage[ ]{array}
+%\usepackage[ ]{amsmath}
 
 \usepackage[ ]{graphicx}
 \title{Revisão P2\\Linguagens Formais e Autômatos}
@@ -246,5 +247,271 @@ Os estados são equivalentes quando, para cada símbolo, levam ao mesmo tipo de 
 	
 	$\textbf{F} ::= \textbf{f}\textbf{F} | \textbf{D}\textbf{d}$
 	
+\section{Fatoração}
+	Eliminamos primeiro os indeterminismos diretos para depois eliminar os indeterminismos indiretos.
+	
+	Uma GLC está  fatorada se ela é determinística, ou seja, se ela não possui produções para  um mesmo não-terminal no lado esquerdo cujo lado direito inicie com a mesma cadeia de símbolos  ou com símbolos que derivam seqüências que iniciem com a mesma cadeia de símbolos. De acordo  com esta definição, a seguinte gramática é não-determinística:  
+
+	$S::= AC | BC$
+	
+	$A::= aD |cC$
+	
+	$B::= aB|dD$
+	
+	$C::= eC | eA$
+	
+	$D::= fD|AB$
+	
+	Fatorando o C:
+		
+	$S::= AC | BC$
+	
+	$A::= aD |cC$
+	
+	$B::= aB|dD$
+	
+	$\textbf{C::= eC'}$
+	
+	$\textbf{C'::= C|A}$
+	
+	$D::= fD|AB$
+	
+	Dá pra fatorar também a produção S, pois começam com não terminal (não-determinismo indireto):
+
+	1º Passo:
+		
+	$S::= \textbf{aD}C| \textbf{cC}C | \textbf{aB}C | \textbf{dD}C$
+	
+	$C::= eC'$
+	
+	$C'::= C | A$
+	
+	$D::= fD|AB$
+	
+	2º passo:
+	
+	$S::= aS' | cCC | dDC$
+	
+	$S'::= DC | BC$	
+	
+	Exemplo:
+	
+	$S:= Abc | bBC | bCD$
+	
+	$A::= aBC |aDC$
+	
+	$B::=dCc|dc$
+	
+	$C::= Acd |dc$
+	
+	$D::= aBC | abc | aC$
+
+	Mudamos a produção $S$, $A$, $B$ e $D$:
+	
+	$S::= Abc | bS'$
+
+	$S'::=BC | CD$	
+	
+	$A ::= aA'$
+	
+	$A'::= BC |DC$
+	
+	$B::= dB'$
+	
+	$B'::=Cc|c$
+	
+	$C::= Acd |dc$
+	
+	$D::= aD'$
+	
+	$D'::= BC | bc | C$
+	
+	Agora retiramos o não-determinismo indireto:
+
+	$S::= Abc | bS'$
+
+	$S'::=dB'C | AcdD | dcD$	
+	
+	$A ::= aA'$
+	
+	$A'::= BC |DC$
+	
+	$B::= dB'$
+	
+	$B'::=Cc|c$
+	
+	$C::= Acd |dc$
+	
+	$D::= aD'$
+	
+	$D'::= BC | bc | C$
+		
+	2° passo:
+	
+	$S::= Abc | bS'$
+
+	$S'::=dS'' | AcdD$	
+	
+	$S''::= B'C | cD$
+	
+	$A ::= aA'$
+	
+	$A'::= BC |DC$
+	
+	$B::= dB'$
+	
+	$B'::=Cc|c$
+	
+	$C::= Acd |dc$
+	
+	$D::= aD'$
+	
+	Substituimos o D:
+	
+	$S::= Abc | bS'$
+
+	$S'::=dS'' | AcdD$	
+	
+	$S''::= B'C | cD$
+	
+	$A ::= aA'$
+	
+	$A'::= BC |DC$
+	
+	$B::= dB'$
+	
+	$B'::=Cc|c$
+	
+	$C::= Acd |dc$
+	
+	$D::= aD'$
+	
+	$D'::= dB'C | bc | Acd | dc$
+	
+	Novamente:
+	
+	$S::= Abc | bS'$
+
+	$S'::=dS'' | AcdD$	
+	
+	$S''::= B'C | cD$
+	
+	$A ::= aA'$
+	
+	$A'::= BC |DC$
+	
+	$B::= dB'$
+	
+	$B'::=Cc|c$
+	
+	$C::= Acd |dc$
+	
+	$D::= aD'$
+	
+	$D'::= dD'' | bc | Acd$
+	
+	$D''::= B'C | c$
+	
+	Produções B e S podem começar com c e podem ser fatoradas mais ainda.
+	
+\section{Recursão à esquerda}
+
+	Acontece quando uma produção possui uma regra que começa com um não-terminal que é o próprio símbolo da produção
+
+	Ex:
+	$$S::= Aab|Bc| ScAB$$	
+	$$A::= SAc | BaA |ab$$
+	$$B::= Ac |aBb |ab$$
+	
+	Para eliminar essa recursão à esquerda, mantendo a gramática com a mesma capacidade gerativa. Começamos com a produção que não é recursiva (como $Bc$), e criamos uma nova produção $S'$:
+	
+	$$S::= AabS' | BcS'$$
+	$$S'::= cAbS' | \varepsilon$$
+	
+	Substituímos as produções que possuem S pelas produções de S' (em A):
+	$$A::=AabS'Ac | BcS'Ac | BaA |ab$$
+	
+	Agora podemos eliminar a recursão à esquerda de A:
+	
+	$$A::= BcS'AcA' | BaAA' | abA'$$
+	$$A'::- abS'AcA' | \varepsilon$$
+	
+	Não sei o que é isso:
+	
+	$B::= \textbf{B}cS'AcA'c|\textbf{B}aA'Ac | abAc | aBb | ab$ \textit{Professor riscou essa produção}
+	
+	$B::= abAcB' | aBbB' |abB'$
+	
+	$B'::= cS'AcA'cB' | aAA'cB'|\varepsilon$
+	
+\textbf{	Exemplo:}
+	
+	$S::= SaB | Sbc | Acd$
+	
+	$A::= ABc | Acd | Bcd | Cd$
+	
+	$B::= Acd | Bcc | Cde$
+	
+	$C::= Ac | Cd | dc$
+	
+\textbf{	Primeiro em S:}
+	
+	$S::= AcdS'$
+	
+	$S'::= aBS' | bcS' | AcdS' | \varepsilon$
+		
+	$A::= ABc | Acd | Bcd | Cd$
+	
+	$B::= Acd | Bcc | Cde$
+	
+	$C::= Ac | Cd | dc$
+	
+\textbf{	Agora em A:}
+	
+	$S::= AcS'$
+	
+	$S'::= aBS' | bcS' | AcdS' | \varepsilon$
+	
+	$A::= BcdA' | CdA'$
+	
+	$A'::= BcA' | cdA' | \varepsilon$
+	
+	$B::= Acd | Bcc | Cde$
+	
+	$C::= Ac | Cd | dc$
+	
+\textbf{	Agora em B:}
+	
+	$S::= AcS'$
+	
+	$S'::= aBS' | bcS' | AcdS' | \varepsilon$
+	
+	$A::= BcdA' | CdA'$
+	
+	$A'::= BcA' | cdA' | \varepsilon$
+	
+	$B::= AcdB' | CdeB'$
+	
+	$B'::= ccB' | \varepsilon$
+	
+	$C::= Ac | Cd | dc$
+	
+\textbf{	Agora em C:}
+
+	$S::= AcS'$
+	
+	$S'::= aBS' | bcS' | AcdS' | \varepsilon$
+	
+	$A::= BcdA' | CdA'$
+	
+	$A'::= BcA' | cdA' | \varepsilon$
+	
+	$B::= AcdB' | CdeB'$
+	
+	$B'::= ccB' | \varepsilon$
+	
+	$C::= AcC' | dcC'$
+	
+	$C'::= dC' | \varepsilon$
 	
 \end{document}

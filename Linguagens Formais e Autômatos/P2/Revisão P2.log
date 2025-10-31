@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  16 OCT 2025 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2025.8.28)  30 OCT 2025 21:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -383,20 +383,20 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 (./Revisão P2.aux)
 \openout1 = `"Revisão P2.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count296
@@ -420,17 +420,17 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 14.
+(Font)              <12> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 14.
+(Font)              <8> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 14.
+(Font)              <6> on input line 15.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 27.
+(Font)              <7> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 27.
+(Font)              <5> on input line 28.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--52
+Underfull \hbox (badness 10000) in paragraph at lines 45--53
 
  []
 
@@ -443,7 +443,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 44--52
 <Images/arvore-descendente.png, id=18, 452.4403pt x 336.50719pt>
 File: Images/arvore-descendente.png Graphic file (type png)
 <use Images/arvore-descendente.png>
-Package pdftex.def Info: Images/arvore-descendente.png  used on input line 103.
+Package pdftex.def Info: Images/arvore-descendente.png  used on input line 104.
 
 (pdftex.def)             Requested size: 226.2196pt x 168.25317pt.
 
@@ -454,33 +454,33 @@ Package pdftex.def Info: Images/arvore-descendente.png  used on input line 103.
 <Images/arvore-nao-ambigua.png, id=27, 423.08063pt x 463.7325pt>
 File: Images/arvore-nao-ambigua.png Graphic file (type png)
 <use Images/arvore-nao-ambigua.png>
-Package pdftex.def Info: Images/arvore-nao-ambigua.png  used on input line 137.
+Package pdftex.def Info: Images/arvore-nao-ambigua.png  used on input line 138.
 
 (pdftex.def)             Requested size: 274.99915pt x 301.42255pt.
 
-Overfull \hbox (126.65167pt too wide) in paragraph at lines 137--138
+Overfull \hbox (126.65167pt too wide) in paragraph at lines 138--139
 [][] 
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 141--142
+Underfull \hbox (badness 4634) in paragraph at lines 142--143
 []\OT1/cmr/m/n/10 Na as-cen-dente, a ^^Sarvore fica
  []
 
 
 
 [4 <./Images/arvore-nao-ambigua.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 155--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--157
+Underfull \hbox (badness 10000) in paragraph at lines 156--158
 
  []
 
 
-Overfull \hbox (7.06606pt too wide) in paragraph at lines 162--164
+Overfull \hbox (7.06606pt too wide) in paragraph at lines 163--165
 []$\OML/cmm/m/it/10 B \OT1/cmr/m/n/10 ::= \OML/cmm/m/it/10 b$ \OT1/cmr/m/n/10 M
 ar-camos os ter-mi-nais $\OML/cmm/m/it/10 "; a; c; b$\OT1/cmr/m/n/10 . Percebe-
 mos que $\OML/cmm/m/it/10 S; A; B$ \OT1/cmr/m/n/10 s~ao produ^^Xc~oes
@@ -490,17 +490,23 @@ mos que $\OML/cmm/m/it/10 S; A; B$ \OT1/cmr/m/n/10 s~ao produ^^Xc~oes
 
 [5]
 
-[6] (./Revisão P2.aux)
+[6]
+
+[7]
+
+[8]
+
+[9] (./Revisão P2.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12551 strings out of 475171
- 269575 string characters out of 5767095
+ 12553 strings out of 475171
+ 269609 string characters out of 5767095
  646528 words of memory out of 5000000
- 35347 multiletter control sequences out of 15000+600000
+ 35349 multiletter control sequences out of 15000+600000
  563773 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  102i,9n,107p,432b,198s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -510,12 +516,13 @@ ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
 share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1
-/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P2.pdf" (6 pages, 145716 bytes).
+st/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
+r/sfrm1000.pfb>
+Output written on "Revisão P2.pdf" (9 pages, 163397 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 46 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 57 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  23 words of extra memory for PDF output out of 10000 (max. 10000000)
 

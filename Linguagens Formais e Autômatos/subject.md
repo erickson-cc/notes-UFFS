@@ -10,3 +10,6 @@ Unidade 2:
 
 Trabalhos facultativos:
     Serve para arredondar a nota se estiver entre 5,6 e 5,9
+
+Projeto Prático:
+    Não precisa fazer a minimização
