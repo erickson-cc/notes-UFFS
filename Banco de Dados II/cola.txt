@@ -63,3 +63,21 @@ create trigger check_stock
 	{before|after} {update or select or delete}
 	on <table>
 	for each{row|statement} execute procedure <função_trigger>;
+
+CORREÇÃO PROVA
+
+"um conjunto de dados é, ou pode ser, muito maior do que a RAM disponível. O SGBD precisa garantir as propriedades $ACID$ (Atomicidade, Consistência, Isolamento e Durabilidade). A Durabilidade exige que, uma vez que uma transação seja confirmada (commit), ela não pode ser perdida, mesmo em caso de falha de energia. Isso torna o disco o único lugar confiável para a verdade.
+
+A função do dirty_bit é garantir a persistência dos dados (durabilidade) e otimizar a E/S de disco. Ele sinaliza ao SGBD que uma página precisa ser escrita de volta ao disco (flush) para que as alterações não sejam perdidas.
+Quem executa: Mecanismo de execução (altera os bytes da página de dados) e Gerenciador de Buffer (registra a atualização em sua tabela de controle interna)
+
+O pin_count é um contador que registra quantas transações estão ativamente usando aquela página agora, sua função é garantir a consistência lógica e o controle de concorrência. Ele impede que o Gerenciador de Buffer evicte uma página enquanto outro processo ainda está trabalhando nela.
+Quem executa: Gerenciador de Buffer
+
+Clock Algorithm: As páginas do buffer pool são organizadas em um círculo, O ponteiro se move no sentido horário; pin_count==0 & referenced_bit == 1 -> referenced_bit-- e move para próxima página, se os dois são 0 a página é candidata para substituição. Toda vez que acontece um cache hit, o referenced_bit da página é movido para 1. Não tem o custo do LRU de gerenciar uma pilha a cada transação
+
+LRU: substituir as páginas ocupadas mais antigas. Se uma página foi usada recentemente, é provável que ela seja usada novamente em breve, se ela não é usada há muito tempo, é provável que não seja mais necessária. Funciona com uma estrutura de pilha através de cache hit/miss.
+
+MRU: a página liberada é a última que foi utilizada. pilha remove o topo em vez de remover a base. É bom para scans sequenciais gigantes, pois protege páginas antigas.
+
+Toss-Immediate: Bom para consulta de grandes volumes de dados para prevenir poluição de cache.
