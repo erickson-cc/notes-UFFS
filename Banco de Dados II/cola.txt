@@ -24,3 +24,42 @@ os tempos de inserção e busca são os mesmos = log_m{n}
 
 HASHING:
 Linear Probe Hashing: uma tabela hashing enorme para tratar colisões.
+hashing extensível: aquele que tem o global e o local
+linear hashing: uma fila encadeada de buckets
+
+Stored Procedure:
+create [or replace] function <name> ([<param>])
+	returns <type> as $$
+	declare
+	-- variables
+	begin
+	-- logic
+	end;
+	$$ language plpgsql;
+
+select * from <name>([param]); -- chamada
+
+CREATE OR REPLACE PROCEDURE sample(soma int)
+	language plpgsql as $$
+	declare
+	-- variables
+	begin
+	-- logic
+	end;
+	$$;
+
+call sample;
+
+create function <name>()
+	returns trigger as $check_stock$
+	declare 
+		-- variables
+	begin
+		-- logic
+	end;
+	$check_stock$ language plpgsql;
+
+create trigger check_stock
+	{before|after} {update or select or delete}
+	on <table>
+	for each{row|statement} execute procedure <função_trigger>;
