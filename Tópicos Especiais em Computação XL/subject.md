@@ -110,9 +110,9 @@ Ciclo de Desenvolvimento:
     x1norm = (x1-xmin)/(xmax-xmin)
     ŷorig=ymin+ŷnorm * (ymax-ymin)
 
-    Amostra 1 (x1nom = 0.0, x2.nom = 0.0, ynom=0)
+    Amostra 1 (x1norm = 0.0, x2.norm = 0.0, ynorm=0)
     z =0.2*0+0.3*0+0.1=0.1
-    ŷnom=max(0,0.1)=0.1
+    ŷnorm=max(0,0.1)=0.1
     ŷorig = 50+0.1*20=52cm
     erro = ŷcm -ycm = 52-50
     MSE = 2^2 +(-2)^2 +(-3,5)^2 +(-1)^2+(-8)^2 = 17,06
@@ -121,3 +121,10 @@ Ciclo de Desenvolvimento:
     ÉPOCA: calcular o forward pass de todas as amostras, calcular o gradiente, desnormalizar, calcular o erro, calcular a média do erros (MSE), normalizar a média dos erros (MSE_{norm})
 # Khan
     
+# Learning Rate
+
+# Método estocástico, bash e mini-bash
+
+# Épocas
+
+# Backpropagation
