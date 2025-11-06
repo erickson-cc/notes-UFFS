@@ -1,0 +1,152 @@
+\documentclass[ ]{article}
+\usepackage[]{amsmath}
+\usepackage[ ]{amssymb}
+\usepackage[]{indentfirst}
+
+\title{Aula que esqueci a caneta}
+\begin{document}
+	\maketitle
+	% Quadro 1
+	\section{Aplicações}
+		\textbf{Definição:} Dados dois conjuntos U e V, ambos não vazios, uma aplicação de U em V é uma lei pela qual cada elemento de U se corresponde com um único elemento de V.
+
+		Se F indica essa lei, e U é um elemento de U, então tem-se:
+
+		$F:U \to V$
+
+		$u \to F(u)$
+
+		O conjunto U é chamado Domínio e V é o Contradomínio.
+
+		\textit(Imagem de um conjunto U e um conjunto F, com uma seta F que vai de u para F(u))
+
+		Dado $W \subset U$, chama-se Imagem de W por F o subconjunto de V, dado por $F(W) = \{ F(u) / u \in W\}$.
+
+		Se $W=U$, então $F(U)$ recebe o nome de imagem de F e denota-se por $Im(F)$.
+
+	\section{Transformações Lineares}
+		Sejam U, V espaços vetoriais sobre $\mathbb{R}$. Uma aplicação $F: U \to V$ é uma transformação linear de U em V se, e somente se:
+		\begin{itemize}
+			\item $F(u_1+u_2) = F(u_1) + F(u_2), \forall u_1,u_2 \in U$
+			\item $F(\alpha u) = \alpha . F(u) , \forall u \in U, \alpha	\in \mathbb{R}$
+		\end{itemize}
+		Quando $U=V$, ou seja, quando $F:U \to U$, então a transformação linear é chamada \textbf{Operador Linear}.
+		
+		Assim, transformações lineares são aplicações em espaços vetoriais, em vez de em conjuntos. Valem as 8 propriedades para soma e multiplicação por escalar.
+		
+		% Quadro 2
+		\subsection{Exemplo}
+			Verifique se $F:\mathbb{R}^3 \to \mathbb{R}^2$, definida por $F(x,y,z)=(x,2x-z),\forall \mathbb{R}^3$ é uma transformação linear.
+			
+			Para isso, precisamos provar as duas propriedades da transformação linear:
+				$$F(u_1+u_2) = F(u_1)+F(u_2)$$
+				$$u_1 = (x_1,y_1,z_1) \in \mathbb{R}^3$$
+				$$u_2 = (x_2,y_2,z_2) \in \mathbb{R}^3$$
+				$$F(u_1+u_2) = F((x_1,y_1,z_1)+(x_2,y_2,z_2)) = F(x_1+x_2, y_1+y_2, z_1+z_2)$$
+				$$F(u_1+u_2) = (x_1+x_2 ,2.(x_1+x_2) - (z_1+z_2))$$
+				$$F(u_1+u_2) = (x_1+x_2,2x_1+2x_2-z_1-z_2) = (x_1,2x_1-z_1)+(x_2,2x_2-z_2)$$
+				$$F(u_1+u_2) =F(u_1)+F(u_2)$$
+				
+			Agora para a segunda propriedade:
+				$$F(\alpha u) = \alpha F(u)$$
+				$$F(\alpha	u) = F(\alpha(x,y,z) = F(\alpha x, \alpha y, \alpha z)$$
+				$$F(\alpha u) = \alpha(x,2x-z) = \alpha F(x,y,z) = \alpha. F(u)$$
+				
+			Logo, $F$ é transformação linear.
+		\subsection{Propriedades}
+			Sejam $U, V$ espaços vetoriais reais e seja $F: U\to V$ uma transformação linear. Então valem as proprieades:
+			\begin{itemize}
+				\item $F(\overrightarrow{o}) = \overrightarrow{o}$, ou seja, $F$ transforma o vetor nulo $\overrightarrow{o}$ de $U$ no vetor nulo de $V$.
+				\item $F(-u) = -F (u) , \forall u \in U$
+				\item $F(u_1-u_2) = F(u_1) - F(u_2) , \forall u_1, u_2 \in U$
+				% Quadro 3
+				\item Se W é um subespaço de U, então a imagem de W por F é um subespaço de V.
+			\end{itemize}
+		\subsection{Exemplo}
+			Seja $F: \mathbb{R}^2 \to \mathbb{R}^2$ um operador linear e que:
+			\begin{enumerate}
+				\item $F(1,2) = (3,-1)$
+				\item $F(0,1) = (1,2)$
+			\end{enumerate}
+			Encontre $F(x,y)$ sendo $(x,y) \in \mathbb{R}^2$
+			
+			\textit{Atenção, quando o domínio e o contradomínio são idênticos, é um operador linear, se são diferentes, é uma tranformação linear}
+			
+			Note que os vetores $(1,2)$ e $(0,1)$ são linearmente independentes, portanto formam uma Base. Portanto, todos os vetores do $\mathbb{R}^2$ são combinações lineares dessa Base.
+			
+			Logo, $$(x,y) = a(1,2) + b(0,1)$$
+			
+			$x=1.a+0,b$
+			
+			$y= 2.a + 1.b$
+			
+			Temos,
+			$$x=a$$
+			$$y=2.x+b$$
+			$$y-2x=b$$
+			Concluímos que:
+			$$(x,y)= x.(1,2)+(y-2x).(0,1)$$
+			
+			Lei de formação:
+			$$F(x,y)=x.F(1,2) + (y-2x). F(0,1)$$
+			
+			$F(x,y) = x.(3,-1) + (y-2x).(1,2)$
+			
+			$F(x,y) = (3x+y-2x,-x+2y-4x) = (x+y, -5x+2y)$
+			
+			Portanto, a lei de formação é:
+			
+			$F(x,y) = (x+y,-5x+2y)$
+			
+	\section{Núcleo e imagem}
+		Sejam U, V espaços vetoriais sobre $\mathbb{R}$ e $ F:U\to V$ uma transformação linear. Indica-se por $\ker(F)$ e denomina-se núcleo de F o seguinte subconjunto de U:
+		$$\ker(F) = \{ u \in U | F(u)= \overrightarrow{o}\}, \overrightarrow{o} = (0,0)$$
+		\subsection{Exemplo}
+			Seja $F:\mathbb{R}^2 \to \mathbb{R}^3$ a transformação linear dada por $F(x,y)=(0,x+y,0)$
+			
+			Encontre o núcleo de F.
+			
+			Queremos encontrar os vetores $\overrightarrow{u} \in U$, tais que $F(u) = \overbrace{o}$. Ou seja, $(0, x+y,0) = (0,0,0)$.
+			
+			$0=0$
+			
+			$x+y=0$
+			
+			$0=0$
+			
+			$$x = -y$$
+
+			% Quadro 4
+			
+		\subsection{Proposição}
+			Seja a transformação linear $F:U \to V$. Então:
+			\begin{itemize}
+				\item $\ker(F)$ é um subespaço vetorial de $ U$
+				\item A transformação F é injetora se, e somente se, $\ker(F) = \{\overrightarrow{o}\}$, ou seja, se o núcleo de F possui apenas o vetor nulo.
+			\end{itemize}
+		\subsection{Teorema}
+			Sejam $U,V$ espaços vetoriais de dimensão finita sobre $\mathbb{R}$. Dada $F:U\to V$ transformação linear, então:
+			$$\dim(U)=\dim(\ker(F)+\dim(Im(F)))$$
+	\section{Correção da prova}
+		\textbf{5.a} $M_3 | det(A) = 1$. Esse conjunto não é um subespaço vetorial pois, para ser um subespaço vetorial, o elemento neutro precisa estar contido no subespaço. Como a matriz nula 3x3 não está no conjunto, pois seu determinante não é 1, podemos concluir que o conjunto não é um subespaço vetorial.
+		
+		\textbf{5.c} $det(A) \neq 0?$
+		
+		Não precisa calcular o determinante dessa matriz, pois podemos perceber que a linha 1 e linha 2 são linhas proporcionais, portanto determinante de A é igual a 0.
+		
+		\textbf{5.d} $p(x) = 2x^2 - 3x+1$ é combinação linear por $p_1(x) = x-1$ e $p_2(x) =2x^2-5x+2$
+		
+		$2x^2-3x+1 = a(x-1)+b(2x^2-5x+2)$
+		
+		$b=1$
+		
+		$a =2$
+		
+		$1=-a+2b$
+		
+		$1=-(2)+3.(1)$
+		
+		$1=1$
+		
+		Portanto, é combinação linear.
+\end{document}
