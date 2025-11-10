@@ -1,0 +1,27 @@
+1. certo
+2. certo
+3. --------------------------------------------------------------------------------------------------
+
+create function sal_log
+	...
+	begin
+		if old.salary != new.salary
+			begin
+				insert into aud_employee (idemp, user, date_time,old_sal, new_sal)
+					values (old.id, current_user, Now(), old.salary, new.salary);
+			end;
+		end;
+	...
+create trigger att_sal BEFORE update on employee for each ROW execute procedure sal_log;
+
+-----------------------------------------------------------------------------------------------------
+4. certo
+5.---------------------------------------------------------------------------------------------------
+	Sabemos que o arquivo não é de tamanho fixo. (Podemos usar JSON)
+	Podemos usar 30 bytes para armazenar o código, 60 bytes para armazenar a descrição, em seguida armazenar a quantidade e os ponteiros dos pesos.
+	Pesos podem usar 4 bytes de ponteiro, 30 bytes de estrutura fixa
+		me perdi na explicação do professor mas ele desenhou duas estruturas no quadro
+	A exclusão vai ser feita com quantidade=0, toda vez que for essa quantidade, o programa pula.
+	Isso vai requerir uma função de limpar o disco.
+	Podemos também dedicar um byte inicial para representar o status do registro (se está apagado ou não)
+-----------------------------------------------------------------------------------------------------
