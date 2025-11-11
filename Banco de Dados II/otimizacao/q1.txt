@@ -1,0 +1,12 @@
+SELECT b.date, s.region, s.location
+FROM brweather b natural join state s
+WHERE b.temperature > 30 
+AND b.time > '1500' AND b.conditions = 'Sunny';
+
+seleção{b.date,s.region,s.location} (projeção{b.temperature>30,b.time>1500,b.conditions='Sunny}(brweather |><| state))
+
+seleção{b.date,s.region,s.location} (projeção{	b.temperature>30,	(brweather |><| state))
+						b.time>1500,
+						b.conditions='Sunny}
+
+[imagem q1.png]
