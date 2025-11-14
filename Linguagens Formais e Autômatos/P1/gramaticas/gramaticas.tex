@@ -626,4 +626,147 @@ $
         \end{tabular}
     \end{minipage}
 \end{center}
+
+	\section*{5 Classe de equivalência}
+	
+		\textbf{a}
+		
+		$ S::= aS | aB | bS$
+		
+		$B::= aC$
+		
+		$C::= b$
+		\begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+             & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		S & $S,B$ & $S$\\
+		$B$ & $C$ & \\
+		$C$ & & $D$\\
+		$*D$ & & \\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+    
+    		\begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{AFD}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+             & a & b \\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		S & $[S,B]$ & $S$\\
+		$[S,B]$ & $[S,B,C]$ & $S$\\
+		$[S,B,C]$ & $[S,B,C]$ & $[S,D]$\\
+		$*[S,D]$ &$[S,B]$& $S$\\
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+		
+		
+	\section{7 Produções epsilon}
+		\textbf{b} \textit{diferente da lista}
+		
+		Marcar produções que ó first é o Epsilon
+		
+		$S::= \textbf{A}\textbf{C} | aB\textbf{C} | b\textbf{C}$
+			% Agora incluir as produções caso substiuir por Epsilon
+			$| \textit{C}| \textit{A} | \textit{aB} | \textit{b}$ 
+		
+		$\textbf{A}::= a\textbf{A}a | \varepsilon \textit{-}$ $| \textit{aa}$ % eliminar o epsilon
+		
+		$B::= B |bB$
+		
+		$\textbf{C}::= \textbf{C}B | c\textbf{C} | \varepsilon \textit{-}$ $| \textit{B} | \textit{c}$
+	\section*{9 Fatoração de gramáticas}
+	
+		\textbf{d}
+		
+		$S::= aBd | acD|bc$
+		
+		$B::= bDc | bCd | ad$
+		
+		$D::= cdD | cdB$ \textit{Professor alterou a segunda regra}
+		
+		$C:: cbB | adD$
+		
+		
+		$S::= aS'| bC$
+		
+		$S'::= Bd|cD$
+		
+		$B::= bB' | ad$
+		
+		$B' ::= Dc|Cd$
+		
+		$D::= cdD'$
+
+		$D'::= D | B$
+		
+		$B' ::= cdD'c| cbBd | adDd$
+		
+		$B'::=CB''|adDd$
+		
+		$B'' ::= dD'c |bBd$
+	\section*{10 Eliminar recursão à esquerda}
+		
+		\textbf{d}
+		
+		$S::= Aab|Bc|\overbrace{S} cAb$
+		
+		$A::= SAc | BaA| ab$
+		
+		$B::= Ac|aBb|ab$
+		
+		$S::= AabS'| BcS'$
+		
+		$S'::= cAbS' | \varepsilon$
+		
+		$A::=AabS'Ac | BcS'Ac | BaA|ab$ % recursão indireta quando A começa com S e S começa com A
+		
+		$A::= BcS'AcA' | BaAA'|abA'$
+		
+		$A'::= abS'AcA'|\varepsilon$
+		
+		$B::= BcS'AcA'c | BaAA'c| abA'c| aBb|ab$
+		
+		$B::= abA'cB' | aBbB' |abB'$
+		
+		$B'::= cS'AcA'cB'| aAA'cB' | \varepsilon$
+		
+		Lembrar de remover as produções que foram subistituídas
+	\section*{11 First e Follow}
+	o follow é o first do símbolo que vem logo em seguida
+	
+	\textbf{a} \textit{feita pelo professor}
+	
+	$S::= Syx | Bz | CAw|AB$
+	
+	$A::= aCB | Byb|bC$
+	
+	$B::= cAd| Byd | aB|\varepsilon$
+	
+	$C::= zBd |wCc|ABy|\varepsilon$
+	
+	    \begin{minipage}[t]{0.48\textwidth} % t alinha pelo topo
+        \centering % Centraliza o conteúdo dentro da minipage
+        \textbf{}\\ % Título da tabela
+        \vspace{0.2cm} % Espaço entre o título e a tabela
+        \begin{tabular}{|l|c|c|c|} % Colunas com linhas verticais. 'l' para a primeira coluna para alinhamento da seta/asterisco
+            \toprule % Linha superior do booktabs
+             & First & Follow\\
+            \midrule % Linha intermediária do booktabs (espaçamento reduzido)
+		 S & $c,a,z,w,b,\varepsilon, y$ &\$ $,y$ \\
+		 A & $a,b,c, y$ & $\underbrace{w},\underbrace{c,a,y},\underbrace{d}$ $\$ $\\%segunda passada F(A) = F(A)+F(S)
+		 B & $c,a,\varepsilon, y$ & $z,y,d$ $\$,w,c,a $ \\ % segunda passada F(B) = F(B)+F(S)
+		 C & $z,w,a,b, \varepsilon, c,y$ & $a,b,c,y$ $w,d,\$ $\\ % segunda passada
+            \bottomrule % Linha inferior do booktabs
+        \end{tabular}
+    \end{minipage}
+	
 \end{document}
