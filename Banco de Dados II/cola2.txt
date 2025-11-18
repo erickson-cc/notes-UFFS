@@ -1,0 +1,3 @@
+pergunta da prova arvore de consulta:
+	Descobrir quandos I/O vão ser feitos
+	Descobrir quantas tuplas vão resultar (Seletividade de Caminhos)
