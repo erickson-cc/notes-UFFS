@@ -8,6 +8,7 @@ contador_estados = 0        # Variável para gerar nomes de estados (Qxx)
 
 def processarGramatica(linha):
     # Apenas o estado inicial <S> é compartilhado por todas as regras
+    global contador_estados
     print("Processando Gramática na linha:"+linha)
     lados = linha.split("::=") #[,] esquerdo = <S> ; direito = a<A> | b<A> | ε
     esquerdo = lados[0].strip().replace("<","").replace(">","")
@@ -23,8 +24,8 @@ def processarGramatica(linha):
 
         if p == "ε": # Caso seja produção vazia
             estados_finais.add(esquerdo)
-            continue
-        if "<" in p and ">" in p: # Caso seja x<X>
+            #continue
+        elif "<" in p and ">" in p: # Caso seja x<X>
             pedacos = p.split("<") # separa o lado esquerdo do direito
             simbolo = pedacos[0].strip()
             estado = pedacos[1].replace(">","").strip() # tira o estado destino
@@ -34,7 +35,19 @@ def processarGramatica(linha):
 
             afnd[esquerdo][simbolo].append(estado)
 
-        # Criar if caso a produção seja apenas terminal
+        elif "<" not in p and ">" not in p and len(p)==1:
+            # if caso a produção seja apenas terminal
+            simbolo = p
+            contador_estados += 1
+            novo_estado = f"Q{contador_estados}"
+            if novo_estado not in afnd:
+                afnd[novo_estado] = {}
+            if simbolo not in afnd[esquerdo]:
+               afnd[esquerdo][simbolo] = []
+            afnd[esquerdo][simbolo].append(novo_estado)
+            estados_finais.add(novo_estado)
+            
+
         else:
             print("Problema na leitura das produções")
             break
@@ -90,5 +103,6 @@ try:
         for linha in arquivo:
             iterarLinha(linha)
 
+    print(f"Estados finais: {estados_finais}")
 except FileNotFoundError:
     print("Erro: O arquivo"+arquivo+"não foi encontrado")

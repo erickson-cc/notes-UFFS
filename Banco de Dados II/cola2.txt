@@ -1,3 +1,18 @@
 pergunta da prova arvore de consulta:
 	Descobrir quandos I/O vão ser feitos
 	Descobrir quantas tuplas vão resultar (Seletividade de Caminhos)
+
+WR
+RW
+WW
+
+se o grafo possuir ciclo, ele é não serializável
+Todo escalonamento estrito é recuperável e evita aborto em cascata
+
+equivalente serializável equivalente em conflito e equivalente serializável equivalente em conflito
+colocar regras de equivalência em visão
+
+2PL garante a serialização dos escalonamentos das transações
+questão 2PL:
+	Achar o primeiro unlock e verificar se tem um write_lock após o primiero unlock
+	Se o bloqueio estiver no início, é um conservador
