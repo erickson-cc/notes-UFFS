@@ -1,0 +1,8 @@
+minimização:
+	Remover inacessíveis
+		(não tem como chegar a partir do <S>)
+	Remover mortos
+		(não é um estado fim mas não consegue atingir outro estado fim a partir dele)
+	Remover equivalentes
+		(
+		* fazer a fusão dos estados
