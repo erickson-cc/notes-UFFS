@@ -1,0 +1,135 @@
+		-- Lista 1 --
+1. A camada de software de entrada e saída responsável por enviar comandos diretos ao hardware do controlador do dispositivo é a camada de interrupções.
+Correção: Camada de drivers do dispositivo.
+
+2. Os dispositivos possuem um espaço de endereços na meḿoria que a CPU acessa através de instruções especiais de E/S>
+Correção: Os registradores do controlador de dispositivos são acessados como se fossem locais de memória comum. A letra C não está correta porque o DMA faz o controle do conteúdo que recebe do dispositivo.
+
+*A vantagem do DMA é reduzir o número de interrupções de 1/caracter para 1/buffer impresso*
+
+3. Driver é uma parte do kernel que gerencia comunicação do hardware com o kernel.
+
+4. A CPU fica em loop de espera até que toda a E/S seja concluída.
+
+5. Mapear nomes de arquivos de acordo com os i-nós e organizá-los em estrutura hierárquica.
+
+6. Um link que aponta para o mesmo i-node do arquivo original.
+Correção: o hard link mantém o link após mudar o arquivo de diretório. Por isso que a opção que eu escolhi é referente ao  hardlink. A opção C é a correta.
+
+7. Fragmentação interna é o espaço livre dentro de um bloco, pois o arquivo não preenche o bloco inteiro. Fragmentação externa é referente à dificuldade de alocar um espaço contiguo para um arquivo, pois os blocos acabam ficando separados e o arquivo está separado fisicamente ao longo do drive.
+
+8.
+Correção: alocação encadeada é um link de blocos em que o header do bloco n aponta para o número do bloco n+1, mesmo estando ou não separados no disco. A vantagem é a ocupação de quaisqeur blocos disponíveis, as desvantagens é o uso de disco pelos metadados e o fato de nao ser contíguo, o que o obriga a percorrer a lista encadeada e impede o acesso direto.
+
+9.
+Correção: No SMP, apenas uma das CPUs podem acessar a memória por vez, as outras estão bloqueadas de acesso ao barramento. OS bloqueia o acesso a memória usando MUTEX.
+
+10.
+Correção: letra A.
+
+11.
+Correção: letra B, A mudança de contexto fica mais rápida com o spinlock.
+
+12.
+Correção: A letra B descreve o funcionamento de qualquer barramento.
+
+13.
+Correção: Política de segurança serve para definir quem deve ou não ter as permissões dos arquivos.
+
+14.
+Correção: Letra B
+
+15.
+Correção: Letra B. Acesso mínimo, apenas os estritamente necessários.
+
+16.
+Correção: Monitoramento de tráfego
+
+17.
+Correção: Letra B.
+
+18.
+Correção: Letra B.
+
+19.
+Correção: Letra B.
+
+20.
+Correção: Letra B.
+
+		-- Lista 2 --
+1. 9, 4, 21, 19, 1, 39, 5, 37
+SSF
+o braço está no cilíndro 2
+desloca para 1 (1 ms)
+desloca para 4 (3 ms)
+desloca para 5 (1 ms)
+desloca para 9 (4 ms)
+desloca para 19 (10 ms)
+desloca para 21 (3 ms)
+desloca para 37 (16 ms)
+desloca para 39 (2 ms)
+total: 39ms
+
+Elevador
+o braço está no cilindro 2
+desloca para 4 (2 ms)
+desloca para 5 (1 ms)
+desloca para 9 (4 ms)
+desloca para 19 (10 ms)
+desloca para 21 (3 ms)
+desloca para 37 (16 ms)
+desloca para 39 (2 ms)
+desloca para 1 (38 ms)
+total: 75ms
+
+2.
+start: 1000 0000 0000 0000 0000 
+add A: 1111 1110 0000 0000 0000 
+add B: 1111 1111 1111 0000 0000 
+add C: 1111 1111 1111 1111 1110 
+del A: 1000 0001 1111 1111 1110 
+add D: 1111 1111 1111 1111 1111 (fragmentação externa)
+
+3.
+escalonamento em bando acontece quando o processador tenta executar o maior número possível de threads simultaneamente. A causa desse problema é o motivo de haver mais threads do que CPUs. Outra explicação é que parte das threads são bloqueadas por alguma outra razão, não estando disputando a CPU.
+
+4.
+9/2 = 5 blocos, 4 estarão cheios e o último sempre vai ter  1kb desperdiçado (fragmentação interna). Ou seja, no máximo vai existir 90% de proveitamento do disco.
+
+5.
+desenhar os níveis 1, 2 e 3:
+3- p3	  f1
+2- p2	  f3
+1- p1 <-> f2
+
+6.
+Na FAT eu tenho tantas entradas quantos blocos eu tiver, desenhar a memória vertical com 16 blocos
+0  |____|
+1  |____|
+2  |____|
+3  |____|
+    ....
+13 |____|
+14 |____|
+15 |____|
+
+Fazer a Tabela FAT
+00 |____|
+01 |____|
+02 |__8_|
+03 |_10_|
+04 |__9_|
+05 |_-1_| EOF
+06 |__3_|
+07 |__5_|
+08 |_11_|
+09 |__6_|
+10 |_-1_| EOF
+11 |__7_|
+12 |__4_|
+13 |____|
+14 |__2_|
+15 |____|
+
+Esse FAT tem 4 bits, 2^4 blocos
