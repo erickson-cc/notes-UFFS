@@ -1,5 +1,5 @@
 pergunta da prova arvore de consulta:
-	Descobrir quandos I/O vão ser feitos
+	Descobrir quantos I/O vão ser feitos
 	Descobrir quantas tuplas vão resultar (Seletividade de Caminhos)
 
 WR
@@ -16,3 +16,27 @@ colocar regras de equivalência em visão
 questão 2PL:
 	Achar o primeiro unlock e verificar se tem um write_lock após o primiero unlock
 	Se o bloqueio estiver no início, é um conservador
+
+----------------------------------------
+processador de consultas: I/O & #tuplas
+transações:
+	Planos: Lógico & Físico
+escalonador: R & W (isolamento)
+	RW WR WW
+serial
+serializável
+gráfico de conflito
+
+bloqueios: binário & compartilhado
+2PL
+
+redo: transações com commit no log
+undo: transações sem commit no log
+----------------------------------------
+nested loop join & single loop join
+Árvore de consulta
+"Faça dois planos lógicos, escolha um deles para fazer o plano físico e faça o físico do lógico."
+
+Parte mais difícil da prova:
+https://docs.google.com/presentation/d/1cUiCh464q_HmNAqPfxn0-vjUkIilomC8RLBJgkDJ49k/edit?slide=id.p1#slide=id.p1
+Entender aquela parte de escolher arbritrariamente o número de I/O
