@@ -6,6 +6,8 @@ afnd = {}
 estados_finais = set()      # conjunto para guardar estados finais
 contador_estados = 0        # Variável para gerar nomes de estados (Qxx)
 
+
+#------------vvvvvvvvv CRIAÇÃO DO AUTÔMATO vvvvvvvvv------------
 def processarGramatica(linha):
     # Apenas o estado inicial <S> é compartilhado por todas as regras
     global contador_estados
@@ -24,7 +26,7 @@ def processarGramatica(linha):
 
         if p == "ε": # Caso seja produção vazia
             estados_finais.add(esquerdo)
-            #continue
+            continue
         elif "<" in p and ">" in p: # Caso seja x<X>
             pedacos = p.split("<") # separa o lado esquerdo do direito
             simbolo = pedacos[0].strip()
@@ -92,8 +94,61 @@ def iterarLinha(linha):
         processarGramatica(linha)
     else:
         processarToken(linha)
+#------------^^^^^^^^^ CRIAÇÃO DO AUTÔMATO ^^^^^^^^^------------
+#------------vvvvvvvvv    DETERMINIZAÇÃO   vvvvvvvvv------------
+def alfabetoAFND(afnd):
+    alfabeto = set()
+    for estado in afnd:
+        for simbolo in afnd[estado]:
+            alfabeto.add(simbolo)
+    return list(alfabeto)
+
+def determinizar(afnd, estados_finais):
+    print("Iniciando determinização do AFND")
+    afd = {}
+    estado_inicial = frozenset(['S']) # congela a lista
+    fila = [estado_inicial] # fila de processamento de estados
+    estados_processados = set()
+    estados_processados.add(estado_inicial)
+    estados_finais_afd = set() # estados finais determinizados
+    alfabeto = alfabetoAFND(afnd)
+
+    while fila:
+        conjunto_atual = fila.pop(0) # next
+        nome_estado = "["+"_".join(sorted(list(conjunto_atual)))+"]" # [Q1_Q8]
+
+        if nome_estado not in afd:
+            afd[nome_estado] = {}
+
+        # Verifica se esse conjunto contém algum estado que era final no original
+        # Se sim, adiciona aos finais do AFD
+        # --- LÓGICA AQUI: itere sobre conjunto_atual e cheque se está em finais_afnd ---
+        for i in conjunto_atual:
+            if i in estados_finais:
+                estados_finais_afd.add(nome_estado)
+
+        for letra in alfabeto:
+            destinos = set()
+            for subestado in conjunto_atual:
+                if subestado in afnd and letra in afnd[subestado]:
+                    lista_destinos = afnd[subestado][letra]
+                    destinos.update(lista_destinos)
+
+            if destinos:
+                novo_estado_composto = frozenset(destinos)
+                nome_destino = "["+"_".join(sorted(list(novo_estado_composto)))+"]"
+
+                afd[nome_estado][letra] = [nome_destino]
+
+                if novo_estado_composto not in estados_processados:
+                    # se o estado composto ainda não foi processado
+                    estados_processados.add(novo_estado_composto)
+                    fila.append(novo_estado_composto)
+    return afd, estados_finais_afd
 
 
+
+#------------vvvvvvvvv        MAIN        vvvvvvvvv------------
 arquivo = "fonte.txt"
 
 try:
@@ -104,5 +159,14 @@ try:
             iterarLinha(linha)
 
     print(f"Estados finais: {estados_finais}")
+    # chamada da det
+    afd_result, finais_afd = determinizar(afnd, estados_finais)
+    print("AFND foi determinizado")
+    for est, trans in afd_result.items():
+        print(f"Estado {est}: {trans}")
+    print(f"Estados Finais AFD: {finais_afd}")
+    
 except FileNotFoundError:
     print("Erro: O arquivo"+arquivo+"não foi encontrado")
+
+
