@@ -7,6 +7,7 @@ afnd = {}
 estados_finais = set()      # conjunto para guardar estados finais
 contador_estados = -1        # Variável para gerar nomes de estados (A-B-C-D-E...)
 mapa_gramatica = {"S":"S"}
+arquivo = "fonte.txt"
 
 #------------vvvvvvvvv CRIAÇÃO DO AUTÔMATO vvvvvvvvv------------
 def processarGramatica(linha):
@@ -137,40 +138,37 @@ def alfabetoAFND(afnd):
             alfabeto.add(simbolo)
     return list(alfabeto)
 
-def imprimir_afnd(afnd, finais):
-    print("\n" + "="*50)
-    print("RESUMO DO AFND (Autômato Finito Não Determinístico)")
-    print("Legenda: -> (Inicial), * (Final)")
+def imprimir_automato(automato, finais):
     print("-" * 50)
-    print(f"{'ESTADO':<15} | {'TRANSIÇÕES (Símbolo -> [Destinos])'}")
+    print(f"ESTADO   | TRANSIÇÕES")
     print("-" * 50)
 
     # Ordena para 'S' aparecer primeiro ou ficar alfabético
-    estados_ordenados = sorted(afnd.keys())
+    estados_ordenados = sorted(automato.keys())
     
-    # Se 'S' estiver na lista, move para o início (opcional, apenas estética)
+    # Se 'S' estiver na lista, move para o início
     if 'S' in estados_ordenados:
         estados_ordenados.remove('S')
         estados_ordenados.insert(0, 'S')
 
     for estado in estados_ordenados:
         # Define marcadores visuais
-        prefixo = "-> " if estado == "S" else "   "
-        sufixo = "*" if estado in finais else " "
+        prefixo_inicial = "-> " if estado == "S" else "   "
+        prefixo_final = "*" if estado in finais else " "
         
-        nome_formatado = f"{prefixo}{estado}{sufixo}"
+        nome_formatado = f"{prefixo_inicial}{prefixo_final}{estado}"
         
         # Monta string das transições
         lista_transicoes = []
-        if estado in afnd:
-            for simbolo, destinos in afnd[estado].items():
+        if estado in automato:
+            for simbolo, destinos in automato[estado].items():
                 # Formata a lista de destinos ex: a->{Q1, Q2}
                 destinos_str = ", ".join(destinos)
                 lista_transicoes.append(f"'{simbolo}'->{{{destinos_str}}}")
         
         str_transicoes = " | ".join(lista_transicoes)
-        
-        print(f"{nome_formatado:<15} | {str_transicoes}")
+        alinhar_espaco = 5-len(estado) 
+        print(f"{nome_formatado}"+" "*alinhar_espaco+f"| {str_transicoes}")
     
     print("="*50 + "\n")
 
@@ -186,14 +184,11 @@ def determinizar(afnd, estados_finais):
 
     while fila:
         conjunto_atual = fila.pop(0) # next
-        nome_estado = "["+"_".join(sorted(list(conjunto_atual)))+"]" # [Q1_Q8]
+        nome_estado = "_".join(sorted(list(conjunto_atual))) # [Q1_Q8], tentei adicionar os "[]"+"[]" mas isso dificulta a impressão
 
         if nome_estado not in afd:
             afd[nome_estado] = {}
 
-        # Verifica se esse conjunto contém algum estado que era final no original
-        # Se sim, adiciona aos finais do AFD
-        # --- LÓGICA AQUI: itere sobre conjunto_atual e cheque se está em finais_afnd ---
         for i in conjunto_atual:
             if i in estados_finais:
                 estados_finais_afd.add(nome_estado)
@@ -207,7 +202,7 @@ def determinizar(afnd, estados_finais):
 
             if destinos:
                 novo_estado_composto = frozenset(destinos)
-                nome_destino = "["+"_".join(sorted(list(novo_estado_composto)))+"]"
+                nome_destino = "_".join(sorted(list(novo_estado_composto)))
 
                 afd[nome_estado][letra] = [nome_destino]
 
@@ -220,22 +215,21 @@ def determinizar(afnd, estados_finais):
 
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------
-arquivo = "fonte.txt"
 
 try:
     with open(arquivo, 'r', encoding='utf-8') as arquivo:
-                            # embora não tenha caracteres especiais no arquivo,
-                            # utilizei a codificação utf-8
+                            # utf-8 para processar o simbolo epsilon
         for linha in arquivo:
             iterarLinha(linha)
 
     print(f"\nEstados finais: {estados_finais}")
-    imprimir_afnd(afnd, estados_finais)
+    print("\nAFND:")
+    imprimir_automato(afnd, estados_finais)
     # chamada da det
-    afd_result, finais_afd = determinizar(afnd, estados_finais)
+    afd, finais_afd = determinizar(afnd, estados_finais)
     print("\n\n----- AFND foi determinizado -----")
-    for est, trans in afd_result.items():
-        print(f"Estado {est}: {trans}")
+    print("\nAFD:")
+    imprimir_automato(afd, finais_afd)
     print(f"Estados Finais AFD: {finais_afd}")
     
 except FileNotFoundError:
