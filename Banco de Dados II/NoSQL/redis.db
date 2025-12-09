@@ -1,0 +1,16 @@
+hset pg:user:<email>:nome
+hset pg:user:<email>:senha
+hset pg:user:<email>:dtnasc
+
+sadd emails email1@email.com
+sadd emails email2@email.com
+sadd emails email3@email.com
+
+sadd friend:<email> <email>
+
+hset pg:post:<email>:<id> texto dthora
+
+sadd like:<email>:<id> <emails> 
+
+hset comment:<email>:<id> <email>:<seq> text "comentario" <email>:<seq><alth> "comentario"
+hgetall comment:<email>
