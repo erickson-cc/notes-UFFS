@@ -1,0 +1,145 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.11)  11 DEC 2025 15:31
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./20230001178.tex
+(20230001178.tex
+LaTeX2e <2024-06-01>
+L3 programming layer <2024-05-08>
+
+(C:\Users\EricksonMuller\AppData\Local\Programs\MiKTeX\tex/latex/base\article.c
+ls
+Document Class: article 2024/02/08 v1.4n Standard LaTeX document class
+
+(C:\Users\EricksonMuller\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.cl
+o
+File: size10.clo 2024/02/08 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count194
+\c@section=\count195
+\c@subsection=\count196
+\c@subsubsection=\count197
+\c@paragraph=\count198
+\c@subparagraph=\count199
+\c@figure=\count266
+\c@table=\count267
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen141
+)
+(C:\Users\EricksonMuller\AppData\Local\Programs\MiKTeX\tex/latex/tools\indentfi
+rst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
+)
+(C:\Users\EricksonMuller\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3ba
+ckend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count268
+\l__pdf_internal_box=\box52
+) (20230001178.aux)
+\openout1 = `20230001178.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+
+Overfull \hbox (4.4915pt too wide) in paragraph at lines 16--17
+\OT1/cmr/m/n/10 min^^S^^Psticos. En-quanto um Aut^omato Finito N~ao-Determin^^S
+^^Pstico per-mite m^^Sultiplas
+ []
+
+
+
+[1
+
+{C:/Users/EricksonMuller/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (10.47278pt too wide) in paragraph at lines 22--23
+[]\OT1/cmr/m/n/10 Esta se^^Xc~ao ap-re-senta os fun-da-men-tos matem^^Saticos e
+ com-puta-cionais necess^^Sarios
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 25.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 25.
+
+
+[2]
+Overfull \hbox (6.73961pt too wide) in paragraph at lines 37--37
+[]\OT1/cmr/bx/n/14.4 Especifica^^Xc~ao e Im-ple-menta^^Xc~ao da Solu^^Xc~ao par
+a
+ []
+
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+46.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 46.
+
+LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbraceleft' on input line 46.
+
+
+
+[3]
+Overfull \hbox (12.94395pt too wide) in paragraph at lines 57--58
+[]\OT1/cmr/m/n/10 O de-sen-volvi-mento deste tra-balho per-mi-tiu con-sol-i-dar
+ os con-hec-i-men-tos te^^Soricos
+ []
+
+
+
+[4] (20230001178.aux)
+ ***********
+LaTeX2e <2024-06-01>
+L3 programming layer <2024-05-08>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 523 strings out of 473937
+ 10397 string characters out of 5723122
+ 1935893 words of memory out of 5000000
+ 23419 multiletter control sequences out of 15000+600000
+ 563946 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,7n,50p,1007b,296s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\EricksonMuller\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dp
+i600\tcrm1000.pk><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/EricksonMuller/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/EricksonMuller/A
+ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/User
+s/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmr12.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/EricksonMuller/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/EricksonM
+uller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><
+C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmtt10.pfb><C:/Users/EricksonMuller/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmtt9.pfb>
+Output written on 20230001178.pdf (4 pages, 152287 bytes).
+PDF statistics:
+ 70 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

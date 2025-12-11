@@ -1,6 +1,8 @@
 # Gerar um AFD livre de estados inalcançáveis e mortos
 # Entrada: Arquivo com a relação de tokens e/ou GRs de uma linguagem
 # Saída: AFD e mínimo sem a aplicação de classes de equivalência entre estados.
+# Autor: Erickson Giesel Müller
+# Matrícula: 20230001178
 
 #------------vvvvvvvvv  VARIÁVEIS GLOBAIS  vvvvvvvvv------------
 afnd = {}
@@ -130,7 +132,7 @@ def iterarLinha(linha):
     else:
         processarToken(linha)
 #------------^^^^^^^^^ CRIAÇÃO DO AUTÔMATO ^^^^^^^^^------------
-#------------vvvvvvvvv    DETERMINIZAÇÃO   vvvvvvvvv------------
+#------------vvvvvvvvv       IMPRESSÃO     vvvvvvvvv------------
 def alfabetoAFND(afnd):
     alfabeto = set()
     for estado in afnd:
@@ -162,7 +164,7 @@ def imprimir_automato(automato, finais):
         lista_transicoes = []
         if estado in automato:
             for simbolo, destinos in automato[estado].items():
-                # Formata a lista de destinos ex: a->{Q1, Q2}
+                # Formata a lista de destinos ex: a->{A, B}
                 destinos_str = ", ".join(destinos)
                 lista_transicoes.append(f"'{simbolo}'->{{{destinos_str}}}")
         
@@ -172,47 +174,79 @@ def imprimir_automato(automato, finais):
     
     print("="*50 + "\n")
 
+#------------^^^^^^^^^       IMPRESSÃO     ^^^^^^^^^------------
+#------------vvvvvvvvv    DETERMINIZAÇÃO   vvvvvvvvv------------
 def determinizar(afnd, estados_finais):
     print("Iniciando determinização do AFND")
     afd = {}
     estado_inicial = frozenset(['S']) # congela a lista
-    fila = [estado_inicial] # fila de processamento de estados
+    fila = [estado_inicial] # fila de processamento de estados que ainda não foram analisados
     estados_processados = set()
-    estados_processados.add(estado_inicial)
+    estados_processados.add(estado_inicial) # para evitar loop infinito processando o mesmo estado composto infinitas vezes
     estados_finais_afd = set() # estados finais determinizados
     alfabeto = alfabetoAFND(afnd)
 
     while fila:
         conjunto_atual = fila.pop(0) # next
-        nome_estado = "_".join(sorted(list(conjunto_atual))) # [Q1_Q8], tentei adicionar os "[]"+"[]" mas isso dificulta a impressão
+        nome_estado = "_".join(sorted(list(conjunto_atual))) # [A_B], tentei adicionar os "[]"+"[]" mas isso dificulta a impressão
 
         if nome_estado not in afd:
+            # se o estado composto ainda não existe no dicionário, cria
             afd[nome_estado] = {}
 
         for i in conjunto_atual:
+            #verifica se o estado composto é final, se algum dos estados do conjunto_atual é final
             if i in estados_finais:
                 estados_finais_afd.add(nome_estado)
 
         for letra in alfabeto:
+            # percorre cada subestado
             destinos = set()
             for subestado in conjunto_atual:
                 if subestado in afnd and letra in afnd[subestado]:
+                    # se o subestado tem transição com essa letra
+                    # pega os destinos possíveis no AFND
                     lista_destinos = afnd[subestado][letra]
+                    # adiciona oa conjunto de destinos do novo estaod composto
                     destinos.update(lista_destinos)
 
-            if destinos:
+            if destinos: # se encontrou destino para o terminal
                 novo_estado_composto = frozenset(destinos)
                 nome_destino = "_".join(sorted(list(novo_estado_composto)))
-
+                # cria a transição do afd A -x-> B
+                # como no AFD o destino é único, é usada uma lista de 1 elemento
                 afd[nome_estado][letra] = [nome_destino]
 
                 if novo_estado_composto not in estados_processados:
-                    # se o estado composto ainda não foi processado
+                    # se o estado composto ainda não foi processado Estado Novo
+                    # marca como visitado e adiciona na fila para ser processado
                     estados_processados.add(novo_estado_composto)
                     fila.append(novo_estado_composto)
     return afd, estados_finais_afd
 
+#------------^^^^^^^^^    DETERMINIZAÇÃO   ^^^^^^^^^------------
+#------------vvvvvvvvv    ESTADO DE ERRO   vvvvvvvvv------------
+def addEstadoErro(afd, alfabeto, estados_finais):
+    nome_erro = "_"# para melhor visualizar, o estado de erro é apenas um underline
+    p_erro = False
 
+    # Listar estados existentes
+    estados_existentes = list(afd.keys())
+    # Percorrer o autômato procurando falhas
+    for estado in estados_existentes:
+        for letra in alfabeto:
+            if letra not in afd[estado]:
+                p_erro = True
+                afd[estado][letra] = [nome_erro] #transição para o erro
+
+    # definir o estado ERRO
+    if p_erro:
+        afd[nome_erro] = {}
+        for letra in alfabeto:
+            afd[nome_erro][letra] = [nome_erro]
+    #
+    estados_finais.add(nome_erro)
+    return afd, estados_finais
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------
 
@@ -227,6 +261,9 @@ try:
     imprimir_automato(afnd, estados_finais)
     # chamada da det
     afd, finais_afd = determinizar(afnd, estados_finais)
+    #chamada estado_erro
+    alfabeto_lista = alfabetoAFND(afnd)
+    afd, finais_afd = addEstadoErro(afd, alfabeto_lista, finais_afd)
     print("\n\n----- AFND foi determinizado -----")
     print("\nAFD:")
     imprimir_automato(afd, finais_afd)
