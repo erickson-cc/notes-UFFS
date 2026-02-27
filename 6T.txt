@@ -1,16 +1,27 @@
-2N1234 		Redes de Computadores - Marco
-3N1234 		História da Fronteira Sul
-4N1234 		Engenharia de Software II - Raquel Pegoraro
-		Teoria da Computação
-5N1234 		Construção de Compiladores - Braulio
-6N1234 		Iniciação à Prática de Extensão
-		Cálculo Numérico
-		Direito e Cidadania
+2M123 		Meio Ambiente, Economia e Sociedade 
+Professor: Leandro Bordin
+Sala: 210A
 
-2M345 		Direitos e Cidadania
+2N1234 		Redes de Computadores 
+Professor: Marco Aurelio Spohn
+Sala: 309B
+
+3N1234 		História da Fronteira Sul
+Professor: Fernando Vojniak
+Sala: 310B
+
 4M2345 		Direitos e Cidadania
-2M2345 		Meio Ambiente, Economia e Sociedade
-2M123 		Meio Ambiente, Economia e Sociedade - Leandro Bordin
-56M12 7M1234 	História da Fronteira Sul
-67M123 		História da Fronteira Sul
-5M1234 		História da Fronteira Sul
+Professor: Cristiane Zanini
+Sala: 209B
+ 
+4N1234 		Engenharia de Software II
+Professor: Raquel Aparecida Pegoraro
+Sala: 309B
+
+5N1234 		Construção de Compiladores
+Professor: Braulio Adriano de Mello
+Sala: 309B
+
+6N1234 		Iniciação à Prática de Extensão
+Professor: Carlos Roberto Franca
+Sala: 105C
