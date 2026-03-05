@@ -1,0 +1,14 @@
+Grupo: Erickson e Matheus
+Nome da Tarefa:
+Definição do tema do trabalho
+Descrição: Jogo para ensinar o editor vim.
+
+a) Oportunidade e/ou Problema busca resolver:
+	Ensinar pessoas que buscam um editor de texto para otimizar a produção de códigos e software.
+
+b) Apresentação geral da proposta - Visão geral das funcionalidades
+	Desenvolver um sistema que simula as movimentações do software de edição de texto Vim, esse sistema funciona como um modelo de jogo com diversas fases e desafios para ensinar e acostumar o usuário aos comandos e atalhos que o vim disponibiliza. O objetivo final desse software é que o usuário se acostume a digitar e editar texto de maneira automática, sem sofrer o atraso de pensar para digitar, como nos outros editores de textos.
+
+c) Qual será o público alvo (cliente/persona/stakeholder)
+	Desenvolvedores de software, redatores de texto, público acadêmico, empresas de software.
+ 

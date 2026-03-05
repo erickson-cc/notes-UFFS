@@ -1,0 +1,54 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pacotes Básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[brazilian]{babel}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\geometry{left=3cm, top=3cm, right=2cm, bottom=2cm}
+
+% --- Informações do Documento ---
+\title{Engenharia de Software II \\ \textbf{Proposta de Projeto: Vim Game}}
+\author{Erickson Giesel Müller e Matheus Cavassolla Zandoná}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Definição do Tema}
+\textbf{Tarefa:} Definição do tema do trabalho \\
+
+\textbf{Descrição:} Desenvolvimento de uma aplicação gamificada voltada ao ensino e prática do editor de texto Vim.
+
+\section*{a) Oportunidade e/ou Problema a ser resolvido}
+
+O Vim é reconhecido como uma das ferramentas de edição de texto mais poderosas e eficientes no ecossistema de desenvolvimento de software. No entanto, sua interface baseada estritamente em comandos de teclado e modos de operação apresenta uma \textbf{barreira de entrada significativa} para novos usuários.
+
+O problema central reside na curva de aprendizado inicial, que é extremamente acentuada. Muitos desenvolvedores desejam otimizar sua produção de código e reduzir a dependência do mouse, mas desistem do Vim devido à falta de uma metodologia de aprendizado intuitiva e prática. Atualmente, a transição de editores convencionais para o Vim causa uma queda temporária de produtividade que muitos profissionais não podem arcar. O projeto busca resolver essa lacuna, transformando o treinamento mecânico em uma experiência interativa e progressiva.
+
+\section*{b) Apresentação geral da proposta e Visão geral das funcionalidades}
+
+A proposta consiste no desenvolvimento de um sistema que simula fielmente o ambiente do Vim, porém estruturado como um jogo de progressão por níveis. O objetivo é que o usuário alcance a "memória muscular" necessária para operar o editor sem hesitação cognitiva.
+
+\textbf{Principais Funcionalidades:}
+\begin{itemize}
+    \item \textbf{Simulação de Comandos:} Implementação de um motor que reconhece comandos nativos do Vim (como movimentação $h, j, k, l$, modos de inserção, comandos de deleção e substituição).
+    \item \textbf{Fases de Aprendizado Progressivo:} O jogo será dividido em módulos, começando por comandos básicos de navegação e evoluindo para macros complexas e expressões regulares.
+    \item \textbf{Feedback em Tempo Real:} O sistema fornecerá indicadores de precisão e velocidade, incentivando o usuário a encontrar o caminho mais eficiente (com menos toques de tecla) para resolver um desafio de edição.
+    \item \textbf{Desafios de Edição (Puzzles):} O usuário recebe um bloco de texto "sujo" e deve transformá-lo no resultado esperado utilizando o menor número de comandos possível.
+\end{itemize}
+
+\section*{c) Público-alvo (Persona e Stakeholders)}
+
+O software é projetado para atender perfis que dependem da manipulação intensiva de texto e código:
+
+\begin{itemize}
+    \item \textbf{Desenvolvedores de Software:} Profissionais que buscam maximizar o \textit{throughput} de codificação e minimizar o túnel do carpo ao evitar o uso excessivo do mouse.
+    \item \textbf{Redatores e Editores de Texto:} Usuários que trabalham com grandes volumes de documentação e necessitam de agilidade na reorganização de parágrafos e termos.
+    \item \textbf{Público Acadêmico:} Estudantes de Ciência da Computação e áreas correlatas que desejam dominar ferramentas de terminal e ambientes Unix-like.
+    \item \textbf{Empresas de Tecnologia (Stakeholders):} Organizações interessadas em aumentar a eficiência técnica de seus colaboradores através de ferramentas de capacitação interna.
+\end{itemize}
+
+\end{document}
