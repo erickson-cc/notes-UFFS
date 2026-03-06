@@ -1,0 +1,35 @@
+# GR
+	M(G) = {\alpha \in (a,b,c)^+ onde 'b' nunca precede 'c'}
+não há restrição em relação ao número de ocorrências dos números do símbolo do alfabeto.
+não pode ser vazio (\varepsilon) pois o fechamento é positivo, não pode ter tamanho 0.
+
+S::= a<A> | b<B> | c<A>
+A::= a<A> | b<B> | c<A> | \varepsilon
+B::= a<A> | b<B> | \varepsilon
+
+	M(G) = {\alpha \in (a,b,c)^+ pmde 'a' nunca precede 'b' e a soma das ocorrências de 'b' e 'c' é ímpar}
+
+S::= a<A> | b<B> | c<B>
+A::= a<A> | c<B>
+B::= a<C> | b<S> | c<S> | \varepsilon
+C::= a<C> | c<S> | \varepsilon
+
+# GLC
+	M(G) = {\alpha \in a^x b^y c^z onde y=x+z e x,y,z>=0}
+
+S::= <A><B>
+A::= a<A>b | \varepsilon
+B::= b<B>c | \varepsilon
+
+	M(G) = {\alpha \in a^x b^y c^z onde x!=z e x,y,z>=0}
+
+S::= a<S>c | <B> | <A>
+A::= a<A> | a<C>
+B::= <B>c | <C>c
+C::= b<C> | \varepsilon
+
+# Determinização
+vai ter uma tabela em que com o mesmo terminal você consegue ir para mais de um estado
+criar um estado novo para cada transição com mais de um estado pelo mesmo terminal
+se um desses estados for final, o novo estado também vai ser final
+para esse estado todas as transições dos estados que o compõem
