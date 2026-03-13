@@ -33,3 +33,97 @@ vai ter uma tabela em que com o mesmo terminal você consegue ir para mais de um
 criar um estado novo para cada transição com mais de um estado pelo mesmo terminal
 se um desses estados for final, o novo estado também vai ser final
 para esse estado todas as transições dos estados que o compõem
+
+
+# Eliminação de recursão à esquerda
+% ao menos uma de suas produções tem como primeiro símbolo o símbolo que dá nome à regra
+% usar recursão à direita para compensar
+
+S::= <S>b | <C>c | <A>b 
+A::= <S>c | ab
+C::= <S>cd | <C>ba | b
+
+S::= <C>c<S'> | <A>b<S'>
+S'::= b<S'> | \varepsilon
+% conseguimos eliminar a recursão à esquerda em <S>
+% existe recursão à esquerda indireta em <A> pois o <S> tem um first como <A>
+
+A::= <C>c<S'>c | <A>b<S'>c | ab
+% agora eliminar a recursão direta
+A::= <C>c<S'>c<A'> | ab<A'>
+A'::= b<S'>c<A'> | \varepsilon
+
+% agora remover a recursão à esquerda indireta da regra <C> por <S>
+C::= <C>c<S'>cd | <A>b<S'>cd |<C>ba | b
+% agora remover a recursão à esquerda indireta da regra <C> por <A>
+C::= <C>c<S'>cd | <C>c<S'>c<A'>b<S'>cd | ab<A'>b<S'>cd | <C>ba | b
+% agora remover a recursão à esquerda direta da regra <C>
+C::= ab<A'>b<S'>cd<C'> | b<C'>
+C'::= c<S'>cd<C'> | c<S'>c<A'>b<S'>cd<C'> | ba<C'> | \varepsilon
+% Página 45 na apostila tem o resultado final bem estruturado
+
+# Exercício de eliminação de recursão à esquerda
+
+S::= <B>a<S> | \varepsilon
+B::= <S><A>a | <B>b | <A>bc
+A::= <S>a | <B>ba
+
+% não tem recursão à esquerda na regra <S>
+% tem recursão à esquerda INDIRETA na regra <B>
+%		primeiro solucinar a regra indireta e depois a direta
+
+S::= <B>a<S> | \varepsilon % igual
+B::= <B>a<S><A>a | <A>a | <B>b | <A>bc
+% agora reitrar a recursão direta
+B::= <A>a<B'> | <A>bc<B'>
+B'::= <a<S><A>a<B'> | b<B'> | \varepsilon
+
+% retirar a recursão indireta da produção <A> por <S>
+A::= <B>a<S>a | a | <B>ba
+
+% retirar a recursão indireta da produção <A> por <B>
+A::= <A>a<B'>a<S>a | aA<b>bc<B'>a<S>a | a | <A>a<B'>ba | <A>bc<B'>ba
+
+% agora retirar a recursão direta de <A>
+A::= a<A'> |
+A'::= a<B'>a<S>a<A'> | bc<B'>a<S>a<A'> | a<B'>ba<A'> | bc<B'>ba<A'>
+
+% First & Follow
+
+S::= <A><B><C> | a<B> | b<A> | \varepsilon
+A::= ab | <C>b | c<B> | \varepsilon
+B::= b<A> | b | \varepsilon
+C::= c<A> | <A><B>c | \varepsilon
+
+%Conjuntos First e Follow
+First(S) -> {a,b,\varepsilon,c,
+Follow(S) -> {$,
+
+First(A) -> {a,c,\varepsilon,b
+Follow(A) -> {b,c,a,$
+
+First(B) -> {b,\varepsilon
+Follow(B) -> {c,a,b,$
+
+First(C) -> {c,\varepsilon,a,b
+Follow(C) -> {b,$
+
+% Exercício First e depois follow
+
+S::= x<S>y | <A><B>z | <A><C>w | <B><A>
+A::= a<C><B> | <B>by | <B>y
+B::= a<C>y | <C>dy | \varepsilon
+C::= d<B>z | c<C>w | <A><B>y | \varepsilon
+
+First(S) -> {x,a,b,y,d
+Follow(S) -> {$,y,
+
+First(A) -> {a,b,c,y,d
+Follow(A) -> {c,d,a,b,y,$
+
+First(B) -> {c,\varepsilon,d,a,b,y
+Follow(B) -> {z,a,b,y,c,d,$
+
+First(C) -> {d,c,\varepsilon,a,b,y
+Follow(C) -> {w,c,d,a,b,y,$
+

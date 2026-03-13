@@ -1,4 +1,5 @@
 \documentclass[ ]{article}
+\usepackage[ ]{indentfirst}
 
 \title{Revisão P1\\Construção de Compiladores\\Prof. Bráulio de Mello}
 \author{Erickson G. Müller}
@@ -19,6 +20,29 @@
 	\end{itemize}
 \newpage
 
-A saída do Analisador Léxico é a entrada do Analisador Sintático.
+
+\section{Construção de Analisador Léxico}
+
+	A saída do Analisador Léxico é a entrada do Analisador Sintático.
+
+\textbf{Processo:}
+	\begin{enumerate}
+		\item Definir tokens
+		\item Construir o AFND
+		\item Determinar o AF
+		\item Acrescentar estado de erro para tratar tokens inválidos
+		\item Construir o analisador (algoritmo)
+		\item Tratamento de erro
+		\begin{enumerate}
+			\item Rótulo não reconhecido
+			\item Descrição do erro
+			\item Adicionar na Tabela de Símbolos
+		\end{enumerate}
+		\item Reconhecimento
+	\end{enumerate}
+	
+	1 estado reconhece 1 token
+	
+	1 Token pode ser reconhecido por mais de 1 estado
 
 \end{document}
