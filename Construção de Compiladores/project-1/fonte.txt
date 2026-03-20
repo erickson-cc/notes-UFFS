@@ -1,0 +1,6 @@
+se
+sai
+foi
+
+S::=f<A>|a<A>|e<A>|i<A>
+a::=f<A>|a<A>|e<A>|i<A>|ε
