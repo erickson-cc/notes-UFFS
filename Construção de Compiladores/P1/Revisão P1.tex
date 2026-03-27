@@ -53,4 +53,186 @@
 		\textit{L1: rótulo da cadeia}
 		
 		\textit{[Mensagem de erro]}
+		
+	\section{Reconhecedores Sintáticos}
+	
+		\begin{itemize}
+			\item GLC
+			\item Autômatos de PIlha
+			\item APND
+			\begin{itemize}
+				\item $K$ - conjunto de estados
+				\item $\sum$ - alfabeto de entrada
+				\item $\Upsilon$ - alfabeto da pilha
+				\item $\delta$ - função de transição (\textit{atua sobre a fita})
+				\item $i$ - estado inicial ($i \in K$)
+				\item $I$ - símbolo inicial da pilha ($I \in \Upsilon$)
+				\item $F$ - conjunto de estados finais ($F \subseteq K$)
+			\end{itemize}			
+		\end{itemize}
+		
+		Se $(p, \alpha)\in \delta(q,a,Z)$ então $[q,ax,zy] \vdash^*[p,x,\alpha y]$.
+		\textit{\\ 
+		$^*$ $\vdash$ = transição/fecho transitivo\\ 
+		$^*$ $\alpha$ = símbolo empilhamento\\
+		$^*$ a = início da fita\\ 
+		$^*$ Z = topo da pilha\\}
+				
+		\subsection{Aceitação por estado final}
+			$L_{ef}(A)=\{ x \in \sum^* | [i,x,I] \vdash^* [f,\varepsilon,y]$ e $f\in F$ e $y \in \Upsilon^*$ qualquer$\}$
+			
+		\subsection{Aceitação por pilha vazia}
+			$L_{pv}(A)=\{ x \in \sum^* | [i,x,I] \vdash^* [f,\varepsilon,\varepsilon]$ e $f\in K$ qualquer$\}$
+			
+		\subsection{Exemplo}
+			$K = \{0,1,2\}$
+			
+			$i = {0}$
+			
+			$\sum = \{a,b\}$
+			
+			$I=X$
+			
+			$\Upsilon = \{X,A\}$
+			
+			$F=\{2$\}
+			
+%			\textbf{
+\textbf{Funções de Transição}
+
+				$$1: \delta(0,a,X)=\{(0,AX)\}$$
+				$$2: \delta(0,a,A)=\{(0,AA)\}$$
+				$$3: \delta(0,b,A)=\{(1,\varepsilon)\}$$
+				$$4: \delta(1,b,A)=\{(1,\varepsilon)\}$$
+				$$5: \delta(1,\varepsilon,X)=\{(2,X)\}$$
+				
+%			}
+Fita Resultada do analisador léxico:
+
+\textit{Fita:} $[0,aaabbb,X]\vdash$
+
+* \textit{Lembrar que estado inicial é 0 e X está no topo da pilha.}
+
+1ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX]$
+
+2ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX]$
+
+3ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX] \vdash [0,bbb,AAAX]$
+
+4ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX] \vdash [0,bbb,AAAX] \vdash [1,bb,AAX]$
+
+5ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX] \vdash [0,bbb,AAAX] \vdash [1,bb,AAX] \vdash [1,b,AX]$
+
+6ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX] \vdash [0,bbb,AAAX] \vdash [1,bb,AAX] \vdash [1,b,AX] \vdash [1,\varepsilon, X] $
+
+7ª transição: $[0,aaabbb,X]\vdash [0,aabbb,AX] \vdash [0,abbb,AAX] \vdash [0,bbb,AAAX] \vdash [1,bb,AAX] \vdash [1,b,AX] \vdash [1,\varepsilon, X] \vdash [2,\varepsilon, X]$
+
+Assim, $[2,\varepsilon,X] \in F$
+
+		\subsection{Exemplo 2}
+		
+			$K=\{0,1\}$
+			
+			$i= \{0\}$
+			
+			$\sum = \{a,b\}$
+			
+			$I=\{X\}$
+			
+			$\Upsilon = \{X,A\}$
+			
+			$F = \O$
+			
+			\textbf{Funções de Transição}
+			
+			$$1:\delta(0,a,X) = \{(0,A)\}$$
+			$$2:\delta(0,a,A) = \{(0,AA)\}$$
+			$$3:\delta(0,b,a)= \{(1,\varepsilon)\}$$
+			$$4:\delta(1,b,A)=\{(1,\varepsilon)\}$$
+			
+			\textit{Fita:} $[0,aabbb,X]\vdash [0,abbb,A] \vdash [0,bbb,AA] \vdash [1,bb,A] \vdash [1,b,\varepsilon]$ \textbf{não ocorreu reconhecimento no último estado}
+			
+		\subsection{Exemplo Gramática de Operadores}
+		
+			$E::= E+T | T$
+			
+			$T::= T*F | F$
+			
+			$F::= (E) | a$
+			
+			Reconhecimento por pilha vazia
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash$
+			
+			\textbf{Criação de regras:}
+			$$1: \delta(0,\varepsilon, E) = \{(0,T)\}$$
+			\textit{Comentário: o autômato de pilha é não determinístico pois não podemos escolher qual produção da regra será usado na transição para reduzir e acrescentar no topo da pilha. A regra 1 reduz uma produção de E e empilha uma produção de T}
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash$
+			
+			\textbf{Criação de nova regra:}
+			$$1: \delta(0,\varepsilon, E) = \{(0,T)\}$$
+			$$2: \delta(0,\varepsilon,T) = \{(0,T*F),(0,F)\}$$
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash [0,a*(a+a),T*F] \vdash [0,a*(a+a), F*F] \vdash$
+			
+			\textbf{Criação de nova regra:}
+			\textbf{Criação de nova regra:}
+			$$1: \delta(0,\varepsilon, E) = \{(0,T)\}$$
+			$$2: \delta(0,\varepsilon,T) = \{(0,T*F),(0,F)\}$$
+			$$3:\delta(0,\varepsilon,F)=\{(0,a)\}$$
+			$$4:\delta(0,a,a)=\{(0,\varepsilon)\}$$
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash [0,a*(a+a),T*F] \vdash [0,a*(a+a), F*F] \vdash [0,a*(a+a), a*F] \vdash [0,*(a+a),*F] \vdash [0,(a+a),F] \vdash [0,(a+a),(E)] \vdash$
+			
+			\textbf{Criação de novas funções:}
+			$$1: \delta(0,\varepsilon, E) = \{(0,T)\}$$
+			$$2: \delta(0,\varepsilon,T) = \{(0,T*F),(0,F)\}$$
+			$$3:\delta(0,\varepsilon,F)=\{(0,a)\}$$
+			$$4:\delta(0,a,a)=\{(0,\varepsilon)\}$$
+			$$5:\delta(0,*,*)=\{(0,\varepsilon)\}$$
+			$$6:\delta(0,(,()=\{(0,\varepsilon)\}$$
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash [0,a*(a+a),T*F] \vdash [0,a*(a+a), F*F] \vdash [0,a*(a+a), a*F] \vdash [0,*(a+a),*F] \vdash [0,(a+a),F] \vdash [0,(a+a),(E)] \vdash [0, a+a), E)] \vdash [0, a+a) , E+T)] \vdash [0,a+a, T+T)] \vdash [0,a+a),F+T)]\vdash [0,a+a),a+T)] \vdash [0, +a), +T)] \vdash$
+			
+			\textbf{Criação da regra para + no inicio da fita e + no topo da pilha:}
+			$$1: \delta(0,\varepsilon, E) = \{(0,T)\}$$
+			$$2: \delta(0,\varepsilon,T) = \{(0,T*F),(0,F)\}$$
+			$$3:\delta(0,\varepsilon,F)=\{(0,a)\}$$
+			$$4:\delta(0,a,a)=\{(0,\varepsilon)\}$$
+			$$5:\delta(0,*,*)=\{(0,\varepsilon)\}$$
+			$$6:\delta(0,(,()=\{(0,\varepsilon)\}$$
+			$$7:\delta(0,+,+)= \{(0,\varepsilon)\}$$
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash [0,a*(a+a),T*F] \vdash [0,a*(a+a), F*F] \vdash [0,a*(a+a), a*F] \vdash [0,*(a+a),*F] \vdash [0,(a+a),F] \vdash [0,(a+a),(E)] \vdash [0, a+a), E)] \vdash [0, a+a) , E+T)] \vdash [0,a+a, T+T)] \vdash [0,a+a),F+T)]\vdash [0,a+a),a+T)] \vdash [0, +a), +T)] \vdash [0,a),T)] \vdash [0,a),F)] \vdash [0,a),a)] \vdash [0,),)] \vdash$
+			
+			\textbf{Criação de nova regra:}
+			
+			$$1: \delta(0,\varepsilon, E) = \{(0,T),(0,E+T)\}$$
+			*\textit{em algum momento foi adicionado }
+			$$2: \delta(0,\varepsilon,T) = \{(0,T*F),(0,F)\}$$
+			$$3:\delta(0,\varepsilon,F)=\{(0,a),(0,(E)\}$$
+			*\textit{em algum momento foi adicionado}
+			$$4:\delta(0,a,a)=\{(0,\varepsilon)\}$$
+			$$5:\delta(0,*,*)=\{(0,\varepsilon)\}$$
+			$$6:\delta(0,(,()=\{(0,\varepsilon)\}$$
+			$$7:\delta(0,+,+)= \{(0,\varepsilon)\}$$
+			$$8:\delta(0,),))= \{(0,\varepsilon)\}$$
+			
+			\textit{Fita:}$[0,a*(a+a),E]\vdash [0,a*(0+a),T] \vdash [0,a*(a+a),T*F] \vdash [0,a*(a+a), F*F] \vdash [0,a*(a+a), a*F] \vdash [0,*(a+a),*F] \vdash [0,(a+a),F] \vdash [0,(a+a),(E)] \vdash [0, a+a), E)] \vdash [0, a+a) , E+T)] \vdash [0,a+a, T+T)] \vdash [0,a+a),F+T)]\vdash [0,a+a),a+T)] \vdash [0, +a), +T)] \vdash [0,a),T)] \vdash [0,a),F)] \vdash [0,a),a)] \vdash [0,),)] \vdash [0,\varepsilon, \varepsilon \vdash ^*$
+			
+			
+		\section{Tarefa com a mesma gramática}
+			\textbf{Fita:}\\
+			$[0,a*((a+(a*a)),E] \vdash$
+			\\
+		\subsection{Tarefa: montar o conjunto de funções de transição}		
+			\textbf{Gramática}\\
+			$S::=<A>|<S>|\varepsilon$\\
+			$A::=$ se $cond$ então $<B> |$ enquanto $cond \{<C>\}$\\
+			$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
+			$C::= <A> |$ exp\\
+			
+						
+			\textbf{Funções de Transição:}\\
 \end{document}
