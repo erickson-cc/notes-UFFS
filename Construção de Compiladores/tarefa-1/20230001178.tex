@@ -1,0 +1,75 @@
+\documentclass[ 12pt, a4paper]{article}
+\usepackage[ ]{indentfirst}
+\usepackage[ ]{enumitem}
+\usepackage[brazilian]{babel}
+\usepackage[ ]{amsmath}
+\title{Tarefa Reconhecimento Sintático\\Construção de Compiladores}
+\author{Erickson G. Müller}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\section{Montar o conjunto de funções de transição}
+
+	\textbf{Gramática}\\
+	$S::=<A> <S>|\varepsilon$\\
+	$A::=$ se cond entao $<B> |$ enquanto cond$ \{<C>\}$\\
+	$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
+	$C::= <A> |$ exp\\
+	
+	\textbf{Fita}\\
+	se cond entao $\{$ enquanto cond $\{$ exp $\}\}$ else $\{$ exp $\}$\\
+						
+	\textbf{Funções de Transição:}\\
+	
+		\underline{ Regras de expansão para os não terminais $S, A, B , C$ }
+	\begin{enumerate}[]
+		\item	$\delta(0,\varepsilon,S) = \{(0,A S), (0, \varepsilon)\}$
+		\item	$\delta(0, \varepsilon, A) = \{(0,$ se cond então $B),(0,$ enquanto cond $\{C\})\}$
+		\item	$\delta(0,\varepsilon,B) = \{ (0, \{C\}), (0, \{C\}$ else $\{C\})\}$
+		\item	$\delta(0,\varepsilon,C) = \{ (0, A), (0,$ exp$)\}$		
+	\end{enumerate}
+	
+		\underline{ Regras de casamento para os terminais se, cond, entao, enquanto, $\{, \}$, else, exp }
+	\begin{enumerate}[start=5]
+
+		\item 	$\delta(0, se, se) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, cond, cond) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, entao, entao) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, enquanto, enquanto) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, \{, \{) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, \}, \}) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, else, else) = \{(0, \varepsilon)\})$
+		\item	$\delta(0, exp, exp) = \{(0, \varepsilon)\})$
+	\end{enumerate}
+
+\section{Processar a cadeia}
+\begin{small}
+\begin{align*}
+    &[0, \text{se cond entao } \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, S] \\
+    \vdash\ &[0, \text{se cond entao } \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, A\ S] \\
+    \vdash\ &[0, \text{se cond entao } \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{se cond entao } B\ S] \\
+    \vdash\ &[0, \text{cond entao } \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{cond entao } B\ S] \\
+    \vdash\ &[0, \text{entao } \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{entao } B\ S] \\
+    \vdash\ &[0, \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, B\ S] \\
+    \vdash\ &[0, \{ \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \{ C \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, C \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, A \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{enquanto cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{enquanto cond } \{ C \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{cond } \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{cond } \{ C \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \{ \text{exp} \} \} \text{ else } \{ \text{exp} \}, \{ C \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{exp} \} \} \text{ else } \{ \text{exp} \}, C \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{exp} \} \} \text{ else } \{ \text{exp} \}, \text{exp} \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \} \} \text{ else } \{ \text{exp} \}, \} \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \} \text{ else } \{ \text{exp} \}, \} \text{ else } \{ C \}\ S] \\
+    \vdash\ &[0, \text{else } \{ \text{exp} \}, \text{else } \{ C \}\ S] \\
+    \vdash\ &[0, \{ \text{exp} \}, \{ C \}\ S] \\
+    \vdash\ &[0, \text{exp} \}, C \}\ S] \\
+    \vdash\ &[0, \text{exp} \}, \text{exp} \}\ S] \\
+    \vdash\ &[0, \}, \}\ S] \\
+    \vdash\ &[0, \varepsilon, S] \\
+    \vdash\ &[0, \varepsilon, \varepsilon] \quad \text{(Cadeia Aceita com Sucesso)}
+\end{align*}
+\end{small}
+\end{document}
