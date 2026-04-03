@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.27)  31 MAR 2026 19:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.27)  3 APR 2026 03:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -26,55 +26,136 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 (/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 )
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
+
+(/usr/share/texmf-dist/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2025-06-23 v0.14 Display of landscape pages in PD
+F (HO)
+
+(/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+(/usr/share/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+)))
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(/usr/share/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen151
+\lightrulewidth=\dimen152
+\cmidrulewidth=\dimen153
+\belowrulesep=\dimen154
+\belowbottomsep=\dimen155
+\aboverulesep=\dimen156
+\abovetopsep=\dimen157
+\cmidrulesep=\dimen158
+\cmidrulekern=\dimen159
+\defaultaddspace=\dimen160
+\@cmidla=\count283
+\@cmidlb=\count284
+\@aboverulesep=\dimen161
+\@belowrulesep=\dimen162
+\@thisruleclass=\count285
+\@lastruleclass=\count286
+\@thisrulewidth=\dimen163
+)
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count283
+\l__color_backend_stack_int=\count287
 )
 (./Revis찾o P1.aux)
 \openout1 = `"Revis찾o P1.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen164
+\scratchbox=\box53
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen165
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks19
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 9.
+(Font)              <14.4> on input line 11.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 9.
+(Font)              <7> on input line 11.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts
 /enc/dvips/cm-super/cm-super-ts1.enc}]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 64.
+(Font)              <12> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 64.
+(Font)              <8> on input line 66.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 64.
+(Font)              <6> on input line 66.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 74--80
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9
-8.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+00.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 98.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 100.
  [3]
-Overfull \hbox (21.88463pt too wide) in paragraph at lines 120--121
+Overfull \hbox (21.88463pt too wide) in paragraph at lines 122--123
 []\OT1/cmr/m/n/12 3\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 transi^^Xc~ao: $[0\OML/cmm
 /m/it/12 ; aaabbb; X\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0\OML
 /cmm/m/it/12 ; aabbb; AX\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0
@@ -83,7 +164,7 @@ Overfull \hbox (21.88463pt too wide) in paragraph at lines 120--121
  []
 
 
-Overfull \hbox (32.55125pt too wide) in paragraph at lines 122--123
+Overfull \hbox (32.55125pt too wide) in paragraph at lines 124--125
 []\OT1/cmr/m/n/12 4\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 transi^^Xc~ao: $[0\OML/cmm
 /m/it/12 ; aaabbb; X\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0\OML
 /cmm/m/it/12 ; aabbb; AX\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0
@@ -92,7 +173,7 @@ Overfull \hbox (32.55125pt too wide) in paragraph at lines 122--123
  []
 
 
-Overfull \hbox (32.55125pt too wide) in paragraph at lines 124--125
+Overfull \hbox (32.55125pt too wide) in paragraph at lines 126--127
 []\OT1/cmr/m/n/12 5\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 transi^^Xc~ao: $[0\OML/cmm
 /m/it/12 ; aaabbb; X\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0\OML
 /cmm/m/it/12 ; aabbb; AX\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0
@@ -101,7 +182,7 @@ Overfull \hbox (32.55125pt too wide) in paragraph at lines 124--125
  []
 
 
-Overfull \hbox (32.55125pt too wide) in paragraph at lines 126--127
+Overfull \hbox (32.55125pt too wide) in paragraph at lines 128--129
 []\OT1/cmr/m/n/12 6\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 transi^^Xc~ao: $[0\OML/cmm
 /m/it/12 ; aaabbb; X\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0\OML
 /cmm/m/it/12 ; aabbb; AX\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0
@@ -110,7 +191,7 @@ Overfull \hbox (32.55125pt too wide) in paragraph at lines 126--127
  []
 
 
-Overfull \hbox (32.55125pt too wide) in paragraph at lines 128--129
+Overfull \hbox (32.55125pt too wide) in paragraph at lines 130--131
 []\OT1/cmr/m/n/12 7\TS1/cmr/m/n/12 � \OT1/cmr/m/n/12 transi^^Xc~ao: $[0\OML/cmm
 /m/it/12 ; aaabbb; X\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0\OML
 /cmm/m/it/12 ; aabbb; AX\OT1/cmr/m/n/12 ] \OMS/cmsy/m/n/12 ` \OT1/cmr/m/n/12 [0
@@ -119,37 +200,74 @@ Overfull \hbox (32.55125pt too wide) in paragraph at lines 128--129
  []
 
 
-LaTeX Warning: Command \O invalid in math mode on input line 144.
+LaTeX Warning: Command \O invalid in math mode on input line 146.
 
 [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 226--229
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 230--235
+Underfull \hbox (badness 10000) in paragraph at lines 232--237
+
+ []
+
+[7]
+<images/analisador.png, id=36, 408.02437pt x 290.58563pt>
+File: images/analisador.png Graphic file (type png)
+<use images/analisador.png>
+Package pdftex.def Info: images/analisador.png  used on input line 242.
+(pdftex.def)             Requested size: 326.41994pt x 232.46881pt.
+
+
+LaTeX Warning: Command \o invalid in math mode on input line 255.
+
+<images/tabela.png, id=38, 717.43031pt x 246.9225pt>
+File: images/tabela.png Graphic file (type png)
+<use images/tabela.png>
+Package pdftex.def Info: images/tabela.png  used on input line 259.
+(pdftex.def)             Requested size: 466.32417pt x 160.49771pt.
+
+Overfull \hbox (76.32417pt too wide) in paragraph at lines 259--260
+ [] 
+ []
+
+[8 <./images/analisador.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 263--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 263--310
 
  []
 
-[7] (./Revis찾o P1.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 263--310
+
+ []
+
+[9 <./images/tabela.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 314--319
+
+ []
+
+[10] [11
+
+] (./Revis찾o P1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 523 strings out of 469495
- 9668 string characters out of 5470098
- 442756 words of memory out of 5000000
- 29242 multiletter control sequences out of 15000+600000
+ 1600 strings out of 469495
+ 26621 string characters out of 5470098
+ 450756 words of memory out of 5000000
+ 30268 multiletter control sequences out of 15000+600000
  633950 words of font info for 60 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 35i,7n,38p,462b,262s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,12n,93p,462b,272s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -160,10 +278,10 @@ st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/
 public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
 r/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
 
-Output written on "Revis찾o P1.pdf" (7 pages, 147726 bytes).
+Output written on "Revis찾o P1.pdf" (11 pages, 347955 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 101 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

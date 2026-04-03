@@ -1,6 +1,8 @@
 \documentclass[ 12pt, a4paper]{article}
 \usepackage[ ]{indentfirst}
-
+\usepackage[ ]{pdflscape}
+\usepackage[ ]{graphicx}
+\usepackage[ ]{booktabs}
 \title{Revisão P1\\Construção de Compiladores\\Prof. Bráulio de Mello}
 \author{Erickson G. Müller}
 \date{23 de Abril de 2026}
@@ -233,6 +235,124 @@ Assim, $[2,\varepsilon,X] \in F$
 			$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
 			$C::= <A> |$ exp\\
 			
-						
-			\textbf{Funções de Transição:}\\
+	\newpage
+	\section{Análise Preditiva Tabular}
+		O analisador preditivo precisa do conjunto \textit{follow}, por isso usamos o símbolo de final de sentença. X = topo da pilha. N = conjunto dos não terminais. Quando aparecer um V maiúsculo é um terminal v (OR).
+		\\
+		\includegraphics[scale=0.8]{images/analisador.png}
+		
+		\begin{enumerate}
+			\item se $X = a = \$ $, aceita
+			\item se $X = a \neq \$$
+			\begin{itemize}
+				\item desempilha $a$
+				\item avança posição de leitura na fita
+			\end{itemize}
+			\item se $X \in N$
+			\begin{itemize}
+				\item consulta $M[X,a]$
+				\item se $M[X,a] = \{X::=UVW\}$
+				\item se $M[X,a] = \o$, erro
+			\end{itemize}
+		\end{enumerate}
+		\begin{center}
+		\includegraphics[scale=0.65]{images/tabela.png}
+		
+		\textit{substituir id por a}
+		\end{center}
+		$E::= EvT | T$\\
+		$T::= T\&F | F$\\
+		$F::= \neg F | a$
+		\\
+		O analisador preditivo não reconhece recursão à esquerda, portanto vamos retirar a recursão.
+		\\
+		$E::= TE'$\\
+		$E'::= VTE' | \varepsilon$\\
+		$T::=FT'$\\
+		$T'::= \&FT'| \varepsilon$\\
+		$F::=\neg F | a$\\
+		Essa gramática é recursiva à direita e não à esquerda. \\ \\		
+		\\
+		o inicio do topo da pilha é definido pelo símbolo inicial da gramática.\\
+		\begin{tabular}{|c|c|c|}
+			Pilha $E\$ $ & Entrada da fita & ação \\
+			$\$TE' \$$ & $a v a \& a \$$ & $E::=TE'$\\
+			$FT'E'\$$ & $ava\&a\$ $ & $T::=FT'$ \\
+			$aT'E' \$ $ & $ava\&a \$ $ & $F::a$ \\
+			$T'E' \$ $ & $va\&a\$ $ & $T'::\varepsilon$\\
+			$E'\$ $ & $va\&a\$ $ & $E' ::= VTE'$\\
+			$VTE'\$ $ & $va\& a \$ $ & $T'::=FT'$\\
+			$TE' \$ $ & $a\& a \$ $ & \\
+			$FT'E'\$ $ & $a\&a\$ $ & $F::= a$\\  
+			$aT'E'\$ $ & $a\&a\$ $& $T'::=\&FT'$\\
+			$T'E'\$$ & $\&a\$ $ & \\
+			$\&FT'E'\$ $ & $\&a\$ $ & $T'::= \&FT' $\\
+%			$\&FT'E'\$$ & $\&a\$ $ & \\
+			$FT'E'\$ $ & $a\$ $ & $F::=a$\\
+			$aT'E'\$ $ &$a\$ $ \\
+%			$aT'E'\$ $& $\$ $ & \\
+			$T'E'\$ $ &  $\$ $ & $T'::=\varepsilon$\\
+			$E'\$ $ & $\$ $& $E'::\varepsilon$\\
+			$\$$ & $\$ $ &  Aceite\\ 
+			
+		
+		\end{tabular}
+		\\ \\ Tabela first e follow:: \\
+		\begin{tabular}{|c|c|c|}
+				& First 		& Follow		\\
+			E	& $\neg , a $ 		& $\$			$\\
+			E'	& $V,\varepsilon$	& $\$			$\\
+			T	& $\neg, a $		& $V, \$		$\\
+			T'	& $\&, \varepsilon$	& $V, \$		$\\
+			F	& $ \neg, a $		& $\&,V, \$		$\\
+		
+		\end{tabular}
+		
+		Para acrescentar uma ação na tabela preditiva, a produção será acrescentada na linha definida pelo símbolo que dá nome à regra nas colunas do first da produção. Quando uma produção é $\varepsilon$, acrescentamos a produção na linha do símbolo que dá nome à regra nas colunas definidas pelo follow do mesmo símbolo. 
+		
+		\subsection{Tarefa com a gramática do TF1}
+			\textbf{Gramática}\\
+			$S::= AS|\varepsilon$\\
+			$A::=$ se $cond$ então $B |$ enquanto $cond \{C\}$\\
+			$B::= \{C\} | \{C\} $ senao $\{C\}$\\			
+			$C::= A |$ exp\\
+			
+			\textbf{Eliminação da recursão à esquerda}:
+			Não existe nenhuma recursão à esquerda nessa gramática.
+			
+			\textbf{Construção da tabela de análise preditiva:}
+			
+\begin{landscape}
+	
+	\textbf{Gramática Fatorada:}\\
+	$S::= AS|\varepsilon$\\
+	$A::=$ se $cond$ então $B |$ enquanto $cond \{C\}$\\
+	$B::= \{C\}B'$\\
+	$B'::=$ senao $\{C\} | \varepsilon $\\			
+	$C::= A |$ exp\\
+\thispagestyle{empty}
+\begin{table}[h]
+\centering
+\makebox[\textwidth][c]{
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+
+\toprule
+&$ se			$&$ cond	$&$ entao	$&$ enquanto	$&$ 	\{	$&$	\}	$&$ senao	$&$ exp		$&$ \$			$\\
+\hline
+$S$&$ S\to AS		  	$&$		$&$		$&$ S\to AS	$&$		$&$		$&$		$&$		$&$ S\to \varepsilon 	$\\
+\hline
+$A$&$  A\to $se cond entao $B  	$&$		$&$		$&$ A\to $ enquanto cond $\{C\}		$&$		$&$		$&$		$&$		$&$		$\\
+\hline
+$B$&$     			$&$		$&$		$&$		$&$ B\to \{C\}B'	$&$		$&$		$&$		$&$		$\\
+\hline
+$B'$&$ B' \to \varepsilon     			$&$		$&$		$&$ B' \to \varepsilon		$&$ 			$&$  B' \to \varepsilon		$&$ B'\to$ senao $\{C\}		$&$		$&$ B' \to \varepsilon	$\\
+\hline
+$C$&$ C\to A   			$&$		$&$		$&$ C\to A	$&$		$&$		$&$		$&$ C\to exp	$&$		$\\
+\bottomrule
+			
+\end{tabular}
+}
+\end{table}
+\end{landscape}
+
 \end{document}
