@@ -178,7 +178,7 @@ def imprimir_automato(automato, finais):
 #------------^^^^^^^^^       IMPRESSÃO     ^^^^^^^^^------------
 #------------vvvvvvvvv    DETERMINIZAÇÃO   vvvvvvvvv------------
 def determinizar(afnd, estados_finais):
-    print("Iniciando determinização do AFND")
+    print("Iniciando determinização do AFND...")
     afd = {}
     estado_inicial = frozenset(['S']) # congela a lista
     fila = [estado_inicial] # fila de processamento de estados que ainda não foram analisados
@@ -261,21 +261,20 @@ try:
         for linha in arquivo:
             iterarLinha(linha)
 
-    print(f"\nEstados finais: {estados_finais}")
-    print("\nAFND:")
-    imprimir_automato(afnd, estados_finais)
+    # print(f"\nEstados finais: {estados_finais}")
+    # imprimir_automato(afnd, estados_finais)
     # chamada da det
+    print("AFND Construído")
     afd, finais_afd = determinizar(afnd, estados_finais)
     #chamada estado_erro
     alfabeto_lista = alfabetoAFND(afnd)
     afd, finais_afd = addEstadoErro(afd, alfabeto_lista, finais_afd)
-    print("\n\n----- AFND foi determinizado -----")
-    print("\nAFD:")
-    imprimir_automato(afd, finais_afd)
-    print(f"Estados Finais AFD: {finais_afd}")
+    print("AFND foi determinizado")
+    # imprimir_automato(afd, finais_afd)
+    # print(f"Estados Finais AFD: {finais_afd}")
     
 except FileNotFoundError:
     print("Erro: O arquivo"+arquivo+"não foi encontrado")
 
-try:
-    with open(entrada, 
+#try:
+    # with open(entrada, 
