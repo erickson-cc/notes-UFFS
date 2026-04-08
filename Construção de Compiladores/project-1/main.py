@@ -246,12 +246,15 @@ def addEstadoErro(afd, alfabeto, estados_finais):
         for letra in alfabeto:
             afd[nome_erro][letra] = [nome_erro]
     #
-    estados_finais.add(nome_erro)
+    # estados_finais.add(nome_erro) # Removido pois não add o estado de erro ao estado de aceitação
     return afd, estados_finais
 
 #------------vvvvvvvvv     ANALISADOR LÉXICO     vvvvvvvvv------------
 def analisadorLex(entrada):
-    reconhecimento()
+    estado_corrente = "S"
+    while estado_corrente != " ":
+        ler(simbolo_lex)
+        estado_corrente = afd[estado_corrente][simbolo_lex]
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------
 
