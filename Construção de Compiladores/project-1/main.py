@@ -251,10 +251,16 @@ def addEstadoErro(afd, alfabeto, estados_finais):
 
 #------------vvvvvvvvv     ANALISADOR LÉXICO     vvvvvvvvv------------
 def analisadorLex(entrada):
+    fita = []
+    tabela_simbolos = []
     estado_corrente = "S"
     while estado_corrente != " ":
         ler(simbolo_lex)
-        estado_corrente = afd[estado_corrente][simbolo_lex]
+        estado_corrente = afd[estado_corrente][simbolo_lex] # Ocorre a transição
+        if estado_corrente == "_":
+            fita.append(estado_corrente)
+
+
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------
 
