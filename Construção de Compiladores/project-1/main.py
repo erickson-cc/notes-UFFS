@@ -250,16 +250,60 @@ def addEstadoErro(afd, alfabeto, estados_finais):
     return afd, estados_finais
 
 #------------vvvvvvvvv     ANALISADOR LÉXICO     vvvvvvvvv------------
+def ler_entrada(simbolo_lex):
+    try:
+        with open(entrada, 'r', encoding='utf-8') as entradaanal:
+            conteudo = entradaanal.read()
+    except FileNotFoundError:
+        print("Erro: O arquivo"+entrada+"não foi encontrado")
+        return
+    return conteudo
+def imprimir_fita(fita):
+def imprimir_ts(tabela_simbolos):
 def analisadorLex(entrada):
     fita = []
     tabela_simbolos = []
-    estado_corrente = "S"
-    while estado_corrente != " ":
-        ler(simbolo_lex)
-        estado_corrente = afd[estado_corrente][simbolo_lex] # Ocorre a transição
-        if estado_corrente == "_":
-            fita.append(estado_corrente)
+    linha_atual = 1
+    conteudo = ler_entrada(simbolo_lex)
+    i = 0
+    tamanho = len(conteudo)
+    while i<tamanho:
+        estado corrente = "S"
+        while i < tamanho and conteudo[i] in [" ", "\n"]:
+            if conteudo[i] == "\n":
+                linha_atual += 1
+            i += 1
+        # Condição de parada
+        if i>= tamanho:
+            break
 
+        # leitura do token
+        while i < tamanho:
+            simbolo_lex = conteudo[i]
+            if simbolo_lex in [" ", "\n"]:
+                break # fim do token
+
+        #transição
+        if estado_corrente in afd and simbolo_lex in afd[estado_corrente]:
+            estado_corrente = afd[estado_corrente][simbolo_lex][0]
+            # a linha 219 do código transforma o estado em uma lista, o índice evita analisar a lista inteira
+        else:
+            estado_corrente = "_" # estado de erro se o terminal não tem transição
+
+        i+= 1
+        if estado_corrente not in finais_afd:
+            estado_corrente = "_"  # EC = X pois não final
+
+        fita.append(estado_corrente)
+
+        tabela_simbolos.append({
+            "linha": linha_atual,
+            "identificador": estado_corrente,
+            "label": "Por fazer" #?
+            })
+        imprimir_fita(fita)
+        imprimir_ts(tabela_simbolos)
+                
 
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------

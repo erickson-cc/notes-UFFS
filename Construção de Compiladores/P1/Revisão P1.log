@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.27)  3 APR 2026 03:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.6)  9 APR 2026 20:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -254,17 +254,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 314--319
 
 [10] [11
 
-] (./Revisão P1.aux)
+]
+Overfull \hbox (1.42244pt too wide) in paragraph at lines 366--367
+[]\OT1/cmr/m/n/12 LALR (pre-cisa adi-cionar a transi^^Xc~ao da pr^^Soxima trans
+i^^Xc~ao e da seguinte) 
+ []
+
+<images/analisador_lr.png, id=53, 554.07pt x 414.79968pt>
+File: images/analisador_lr.png Graphic file (type png)
+<use images/analisador_lr.png>
+Package pdftex.def Info: images/analisador_lr.png  used on input line 370.
+(pdftex.def)             Requested size: 332.44456pt x 248.88173pt.
+[12
+
+ <./images/analisador_lr.png>]
+Overfull \hbox (2.72643pt too wide) in paragraph at lines 407--425
+\OT1/cmr/bx/n/12 3-Estado Cor-rente ($\OMS/cmsy/m/n/12 ^^O$\OT1/cmr/bx/n/12 ) e
+st^^Sa no fi-nal de al-gum item v^^Salido(produ^^Xc~ao)?
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--425
+
+ []
+
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 426--440
+
+ []
+
+[14]
+Overfull \hbox (24.28181pt too wide) in paragraph at lines 441--441
+[]\OT1/cmr/bx/n/17.28 Construir con-junto de itens v^^Salidos, transi^^Xc~oes
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
+
+ []
+
+[15] (./Revisão P1.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1600 strings out of 469495
- 26621 string characters out of 5470098
+ 1607 strings out of 469495
+ 26837 string characters out of 5470099
  450756 words of memory out of 5000000
- 30268 multiletter control sequences out of 15000+600000
+ 30275 multiletter control sequences out of 15000+600000
  633950 words of font info for 60 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
  87i,12n,93p,462b,272s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -273,15 +312,15 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/
-share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-supe
-r/sfrm1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-
-Output written on "Revisão P1.pdf" (11 pages, 347955 bytes).
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><
+/usr/share/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on "Revisão P1.pdf" (15 pages, 466404 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
- 61 compressed objects within 1 object stream
+ 121 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

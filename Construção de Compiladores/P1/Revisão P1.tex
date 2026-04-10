@@ -355,4 +355,94 @@ $C$&$ C\to A   			$&$		$&$		$&$ C\to A	$&$		$&$		$&$		$&$ C\to exp	$&$		$\\
 \end{table}
 \end{landscape}
 
+\section{Analisadores LR}
+	\begin{itemize}
+		\item redutores (ascendentes)
+		\item esquerda $\to$ direita (\textbf{derivação} mais à direita)
+		\item estruturas sintáticas LLC
+		\item identificação de erros (lookahead LALR)
+		\item exige mais esforço de implementação
+		\item SLR
+		\item LALR (precisa adicionar a transição da próxima transição e da seguinte)
+		\item LR
+		\item utiliza a pilha
+	\end{itemize}
+	\includegraphics[scale=0.6]{images/analisador_lr.png}
+
+	\subsection{Ações da tabela de análise}
+		\begin{itemize}
+			\item Empilha
+			\item Reduz (sempre é seguida por um salto)
+			\item Salto
+			\item Aceite (reconhecimento e acontece em uma situação só da tabela)
+			\item Erro (identificação e tratamento)
+		\end{itemize}
+
+	\subsection{Passos de construção de um analisador LR}
+		\begin{itemize}
+			\item GLC
+			\item Itens válidos (canônicos)
+			\item Transições pelos terminais (from itens válidos)
+			\item Saltos pelos não-terminais, depois de uma redução(from itens válidos)
+			\item First/Follow
+			\item Construção da Tabela de Análise a partir de:
+				\begin{enumerate}
+					\item Estados
+					\item Transições
+					\item Saltos
+					\item Follow
+					\item Identificador das produções
+				\end{enumerate}
+			\item Algoritmo de reconhecimento
+			\item ID das produções
+		\end{itemize}
+	\subsection{Construção do conjunto de itens válidos:}
+
+		$S::= a|[L]$
+
+		$L::= L;S | S$
+
+		Iniciar pelo estado 0. \textit{Todas as produções do estado inicial precisam aparecer no estado 0}
+
+		$Io =\{$\\
+		Itens válidos:\\
+		$S'::=S\$$\\
+		$S::= a|[L]$\\
+		$L::= L;S | S$\\
+		$I_0 =\{S'::=\bullet S\$, S::=\bullet a,S::=\bullet [L]\}$\\
+		$S'\to \bullet $\\
+		\textbf{1-Transição pelo mesmo Sb no estado de origem?}\\
+		\textbf{2-Estado corrente ($\bullet$) precede em N?}\\
+		$I_1 =\{S'::=S\bullet \$\}(Completo!)$\\
+		$I_2 =\{S::=a\bullet \}(Completo!)$\\
+		\textbf{3-Estado Corrente ($\bullet$) está no final de algum item válido(produção)? Se sim, esse estado possui um item chamado de "completo" que vai resultar numa ação de redução seguida de um salto.}\\
+		$I_3 =\{S::=[\bullet L], L::= \bullet L;S, L::=\bullet S, S::=\bullet a, S::=\bullet [L] \}$\\
+		$I_4 =\{S::=[L\bullet],L::=L\bullet ;S\}$\\
+		$I_5 = \{ L::=S\bullet\}(Completo!)$\\
+		$I_6 = \{ S::= [L]\bullet\}(Completo!)$\\
+		$I_7 = \{ L::= L;\bullet S, S::= \bullet a, S::= \bullet [L] \}$\\
+		$I_8 = \{ L::= L;S \bullet\} $ (Completo!)\\
+	\subsection{Construção das transições:}
+		Partindo de um estado, olhar para o item e o estado corrente dele e identificar o estado em que o item tenha transição. Quando a transição ocorre com um símbolo não terminal, temos um salto, quando é por um terminal, temos um empilhamento.\\
+		$T(I_0,S)=I_1$\\
+		$T(I_0,a)=I_2$\\
+		$T(I_0,[)=I_3$\\
+		$T(I_3,L)=I_4$\\
+		$T(I_3,S)=I_5$\\
+		$T(I_3,a)=I_2$\\
+		$T(I_3,[)=I_3$\\
+		$T(I_4,])=I_6$\\
+		$T(I_4,;)=I_7$\\
+		$T(I_7,S)=I_8$\\
+		$T(I_7,a)=I_2$\\
+		$T(I_7,[)=I_3$\\
+	%\subsection{Construção dos saltos:}
+\newpage
+\section{Construir conjunto de itens válidos, transições e saltos}
+	\textbf{Gramática:}\\
+	$E::=E+T| \bullet T$\\
+	$T::=T*F|F$\\
+	$F::= (E) | a $\\
+
+	
 \end{document}
