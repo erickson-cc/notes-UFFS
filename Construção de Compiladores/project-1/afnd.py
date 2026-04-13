@@ -1,4 +1,7 @@
-# Autor: Erickson Giesel M�ller
+# Gerar um AFD livre de estados inalcançáveis e mortos
+# Entrada: Arquivo com a relação de tokens e/ou GRs de uma linguagem
+# Saída: AFD e mínimo sem a aplicação de classes de equivalência entre estados.
+# Autor: Erickson Giesel Müller
 # Matrícula: 20230001178
 
 #------------vvvvvvvvv  VARIÁVEIS GLOBAIS  vvvvvvvvv------------
@@ -6,9 +9,7 @@ afnd = {}
 estados_finais = set()      # conjunto para guardar estados finais
 contador_estados = -1        # Variável para gerar nomes de estados (A-B-C-D-E...)
 mapa_gramatica = {"S":"S"}
-rotulos_originais = {}
 arquivo = "fonte.txt"
-entrada = "entrada.txt"
 
 #------------vvvvvvvvv CRIAÇÃO DO AUTÔMATO vvvvvvvvv------------
 def processarGramatica(linha):
@@ -36,7 +37,6 @@ def processarGramatica(linha):
 
         if p == "ε": # Caso seja produção vazia
             estados_finais.add(esquerdo)
-            rotulos_originais[esquerdo] = "Terminal" # colocar no relatorio
             continue
         elif "<" in p and ">" in p: # Caso seja x<X>
             pedacos = p.split("<") # separa o lado esquerdo do direito
@@ -65,7 +65,6 @@ def processarGramatica(linha):
                afnd[esquerdo][simbolo] = []
             afnd[esquerdo][simbolo].append(novo_estado)
             estados_finais.add(novo_estado)
-            rotulos_originais[esquerdo] = "Terminal" # colocar no relatorio
             
 
         else:
@@ -100,7 +99,6 @@ def processarToken(linha):
 
         estado_atual = novo_estado
     estados_finais.add(estado_atual)
-    rotulos_originais[estado_atual] = f"Palavra reservada '{token}'" # colocar no relatorio (guarda a label do estado)
     print(f"Processamento do token '{token}' finalizado.")
 
 def gerarNomeEstado(n):
@@ -179,14 +177,13 @@ def imprimir_automato(automato, finais):
 #------------^^^^^^^^^       IMPRESSÃO     ^^^^^^^^^------------
 #------------vvvvvvvvv    DETERMINIZAÇÃO   vvvvvvvvv------------
 def determinizar(afnd, estados_finais):
-    print("Iniciando determinização do AFND...")
+    print("Iniciando determinização do AFND")
     afd = {}
     estado_inicial = frozenset(['S']) # congela a lista
     fila = [estado_inicial] # fila de processamento de estados que ainda não foram analisados
     estados_processados = set()
     estados_processados.add(estado_inicial) # para evitar loop infinito processando o mesmo estado composto infinitas vezes
     estados_finais_afd = set() # estados finais determinizados
-    rotulos_afd = {} # relatorio, os estados se fundem labelOriginal -> labelComposto
     alfabeto = alfabetoAFND(afnd)
 
     while fila:
@@ -201,10 +198,6 @@ def determinizar(afnd, estados_finais):
             #verifica se o estado composto é final, se algum dos estados do conjunto_atual é final
             if i in estados_finais:
                 estados_finais_afd.add(nome_estado)
-                if i in rotulos_originais: # logica das labels do afd
-                    rotulos_afd[nome_estado] = rotulos_originais[i]
-                    if "Palavra reservada" in rotulos_originais[i]:
-                        break
 
         for letra in alfabeto:
             # percorre cada subestado
@@ -229,7 +222,7 @@ def determinizar(afnd, estados_finais):
                     # marca como visitado e adiciona na fila para ser processado
                     estados_processados.add(novo_estado_composto)
                     fila.append(novo_estado_composto)
-    return afd, estados_finais_afd, rotulos_afd
+    return afd, estados_finais_afd
 
 #------------^^^^^^^^^    DETERMINIZAÇÃO   ^^^^^^^^^------------
 #------------vvvvvvvvv    ESTADO DE ERRO   vvvvvvvvv------------
@@ -252,77 +245,8 @@ def addEstadoErro(afd, alfabeto, estados_finais):
         for letra in alfabeto:
             afd[nome_erro][letra] = [nome_erro]
     #
-    # estados_finais.add(nome_erro) # Removido pois não add o estado de erro ao estado de aceitação
+    estados_finais.add(nome_erro)
     return afd, estados_finais
-
-#------------vvvvvvvvv     ANALISADOR LÉXICO     vvvvvvvvv------------
-def ler_entrada():
-    try:
-        with open(entrada, 'r', encoding='utf-8') as entradaanal:
-            conteudo = entradaanal.read()
-    except FileNotFoundError:
-        print("Erro: O arquivo"+entrada+"não foi encontrado")
-        return
-    return conteudo
-def imprimir_fita(fita):
-    print(f"\nFita: {' '.join(fita)} $")
-def imprimir_ts(tabela_simbolos):
-    print("------ TABELA DE SIMBOLOS ------")
-    print(f"{'Linha':<7} | {'Identificador':<15} | {'Rotulo'}")
-    print("_"*40)
-    for ts in tabela_simbolos:
-        print(f"{ts['linha']:<7} | {ts['identificador']:<15} | {ts['label']}")
-        print("_"*40)
-def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
-    fita = []
-    tabela_simbolos = []
-    linha_atual = 1
-    conteudo = ler_entrada()
-    i = 0
-    tamanho = len(conteudo)
-    while i<tamanho:
-        estado_corrente = "S"
-        while i < tamanho and conteudo[i] in [" ", "\n"]:
-            if conteudo[i] == "\n":
-                linha_atual += 1
-            i += 1
-        # Condição de parada
-        if i>= tamanho:
-            break
-
-        # leitura do token
-        while i < tamanho:
-            simbolo_lex = conteudo[i]
-            if simbolo_lex in [" ", "\n"]:
-                break # fim do token
-            #transição
-            if estado_corrente in afd and simbolo_lex in afd[estado_corrente]:
-                estado_corrente = afd[estado_corrente][simbolo_lex][0]
-                # a linha 219 do código transforma o estado em uma lista, o índice evita analisar a lista inteira
-            else:
-                estado_corrente = "_" # estado de erro se o terminal não tem transição
-            i+= 1
-
-        if estado_corrente not in finais_afd:
-            estado_corrente = "_"  # EC = X pois não final
-
-        fita.append(estado_corrente)
-        
-        # Logica de label na  tabela
-        if estado_corrente == "_":
-            rotulo_final = "Erro"
-        else:
-            rotulo_final = rotulos_afd.get(estado_corrente, "Indefinido")
-
-        tabela_simbolos.append({
-            "linha": linha_atual,
-            "identificador": estado_corrente,
-            "label": rotulo_final
-            })
-    imprimir_fita(fita)
-    imprimir_ts(tabela_simbolos)
-                
-
 
 #------------vvvvvvvvv        MAIN        vvvvvvvvv------------
 
@@ -332,18 +256,20 @@ try:
         for linha in arquivo:
             iterarLinha(linha)
 
-    # print(f"\nEstados finais: {estados_finais}")
-    # imprimir_automato(afnd, estados_finais)
+    print(f"\nEstados finais: {estados_finais}")
+    print("\nAFND:")
+    imprimir_automato(afnd, estados_finais)
     # chamada da det
-    print("AFND Construído")
-    afd, finais_afd, rotulos_afd = determinizar(afnd, estados_finais)
+    afd, finais_afd = determinizar(afnd, estados_finais)
     #chamada estado_erro
     alfabeto_lista = alfabetoAFND(afnd)
     afd, finais_afd = addEstadoErro(afd, alfabeto_lista, finais_afd)
-    print("AFND foi determinizado")
-    # imprimir_automato(afd, finais_afd)
-    # print(f"Estados Finais AFD: {finais_afd}")
-    analisadorLex(entrada, afd, finais_afd, rotulos_afd)
+    print("\n\n----- AFND foi determinizado -----")
+    print("\nAFD:")
+    imprimir_automato(afd, finais_afd)
+    print(f"Estados Finais AFD: {finais_afd}")
     
 except FileNotFoundError:
     print("Erro: O arquivo"+arquivo+"não foi encontrado")
+
+

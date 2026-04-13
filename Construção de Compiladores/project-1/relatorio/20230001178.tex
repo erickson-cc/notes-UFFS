@@ -1,0 +1,57 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Pacotes Básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[main=brazilian, english]{babel}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\geometry{left=3cm, top=3cm, right=2cm, bottom=2cm}
+\usepackage{booktabs}
+
+% --- Informações do Documento ---
+\title{Relatório Construção de um Analisador Léxico}
+\author{Erickson Giesel Müller}
+\date{\today}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty} % primeira página não tem número.
+
+\section{Construção do AFD}
+A construção do automato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}.\\
+se\\
+sai\\
+foi\\
+$S::=f<A>|a<A>|e<A>|i<A>$\\
+$A::=f<A>|a<A>|e<A>|i<A>|\varepsilon$\\
+
+Assim, temos o alfabeto $(\Sigma): \{s, e, a, i, f, o\}$
+
+\begin{minipage}[t]{0.43\textwidth}
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|} 
+    \toprule 
+    & s & e & a & i & f & o \\
+    \midrule 
+    $\to S $   & $\{AC\}$ & I    & I    & I    & $\{FI\}$ & $\_$ \\
+    $\{AC\}$   & $\_$     & B    & D    & $\_$ & $\_$     & $\_$ \\
+    $*B$       & $\_$     & $\_$ & $\_$ & $\_$ & $\_$     & $\_$ \\
+    $D$        & $\_$     & $\_$ & $\_$ & E    & $\_$     & $\_$ \\
+    $*E$       & $\_$     & $\_$ & $\_$ & $\_$ & $\_$     & $\_$ \\
+    $*\{FI\}$  & $\_$     & I    & I    & I    & I        & G    \\
+    $G$        & $\_$     & $\_$ & $\_$ & H    & $\_$     & $\_$ \\
+    $*H$       & $\_$     & $\_$ & $\_$ & $\_$ & $\_$     & $\_$ \\
+    $*I$       & $\_$     & I    & I    & I    & I        & $\_$ \\
+    $\_$       & $\_$     & $\_$ & $\_$ & $\_$ & $\_$     & $\_$ \\
+    \bottomrule 
+\end{tabular}
+\end{minipage} 
+\hfill
+
+
+
+
+
+
+\end{document}
