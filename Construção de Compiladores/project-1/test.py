@@ -4,7 +4,7 @@
 #------------vvvvvvvvv  VARIAVEIS GLOBAIS  vvvvvvvvv------------
 afnd = {}
 estados_finais = set()      # conjunto para guardar estados finais
-contador_estados = -1        # Variavel para gerar nomes de estados (A-B-C-D-E...)
+contador_estados = -1        # variavel para gerar nomes de estados (A-B-C-D-E...)
 mapa_gramatica = {"S":"S"}
 rotulos_originais = {}
 arquivo = "fonte.txt"
@@ -36,7 +36,7 @@ def processarGramatica(linha):
 
         if p == "ε": # Caso seja produçao vazia
             estados_finais.add(esquerdo)
-            rotulos_originais[esquerdo] = "Variavel" # colocar no relatorio
+            rotulos_originais[esquerdo] = "variavel" # colocar no relatorio
             continue
         elif "<" in p and ">" in p: # Caso seja x<X>
             pedacos = p.split("<") # separa o lado esquerdo do direito
@@ -65,7 +65,7 @@ def processarGramatica(linha):
                afnd[esquerdo][simbolo] = []
             afnd[esquerdo][simbolo].append(novo_estado)
             estados_finais.add(novo_estado)
-            rotulos_originais[esquerdo] = "Variavel" # colocar no relatorio
+            rotulos_originais[esquerdo] = "variavel" # colocar no relatorio
             
 
         else:
@@ -100,7 +100,7 @@ def processarToken(linha):
 
         estado_atual = novo_estado
     estados_finais.add(estado_atual)
-    rotulos_originais[estado_atual] = f"Palavra reservada '{token}'" # colocar no relatorio (guarda a label do estado)
+    rotulos_originais[estado_atual] = "palavra reservada" # colocar no relatorio (guarda a label do estado)
     print(f"Processamento do token '{token}' finalizado.")
 
 def gerarNomeEstado(n):
@@ -203,7 +203,7 @@ def determinizar(afnd, estados_finais):
                 estados_finais_afd.add(nome_estado)
                 if i in rotulos_originais: # logica das labels do afd
                     rotulos_afd[nome_estado] = rotulos_originais[i]
-                    if "Palavra reservada" in rotulos_originais[i]:
+                    if "palavra reservada" in rotulos_originais[i]:
                         break
 
         for letra in alfabeto:
@@ -268,11 +268,11 @@ def imprimir_fita(fita):
     print(f"\nFita: {' '.join(fita)} $")
 def imprimir_ts(tabela_simbolos):
     print("------ TABELA DE SIMBOLOS ------")
-    print(f"{'Linha':<7} | {'Id':<4} | {'Rotulo'}")
-    print("_"*40)
+    print(f"{'Linha':<7} | {'Id':<3} | {'Rotulo':<17} | {'Palavra'}")
+    print("_"*46)
     for ts in tabela_simbolos:
-        print(f"{ts['linha']:<7} | {ts['identificador']:<4} | {ts['label']}")
-        print("_"*40)
+        print(f"{ts['linha']:<7} | {ts['identificador']:<3} | {ts['label']:<17} | {ts['palavra']}")
+        print("_"*46)
 def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
     fita = []
     tabela_simbolos = []
@@ -290,6 +290,8 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
         if i>= tamanho:
             break
 
+        inicio_token = i
+
         # leitura do token
         while i < tamanho:
             simbolo_lex = conteudo[i]
@@ -298,10 +300,13 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
             #transicao
             if estado_corrente in afd and simbolo_lex in afd[estado_corrente]:
                 estado_corrente = afd[estado_corrente][simbolo_lex][0]
-                # a linha 219 do codigo transforma o estado em uma lista, o ndice evita analisar a lista inteira
+                # a linha 216 do codigo transforma o estado em uma lista, o ndice evita analisar a lista inteira
             else:
                 estado_corrente = "_" # estado de erro se o terminal nao tem transicao
+                                    # vai seguir no estado _ até encontrar um separador
             i+= 1
+
+        palavra_lida = conteudo[inicio_token:i]
 
         if estado_corrente not in finais_afd:
             estado_corrente = "_"  # EC = X pois nao final
@@ -310,14 +315,19 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
         
         # Logica de label na  tabela
         if estado_corrente == "_":
-            rotulo_final = "Erro"
+            rotulo_final = "erro"
         else:
-            rotulo_final = rotulos_afd.get(estado_corrente, "Indefinido")
+            rotulo_temp = rotulos_afd.get(estado_corrente, "Indefinido")
+            if "variavel" in rotulo_temp:   # variavel
+                rotulo_final = "variavel"
+            else:                           # palavra reservada
+                rotulo_final = rotulo_temp
 
         tabela_simbolos.append({
             "linha": linha_atual,
             "identificador": estado_corrente,
-            "label": rotulo_final
+            "label": rotulo_final,
+            "palavra": palavra_lida
             })
     imprimir_ts(tabela_simbolos)
     imprimir_fita(fita)

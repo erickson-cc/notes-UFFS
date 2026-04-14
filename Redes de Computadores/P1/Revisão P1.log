@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.9)  9 MAR 2026 21:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.6)  13 APR 2026 19:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -69,19 +69,19 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 491 strings out of 469515
- 9121 string characters out of 5470808
+ 491 strings out of 469495
+ 9121 string characters out of 5470099
  439756 words of memory out of 5000000
- 29208 multiletter control sequences out of 15000+600000
+ 29214 multiletter control sequences out of 15000+600000
  632349 words of font info for 55 fonts, out of 8000000 for 9000
- 14 hyphenation exceptions out of 8191
+ 16 hyphenation exceptions out of 8191
  35i,7n,38p,319b,207s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on "Revisão P1.pdf" (2 pages, 74811 bytes).
+Output written on "Revisão P1.pdf" (2 pages, 75619 bytes).
 PDF statistics:
  42 PDF objects out of 1000 (max. 8388607)
  25 compressed objects within 1 object stream

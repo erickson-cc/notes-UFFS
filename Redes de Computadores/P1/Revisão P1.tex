@@ -36,4 +36,7 @@
 		A maioria dos comutadores de pacotes utiliza a transmissão \textit{store-and-forward}. O comutador de pacote (\textit{switch}) deve receber o pacote inteiro antes de poder de poder transmitir o primeiro bit para o enlace de saída. Isso acaba gerando uma fila.
 	\subsection{Encapsulamento}
 		A mensagem (pacote) é enviada na camada de aplicação e é encapsulada para a camada de transporte com o cabeçalho da camada de transporte. Isso é feito para toda a camada até a a camadade enlace. A camada de enlace, com todos os cabeçalhos é enviada até o roteador (?).
+
+	\subsection{Estrutura de segmento TCP}
+		A janela máxima é a do receptor, não a do transmissor.
 \end{document}
