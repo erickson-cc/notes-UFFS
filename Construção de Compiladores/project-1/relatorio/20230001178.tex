@@ -1,6 +1,7 @@
 \documentclass[12pt, a4paper]{article}
 
 % --- Pacotes Básicos ---
+\usepackage{array}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[main=brazilian, english]{babel}
@@ -10,27 +11,46 @@
 \usepackage{booktabs}
 
 % --- Informações do Documento ---
-\title{Relatório Construção de um Analisador Léxico}
+\title{Universidade Federal da Fronteira Sul\\
+Relatório Construção de um Analisador Léxico}
 \author{Erickson Giesel Müller}
 \date{\today}
 
 \begin{document}
 \maketitle
 \thispagestyle{empty} % primeira página não tem número.
+\newpage
 
-\section{Construção do AFD}
-A construção do automato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}.\\
+
+\section{Introdução}
+	O analisador léxico atua como a primeira fase de um compilador. Sua função é ler cada caractere do código bruto, agrupá-los em unidades lógicas com significado, chamadas lexemas, e classificá-los em categorias, chamadas tokens. O algoritmo de reconhecimento gera uma tabela de símbolos, que armazena atributos de cada lexema lido, e uma fita de saída, que representa a ordem de tokens lidos e será usada como entrada para o sintático.
+
+	O presente trabalho tem como objetivo implementar um analisador léxico baseado no autômato finito determinístico (AFD) gerado através de uma biblioteca de tokens e gramáticas regulares. O analisador lê os caracteres em sequência e separa-os em lexemas, após o reconhecimento dos tokens, armazena na tabela de símbolos e acrescenta o identificador do token à fita de saída.
+
+\section{Referencial Teórico}
+	A função de um compilador é traduzir o código-fonte, escrito em linguagem humana, para um programa escrito em linguagem de máquina. A análise léxica separa oa palavras através dos separadores $\\n$ e espaço em branco e avalia se os caracteres digitados formam palavras que pertencem ao alfabeto da linguagem. Caso não reconheça, informa um erro para ser tratado no token.
+
+\section{Implementação e Resultados}
+	A construção do automato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}. A exemplo:\\
+
+\begin{center}
+	\textbf{Arquivo \textit{fonte.txt}}\\
+\begin{tabular}{|>{\raggedright\arraybackslash}p{8.5cm}|} 
+\toprule
 se\\
 sai\\
 foi\\
 $S::=f<A>|a<A>|e<A>|i<A>$\\
 $A::=f<A>|a<A>|e<A>|i<A>|\varepsilon$\\
+\bottomrule
+\end{tabular}
+\\
+\end{center}
 
-Assim, temos o alfabeto $(\Sigma): \{s, e, a, i, f, o\}$
-
-\begin{minipage}[t]{0.43\textwidth}
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|} 
+	Assim, temos o alfabeto $(\Sigma): \{s, e, a, i, f, o\}$ e o seguinte AFD:
+\begin{center}
+	\textbf{Autômato Finito Determinístico}\\
+\begin{tabular}{|>{\raggedright\arraybackslash}p{1cm}|c|c|c|c|c|c|} 
     \toprule 
     & s & e & a & i & f & o \\
     \midrule 
@@ -46,12 +66,8 @@ Assim, temos o alfabeto $(\Sigma): \{s, e, a, i, f, o\}$
     $\_$       & $\_$     & $\_$ & $\_$ & $\_$ & $\_$     & $\_$ \\
     \bottomrule 
 \end{tabular}
-\end{minipage} 
-\hfill
+\end{center}
 
-
-
-
-
+\section{Conclusão e Referências}
 
 \end{document}
