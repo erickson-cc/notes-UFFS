@@ -279,7 +279,6 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
     linha_atual = 1
     conteudo = ler_entrada()
     i = 0
-    mensagem_erro = ""
     tamanho = len(conteudo)
     while i<tamanho:
         estado_corrente = "S"
@@ -292,6 +291,7 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
             break
 
         inicio_token = i
+        indice_erro = -1
 
         # leitura do token
         while i < tamanho:
@@ -303,6 +303,8 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
                 estado_corrente = afd[estado_corrente][simbolo_lex][0]
                 # a linha 216 do codigo transforma o estado em uma lista, o ndice evita analisar a lista inteira
             else:
+                if estado_corrente != "_" and indice_erro == -1:
+                    indice_erro = i # palavra encontrou erro aqui
                 estado_corrente = "_" # estado de erro se o terminal nao tem transicao
                                     # vai seguir no estado _ até encontrar um separador
             i+= 1
@@ -310,13 +312,24 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
         palavra_lida = conteudo[inicio_token:i]
 
         if estado_corrente not in finais_afd:
+            if estado_corrente != "_" and indice_erro == -1:
+                indice_erro = i # palavra encontrou erro no final da palavra
             estado_corrente = "_"  # EC = X pois nao final
 
         fita.append(estado_corrente)
+        mensagem_erro = ""
         
         # Logica de label na  tabela
         if estado_corrente == "_":
             rotulo_final = "erro"
+            if indice_erro != -1:
+                indice_relativo = indice_erro-inicio_token
+                parte_aceita = palavra_lida[:indice_relativo]
+                parte_erro = palavra_lida[indice_relativo:]
+                mensagem_erro = f"{parte_aceita}→{parte_erro}"
+            else: # evitar fallback
+                mensagem_erro = f"→{palavra_lida}"
+
         else:
             rotulo_temp = rotulos_afd.get(estado_corrente, "Indefinido")
             if "variavel" in rotulo_temp:   # variavel
