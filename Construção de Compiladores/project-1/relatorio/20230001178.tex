@@ -19,7 +19,7 @@ Relatório Construção de um Analisador Léxico}
 \begin{document}
 \maketitle
 \thispagestyle{empty} % primeira página não tem número.
-\newpage
+%\newpage
 
 
 \section{Introdução}
@@ -28,8 +28,11 @@ Relatório Construção de um Analisador Léxico}
 	O presente trabalho tem como objetivo implementar um analisador léxico baseado no autômato finito determinístico (AFD) gerado através de uma biblioteca de tokens e gramáticas regulares. O analisador lê os caracteres em sequência e separa-os em lexemas, após o reconhecimento dos tokens, armazena na tabela de símbolos e acrescenta o identificador do token à fita de saída.
 
 \section{Referencial Teórico}
-	A função de um compilador é traduzir o código-fonte, escrito em linguagem humana, para um programa escrito em linguagem de máquina. A análise léxica separa oa palavras através dos separadores $\\n$ e espaço em branco e avalia se os caracteres digitados formam palavras que pertencem ao alfabeto da linguagem. Caso não reconheça, informa um erro para ser tratado no token.
+	A função de um compilador é traduzir o código-fonte, escrito em linguagem humana, para um programa escrito em linguagem de máquina. A análise léxica separa oa palavras através dos caracteres separadores  e avalia se os caracteres digitados formam palavras que pertencem ao alfabeto da linguagem. Caso não reconheça, informa um erro para ser tratado no token.
 
+	Para que o computador consiga reconhecer essas gramáticas, utiliza-se a Teoria dos Autômatos. Inicialmente, as regras formam um AFND, que pode conter ambiguidades e transições vazias ($\varepsilon$). Como algoritmos de reconhecimento exigem previsibilidade, aplica-se a determinização do autômato. No AFD, para cada estado e cada símbolo lido, existe apenas uma transição de destino possível.	
+
+	A análise léxica também é responsável por lidar com entradas inválidas. Caso o algoritmo leia um caractere que não possui transição mapeada no AFD, o autômato é direcionado para um estado de erro. O analisador reporta a falha, insere o rótulo de erro na tabela de símbolos, registra a posição do lexema em que aconteceu o erro léxico e sincroniza a leitura até o próximo delimitador, permitindo que a compilação continue sem interrupções abruptas.
 \section{Implementação e Resultados}
 	A construção do automato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}. A exemplo:\\
 
@@ -67,6 +70,9 @@ $A::=f<A>|a<A>|e<A>|i<A>|\varepsilon$\\
     \bottomrule 
 \end{tabular}
 \end{center}
+
+	A partir da função \textit{analisadorLex()}, o algoritmo de reconhecimento faz a leitura do arquivo \textit{entrada.txt}, analisando as transições de acordo com o AFD gerado.
+	($\textbackslash n$ e espaço em branco)
 
 \section{Conclusão e Referências}
 
