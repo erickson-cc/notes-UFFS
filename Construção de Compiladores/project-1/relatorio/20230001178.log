@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.6)  15 APR 2026 19:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.6)  16 APR 2026 20:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -232,20 +232,21 @@ Overfull \hbox (4.91109pt too wide) in paragraph at lines 65--65
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 75.
 
-[2] (./20230001178.aux)
+[2] [3{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[4] (./20230001178.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 2652 strings out of 469495
- 44492 string characters out of 5470099
- 469898 words of memory out of 5000000
- 31320 multiletter control sequences out of 15000+600000
- 637378 words of font info for 60 fonts, out of 8000000 for 9000
+ 2668 strings out of 469495
+ 44759 string characters out of 5470099
+ 473910 words of memory out of 5000000
+ 31332 multiletter control sequences out of 15000+600000
+ 638365 words of font info for 63 fonts, out of 8000000 for 9000
  16 hyphenation exceptions out of 8191
- 57i,11n,65p,507b,205s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,11n,65p,871b,205s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
@@ -254,11 +255,11 @@ s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
 hare/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf-dist
 /fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf-dist/fonts/type1/pu
 blic/cm-super/sfrm2074.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/s
-fti1200.pfb>
-Output written on 20230001178.pdf (2 pages, 157617 bytes).
+fti1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on 20230001178.pdf (4 pages, 204904 bytes).
 PDF statistics:
- 62 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
+ 80 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

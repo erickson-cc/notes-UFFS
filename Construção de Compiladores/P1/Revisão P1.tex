@@ -412,7 +412,7 @@ $C$&$ C\to A   			$&$		$&$		$&$ C\to A	$&$		$&$		$&$		$&$ C\to exp	$&$		$\\
 		$I_0 =\{S'::=\bullet S\$, S::=\bullet a,S::=\bullet [L]\}$\\
 		$S'\to \bullet $\\
 		\textbf{1-Transição pelo mesmo Sb no estado de origem?}\\
-		\textbf{2-Estado corrente ($\bullet$) precede em N?}\\
+		\textbf{2-Estado corrente ($\bullet$) precede um NT? Se não, não precisa copiar as regras desse não terminal}\\
 		$I_1 =\{S'::=S\bullet \$\}(Completo!)$\\
 		$I_2 =\{S::=a\bullet \}(Completo!)$\\
 		\textbf{3-Estado Corrente ($\bullet$) está no final de algum item válido(produção)? Se sim, esse estado possui um item chamado de "completo" que vai resultar numa ação de redução seguida de um salto.}\\
@@ -443,6 +443,72 @@ $C$&$ C\to A   			$&$		$&$		$&$ C\to A	$&$		$&$		$&$		$&$ C\to exp	$&$		$\\
 	$E::=E+T| \bullet T$\\
 	$T::=T*F|F$\\
 	$F::= (E) | a $\\
+	$I_0 = \{ E' ::= \bullet E \$ , E::= \bullet E+T, E::= \bullet T, T::= \bullet T*F, T::= \bullet F, F::= \bullet (E), F::= \bullet a \}$\\
+	$I_1 = \{E' ::= E \bullet \$, E::= E\bullet +T \}  $ \\
+	$I_2 = \{E::= T\bullet, T::= T\bullet *F\}  $ (Completo) \\
+	$I_3 = \{T::= F \bullet \}  $ (Completo) \\
+	$I_4 = \{F::= (\bullet E), E::= \bullet E+T, E::= \bullet T, T::= \bullet T * F, T::= \bullet F, F::= \bullet (E), F::= \bullet a\}  $ \\
+	$I_5 = \{F::= a\bullet\}  $ (Completo) \\
+	$I_6 = \{E::= E+\bullet T, T::= \bullet T*F, T::= \bullet F, F::= \bullet(E), F::= \bullet a\}  $ \\
+	$I_7 = \{T::= T*\bullet F,F::= \bullet(E), F::= \bullet a\}$ \\
+	$I_8 = \{F::= (E\bullet), E::= E \bullet + T\}  $ \\
+	$I_9 = \{E::= E+T \bullet, T::= T\bullet * F,   $ (Completo) \\
+	$I_{10} = \{T::= T*F \bullet\}  $ (Completo) \\
+	$I_{11} = \{F::= (E)\bullet\}  $ (Completo)\\
 
+\section{Construção da Tabela SLR}
+	Para construir a Tabela SLR precisamos do conjunto de transições, conjunto de saltos, conjunto First e conjunto Follow.
+
+	\textbf{Gramática:}\\
+	$E'::E\$$\\
+	$E::=E+T| \bullet T$\\
+	$T::=T*F|F$\\
+	$F::= (E) | a $\\
+		 Tabela first e follow: \\
+\begin{tabular}{|c|c|c|}
+	& First 		& Follow			\\
+E	& $ (, a	$	& $\$,+,)		$\\
+T	& $ (, a	$	& $ *, \$, +, )		$\\
+F	& $ (, a	$	& $ *, \$, +, )		$\\
+	
+\end{tabular}\\
+	Conjunto de Transições e Saltos:\\
+	$T(I_0,E)=I_1, T(I_0)= I_2, T(I_0,F) = I_3, T(I_0, ()=I_4, T(I_0,a)=I_5$\\
+	$T(I_1,+)= I_6$\\
+	$T(I_2,*)=I_7$\\
+	$T(I_4, *) = I_8, T(4,T)=I_2, T(I_4,F) = I_3, T(I_4,()=I_4, T(I_4,a)=I_5$\\
+	$T(I_6,T)=I_9,T(I_6,F)=I_3,T(I_6,()=I_4,T(I_7,a)=I_5$\\
+	$T(I_7,F) = I_{10}, T(I_7,()=I_4, T(I_7,a)= I_5$\\
+	$T(I_8,)) = I_{11}, T(I_8, +) = I_6$\\
+	$T(I_9,*)=I_7$\\
+
+	Tabela sem operações de redução\\
+	\includegraphics{images/tabela_SLR.png}
+	A operação de redução é apenas para o item completo. Para o estado 2, para $E::T$, nós vamos adicionar na tabela a Redução. Lembrando que o número da redução é referente à ordem das produções da gramática.
+
+\begin{verbatim}
+para I2
+		para E::=T
+		add R2
+		linha 2
+		colunas do Follow (E)
+
+
+para I3
+	para
+	add R4
+	coluna do Follow (T)
+\end{verbatim}
+
+	\includegraphics{images/tabela_SLR_completa.png}\\
+	Incluir Aceite no final de sentença\\
+	\includegraphics{images/tabela_SLR_aceite.png}
+\section{Construir a tabela SLR}
+
+	\textbf{Gramática}\\
+	$S::=<A> <S>|\varepsilon$\\
+	$A::=$ se $cond$ então $<B> |$ enquanto $cond \{<C>\}$\\
+	$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
+	$C::= <A> |$ exp\\
 	
 \end{document}

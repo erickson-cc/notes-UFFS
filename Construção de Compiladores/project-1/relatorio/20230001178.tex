@@ -34,7 +34,7 @@ Relatório Construção de um Analisador Léxico}
 
 	A análise léxica também é responsável por lidar com entradas inválidas. Caso o algoritmo leia um caractere que não possui transição mapeada no AFD, o autômato é direcionado para um estado de erro. O analisador reporta a falha, insere o rótulo de erro na tabela de símbolos, registra a posição do lexema em que aconteceu o erro léxico e sincroniza a leitura até o próximo delimitador, permitindo que a compilação continue sem interrupções abruptas.
 \section{Implementação e Resultados}
-	A construção do automato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}. A exemplo:\\
+	A construção do autômato finito segue as regras determinadas a partir do arquivo \textit{fonte.txt}. A exemplo:\\
 
 \begin{center}
 	\textbf{Arquivo \textit{fonte.txt}}\\
@@ -71,9 +71,48 @@ $A::=f<A>|a<A>|e<A>|i<A>|\varepsilon$\\
 \end{tabular}
 \end{center}
 
-	A partir da função \textit{analisadorLex()}, o algoritmo de reconhecimento faz a leitura do arquivo \textit{entrada.txt}, analisando as transições de acordo com o AFD gerado.
-	($\textbackslash n$ e espaço em branco)
 
-\section{Conclusão e Referências}
+	A partir da função \textit{analisadorLex()}, o algoritmo de reconhecimento faz a leitura do arquivo \textit{entrada.txt}, analisando as transições de acordo com o AFD gerado. Em sua etapa de inicialização, ela carrega o conteúdo bruto do arquivo de entrada e prepara as estruturas de dados fundamentais: uma lista para armazenar a fita de saída e outra para a tabela de símbolos. Utilizando um laço de repetição de controle manual do ponteiro de leitura, o algoritmo inicia a busca por tokens sincronizando o texto. Ele ignora caracteres delimitadores prévios ($\textbackslash n$ e espaço em branco), garantindo que uma variável de contagem seja atualizada para o rastreamento preciso da localização de cada lexema no código-fonte, atualizando também a variável da linha que será guardada na tabela de símbolos.
+
+	Após encontrar o início de uma cadeia válida, a função simula a execução do Autômato Finito Determinístico (AFD). Caractere por caractere, ela verifica as transições possíveis a partir do estado corrente. Se a transição existir, o autômato avança para o próximo estado. Caso o caractere lido não esteja no alfabeto ou force uma transição para o estado de erro, o algoritmo registra o índice exato em que a falha ocorreu, essa posição também é enviada à tabela de símbolos. Nesse cenário defensivo, o analisador continua consumindo e ignorando os caracteres da palavra inválida até encontrar um novo delimitador, impedindo que interrupções por exceção de sistema abortem a compilação.
+
+	O índice em que o erro foi encontrado é armazenado na variável \textit{indice\_relativo}, assim o lexema pode ser recortado em duas partes, \textit{parte\_aceita} e \textit{parte\_erro}, que comporão, separadas por uma seta, a mensagem do erro na tabela de símbolos.
+
+	Ao finalizar a leitura isolada do lexema, o algoritmo verifica se o estado alcançado pertence ao conjunto de estados de aceitação. O identificador validado é então inserido na fita de saída, que servirá de entrada para o analisador sintático. Em paralelo, a tabela de símbolos é construída incorporando os metadados do token.
+
+	Para a demonstração prática dos resultados, utilizou-se um arquivo \textit{entrada.txt} composto por três lexemas distintos: \textit{se}, \textit{f} e \textit{fooi}. O processo de análise iniciou-se com o reconhecimento da palavra reservada \textit{se}, validada através do estado final $B$, seguida pela variável \textit{f}, reconhecida pelo estado $\{FI\}$. Esta etapa inicial confirmou a precisão do AFD em categorizar corretamente tanto cadeias fixas quanto identificadores gerados por regras gramaticais recursivas, separando-os de forma clara na tabela de símbolos.
+
+O teste de robustez do sistema foi realizado com o lexema \textit{fooi}, que não pertence à linguagem. O analisador detectou a falha de transição no segundo caractere 'o', ativando o modo pânico e calculando o \textit{indice\_relativo} para o recorte da mensagem de erro. Como resultado, a tabela de símbolos apresentou a anotação \textit{fo→oi}, isolando visualmente o ponto exato de divergência lógica. Ao final da execução, a fita de saída e a tabela de símbolos consolidaram o sucesso do tratamento de erros e a integridade da extração de metadados necessários para as fases posteriores da compilação.
+\begin{verbatim}
+Fita: B F_I _ $
+------------------------- TABELA DE SIMBOLOS -------------------------
+Linha   | Id  | Rotulo            | Mensagem          | Palavra
+______________________________________________________________________
+1       | B   | palavra reservada |                   | se
+______________________________________________________________________
+2       | F_I | variavel          |                   | f
+______________________________________________________________________
+3       | _   | erro              | fo→oi             | fooi
+______________________________________________________________________
+
+\end{verbatim}
+
+\section{Conclusão}
+	O presente trabalho cumpriu com êxito o objetivo de desenvolver um analisador léxico funcional. Através da aplicação prática de conceitos de Linguagens Formais e Teoria dos Autômatos, foi possível construir um algoritmo capaz de ler dinamicamente especificações de gramáticas regulares, modelar um Autômato Finito Não Determinístico e determinizá-lo para um Autômato Finito Determinístico para o reconhecimento de tokens.
+
+	O grande destaque da implementação está no algoritmo de leitura e no tratamento de erros léxicos. A adoção de um estado de erro, aliada à técnica de recuperação após uma transição não identificada, garantiu que o analisador não sofresse interrupções sistêmicas diante de cadeias inválidas. Além disso, a lógica desenvolvida para rastrear o índice exato de falha dentro de um lexema que deu erro, apontado como mensagem na tabela de símbolos, confere à ferramenta um caráter diagnóstico avançado, fornecendo um feedback preciso ao compilador.
+
+	Por fim, conclui-se que as estruturas de dados geradas ao final do processo atendem plenamente aos requisitos da primeira fase de um compilador. A tabela de símbolos rica em atributos e a fita de saída limpa e validada entregam uma base sólida, isolando a complexidade textual do código-fonte e gerando os insumos exatos e necessários para alimentar as etapas subsequentes, como a análise sintática.
+
+\begin{thebibliography}{9}
+\bibitem{apostila} SCHEFFEL, Roberto M.
+\textit{Apostila Linguagens Formais e Autômatos}.
+\bibitem{aho}
+AHO, A. V.; LAM, M. S.; SETHI, R.; ULLMAN, J. D. \textbf{Compiladores: princípios, técnicas e ferramentas}. 2. ed. São Paulo: Pearson Education do Brasil, 2007.
+
+\bibitem{louden}
+LOUDEN, K. C. \textbf{Compiladores: princípios e práticas}. São Paulo: Thomson Learning, 2004.
+
+\end{thebibliography}
 
 \end{document}

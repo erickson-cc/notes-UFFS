@@ -143,9 +143,9 @@ def alfabetoAFND(afnd):
     return list(alfabeto)
 
 def imprimir_automato(automato, finais):
-    print("-" * 50)
+    print("-" * 70)
     print(f"ESTADO   | TRANSICOES")
-    print("-" * 50)
+    print("-" * 70)
 
     # Ordena para 'S' aparecer primeiro ou ficar alfabetico
     estados_ordenados = sorted(automato.keys())
@@ -174,7 +174,7 @@ def imprimir_automato(automato, finais):
         alinhar_espaco = 5-len(estado) 
         print(f"{nome_formatado}"+" "*alinhar_espaco+f"| {str_transicoes}")
     
-    print("="*50 + "\n")
+    print("="*70 + "\n\n")
 
 #------------^^^^^^^^^       IMPRESSAO     ^^^^^^^^^------------
 #------------vvvvvvvvv    DETERMINIZACAO   vvvvvvvvv------------
@@ -273,14 +273,15 @@ def imprimir_ts(tabela_simbolos):
     for ts in tabela_simbolos:
         print(f"{ts['linha']:<7} | {ts['identificador']:<3} | {ts['label']:<17} | {ts['mensagem']:<17} | {ts['palavra']}")
         print("_"*70)
+
 def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
     fita = []
     tabela_simbolos = []
     linha_atual = 1
-    conteudo = ler_entrada()
-    i = 0
+    conteudo = ler_entrada() # texto bruto de entrada.txt
+    i = 0 # índice de char
     tamanho = len(conteudo)
-    while i<tamanho:
+    while i<tamanho: # percorre conteúdo inteiro
         estado_corrente = "S"
         while i < tamanho and conteudo[i] in [" ", "\n"]:
             if conteudo[i] == "\n":
@@ -295,19 +296,22 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
 
         # leitura do token
         while i < tamanho:
-            simbolo_lex = conteudo[i]
+            simbolo_lex = conteudo[i] # caractere a ser analisado
             if simbolo_lex in [" ", "\n"]:
                 break # fim do token
             #transicao
             if estado_corrente in afd and simbolo_lex in afd[estado_corrente]:
-                estado_corrente = afd[estado_corrente][simbolo_lex][0]
+                prox_estado = afd[estado_corrente][simbolo_lex][0]
+                if prox_estado == "_" and estado_corrente != "_" and indice_erro == -1:
+                    indice_erro = i
+                estado_corrente = prox_estado
                 # a linha 216 do codigo transforma o estado em uma lista, o ndice evita analisar a lista inteira
-            else:
+            else: # tratamento de ERRO por nao ter transicao
                 if estado_corrente != "_" and indice_erro == -1:
-                    indice_erro = i # palavra encontrou erro aqui
+                    indice_erro = i # palavra encontrou ERRO aqui
                 estado_corrente = "_" # estado de erro se o terminal nao tem transicao
                                     # vai seguir no estado _ até encontrar um separador
-            i+= 1
+            i+= 1 # início da próxima letra
 
         palavra_lida = conteudo[inicio_token:i]
 
@@ -320,7 +324,7 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
         mensagem_erro = ""
         
         # Logica de label na  tabela
-        if estado_corrente == "_":
+        if estado_corrente == "_": # Tratamento de ERRO rótulo
             rotulo_final = "erro"
             if indice_erro != -1:
                 indice_relativo = indice_erro-inicio_token
@@ -344,8 +348,8 @@ def analisadorLex(entrada, afd, finais_afd, rotulos_afd):
             "mensagem": mensagem_erro,
             "palavra": palavra_lida
             })
-    imprimir_ts(tabela_simbolos)
     imprimir_fita(fita)
+    imprimir_ts(tabela_simbolos)
                 
 
 
