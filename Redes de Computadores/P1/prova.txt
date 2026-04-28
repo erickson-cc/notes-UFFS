@@ -1,0 +1,4 @@
+1. Considere uma rede com topologia linear, R1->R2->R3->R4, com enlaces de 400 Kbps e atraso de propagação em cada enlace de 5ms1. Considere que os enlaces garantem a menor distância física possível entre os roteadores. Assumindo desprezíveis os tempos de processamento e de espera em filas nos roteadores, responda:
+	a) qual o tempo
+
+
