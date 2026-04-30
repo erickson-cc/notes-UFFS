@@ -11,3 +11,8 @@ Gestão de Projetos (Metodologias Ágeis) garante que o produto seja feito no pr
 Trabalho em equipe e gestão de pessoas.
 Padrão e qualidade de software.
 Processo (repetir padrão de produção) x Produto (qualidade)
+# Aula Sprint 0
+Entregar as definições tecnológicas para o desenvolvimento
+Definir STACK
+Criar o repositório
+Definir matriz de conhecimento para cada membro da equipe
