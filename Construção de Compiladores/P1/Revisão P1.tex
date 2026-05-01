@@ -503,6 +503,34 @@ para I3
 	\includegraphics{images/tabela_SLR_completa.png}\\
 	Incluir Aceite no final de sentença\\
 	\includegraphics{images/tabela_SLR_aceite.png}
+
+\newpage
+\begin{verbatim}
+0						a * a + a $ 					(e5)
+a5						* a + a $				 	(r6)
+0											(reduz 2)
+0F											(salto)
+0F3						* a + a $					(r4)
+0											(reduz 2)
+0T											(salto)
+0T2	
+0T2*7						a + a $	
+0T2*7a5						+ a $				 (r6)
+0T2*7											(reduz 2)
+0T2*7F											(salto)
+0T2*7F10					+ a $				 (r3)
+...						...
+0T2						+ a $				 (r2)
+...						...
+0E1						+ a $				 (e6)
+0E1+6						a $				 (e5)
+0E1+6a5						$				 (r6)
+0E1+6F3						$				 (r4)
+0E1+6T9						$				 (r1) % reduz sempre o dobro
+0						$
+0E1						AC
+
+\end{verbatim}
 \section{Construir a tabela SLR}
 
 	\textbf{Gramática}\\
@@ -510,5 +538,119 @@ para I3
 	$A::=$ se $cond$ então $<B> |$ enquanto $cond \{<C>\}$\\
 	$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
 	$C::= <A> |$ exp\\
-	
+
+\newpage
+\section{Construir a tabela SLR}
+	Gramática\\
+	$S::=$ enq opl faça $\{A\}$ | se opl então $\{A\}$\\
+	$A::=$ $S$ | exp\\
+Reconhecer cadeia:
+	Conjunto de Transições e Saltos:\\
+	$T(I_0,E)=I_1, T(I_0)= I_2, T(I_0,F) = I_3, T(I_0, ()=I_4, T(I_0,a)=I_5$\\
+	$T(I_1,+)= I_6$\\
+	$T(I_2,*)=I_7$\\
+	$T(I_4, *) = I_8, T(4,T)=I_2, T(I_4,F) = I_3, T(I_4,()=I_4, T(I_4,a)=I_5$\\
+	$T(I_6,T)=I_9,T(I_6,F)=I_3,T(I_6,()=I_4,T(I_7,a)=I_5$\\
+	$T(I_7,F) = I_{10}, T(I_7,()=I_4, T(I_7,a)= I_5$\\
+	$T(I_8,)) = I_{11}, T(I_8, +) = I_6$\\
+	$T(I_9,*)=I_7$\\
+
+	Tabela sem operações de redução\\
+	\includegraphics{images/tabela_SLR.png}
+	A operação de redução é apenas para o item completo. Para o estado 2, para $E::T$, nós vamos adicionar na tabela a Redução. Lembrando que o número da redução é referente à ordem das produções da gramática.
+
+\begin{verbatim}
+para I2
+		para E::=T
+		add R2
+		linha 2
+		colunas do Follow (E)
+
+
+para I3
+	para
+	add R4
+	coluna do Follow (T)
+\end{verbatim}
+
+	\includegraphics{images/tabela_SLR_completa.png}\\
+	Incluir Aceite no final de sentença\\
+	\includegraphics{images/tabela_SLR_aceite.png}
+
+\newpage
+\begin{verbatim}
+0						a * a + a $ 					(e5)
+a5						* a + a $				 	(r6)
+0											(reduz 2)
+0F											(salto)
+0F3						* a + a $					(r4)
+0											(reduz 2)
+0T											(salto)
+0T2	
+0T2*7						a + a $	
+0T2*7a5						+ a $				 (r6)
+0T2*7											(reduz 2)
+0T2*7F											(salto)
+0T2*7F10					+ a $				 (r3)
+...						...
+0T2						+ a $				 (r2)
+...						...
+0E1						+ a $				 (e6)
+0E1+6						a $				 (e5)
+0E1+6a5						$				 (r6)
+0E1+6F3						$				 (r4)
+0E1+6T9						$				 (r1) % reduz sempre o dobro
+0						$
+0E1						AC
+
+\end{verbatim}
+\section{Construir a tabela SLR}
+
+	\textbf{Gramática}\\
+	$S::=<A> <S>|\varepsilon$\\
+	$A::=$ se $cond$ então $<B> |$ enquanto $cond \{<C>\}$\\
+	$B::= \{<C>\} | \{<C>\} $ else $\{<C>\}$\\			
+	$C::= <A> |$ exp\\
+
+\newpage
+\section{Construir a tabela SLR}
+	Gramática\\
+	$S::=$ enq opl faça $\{A\}$ | se opl então $\{A\}$\\
+	$A::=$ $S$ | exp\\
+Reconhecer cadeia:
+\begin{verbatim}
+	enq opl faça {
+		se opl então {exp}
+	}
+\end{verbatim}
+		 Tabela first e follow: \\
+\begin{tabular}{|c|c|c|}
+	& First 			& Follow			\\
+	S	& $ enq, se	$		& $ \$, \}		$\\
+	A	& $ enq, se, exp	$	& $ \}		$\\
+\end{tabular}\\
+	Conjunto de Transições e Saltos:
+	$T(I_0,S)=I_1$\\
+	$T(I_0,enq)=I_2$\\
+	$T(I_0,se)=I_3$\\
+	$T(I_2,opl)=I_4$\\
+	$T(I_3,opl)=I_5$\\
+	$T(I_4,faca)=I_6$\\
+	$T(I_5,entao)=I_7$\\
+	$T(I_6,\{)=I_8$\\
+	$T(I_7,\{)=I_9$\\
+	$T(I_8,A)=I_{10}$\\
+	$T(I_8,S)=I_{11}$\\
+	$T(I_8,exp)=I_{12}$\\
+	$T(I_8,enq)=I_2$\\
+	$T(I_8,se)=I_3$\\
+	$T(I_9,A)=I_{13}$\\
+	$T(I_9,S)=I_{11}$\\
+	$T(I_9,exp)=I_{12}$\\
+	$T(I_9,enq)=I_2$\\
+	$T(I_9,se)=I_3$\\
+	$T(I_{10},\})=I_{14}$\\
+	$T(I_{13},\})=I_{15}$\\
+\includegraphics[scale=0.8]{images/tabela-exercicio.png}
+\end{document}
 \end{document}
