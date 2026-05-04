@@ -1,46 +1,74 @@
-1. Considere uma rede com topologia linear, R1->R2->R3->R4, com enlaces de 400 Kbps e atraso de propagação em cada enlace de 5ms1. Considere que os enlaces garantem a menor distância física possível entre os roteadores. Assumindo desprezíveis os tempos de processamento e de espera em filas nos roteadores, responda:
+1. Considere uma rede com topologia linear, R1->R2->R3->R4, com enlaces de 400 Kbps e atraso de propagação em cada enlace de 5ms. Considere que os enlaces garantem a menor distância física possível entre os roteadores. Assumindo desprezíveis os tempos de processamento e de espera em filas nos roteadores, responda:
 	a) Qual o tempo total para envio de um pacoto de 2000 bytes de R1 para R4 assumindo comutação de pacotes (i.e., armazena e reenvia). Apresente o cálculo detalhado.
+	# Tamanho: 2000 bytes = 16000 bits
+	# enlace: 400.000 bits/s
+	# atraso: 5ms
+	# Tprop = 5*3 15 ms
+	# Ttrans= 3*(16.000/400.000)=120 ms
+	# Ttotal = 135 ms
+
+
 	b) Assumindo a possibilidade de comutação de circuito entre R1 e R4, calcule o tempo total para envio de um pacote de 2000 bytes de R1 para R4. Apresente o cálculo detalhado.
+	# Tprop = 5*3 = 15ms
+	# Ttrans = 1.(16.000/400.000) = 40ms
+	# Ttotal = 15ms
 
 2. Network Kid (NK) se considera um dos maiores especialistas do mundo em redes de computadores, NK defende a ideia de que se todos os enlaces de comunicação na Internet não forem mais suscetíveis a erros de transmissão resultantes de interferência, pode-se omitir a transmissão confiável do TCP, tornando-o assim mais "leve", NK está certo? Explique.
+	# NK está errado pois essa condição se aplica apenas ao enlace, o TCP ainda seria necessário para o controle de congestionamento e controle de fluxo. O TCP oferece confiabilidade fim-a-fim.
+
 
 3. NK afirma que se triplicássemos o quantitativo de servidores DNS raiz não haveria mais necessidade dos demais níveis de servidores DNS (i.e., por domínio, subdomínios, locais etc.), facilitando assim o gerenciamento global do DNS, NK está certo? Justifique sua resposta.
+	# NK está errado, triplicar o quantitativo de servidores DNS raiz e eliminar os demais níveis iria resultar num gargalo de transmissão nesses servidores, que não dariam conta da demanda de acesso. A vantagem da estrutura de árvore dos servidores DNS é que os servidores raiz não precisam armazenar todos os endereços dos servidores de nível inferior. Portanto, não são acessados 100% das vezes. Possuir apenas um nível de servidores DNS resultaria em uma busca mais lenta e a atualização dos bancos de dados mais lenta. Também resultaria num atraso de propagação, pois não conseguiríamos distribuir 3 vezes a quantidade de servidores raiz por todo o planeta e manter a velocidade de acesso aos servidores da ponta (autoritativos) que temos hoje.
+
+
 
 4. NK desenvolveu sua própria variante do protocolo TCP para cenários com elevada perda de pacotes. A solução dele é mais conservadora do que o TCP clássico, pois adota janela de transmissão de tamanho zero na etapa de partida lenta (slow start). A solução de NK é de fato mais adequada para o cenário em questão? Explique.
+	# Não, como na etapa de partida lenta a janela de transmissão DOBRA DE TAMANHO a cada ACK recebido, o novo TCP de NK não só não conseguiria dobrar o tamanho da janela de transmissão como nem conseguiria enviar pacotes.
+
+		
 
 5. NK afirma que, devido à ausência de controle de fluxo no protocolo UDP, não há possibilidade de se oferecer serviços com garantia de banda e atraso na internet. NK está certo? Explique.
+	# NK está errado novamente, o protocolo UDP oferece garantia de banda apesar de não ter controle de fluxo. Não sei o que é atraso na internet. Garantia de atraso significa que o pacote não levará mais de X segundos para chegar.
 
-6. NK implementou um protocolo que incorpora a solução de Repetição Seletiva (SRP) como mecanismo de entrega confiável. Na sua solução, os pacotes são numerados (i.e., números de sequêcia) utilizando um campo de 8 bits no cabeçalho. NK limitou o tamanho máximo das janelas de transmissão e recepção em 132 pacotes. A decisão de NK garante que o SRP funcione corretamente nesse cenário? Explique.
+
+
+6. NK implementou um protocolo que incorpora a solução de Repetição Seletiva (SRP) como mecanismo de entrega confiável. Na sua solução, os pacotes são numerados (i.e., números de sequência) utilizando um campo de 8 bits no cabeçalho. NK limitou o tamanho máximo das janelas de transmissão e recepção em 132 pacotes. A decisão de NK garante que o SRP funcione corretamente nesse cenário? Explique.
+	# N = 256
+	# tam = 132
+	# N/2 = 128
+	# 132 > 128
+	# Portanto, NK não está correto pois o tamanho máximo da janela detransmissão excede a metade da espaço de endereçamento dos números de sequência. Se a janela for maior que a metade do espaço de sequência, o receptor pode não conseguir distinguir se um pacote recebido é uma retransmissão de algo que ele já aceitou ou se é um pacote novo que "deu a volta" no contador de sequências.
+
 
 7. Assuma o protocolo TCP com retransmissão rápida e Treshold inicial de 22 segmentos. Mostre a evolução da janela de congestionamento em função da rodada de transmissão (i.e., para cada rodadad apresente o valor do tamanho da janela e treshold, utilizando-se da tabela abaixo e ASSUMINDO JANELA=1 PARA RODADA =1) considerando os seguintes eventos:
 	- Logo após a oitava rodada, a fonte assume a perda de segmento por um esgotamento de temporização (timeout);
-	- Logo após a décima séitma rodada, a fonte assume a perda de segmento devido a recepção de três confirmações duplicadas;
+	- Logo após a décima sétima rodada, a fonte assume a perda de segmento devido a recepção de três confirmações duplicadas;
 	- Logo após a vigésima segunda rodada, a fonte assume a perda de segmento devido a recepção de três confirmações duplicadas;
 	- Após a vigésima quinta rodada a conexão TCP é encerrada.
 
 |    RODADA	|    JANELA	|   THRESHOLD	|
-|     01	|		|		|
-|     02	|		|		|
-|     03	|		|		|
-|     04	|		|		|
-|     05	|		|		|
-|     06	|		|		|
-|     07	|		|		|
-|     08	|		|		|
-|     09	|		|		|
-|     10	|		|		|
-|     11	|		|		|
-|     12	|		|		|
-|     13	|		|		|
-|     14	|		|		|
-|     15	|		|		|
-|     16	|		|		|
-|     17	|		|		|
-|     18	|		|		|
-|     19	|		|		|
-|     20	|		|		|
-|     21	|		|		|
-|     22	|		|		|
-|     23	|		|		|
-|     24	|		|		|
-|     25	|		|		|
+|     01	|	1	|	22	|
+|     02	|	2	|	22	|
+|     03	|	4	|	22	|
+|     04	|	8	|	22	|
+|     05	|	16	|	22	|
+|     06	|	22	|	22	|
+|     07	|	23	|	22	|
+|     08	|	24	|	22	|
+|     09	|	1	|	12	|
+|     10	|	2	|	12	|
+|     11	|	4	|	12	|
+|     12	|	8	|	12	|
+|     13	|	12	|	12	|
+|     14	|	13	|	12	|
+|     15	|	14	|	12	|
+|     16	|	15	|	12	|
+|     17	|	16	|	12	|
+|     18	|	8	|	8	|
+|     19	|	9	|	8	|
+|     20	|	10	|	8	|
+|     21	|	11	|	8	|
+|     22	|	12	|	8	|
+|     23	|	6	|	6	|
+|     24	|	7	|	6	|
+|     25	|	8	|	6	|
