@@ -1,0 +1,1893 @@
+1
+
+UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+INSTITUTO DE FILOSOFIA E CIÊNCIAS HUMANAS
+DEPARTAMENTO DE HISTÓRIA
+
+Jussara Costa Curta
+
+CONTINUIDADE E MUDANÇA DO TERRITÓRIO KAINGANG
+DO RIO GRANDE DO SUL:
+um estudo de caso do aldeamento de Nonoai
+
+Porto Alegre
+2012
+
+
+2
+
+Jussara Costa Curta
+
+CONTINUIDADE E MUDANÇA DO TERRITÓRIO KAINGANG
+DO RIO GRANDE DO SUL:
+um estudo de caso do aldeamento de Nonoai
+
+Trabalho de Conclusão apresentado à
+comissão de Graduação do Curso de em
+História – Licenciatura do Departamento de
+História do Instituto de Filosofia e Ciências
+Humanas da Universidade Federal do Rio
+Grande do Sul, como requisito parcial e
+obrigatório para obtenção do título de
+Licenciatura em História
+Orientadora:
+Profa. Dra. Adriana Schmidt Dias
+
+
+3
+
+Jussara Costa Curta
+
+CONTINUIDADE E MUDANÇA DO TERRITÓRIO KAINGANG
+DO RIO GRANDE DO SUL:
+um estudo de caso do aldeamento de Nonoai
+
+Aprovada em Porto Alegre, 20 de dezembro de 2012.
+
+___________________________________________________________________
+Profa. Dra. Adriana Schmidt Dias – UFRGS
+___________________________________________________________________
+Prof. Dr. Mathias Seibel Luce – UFRGS
+___________________________________________________________________
+Prof. Dr. Jonas Gregório de Souza – UFRGS
+___________________________________________________________________
+
+
+4
+
+RESUMO
+
+Através de um estudo de caso do aldeamento de Nonoai, localizado no Norte do
+Estado do Rio Grande do sul, usando como marco temporal o período de 1848 a
+1889, pretendemos estudar o processo de perda do território nativo Kaingang na
+Província do Rio Grande do Sul. Paralelamente a isso, visamos conhecer a
+concepção de território nativo e procurar quais as estratégias Kaingang para a
+manutenção do mesmo. Analisamos fontes bibliográficas que tratam acerca da
+história das relações entre indígenas e ocidentais a partir de novas abordagens,
+especialmente a etnohistória e a etnologia.
+Kaingang. Aldeamentos. Conflitos. Nonoai. Negociação.
+
+
+5
+
+SUMÁRIO
+
+INTRODUÇÃO..............................................................................................................6
+1 A HISTÓRIA KAINGANG ANTERIOR A CHEGADA DO EUROPEU.....................8
+1.1 AS ORIGENS PRÉ-HISTÓRICAS DOS JÊ MERIDIONAIS ATRAVÉS DA
+LINGUÍSTICA................................................................................................................8
+1.2 CONHECENDO OS JÊ MERIDIONAIS A PARTIR DA ARQUEOLOGIA..........11
+2 A HISTÓRIA DOS KAINGANG DO SÉCULO XVI AO XIX....................................16
+2.1 AS DIVERSAS DENOMINAÇÕES PARA OS JÊ MERIDIONAIS.......................16
+2.2 MODO DE VIDA DOS JÊ MERIDIONAIS............................................................18
+2.3 O AMBIENTE E A SOBREVIVÊNCIA DO JÊ MERIDIONAIS.............................20
+3 A TERRA KAINGANG NO SÉCULO XIX E XX.....................................................23
+3.1 CONCEPÇÕES DE TERRITÓTIO NATIVO KAINGANG NA ETNOGRAFIA.....23
+3.2 FALSAS IDEIAS PARA JUSTIFICAR A EXPROPRIAÇÃO DAS TERRAS DOS
+NATIVOS.....................................................................................................................26
+3.3 O SÉCULO XIX E A QUESTÃO FUNDIÁRIA....................................................28
+4 AS AÇÕES DOS KAINGANG FRENTE A EXPROPRIAÇÃO DE SUAS
+TERRAS..................................................................................................................... 33
+4.1 O ALDEAMENTO DE NONOAI............................................................................33
+4.2
+
+CONFLITOS
+
+E
+
+RESISTÊNCIA
+
+FRENTE
+
+À
+
+EXPROPRIAÇÃO
+
+DO
+
+TERRITÓRIO.............................................................................................................35
+4.3 ALIANÇAS, COLABORACIONISMO E ESTRATÉGIAS NA DEFESA DO
+TERRITÓRIO..............................................................................................................40
+CONCLUSÃO.............................................................................................................45
+REFERÊNCIAS...........................................................................................................48
+
+
+6
+
+INTRODUÇÃO
+
+A ocorrência de fatos atuais para o reconhecimento e demarcação de
+territórios indígenas chamou minha atenção para a questão das terras indígenas.
+Pretendo com este trabalho conhecer a concepção de território nativo, assim como
+estudar o processo de expropriação dos Kaingang de seus territórios tradicionais
+após a colonização. Viso estudar as ações promovidas pelos mesmos pela defesa
+de suas terras.
+A metodologia utilizada neste trabalho consiste na análise de estudos
+bibliográficos que congregaram dados históricos, etnográficos, arqueológicos e
+linguísticos referentes aos grupos Jê do Sul do Brasil. Também é utilizado como
+referencia a obra Apontamentos sobre os indígenas selvagens da nação Coroados
+dos matos da Província do Rio Grande do Sul, uma compilação das observações do
+engenheiro Alphonse Mabilde, resultado de sua experiência entre os índios
+coroados, entre 1836 e 1866.
+Durante o século XIX o Rio Grande do Sul passou por mudanças em seu
+povoamento. A partir da década de 1840, com a criação dos aldeamentos, o
+território dos Kaingang sofreu transformações com a chegada do colono europeu. A
+ocupação do colono, apoiada pelo Estado, resultou na expulsão do indígena de seu
+território e estabeleceu uma situação de conflito muitas vezes provocada pelos
+interesses dos colonizadores.
+Neste trabalho pretendo estudar, tendo como estudo de caso, o processo de
+formação do aldeamento Kaingang de Nonoai na década de 1850. Dentre outros
+aldeamentos organizados no mesmo período pelo governo provincial para liberar as
+terras para a colonização o meu interesse no núcleo de Nonoai deve-se ao fato de
+que este aldeamento foi um dos que mais ações e reações promoveram frente à
+perda do território tradicional, pela defesa das terras nativas. Definiu-se como marco
+inicial o ano de 1848 por abarcar o início do processo do aldeamento Kaingang em
+Nonoai e o ano de 1889 por ser o fim do período Imperial. A documentação referente
+aos aldeamentos dos indígenas no período estudado trata de diversos aspectos
+referentes à criação do aldeamento de Nonoai, desde questões de terras até os
+conflitos existentes nas aldeias.
+
+
+7
+
+O primeiro capítulo visa estabelecer uma revisão acerca da origem dos
+Kaingang, tendo como ponto de partida, em um primeiro momento, a linguística.
+Posteriormente, para conhecer aspectos referentes ao território original dos
+Kaingang que ocupavam o Planalto Meridional, fazemos uso de estudos
+arqueológicos.
+A partir da revisão bibliográfica a respeito da história e formação dos
+Kaingang, abordaremos, no segundo capítulo, um recorte temporal específico (séc.
+XVI – XIX), objetivando apresentar as diversas nomeações para designar os Jê
+meridionais, sua maneira de constituir-se no território e o modo como sobreviviam
+em seu ambiente.
+No terceiro capítulo daremos atenção à questão da terra. Estruturaremos a
+abordagem focando, inicialmente, as concepções de território nativo Kaingang para
+a etnografia. Depois, visamos expor algumas falsas justificativas para a expropriação
+do território Kaingang, no século XIX assim como verificar os efeitos da Lei de
+Terras de 1850 sobre os territórios indígenas.
+No quarto e último capítulo, através de um estudo de caso sobre o
+aldeamento de Nonoai, com base em fontes documentais primárias e, também,
+fontes secundárias, procuramos entender as ações promovidas pelos Kaingang
+frente à expropriação de suas terras.
+
+
+8
+
+A HISTÓRIA KAINGANG ANTERIOR A CHEGADA DO EUROPEU
+1.1 AS ORIGENS PRÉ-HISTÓRICAS DOS JÊ MERIDIONAIS ATRAVÉS DA
+LINGUÍSTICA
+
+Francisco Silva Noelli (2000) em seu texto “Repensando os Rótulos e a
+História dos Jê do Sul a partir de uma Interpretação Interdisciplinar” discute a
+respeito do conjunto de informações sobre os Jê do Sul. “Do meu ponto de vista,
+apesar de inúmeros problemas existentes, a questão dos Jê do Sul do Brasil está
+definida em termos de continuidade histórica”(NOELLI, 2000, p. 27). Ainda segundo
+este autor, ao se referir à origem e expansão dos Jê para o sul, leva em
+consideração o conjunto de dados linguísticos, biológicos e antropológicos que
+devem ser analisados comparativamente dentro de um conjunto cultural mais amplo,
+nesse caso, no âmbito do tronco linguístico Macro-Jê e da cultura Jê, refletindo as
+posições e discussões de etnólogos e linguistas.
+Em relação à classificação linguística, os Kaingang fazem parte do Tronco
+Linguístico Macro-Jê, dentro do qual constituem a Família Jê. De acordo com Urban
+(1992) os povos Jê do sul são conhecidos historicamente como Kaingang 1 e
+Xokleng2, de matriz cultural Macro-Jê, falantes de línguas distintas da família Jê e
+originários do Centro-Oeste do Brasil. Segundo o
+
+autor, este grupo Jê teria se
+
+originado em algum lugar entre as nascentes dos Rios São Francisco e Araguaia,
+possivelmente nas proximidades de um grupo Jê Central atualmente extinto,
+conhecido como Xakriabá.
+Davis e Rodrigues estabelecem as relações entre as línguas da família
+linguística Jê do tronco Macro-Jê. Estes autores colocam os Kaingang no conjunto
+das línguas do grupo Akwén (Xakriabá, Xavante e Xerente) e a língua Apinayé,
+estabelecidas nos Estados de Minas Gerais, Mato Grosso e Goiás. Ao estudar o
+mapa de distribuição dessas línguas conforme Nimuendaju chega-se à conclusão
+1
+
+A denominação “Kaingang” define genericamente e ao mesmo tempo a população e o nome da
+língua por eles falada.
+2
+Entre os Kaingang e Xokleng ainda não foi reconhecida distinção nos registros arqueológicos, mas
+existem claras diferenças linguísticas, sociológicas, biológicas e etnográficas entre esses dois povos
+Jê (NOELLI, 2000).
+
+
+9
+
+que elas se localizam desde o Brasil Central, nas bacias do rio Tocantins (Xerente) e
+Araguaia (Xavante) e, também, nos seus baixos cursos (Apinayé), na área do divisor
+de águas das bacias do Tocantins, São Francisco e Paraná (DAVIS, 1966;
+RODRIGUES, 1986 apud NOELLI, 2000).
+Conforme Urban (1992), nos dias atuais é comum fazer-se uma distinção
+entre a família linguística Jê e o tronco linguístico Macro-Jê. Segundo este autor, se
+imaginarmos uma árvore, a família Jê representaria um ramo relativamente recente
+que se separou há uns 3 mil anos ou mais, a julgar pelas semelhanças internas
+entre as línguas Jê atualmente encontradas. No caso do Tronco Macro-Jê, 3 trata-se
+de relações mais distantes, datando provavelmente de uns 5 ou 6 mil anos pelo
+menos. O autor ainda expõe que toda a rede de línguas geneticamente filiadas ao
+tronco Macro-Jê está concentrada na parte oriental e central do planalto brasileiro.
+Segundo Noelli, a partir de um conjunto de dados linguísticos:
+Urban propôs um modelo de árvore genealógica Macro-Jê, sugerindo os
+processos de separação e diferenciação entre as línguas. A primeira
+separação teria acontecido entre os Jê meridionais (Kaingang e Xokleng),
+iniciando seu deslocamento para o Sul do Brasil, sobre os territórios do
+Planalto Brasileiro (NOELLI, 2000, p. 31).
+
+Segundo Urban (1992), os Jê teriam iniciado este processo migratório em
+direção ao sul, há uns 3 mil anos atrás, mas não se tem ideia de quando teriam
+chegado a região que atualmente ocupam no sul do Brasil. O autor também informa
+que tampouco se sabe porque migraram, embora um estudo do relevo geográfico
+mostre que se dirigiram a uma região de planalto semelhante ao seu habitat
+originário4. De acordo com o autor, o habitat das populações Jê era o planalto
+brasileiro e, se olharmos para a rede mais ampla dos povos Macro-Jê, veremos que
+esse padrão de adaptação ao meio se manteve. O autor, ancorado em estudos
+linguísticos, ainda informa que:
+O método comparativo permite reconstruir muito das palavras que faziam
+parte do vocabulário de línguas faladas há 2 ou 3 mil anos, ou até antes.
+Por exemplo, temos uma certeza considerável de que a palavra meñ ou
+algo muito parecido era utilizado para “mel” por falantes do Brasil Central,
+vivendo em algum lugar entre os rios São Francisco e Tocantins, há uns
+3
+
+No caso do Macro-Jê incluindo Kamakã, Botocudo, Pataxó, Puri, Kariri, Guató, e possivelmente,
+Bororo e Fulniô (CUNHA, 1992).
+4
+A observação de Urban sobre o fato de que migraram para regiões de relevo semelhante pode ser
+comprovada ainda hoje nas reservas atuais, que são um fragmento dos antigos territórios
+(TOMMASINO, 1995).
+
+
+10
+
+dois ou três mil anos. Podemos reconstruir essa palavra através das línguas
+Jê atuais, cuja distribuição sugere uma origem naquela região (URBAN
+1992, p. 89).
+
+Embora o autor entenda que as causas da migração dos Jê meridionais para
+o planalto brasileiro não sejam conhecidas pode-se levar em consideração a
+hipótese de José Brochado5 (1984). Segundo este autor, a partir de 5.000 anos
+atrás, as migrações populacionais da borda sul da Amazônia rumo ao sul do
+continente seriam derivadas de um grande aumento populacional que teria
+expulsado várias levas de migrantes, não só aqueles filiados ao tronco linguístico
+Tupi-guarani, mas também populações falantes da língua Jê, localizadas a oeste do
+sul da Amazônia e a leste desta área (BROCHADO, 1984 apud NOELLI 2000).
+Conforme Mota (2000) apesar de estudos linguísticos e dos esforços da
+arqueologia e da etno-história em buscar respostas sobre a presença pré-cabralina
+dos Kaingang no Sul do Brasil, muitas perguntas continuam sem resposta e
+demandam esforços conjuntos de pesquisadores na elaboração de projetos
+interdisciplinares sobre a presença dessas populações. Segundo este autor,
+trabalhando com a hipótese de que os grupos Jê se deslocaram do Brasil Central
+para o Sul (MOTA, 2000, p.189):
+Se confirmada a afirmação - da linguística e da arqueologia – de que os
+povos Jê migraram das áreas de cerrados do Brasil Central para o Sul,
+podemos atentar para a hipótese - a se ser confirmada por novas pesquisas
+arqueológicas - de que eles vieram seguindo um padrão de ocupação
+semelhante ao que tinham na sua região de origem, isto é primeiro
+ocuparam as áreas de cerrados, faxinais e campos das terras mais altas, e
+depois se espalharam para as áreas de florestas e vales dos médios e
+grandes rios. E ao chegarem ao sul do rio Paranapanema e oeste do rio
+Itararé seguiram o mesmo padrão de ocupação em direção ao Sul e
+Sudoeste, cruzando os rios Goio-Kovó (Iguaçu) e Goio-en (Uruguai) e
+chegando até o noroeste do Rio Grande do Sul (MOTA, 2000, p.189).
+
+Mota (2000) corrobora a ideia de que estas populações de língua Jê
+habitavam os planaltos entre as nascentes dos rios São Francisco e Araguaia, no
+Brasil central, e se separaram das outras populações de língua Jê, migrando para o
+Sul.
+
+5
+
+BROCHADO, José P. An ecological modelo f the spread of potter and agriculture into Easterno South
+America. Urbana- Champaign, 1984. TESE (Doutorado em Antropologia), University of lllinois at
+Urbana- Champaign.
+
+
+11
+
+1.2 CONHECENDO OS JÊ MERIDIONAIS A PARTIR DA ARQUEOLOGIA
+Segundo Prous (1992), os primeiros dados sobre os grupos indígenas préhistóricos do Planalto do Rio Grande do Sul foram gerados graças aos
+levantamentos feitos pelos pesquisadores relacionados ao Programa Nacional de
+Pesquisas Arqueológicas, o PRONAPA, entre os anos de 1965 e 1971. Este era um
+projeto de pesquisa montado em colaboração com o Instituto do Patrimônio Histórico
+e Artístico Nacional (IPHAN) e o Smithsonian Institution, cujo objetivo principal era
+promover pesquisas no território brasileiro visando elaborar, da maneira mais rápida
+possível, um quadro geral das culturas pré-históricas brasileiras .
+As primeiras pesquisas arqueológicas no Brasil, realizadas até o início da
+década de 1980, foram efetivadas de acordo com a filosofia de trabalho
+desenvolvida pelo Pronapa, ou seja, de efetuar prospecções com coleta de material
+em superfície e poucas escavações. O objetivo era verificar a distribuição geográfica
+de vestígios arqueológicos e as cronologias correspondentes. Para Prous (1992),
+estes estudos apesar de propiciarem uma visão geral sobre as ocupações précoloniais das áreas, mostravam-se ainda superficiais, pois se limitavam a descrever
+os achados e a enquadrá-los nestas formas de classificação .
+Trabalhos arqueológicos recentes de pesquisadores na região do Planalto Sul
+Brasileiro procuraram novas propostas interpretativas para o estudo das relações
+entre sítios. Essas pesquisas deixaram claro que a ocupação pré-colonial da região
+foi alvo de diferentes interesses e com redes de relações sociais, ocupação e
+construção de espaços e paisagens bastante complexas.
+Nesse sentido, o espaço foi constantemente reelaborado e resignificado a
+partir de uma dinâmica espacial e temporal caracterizada por cada grupo que
+vivenciou a região. Os próprios elementos materiais, a partir dos quais os
+arqueólogos investigaram esta área de ocupação demonstraram a diversidade e
+dinamicidade da presença indígena na região (SILVA E BARCELOS, 2009).
+Segundo Noelli (2000), a abordagem pronapiana tinha por base, conforme
+modelo oferecido por Meggers nos anos 50, tratar a cultura separada das pessoas.
+De acordo com o autor a adoção desse princípio privilegiava interpretações que
+conceberam os sítios como unidades isoladas, despidas de interpretação sociológica
+e histórica. Este modelo impedia o livre transito das ideias, métodos e informações
+
+
+12
+
+sobre o estado da arqueologia no resto do mundo, ou mesmo ignoravam ideias e
+pesquisas relevantes que lhes fossem discordantes.
+Instrumentalizou-se uma estratégia de seleção de dados que ignorou a
+maioria das informações históricas, linguísticas e etnográficas preexistentes,
+assim como resultados de pesquisadores movidos por outras ideias [...].
+Sua aplicação resultou em modelos e hipóteses simplistas, estanques em
+relação às que estavam sendo desenvolvidas por outras disciplinas,
+dissociando a pesquisa arqueológica da antropologia e das outras ciências
+sociais que floresciam no Brasil desde o século XIX (NOELLI, 2000, p.11).
+
+O autor ainda expõe que os pesquisadores da geração que se
+profissionalizou nos anos 60 construíram a história e a cultura das populações
+indígenas a partir de seus próprios pressupostos, ignorando fontes históricas e
+etnográficas. Os pronapianos basicamente consideravam o produto de suas
+atividades, cuja meta principal era “definir rotas de difusão das cerâmicas” (DIAS 6,
+1994 apud NOELLI, 2000).
+Durante o período de 1966 e 1970 foram executados projetos de
+levantamento, prospecção e escavação nos municípios do planalto Gaúcho. Essas
+primeiras pesquisas na região seguiram a mesma abordagem metodológica do
+PRONAPA. De acordo com Noelli (2000) os pesquisadores conseguiram definir pela
+primeira vez os registros arqueológicos dos povos Jê, que até o momento só haviam
+sido pontualmente mencionados e que não constavam nas principais sínteses
+relativas ao sul do Brasil e adjacências publicadas por arqueólogos profissionais até
+o inicio dos anos 60.
+Para Saldanha (2005), a Tradição Taquara 7 para o Rio Grande do Sul foi
+criada a partir da presença de pequenos vasos cerâmicos e diferentes tipos de
+trabalhos em terra nos sítios arqueológicos, entre os quais têm destaque às
+denominadas “casas subterrâneas”. São estruturas de moradia características de
+regiões altas, ocorrendo em altitudes acima de 500 metros. São encontradas em
+todo o planalto meridional brasileiro, bem como em outras regiões semelhantes na
+América.
+6
+
+DIAS, A. S. 1994 Repensando a tradição Umbu a partir de um estudo de caso. Dissertação de
+Mestrado em Arqueologia, Pontifícia Universidade Católica do Rio Grande do Sul, Porto Alegre.
+7
+De acordo com Noelli (2000) no final dos anos 60 a interpretação pronapiana postulou 3 tradições
+arqueológicas para o Sul do Brasil e Estado de São Paulo, denominadas Itararé, Casa da Pedra e
+Taquara, sendo que de acordo com a metodologia do Pronapa, os marcadores eram principalmente
+obtidos nas vasilhas e/ ou fragmentos cerâmicos e eventualmente as formas das vasilhas e os
+diferentes ambientes de inserção dos sítios arqueológicos para definir suas tradições.
+
+
+13
+
+Segundo Prous (1992), as casas subterrâneas são atribuídas ao grupo Jê ou
+
+Kaingang, que antes da conquista ocupavam o planalto e representam uma
+invenção engenhosa do homem pré-histórico contra os invernos rigorosos das
+grandes altitudes. Essas moradias coincidiam com a formação da floresta de
+araucária, onde haveria maiores condições de garantirem sua subsistência. Também
+Schmitz (1975) nos informa que nas regiões mais frias do planalto, por debaixo dos
+matos de pinheiros, os ameríndios construíam casas subterrâneas para se defender
+das baixas temperaturas e também desidratavam o pinhão de que se alimentavam
+nas longas estações de poucos recursos.
+Conforme Schmitz (1975), os atuais Kaingang, descendentes dos antigos
+Guaianá, têm suas raízes culturais nas casas subterrâneas, que cobrem o planalto,
+desde o século II d.C. Prossegue o autor informando que desde a chegada dos
+imigrantes alemães e italianos para ocupar as matas da encosta e do planalto, o
+Kaingang se manifestou defendendo o seu território. Segundo o autor:
+No planalto, onde antes existiam as casas subterrâneas, estão grupos Jê
+(guaianá e afins) [...]. Essas coincidências não são meros acidentes, mas
+indicam, sem margem de dúvida razoável, a continuidade cultural local. [...]
+as áreas culturais e pré-históricas coincidem, permitindo a ilação da
+continuidade dos grandes contingentes populacionais. (SCHMITZ, 1975, p.
+11).
+
+As datas que foram obtidas através do processo de datação por Carbono
+(C14) nos fornecem dados que podem servir para a elaboração de um primeiro
+quadro da ocupação e dispersão humana no planalto meridional. Os registros mais
+antigos para os sítios arqueológicos estudados remontam ao século II de nossa era,
+os mais recentes atingem o final do século XVI, ou em alguns casos o século XIX
+(DIAS, 2004).
+Datas de Carbono 14 para a Tradição Taquara indicando sua continuidade
+em meados do século XIX, com a ocupação de suas características ''casas
+subterrâneas’’, coincidem com o tempo em que Mabilde descreve os índios
+Kaingang, no mesmo lugar, como seus únicos habitantes. A coincidência temporal é
+perfeita (DIAS, 2004).
+Ainda sobre as moradias, há o relato da construção e habitação destas casas
+em tempos bem recentes, talvez em meados do século XIX. Sérgio Baptista da Silva
+coletou esta descrição de um informante de Nonoai, conforme seque abaixo:
+
+
+14
+
+Meu avô, tio da minha mãe, era de Tenente Portela. Ele viveu cento e
+faziam uma cavação grande
+pra ser coberta. [...]. Ele chegou a ver, viver junto como os pais numa casa
+destas. É uma escavação redonda, e as coberta,ele mostrava, elas quase
+encostavam no chão pra não entrar o vento. Faziam uma valeta em roda pra
+água não entrar. Do fundo, sobe tipo uma escadinha, na parede, pra subir,
+volteadinha. Ali, tu saía pra fora. De noite, cobre com palha. No meio tem
+um tronco, tipo esteio, até uma alturinha pra fazer coberta. Aqui, é também
+feito fogo, dentro da casa. Só que em cima [...] tem tipo um chapeuzinho de
+capim. Quando faz fogo, tiram. A fumaça sobe. Quando chove, botam em
+cima. A folha de palmeira era a cama (SILVA, 2001 p. 41).
+
+Em sua pesquisa etnoarqueológica dos grafismos Kaingang, Sérgio Baptista
+da Silva (2001) relata a relação milenar constatada arqueologicamente entre os
+grupos Proto-Jê meridionais ancestrais dos atuais Kaingang. Nesse sentido, Schmitz
+também aponta que os Kaingang fazem parte de uma “história viva de milênios, num
+ambiente em transformação, no qual havia competição interna e relações amistosas
+e conflitivas com vizinhos e antecessores” (SCHMITZ 2007, p. 3).
+Para Saldanha (2005), apesar da grande quantidade de trabalhos sobre a
+cultura material do grupo em estudo, inúmeras questões relativas ao modo de vida e
+aos processos culturais sofridos pelas populações que manipularam esta
+materialidade continuam em aberto. Sendo assim o autor acredita que, neste
+momento, o principal encaminhamento para problematizar a arqueologia do planalto
+sulino seria o estudo das continuidades e mudanças passíveis de serem verificadas
+tanto a nível cronológico quanto espacial. Este autor complementa dizendo que:
+Para a abordagem deste tema fulcral (continuidade e mudança) na
+compreensão destas sociedades, creio que alguns pontos críticos devem
+ser levantados, tais como a variabilidade tecnológica e estilística das
+diferentes classes de artefatos em contextos regionais, processos de
+simbiose e troca com grupos distintos, diferenças na estrutura de
+assentamentos em termos regionais, natureza da transição do período précerâmico para o cerâmico, existência de hierarquias no período pré-contato
+(como a existente entre os grupos Kaingang no século XIX), entre outros
+(SALDANHA, 2005, p. 9).
+
+Este autor cita os estudos de Silva, (2001) e Laroque, (2000) como trabalhos
+que congregaram dados históricos, etnográficos e lingüísticos dos grupos Jê do Sul
+do Brasil, e têm demonstrado que estas sociedades passaram por intensos
+processos sócio-culturais, com deslocamentos, absorção de diferentes contingentes
+populacionais e formação de identidades regionais diferenciadas.
+
+
+15
+
+A seguir, trataremos de alguns aspectos a respeito da história e formação dos
+Kaingang, tendo como recorte temporal, os séculos XVI ao XIX.
+
+
+16
+
+2 A HISTÓRIA DOS KAINGANG DO SÉCULO XVI AO SÉCULO XIX
+2.1 AS DIVERSAS DENOMINAÇÕES PARA OS JÊ MERIDIONAIS
+
+A partir do século XVI é verificada no planalto meridional brasileiro a
+existência dos Guaianá, que foi registrada por Gabriel Soares de Souza (1587) e
+pelo viajante inglês Antophy Knivet (1591) 8. O cronista Simão de Vasconcellos 9
+também menciona esse grupo e observa que estes foram obrigados pelos
+portugueses a se retirarem para o Sul. Um século depois, temos as descrições feitas
+pelos missionários jesuítas Antonio Ruiz de Montoya e Dias Taño a respeito dos
+Guaianá. Estes informam que visitaram os Guaianá no alto Uruguai e que sua língua
+era diferente do Guarani. No século XVIII os Guaianá são identificados pelo
+historiador Pedro Lozano (LAROQUE, 2000).
+De acordo com Ítala Becker (1995), baseando-se nos escritos de João Pedro
+Gay e Antonio Serrano, os Kaingang dos séculos XVII e XVIII que viviam no Brasil
+Meridional eram designados sob diversos nomes como Socré ou Shokléng, Kamé,
+Bugres ou ainda Coroados. Nos Estados de Santa Catarina e Rio Grande do Sul,
+têm-se nos Guaianá (Jê Meridional), tomados em sentido amplo, os seus ancestrais
+diretos10. A autora informa que a denominação Guaianá se estendia a várias tribos
+de índios que tinham relações entre si e cujo gênio, costume e língua se
+diferenciavam do Guarani.
+A partir de meados do século XIX havia se generalizado a denominação de
+coroados aparecendo em autores que se referiam a grupos Kaingang de diversos
+lugares, como no centro do Paraná, na Província Argentina de Missiones ou ainda
+no nordeste do Rio Grande do Sul. Para o caso da Província do Rio Grande do Sul
+8
+
+Fontes documentais para o século XVI são “Tratado descriptivo do Brasil em 1587” (1587), de
+Gabriel Soares de Souza e a “Narração da viagem que, nos anos de 1591 e seguintes, fez Antonio
+Knivet da Inglaterra ao Mar do Sul, em Companhia de Thomaz Candish (1878), escrita pelo próprio
+Knivet”. Tratam da presença dos Guaianá na Serra do Mar, mais precisamente de Angra dos Reis até
+Cananéia (LAROQUE, 2000).
+9
+Para o século XVII destaca-se como fonte documental a “Chronica da Companhia de Jesus no
+Estado de Brasil, e do que Sobraram seus Filhos nesta Parte do Novo Mundo (1663)” escrita por
+Simões de Vasconcellos, a qual informa que nesta época os Guaianá ocupavam os mesmos
+territórios descritos por Gabriel Soares (LAROQUE, 2000).
+10
+A afirmação de que os grupos Guaianá ou Guananá seriam antepassados dos Kaingang foi feita
+também por Carlos Teschauer S. J. (1929), segundo o qual, os denominados Kaingang do século XIX
+eram encontrados nas mesmas áreas nas quais se encontravam, nos séculos XVII e XVIII, os
+Guaianá (LAROQUE, 2000).
+
+
+17
+
+temos valiosas informações nos apontamentos do engenheiro belga Alphonse
+Mabilde (1983).
+O último dos trabalhos mais extensos e importantes sobre os Kaingang na
+segunda metade do século XIX são as notas ou apontamentos do engenheiro belga
+Pierre F. Alphonse Booth Mabilde que ele denominou “Índios Selvagens Coroados
+dos Matos da Província do Rio Grande de Sul”. Mabilde foi engenheiro e agrimensor
+das colônias que se expandiam pelo nordeste e norte do Rio Grande do Sul ente os
+anos de 1848 e 1853, atuando, sobretudo na região entre São Leopoldo e o rio
+Pelotas, que se situa na divisa nordeste do Rio Grande do Sul com Santa Catarina.
+Apesar de algumas afirmações de caráter preconceituoso e de um
+desconhecimento total da língua indígena que coloca em dúvida a suposta
+permanência de Mabilde por dois anos entre os Kaingang como prisioneiro, há
+aspectos da cultura Kaingang bastante bem descritos por ele. Os apontamentos de
+Mabilde foram publicados no final do século (1897 e 1899) e editados em forma de
+livro no final do século XX (VEIGA, 2006).
+Em seus apontamentos esse autor destaca que todos os índios que trazem a
+cabeça tonsurada e o cabelo como eles pertencem a uma mesma família que foi
+denominada Nação Coroados.
+Os selvagens que se encontram nas matas desta província pertencem à
+nação coroados, nome que se lhes da devido ao modo de tonsurarem o
+cabelo. Por esse nome coroados, são conhecidos todos os indígenas que
+usam esse distintivo do cabelo, nas demais províncias do Império, onde
+igualmente se encontram como sejam nas províncias do Paraná, São Paulo,
+Santa Catarina, Minas Gerais, Goiás (....) os coroados, pelo seu distintivo
+(tonsura do cabelo), pertencem a mesma Nação Coroados e como tal se
+reconhecem entre si falando todos, mais ou menos, o mesmo dialeto,
+modificando somente na pronúncia (MABILDE, 1983, p. 9).
+
+A partir de 1882 a denominação Kaingang aparece na documentação
+bibliográfica para designar todo índio não Guarani, termo introduzido por Telêmaco
+Morocines Borba em 1908, como denominação genérica de um grande número de
+grupos indígenas de dialetos aparentados e filiados ao tronco linguístico Jê. Estes
+estavam localizados nos Estados de São Paulo, Paraná, Santa Catarina e Rio
+Grande do Sul, e inicialmente eram conhecidos como Coroado, Bugre, Xokleng e
+Botocudo. Essa denominação também foi utilizada pelo Frei Luiz de Cemitille que
+era missionário capuchinho, e pelo Visconde Affonso Escragnolle de Taunay
+(LAROQUE, 2000).
+
+
+18
+
+2.2 MODO DE VIDA DOS JÊ MERIDIONAIS
+
+No Estado do Rio Grande do Sul encontramos as diversas tribos Kaingang
+localizadas nas áreas que Mabilde (1983) chamou de “matas da província do Rio
+Grande do Sul”. Os ameríndios instalavam-se nas matas nos locais mais elevados.
+Segundo Becker (1995), os territórios Kaingang no Rio Grande do Sul tinham como
+limites no século XIX, a noroeste, o rio Piratini; a nordeste, o rio Pelotas; e a sul, as
+bacias dos rios Taquari, Caí e Jacuí.
+De acordo com os apontamentos de Mabilde, os coroados tinham preferência
+por alojar-se em meio aos pinheirais. Marcas serviam para delimitar o território ou
+pinheiral. E eram próprias de cada tribo ou individuo, sendo as mesmas de suas
+pinturas corporais, de suas lanças e outras armas. Os pinheirais em que os
+selvagens têm seu alojamento eram repartidos e divididos em territórios
+correspondentes, em tamanho, ao número de indivíduos que compunham as tribos.
+O limite entre um e outro território era assinado na casca de um pinheiro que serve
+de marco de divisa (MABILDE, 1983).
+Mabilde (1983) destaca em seus apontamentos que foram dez as marcas
+pintadas sobre as flechas dos coroados e que foram encontradas cortadas nas
+cascas dos pinheiros, nas matas de araucárias, para demarcação de seu território,
+conforme figura abaixo.
+Figura 1 – Marcas Para Demarcação de Território
+
+Mabilde (1983, p.146).
+
+De acordo com Mabilde (1983), os coroados procuravam os lugares mais
+altos dos morros, em meio aos pinheirais para fazer seus alojamentos, e ao contrário
+
+
+19
+
+de outras populações indígenas não procuravam algum rio ou arroio para se
+estabelecer. O autor informa que sacrificavam a comodidade de água perto de suas
+moradias para se colocar em um local alto para a defesa de tribos inimigas. De
+acordo com Mabilde, os coroados só nadavam quando estavam em perigo:
+Esses selvagens são, em geral, péssimos nadadores, fazendo um esforço
+extraordinário para manter-se na água [...] só o grande medo que têm da
+água os torna vitoriosos, fazendo um enorme esforço para vencerem [...]
+não é de estranhar que os coroados tenham medo d’ água e que não
+saibam nadar, pois vivendo no centro das matas, poucas são as ocasiões
+em que tem necessidade de nadar. (MABILDE, 1983, p.171).
+
+Segundo Mabilde (1983), os Kaingang do século XIX do Rio Grande do Sul
+dividiam-se em pequenas tribos, constituídas por famílias entrelaçadas e parentes
+chegados. Cada uma dessas tribos tinha o seu cacique ou chefe, que por sua vez
+dependia do cacique principal.
+Mabilde prossegue seus apontamentos expondo que motivos como
+desobediência ou dissidência acarretavam para o chefe dissidente e sua tribo uma
+guerra de difícil reconciliação. Como no caso de desobediência 11 cito o exemplo do
+pinhão, alimento muito prestigiado pelos Kaingang e conforme descrição de Mabilde
+podia gerar uma guerra. Por ordem do cacique principal, o território do pinheiral
+pertencia exclusivamente ao grupo que nele habitava. Caso outra tribo apanhasse o
+pinhão gerava motivo para uma guerra de extermínio, sendo convocadas todas as
+demais tribos. A respeito do assunto o autor prossegue
+Se o invasor do Território provar que o fato ocorreu por ignorância ou
+involuntariamente pode haver conciliação. Essa, em todo o caso, antes que
+fica estabelecida a verdade, é precedida de decisões sanguinolentas, que
+antecipam a conciliação – a qual raras vezes acontece. Havendo a
+reconciliação, a tribo invasora é obrigada a restituir, á tribo lesada, porção
+de pinhão igual a que recolheu no território invadido (MABILDE, 1983, p.
+127).
+
+Outra forma dos Kaingang declararem guerra entre si era a suspensão das
+visitas periódicas, que Becker (1995) denominou de visitas de caráter político, cujo
+objetivo era o controle da tribo subordinada pelo cacique principal.
+Fato importante descrito por Mabilde (1983) a respeito do costume da
+comunidade Kaingang é o relacionamento entre indígenas da tribo do cacique
+11
+
+Existe um consenso partilhado por comunidades indígenas vizinhas de que é etnicamente incorreto
+utilizar os recursos de outra comunidade sem a devida autorização (RAMOS, 1988).
+
+
+20
+
+principal e das tribos dos caciques subordinados. Em primeiro lugar, cabia ao
+cacique principal indicar o lugar que cada tribo devia ocupar nas matas dos
+pinheiros.
+O autor também informa que após terem se estabelecido nos alojamentos, as
+tribos subordinadas e as tribos do cacique principal passavam por sucessivas visitas
+entre si, como prova de amizade. Porém, as visitas podiam ser proibidas pelo
+cacique principal por motivo de desconfiança ou insubordinação. “Essa interrupção
+de visitas regulares equivale a uma denúncia de um estado de guerra, para a qual,
+sem demora, as demais tribos se preparam por ordem do cacique principal”
+(MABILDE, 1983, p. 44).
+Em sua dissertação de mestrado, Laroque (2000) aponta que os grupos
+Kaingang tinham como uma de suas características a guerra constante, que era
+vivida nas relações intratribais, notadamente marcada pelas frequentes dissidências
+internas e intertribais, estas, principalmente contra os Xokleng, mas também com os
+Guaranis e, posteriormente, com os imigrantes europeus (LAROQUE, 2000).
+De acordo com Bringmann (2009), nas áreas que constituíam o território
+tradicional do grupo Kaingang desde tempo anterior ao contato com os europeus, os
+conflitos já existiam por disputas territoriais com os grupos Guarani e Xokleng, com
+os quais os Kaingang mantinham guerras frequentes pela defesa de suas áreas de
+caça e coleta. Conforme o autor, esses conflitos produzem, alteram, sustentam,
+reforçam ou mantém as fronteiras dos territórios, cujos limites frequentemente estão
+representados por um determinado ambiente natural.
+
+2.3 O AMBIENTE E A SOBREVIVÊNCIA DOS JÊ MERIDIONAIS
+
+O ambiente em estudo pode ser caracterizado por seu clima subtropical
+úmido, com verões quentes e invernos frios, ocorrendo a incidência de geadas e
+neves. A região originalmente localizada na maior parte dos terrenos altos entre as
+bacias e os rios era formada por campos abertos, assim como por florestas, sendo
+que a cobertura original do Estado se dividia em mais ou menos 60% de campo e os
+40% restantes eram áreas florestais. A mata da araucária, cujo fruto é o pinhão, é a
+
+
+21
+
+característica mais destacada das florestas encontradas, principalmente, na parte
+leste e central do Planalto Sul Brasileiro (BELTON, 1994).
+Os dados históricos e geográficos indicam que um território Kaingang tinha
+que apresentar um ecossistema variado que lhes permitisse sua sobrevivência. A
+agricultura era praticada nos terrenos altos, onde plantavam muitas variedades de
+milho, feijão, abóbora e amendoim. A coleta era parte importante da dieta Kaingang.
+Vários tipos de corós12, mel, palmito, pinhão, tubérculos, raízes entre outros
+constituíam itens importantes de sua alimentação, sendo que nas matas também
+colhiam plantas medicinais e cerimoniais (TOMMASINO, 2000).
+Com relação às espécies vegetais encontradas nas partes altas do Rio
+Grande do Sul, conforme Dias (2004), merece destaque o pinhão.Também cita
+vários outros como, por exemplo, o tucum que fornece frutos comestíveis,
+principalmente a amêndoa e a polpa, com a qual ainda é possível obter um tipo de
+licor, e ainda pode ser extraído dessa planta um tipo de palmito. Outro vegetal é o
+jerivá, cuja parte consumida é a polpa e a amêndoa e das folhas é extraído um tipo
+de palmito, proporciona abundância de frutos em duas épocas, uma no verão e outra
+no outono.
+Prossegue Dias (2004) informado que da içara era extraído o palmito durante
+os meses de inverno, o araçá proporciona frutos no verão, a pitanga, guabiroba e
+cereja apresentam maturação dos frutos na primavera e verão. Todos os frutos
+expostos também foram citados por Mabilde (1983) que comenta que estes podiam
+ser apanhados em qualquer lugar do mato, por qualquer individuo do grupo, à
+exceção do pinhão. Com relação à fauna das partes altas do Estado, Dias (2004)
+nos informa que a anta, o porco e o bugio vivem em florestas altas e fechadas.
+Também destaca o tatu, a paca, o tamanduá, macacos, a puma, entre outros.
+Para Noelli (2000), a extensão das áreas manejadas e a sazonalidade de
+várias espécies permitiam uma subsistência centrada na coleta, associada às
+práticas de obtenção de proteína animal baseada na caça e na coleta. Tudo indica
+que iniciavam o ano com o cultivo das plantações, em seguida se dispersavam para
+locais mais antigos em busca de pinhões, palmitos e outros alimentos.
+Becker (1975), ao discorrer sobre o abastecimento dos grupos Kaingang no
+Rio Grande do Sul, informa que grande parte das atividades se realizava nas
+12
+
+O coró é uma larva que se origina dentro dos gomos da taquara, serve como alimento e dele tiram a
+gordura que usam como medicamento em ferimentos e para preparar os alimentos (GARLET, 2010)
+
+
+22
+
+proximidades da aldeia permanente. Outras atividades estacionais exigiam
+deslocamentos grandes, que os distanciavam dos alojamentos por longos períodos.
+Na primavera preparavam os campos e semeavam os produtos agrícolas perto da
+aldeia. No verão saiam para pescar em locais distanciados da aldeia. No outono e
+verão recolhiam os pinhões que podiam estar perto ou longe da aldeia e no inverno
+provavelmente viviam das provisões feitas e dos produtos agrícolas.
+Para Tommasino (2000), as florestas, os rios e campos forneciam toda a
+matéria prima para fabricar armas, utensílios domésticos, cestarias, objetos de
+cerâmica. Percebe-se, desta maneira, ser a mobilidade uma característica comum
+aos índios do Brasil Meridional, sendo que o tempo de duração dos deslocamentos
+no interior do território dependia das atividades em curso.
+Para Tomasino (2000), a sociedade Kaingang até a primeira metade do
+século XIX podia ser caracterizada como um povo de floresta e a sua dinâmica
+sempre esteve, enquanto existiam as florestas, diretamente vinculada à dinâmica da
+natureza. As florestas subtropicais do Brasil formavam o meio ambiente onde os
+Kaingang obtinham os seus meios de vida. As atividades de caça, coleta, cultivo e
+pesca apropriou-se do calendário natural sobre o qual se articularam todas as
+atividades econômicas e socioculturais. A seguir, procuramos entender a concepção
+de território tradicional para os Kaingang. Estudamos as falsas ideias utilizadas para
+justificar a expropriação de suas terras, assim como procuramos entender a questão
+fundiária no século XIX.
+
+
+23
+
+3 A TERRA KAINGANG NO SÉCULO XIX e XX
+3.1 CONCEPÇÕES DE TERRITÓRIO NATIVO KAINGANG NA ETNOGRAFIA
+
+Para as comunidades indígenas, a terra representa muito mais do que um
+simples meio de subsistência. É o elemento essencial, pois representa o suporte da
+vida social e está diretamente ligada ao sistema de crenças e conhecimento. Logo, a
+terra não é apenas um recurso natural, mas está diretamente ligada ao cotidiano
+como um todo interligado, representando a base da vida sociocultural (RAMOS,
+1988).
+Enquanto espaço de subsistência, a unidade territorial da sociedade Kaingang
+constitui-se de um espaço físico composto por serras, campos e florestas, onde os
+grupos possam exercer suas atividades de caça, pesca, coleta e plantio.
+
+Esse
+
+imenso território constituía um espaço de contínuos deslocamentos dos grupos para
+desenvolverem suas atividades de subsistência material e reprodução social. A
+noção de propriedade comum do solo não implicava ausência de direitos precisos e
+definidos do nativo sobre seu território (TOMMASINO, 2000).
+De acordo com Seeger e Castro 13 (1979) apud Tommasino, 2000) os Jê
+Meridionais não pareciam definir sua identidade em relação a uma geografia
+determinada. Sua organização social se representava em termos conceituais, antes
+que geográficos. Nesse sentido, o modo de vida Kaingang implica uma relação
+específica com a natureza e entre si, de acordo com as representações simbólicas
+historicamente elaboradas que conferem sentido às suas práticas materiais e
+sociais, sendo que as dimensões materiais e simbólicas transcendem o recorte das
+fronteiras geográficas.
+Conforme dito acima, os Kaingang tinham uma concepção própria de território
+nativo14. A explicação mítica sobre sua origem permeia toda sua cultura e constituise como princípio estruturante da vida em sociedade. A ligação originária com a
+terra, a terra-mãe, é tão forte que acompanha toda a sua vida desde o nascimento
+13
+
+SEEGER, Antony; CASTRO, Eduardo Viveiros de. Terras e territórios indígenas do Brasil. In:
+Encontros com a Civilização Brasileira, Rio de Janeiro, n.12, 1979.
+14
+A concepção de limite territorial não é estranha às sociedades nativas, mas sim o sentido de
+exclusividade de um território conforme concedidos pela Sociedade Colonial e Nacional (RAMOS,
+1988).
+
+
+24
+
+até a morte. A explicação mítica que eles mantém em relação à terra explica,
+inclusive, o mito de sua origem (TOMMASINO, 2000).
+Se tomarmos como referência a geografia da terra mítica, pode-se perceber
+com clareza a associação com as terras do planalto, que é seu habitat. Após o
+dilúvio, segundo conta o mito, os Kaingang se estabeleceram nas proximidades da
+serra Krinjijimbé (TOMMASINO, 2000).
+Em tempos imemoriais deu-se um dilúvio que cobriu a terra inteira, habitada
+por nossos antepassados. Somente o cume da serra Krinjinjimbé (Serra do
+Mar) sobressaía das águas diluviais. Os Kaingáng, Kairucré e Kamé
+nadavam na direção dela, cada um com um luminoso tição entre os dentes.
+Os Kairukré e os Kamé cansaram, afundaram-se e pereceram; suas almas
+foram habitar no interior da montanha. [...] Desaparecida a grande
+inundação os Kaingáng estabeleceram-se nas proximidades da Serra do
+Mar. Os Kairucré e os Kamé, cujas almas moravam no interior da Serra
+começaram a abrir caminhos. Depois de muitos trabalhos e fadigas, uns
+puderam sair de um lado e os outros do outro (TELEMACO BORBA, 1908
+apud SILVA, 2001 p.130).
+
+A hipótese de Tommasino (2000) sobre a importância do mito na construção
+do território Kaingang apoia-se nas observações de Urban (1992). Conforme visto
+anteriormente, os Kaingang ao se fixarem no Sul, o fizeram em uma região
+geomorfologicamente semelhante ao lugar de origem. Nesse caso a autora pretende
+apontar que os Kaingang mantêm uma identificação étnica com a região do Planalto
+Central, que se constituiu empiricamente como seu habitat.
+Dessa maneira, a concepção indígena de território assume uma dimensão
+sócio-política cosmológica muito mais ampla do que na concepção de terra para o
+branco15. De acordo com Cunha (1992), os índios conservam a memória e o apego a
+seus territórios tradicionais. Nesse sentido, a concepção de territorialidade Kaingang
+abrangia também o lugar onde estavam enterrados os seus mortos e no qual os
+jovens deveriam enterrar seus umbigos.
+No que tange aos limites territoriais entre os Kaingang, para Laroque (2000),
+grandes rios como Jacuí, Sinos, Taquari, Passo Fundo e outros seriam utilizados
+para delimitar os territórios das tribos lideradas pelos grandes chefes. Os rios
+menores serviam para delimitar os subterritórios ocupados pelas várias subtribos
+pertencentes a estes caciques. No entanto, segundo o autor, maiores informações
+para avançarmos nesta questão poderão ser fornecidas pelos estudos arqueológicos
+
+15
+
+Termo utilizado neste trabalho para referir-se aos indivíduos e comunidades não indígenas.
+
+
+25
+
+e pelos depoimentos de Kaingang que atualmente habitam ou já tenham vivido
+nestes territórios.
+De acordo com Tommasino (2000), antes e mesmo nos primeiros tempos de
+Contato, cada grupo local Kaingang possuía um subterritório próprio 16, com direito a
+exploração do mesmo, segundo regras determinadas pela sua cultura. Portanto, a
+sociedade Kaingang se distribuía em vários grupos locais, formando subterritórios
+que eram socialmente interligados, onde cada grupo possuía sua área de
+exploração, fato que remete para a existência de um conceito específico de
+propriedade territorial Kaingang, distinta do conceito capitalista de propriedade
+privada.
+Ainda segundo Tommasino (2000), baseada nos apontamentos de Mabilde, o
+conceito Kaingang de propriedade 17 se aplicava segundo um critério determinado,
+revelando a complexidade sócio-lógica de exploração do território pelos vários
+grupos locais que constituíam essa sociedade.
+Segundo esta autora, apesar do processo de expansão e da grande
+mobilidade geográfica, os Kaingang tinham uma forma própria de se estabelecer no
+território definido socialmente. A noção de propriedade comum do território não
+implicava ausência de direitos precisos e definidos sobre o solo. A existência de
+direitos comunitários sobre o solo, muito longe de significar uma restrição e um
+impedimento ao uso do solo pelos indivíduos, oferece, pelo contrário, a todos uma
+garantia de acesso a esse recurso fundamental, e, mais ainda, garante às gerações
+futuras a herança desse mesmo recurso.
+As florestas de todo o território tribal constituíam espaço de caça e coleta
+por qualquer indivíduo sem que essa exploração gerasse qualquer direito de
+propriedade sobre a terra, com exceção do pinheiral, que era dividido entre
+os grupos. Cada subgrupo (grupo local) tinha uma parcela do pinheiral
+sobre a qual exercia o direito a coleta do pinhão (TOMMASINO, 2000).
+
+O espaço para as sociedades tradicionais tinha e tem um significado
+carregado de conteúdo social, histórico e religioso. Para esses povos, a terra não
+podia ser dividida em partes e transformada em mercadoria pelo seu potencial
+16
+
+Cada subterritório se distribuía em várias aldeias, tendo como ponto de referência os rios, as serras,
+as florestas e os cemitérios, que compunham o espaço produzido histórica e culturalmente
+(TOMMASINO, 2000).
+17
+o direito de
+uso comum do território para caça e para coleta, com exceção do pinheiral, propriedade
+individual/familiar das roças e das armadilhas de pesca, propriedade coletiva de cada grupo local
+pelas terras de campo onde estabeleciam seus estabelecimentos fixos (TOMMASINO, 2000).
+
+
+26
+
+produtivo. Ao contrário, a terra é vista em termos de relações sociais e está em
+poder do grupo como um todo em que as pessoas, como uma parte da natureza,
+estão intimamente ligadas a mesma. Nesse sentido, para o indígena a relação com
+seu território tradicional é vital, sendo que sem essa relação não existe a
+possibilidade de afirmação da identidade étnica e cultural, não sendo possível
+identificar-se como grupo (Mota, 1994).
+3.2 FALSAS IDEIAS PARA JUSTIFICAR A EXPROPRIAÇÃO DAS TERRAS DOS
+NATIVOS
+
+A ideia de nomadismo inerente a estes grupos é fruto de uma ideologia que
+justificava a expropriação das terras indígenas e teve como propósito a destituição
+de seus direitos sobre a terra (NOELLI, 2000). Cito o exemplo do presidente da
+província do Paraná, Taunay que em certa ocasião recebeu um grupo de índios que
+reclamavam de intrusos em suas terras. Ao serem solicitados que informassem qual
+o tamanho da terra a que achavam que tivessem direito, o presidente constatou que
+“tais posses, segundo pretendiam, ocupavam superfícies enormes, para poderem
+contentar os seus hábitos nômades e de simples vagabundagem”(TAUNAY,1931, p.
+84 apud FRANCISCO, 2006).
+Tommasino (2000) tenta desmistificar noções como nomadismo dos grupos
+Kaingang. Para ela, o conceito de nomadismo implica abandono de um território e
+ocupação de outro e esse não parece ser o caso dos Kaingang. De acordo com esta
+autora, tanto a configuração geográfica atual, quanto as fontes históricas e
+linguísticas, remetem a dispersão após o contato e revelam que os Kaingang foram
+se expandindo sem abandonar seus territórios já ocupados, com exceção daqueles
+que lhes foram expropriados pelos colonizadores.
+Para Noelli (2000), baseado em fontes arqueológicas e escritas, os povos Jê
+do Sul eram agricultores18 antes do contato com o branco. Conforme o autor, a
+interpretação precária dessas fontes e a falsa imagem de nomadismo resultaram na
+crença sobre estas populações serem caçadoras-coletoras, que adotaram a
+agricultura após o contato com os europeus. O autor prossegue informando que a
+18
+
+Veiga (2000) também informa em sua pesquisa que os Kaingang já eram agricultores quando os
+portugueses chegaram ao Brasil, embora também fossem caçadores e coletores.
+
+
+27
+
+estratégia de circular pelo território de domínio, isto é, pelas diversas áreas vizinhas
+da aldeia principal em busca de alimento, também induziu a interpretação de
+nomadismo.
+Veiga (2000) desenvolve interessante argumento, que se contrapõe à ideia
+generalizada de que os cultivos entre os Kaingang fossem pouco manejados, o que
+contribui para a ideia de nomadismo entre eles. De acordo com a autora, a
+sociedade Kaingang tem seus rituais baseados nos cultivos, como é o caso do
+Kikikoi (culto aos mortos). Este é um importante ritual que separa os mortos do
+mundo dos vivos, no qual é servida uma bebida à base de milho fermentado, mel e
+água, o Kiki. Partindo destes argumentos, Veiga infere que a sociedade Kaingang
+não deve ser caracterizada como nômade, pois possuía como base de sua
+organização a ideia de um território fixo e marcado por concepções culturais e
+sociais próprias (VEIGA, 2000 apud FRANCISCO, 2006).
+Mota (1994) procurou mostrar em seu estudo sobre os Kaingang no Paraná
+como se construiu a ideia de vazio demográfico a partir do discurso acadêmico,
+afirmando que a terra do planalto era vazia, desabitada, abandonada. Este discurso
+justifica a ocupação e a, colonização como pacífica e harmoniosa, sem lutas e sem
+resistências. Ao contrario, Mota afirmou que os indígenas resistiram diante da
+presença do colonizador, na defesa de suas terras e de seu modo de vida,
+demonstrando, assim, que não foi um processo pacífico como apresentaram os
+meios oficiais e acadêmicos tradicionais.
+A construção historiográfica da noção do vazio demográfico teve como
+princípio ocultar os conflitos com os indígenas, em função das necessidades de
+ocupar novas áreas, apresentando o território como um local vazio, devoluto 19
+desabitado, improdutivo, justificando uma ocupação produtiva. Noelli (2000)
+corrabora com esta ideia afirmando que a região Sul não possuía áreas significativas
+desabitadas, como pode verificar nos estudos arqueológicos e fontes históricas para
+o século XVI. De acordo com Marcon (1994), os agentes interessados em colonizar
+o território sulino, que era um território indígena, partiram da existência de grandes
+áreas consideradas devolutas, visto que na visão do Estado e dos colonizadores, o
+índio não constituía um ocupante efetivo.
+19
+
+Silva (1996) ao analisar o artigo 3º da Lei de Terras define as Terras Devolutas como as que não
+eram de uso público, as que não estavam sob domínio particular por título legítimo, as que não se
+achavam ocupadas por posse. Considerando as terras excluídas pelos parâmetros citados acima, o
+que restou foram as terras vagas, ou tidas como desocupadas.
+
+
+28
+
+3.3 O SÉCULO XIX E A QUESTÃO FUNDIÁRIA
+
+O século XIX é colocado por Becker (1995) como o período de real
+transformação do grupo Kaingang. Este século produz grandes interferências no
+território e na organização desse grupo principalmente com a Lei de Terras e com os
+aldeamentos que acarretam uma diminuição no território original indígena.
+A Lei de Terras de 1850 coincidiu com o momento em que ocorreu o avanço
+dos colonizadores brancos em direção ao planalto gaúcho, marginalizando os
+grupos indígenas que habitavam esse território. Esta lei redirecionou a ocupação
+territorial brasileira e estabeleceu novos princípios para a ocupação e o registro da
+terra em todo o Império, os quais afetaram diretamente as terras dos índios. Isso se
+deve aos parâmetros estabelecidos para o registro das posses, que excluíam os
+indígenas da possibilidade de acesso legítimo e privado a terra (Braga, 2006).
+Para Perrone-Moises (1992) o aspecto mais importante da questão indígena
+até o final do Século XVIII era preparar os índios para servirem como mão de obra
+aos colonizadores. No entanto, no que se refere ao período em estudo, Manuela
+Carneiro da Cunha (1992) nos diz que no século XIX a questão indígena passou a
+ser uma questão de terras.
+Para caracterizar o século como um todo, pode-se dizer que a questão
+indígena deixou de ser uma questão de mão de obra para se tornar uma
+questão de terras [...] porque é fundamentalmente um problema de terras e
+porque os índios são cada vez menos essenciais como mão de obra, a
+questão indígena passa a ser discutida em termos que, embora sejam
+inéditos, nunca haviam, no entanto sido colocados como política geral a ser
+adotada (CUNHA, 1992, p.134).
+
+Importante para o presente estudo é analisar alguns aspectos causados pela
+regulamentação da propriedade territorial promovida pela Lei de Terras a partir de
+1850 e seus efeitos sobre as populações indígenas do planalto rio-grandense.
+Segundo Marcon (1994), até a independência o acesso à propriedade da
+terra no Brasil deu-se principalmente pela doação de sesmarias. No entanto, com a
+proclamação da Independência, ficaram suspensas novas concessões de sesmarias
+através de uma resolução imperial de 17 de julho de 1822 20. Marcon também informa
+20
+
+“Fique o suplicante na posse das terras que tem cultivado e suspendam-se todas
+as sesmarias futuras até a convocação da Assembleia Geral, constituinte e legislativa”. (MARCON,
+
+
+29
+
+que a partir da Independência até 1850, não houve uma legislação específica sobre
+o acesso à propriedade da terra. A posse 21 passou a ser a única forma de aquisição
+de domínio sobre a terra, não apenas dos pequenos posseiros que na prática já
+existia, mas envolvendo grandes extensões.
+Nesse período teve início a apropriação de extensas áreas no Planalto Médio
+e Alto Uruguai. Na falta de uma legislação regulamentando o acesso às novas terras
+devolutas, o que predominou foi a imposição do poder dos proprietários locais, que
+se apoderaram de grandes extensões de terras ou que criaram um poder paralelo
+para doá-las a terceiros (MARCON, 1994).
+Conforme Francisco (2006), até a década de 1850 todos os campos nativos
+do planalto estavam convertidos em fazendas e sesmarias. De acordo com Zarth
+(1997) o avanço sobre as terras florestais e os ervais aconteceu depois da
+regulamentação da Lei de Terras, em que todos os campos nativos já estavam
+apropriados. Nesse caso as terras de florestas e ervais passaram a constituir uma
+fronteira que possibilitou a apropriação.
+Na metade do século XIX, a posse, ou seja, a simples instalação na terra
+estava consolidada como principal forma de ocupação e apropriação de terras. A
+partir desse momento ela foi legitimada pela Lei N° 601 de 18 de setembro de 1850
+que dispôs sobre a regulamentação do registro de terras no Império, a chamada Lei
+de Terras.
+Apesar de não terem sido elaboradas em função das disputas territoriais entre
+índios e brancos, a Lei de Terras e o seu Regulamento, editados respectivamente
+em 1850 e 1854, tiveram profundos impactos sobre as populações indígenas. Com o
+avanço das frentes de ocupação da terra, a partir da primeira metade do século XIX,
+o eixo das discussões entre índios e brancos foi deslocado para as disputas
+envolvendo os terrenos tradicionalmente ocupados pelas populações nativas. A
+posse da terra se tornou o ponto central da discussão em torno da questão indígena
+no século XIX (BRAGA, 2006).
+A referida lei não permitia a aquisição de terras públicas (pertencentes ao
+Império) por outro meio que não fosse à compra das mesmas. A terra sofreu
+profundas alterações como consequência desta lei e pode ser estabelecida uma
+maior precisão na demarcação entre terras particulares e públicas (BRAGA, 2006).
+1994,p. 68).
+21
+A legislação de doação de sesmarias vigorou até 1822, sendo que desta data até 1850
+prevaleceram às aquisições de terras pela posse, ou seja, a simples instalação na terra.
+
+
+30
+
+Em seu artigo 5°, a Lei de Terras estabeleceu os parâmetros para legitimar as
+posses e determinou a revalidação das ocupações realizadas através de sesmarias,
+no formato exigido pela lei, mesmo para as concessões anteriores a resolução de
+1822 (BRAGA, 2006).
+[...] Art. 5º. Serão legitimadas as posses mansas e pacificas, adquiridas
+por occupação primaria, ou havidas do primeiro ocupante, que se
+acharem cultivadas, ou com principio de cultura, e morada habitual do
+respectivo posseiro, ou quem o represente [...] (BRASIL, 1850).
+
+De acordo com Braga (2006) nem todos os sesmeiros após a Lei N° 601 de
+1850 regularizaram imediatamente suas terras, mas, aceleraram a legitimação das
+posses. Certamente, sentiram o perigo de perder suas possessões ou ter que
+disputá-las com outros posseiros.
+A Lei de Terras permitia a legitimação da posse pela presença do posseiro ou
+pelo seu representante. A presença extensiva de gado pastoreando e um ou dois de
+seus peões agregados, estabelecidos na região era o suficiente para a exigida
+“morada habitual” (BRAGA, 2006).
+O princípio da Posse Útil ressaltava mais uma vez a função da Lei de 1850
+como mecanismo de criação de um mercado de terras, necessário à
+expansão da agricultura mercantil e capitalista que se desenvolveu no
+século XIX. As necessidades de expansão dessa economia agrícola exigiam
+a reserva de novas terras apropriáveis pelos latifúndios em todo o território
+do Império. A reserva de terras apropriáveis foi feita pela exclusão dos
+habitantes dos sertões das possibilidades de acesso à propriedade, ou seja,
+pela restrição das possibilidades de índios e caboclos se apropriarem das
+terras (BRAGA, 2006, p. 58)
+
+A Lei de 1850, no seu artigo 6°, estabelecia parâmetros para a configuração
+da propriedade. No entanto, a política oficial não permitia às comunidades indígenas
+o direito a terra como decorrência de sua ocupação (FRANCISCO, 2006).
+Art. 6º. Não se haverá por princípio de cultura para a revalidação das
+sesmarias ou outras concessões do Governo, nem para a legitimação de
+qualquer posse, os simples roçados, derribadas ou queimas de matos ou
+campos, levantamentos de ranchos e outros atos de semelhante natureza,
+não sendo acompanhados da cultura efetiva e morada habitual exigidas no
+artigo antecedente (BRASIL, 1850).
+
+Os indígenas, caboclos e pequenos posseiros não conseguiram legitimar
+suas ocupações por não obedecerem aos parâmetros exigidos no Artigo 6°.
+Conforme definido nos termos da Lei, os simples roçados, derrubadas ou queimadas
+
+
+31
+
+de matas ou campos, levantamento de ranchos ou outros semelhantes não
+configuravam posse útil da terra e, portanto, os indivíduos que assim dispusessem
+dos terrenos não tinham uma ocupação territorial legitimável (BRAGA, 2006).
+Braga (2006) também informa que, além das dificuldades legais, esses
+habitantes
+
+viviam
+
+frequentemente
+
+isolados
+
+devido
+
+às
+
+grandes
+
+extensões
+
+geográficas, tendo dificuldades de frequentar as igrejas, encarregadas de divulgar a
+Lei. De acordo com Francisco (2006), as características culturais destes grupos
+étnicos estão profundamente vinculadas à coleta, à caça, à pesca, e não ao cultivo
+dos campos nem à vida sedentária, exigências da referida Lei. A cultura efetiva e a
+morada permanente não faziam parte, portanto, do universo cultural e material dos
+caboclos e dos indígenas que viviam na região das matas.
+Os dispositivos propostos pela Lei de Terras em 1850 e sua regulamentação
+em 1854, por um lado, garantiram a legitimação de extensas áreas de terra. Mas por
+outro lado, provocaram o processo de expropriação dos territórios originários das
+comunidades indígenas (FRANCISCO, 2006). Com a criação da Lei de Terras
+formulou-se um novo regime fundiário, e nesse caso, de uma forma geral, o Estado
+protegeu o latifúndio o qual, ampliou ainda mais as suas imensas propriedades,
+vedando o acesso à terra aos escravos livres, caboclos, imigrantes pobres e
+indígenas (NASCIMENTO, 2001).
+A desapropriação dos indígenas e caboclos de seus territórios por não poderem
+comprovar as exigências da Lei de Terras gerou grandes áreas de terras
+disponíveis. Estas áreas passaram ser vistas pelos grandes proprietários, que
+desejavam aumentar suas possessões anteriores, como terrenos devolutos
+(BRAGA, 2006). De acordo com fragmento da Lei de Terras de 1850:
+Cada terra em posse de cultura ou em campos de criação compreenderá:
+além do terreno aproveitado ou do necessário para pastagens dos animais
+que tiver o posseiro, outro tanto mais de terreno devoluto que houver
+contínuo, contanto que em nenhum a extensão total da posse exceda a de
+uma sesmaria, para cultura ou criação, igual às últimas concedidas na
+mesma comarca ou nas mais vizinhas (BRASIL, 1850).
+
+Na década de 1870, nos autos de legitimação de posses aparecem
+indicações da existência de terras e matos contíguos às posses requeridas. De um
+total de 83 proprietários que requereram a legitimação de suas posses no município
+de Passo Fundo durante a década de 1870, 63 dos Autos informam a existência de
+terras devolutas contíguas (FRANCISCO, 2006).
+
+
+32
+
+De acordo com Nonnenmacher (1995), o processo de colonização no Rio
+Grande do Sul obrigou a retirada dos índios de seu território, levando-os ao
+aldeamento com o propósito de facilitar a colonização. “O índio é visto como alguém
+que não pensa por si só, que não produz. Já o colono tem condições e capacidade
+de trabalhar as terras” (NONNENMACHER, 2000, p.14).
+Segundo Cunha (1992), a Lei de Terras inaugura uma política agressiva em
+relação às terras do aldeamento. Um mês após a sua promulgação, uma decisão do
+Império manda incorporar aos próprios nacionais as terras de aldeamentos de índios
+dispersos e confundidos com a população civilizada.
+[...] para que tendo conhecimento do que se dispõe n’aqueles Avisos,
+mande-se questrar e incorporar aos Próprios Nacionais todas as terras
+concedidas aos Índios que já não vivam aldeados, mas sim dispersos e
+confundidos com a massa da população; por que tais terras devem ser
+aproveitadas na forma da dita Lei nº 601, uma vez que não estejam
+ocupadas aforadas, ou arrendadas cumprindo por isso averiguar se existam
+os títulos dos respectivos contratos (OFICIO22..., 1851 apud FRANCISCO)
+
+Nesse sentido, de acordo com Cunha (1992), o governo usa o duplo critério
+da existência da população não indígena e de uma aparente assimilação por parte
+do indígena para despojar os nativos de suas terras tradicionais. A seguir,
+apresentaremos a formação do aldeamento de Nonoai, assim como a expropriação
+dos Kaingang de suas terras e as ações promovidas pelos mesmos frente à defesa
+de seu território tradicional.
+
+22
+
+Ofício de 16/06/1851, do presidente da província ao diretor geral. Lata 300, maço 3 – AHRS.
+
+
+33
+
+4 AS AÇÕES DOS KAINGANG FRENTE A EXPROPRIAÇÃO DE SUAS TERRAS
+4.1 O ALDEAMENTO DE NONOAI
+No século XIX percebemos que a colonização Alemã e Italiana a partir de
+1824 e 1875 respectivamente definiram vários municípios atuais 23 nos territórios
+originais dos índios24. Nesse sentido, estabelece-se uma situação bastante tensa,
+pois na medida em que o colono tentava se estabelecer nas terras que lhe
+pertenciam por determinação Imperial, o Kaingang via a expropriação das terras que
+lhe pertenciam desde tempos imemoriáveis (BECKER, 2006).
+A política de aldeamentos foi implementada pelo governo provincial para
+minimizar os contatos violentos entre índios e brancos e assim liberar as terras para
+a colonização. O aldeamento de Nonoai surge como o principal núcleo naquele
+momento, seguido de Guarita e Campo do Meio (BECKER, 1995). Esse aldeamento
+foi construído no momento em que o governo abria uma estrada 25 para ligação entre
+as Províncias do Rio Grande e de São Paulo.
+O aldeamento de Nonoai, no extremo noroeste do Rio Grande do Sul, foi
+fundado em 1848 e ratificado em 1850 mediante a Lei de Terras. Conforme
+argumentamos no capítulo anterior, esta Lei estipulou que se deveriam usar as
+terras devolutas26 do Império para os aldeamentos. Mesmo a reserva de Nonoai
+tendo sido criada em 1848, sua demarcação foi realizada em 1856 (NASCIMENTO,
+2001).
+O cacique Nonoai era uma liderança muito conhecida dentre os demais
+protagonistas de sua época, legando o seu nome ao próprio aldeamento. Nas
+últimas décadas do século XVIII, Nonoai já era um líder de destaque entre os seus.
+Participou em lutas para defender o território da invasão de outros grupos e liderou
+23
+
+No primeiro momento, surgem as chamadas antigas colônias de São Leopoldo, Feliz, Bom Princípio
+e Pinhal. Posteriormente as colônias italianas de Bento Gonçalves, Caxias do Sul e Garibaldi
+(BECKER, 2006).
+24
+Não pretendo analisar o processo de ocupação europeia no Rio Grande do Sul, apenas verificar as
+ações utilizadas pelos Kaingang diante do processo de conquista de seus territórios.
+25
+Nesse sentido, as estradas são abertas para facilitar o desenvolvimento das colônias.Como
+consequência o índio era retirado do seu território tradicional e reduzido ao aldeamento
+(NONNENMCHER, 2000).
+26
+Não se trata na Lei de Terras, como erroneamente se entendeu às vezes, de declarar as áreas
+indígenas devolutas e sim, inversamente, de reservar terras devolutas do Império para aldeamento de
+índios, quando se os queira assentar e deslocar de seus territórios originais (CUNHA, 1992).
+
+
+34
+
+uma importante batalha contra os Xokleng nas proximidades do arroio do Tigre, local
+onde mais tarde originou-se o aldeamento de Nonoai (LAROQUE, 2000).
+Quanto ao território de onde a tribo de Nonoai teria se originado e/ou migrado,
+segundo Laroque, não há unanimidade por parte dos autores. Segundo este autor,
+de acordo com as notas de João Cezimbra Jacques, há mais de cem anos os
+Kaingang passaram o Rio Uruguai, para a terra Sul-Rio-Grandense e era um dos
+seus capitães o cacique Nonoai. De acordo com o mesmo autor, o padre Pérez
+destaca a frase de Nonoai em que tem os campos de Nonoai como seus, pois
+nesses campos eles nasceram e se criaram e descansam as cinzas de seus
+antepassados.
+Foram aldeados inicialmente em Nonoai 144 Kaigang, mas seu número subiu
+para 750 no mesmo ano, em função da transferência forçada de 600 índios de
+outras regiões (Becker, 1995). De acordo com esta autora, o governo queria
+congregar numa só reserva a maior quantidade possível de nativos, tornando-a
+centro indígena e garantindo, assim, segurança e terra para os brancos.
+Segundo Braga (2006), a política indigenista aplicada na Província de São
+Pedro apareceu nos ofícios dos diretores de índios, permeada do intuito de
+concentrar cada vez mais os grupos indígenas, disponibilizando-lhes a menor área
+possível. O autor prossegue, informando que a diversidade de grupos indicados nos
+documentos demonstra que a intenção do governo da Província do Rio Grande de
+Sul não era reunir em Nonoai grupos aparentados ou com algum tipo de vínculo
+histórico, mas sim o maior número de índios possível.
+Conforme Bringmann (2009), a concentração dos indígenas nos aldeamentos
+consistiu na gradual descaracterização dos índios enquanto grupos étnicos
+homogêneos, acentuando as tensões internas nos núcleos. Como resultado da
+concentração forçada houve muitos casos de evasão indígena ou, como veremos
+adiante, de alianças com agentes do governo.
+De acordo com Braga (2006), mesmo com a resistência dos índios em reunirse em áreas destinadas a eles pelo governo provincial, vários documentos indicam a
+insistência dos diretores dos índios na reunião de vários grupos no aldeamento de
+Nonoai.
+Sou da opinião de V.Exª. que este local he o mais azado para o aldeamento
+de todas as Tribus de Indios Coroados, que vagão por estes contornos, pela
+Vaccaria, Pontão, e Campo do Meio, muito embora ainda não se tenha
+
+
+35
+
+conseguido aqui reunilos todos, em consequencia dos manejos de huns que
+só almejão desacreditar o governo actual, e esta Directoria, e de outros que
+despejadamente aspirão locupletar-se com os Campos e serviços dos
+Indios. Visto como aqui não estão reunidos todos os Índios, não he possivel
+ao certo dizer-se o seo numero; porem não he longe da verdade o calculo
+de 640, inclusive 289 que me acompanharão da Guarita sob as ordens do
+capitão Fongue. (OLIVEIRA27, 1854 apud BRAGA, 2006 p.111).
+
+Segundo Braga (2006), durante a primeira metade da década de 1870 ainda
+havia a pretensão de concentrar todos os Kaingang no aldeamento de Nonoai, que
+até essa época não havia se concretizado. Para Laroque (2000), os resultados
+desejados não foram obtidos, pois não foram levadas em consideração as
+rivalidades existentes entre as diferentes facções Kaingang.
+Para Braga (2006), a persistência do governo, na tentativa de reunir os
+indígenas em áreas cada vez mais reduzidas, permite associar as terras do
+aldeamento à disponibilidade de terras para o projeto de colonização que estava
+sendo desenvolvido pelo Império no sul do Brasil. Este autor também associou a
+redução dos espaços ocupados pelos indígenas ao processo de mercantilização da
+terra que estava se desenvolvendo no Brasil desde a primeira metade do século
+XIX, que culminara com a crescente valorização dos terrenos em função da Lei de
+Terras, depois de 1850.
+4.2 CONFLITOS E RESISTÊNCIA FRENTE À EXPROPRIAÇÃO DO TERRITÓRIO
+Diante da expropriação de seus territórios tradicionais vários foram os
+conflitos, assaltos e correrias28 promovidos pelos índios contra os colonos, indicando
+que a situação dos nativos não era um problema menor no contexto de ocupação
+dos territórios Rio-Grandenses, especialmente nas áreas ao norte e nordeste da
+província. Nesse sentido, foi importante o papel desempenhado pelos missionários 29
+na contenção dos conflitos (FRANCISCO, 2006).
+Segundo Francisco (2006), em Nonoai as negociações foram intensas e a
+presença dos padres parece ter amenizado as disputas. Os missionários eram muito
+27
+
+s.n.],
+1854.
+28
+O termo correrias é usado para designar os atos hostis dos indígenas de várias partes do Brasil no
+momento em que estes impõem resistência ao invasor. Designa principalmente os ataques Kaingang
+às fazendas e aos lotes coloniais dos imigrantes europeus (BRINGMANN, 2009).
+29
+De acordo com Francisco (2006) os missionários a partir de 1846 foram chamados a realizar a sua
+obra civilizadora junto aos indígenas do planalto gaúcho justamente quando a colonização avançava
+sobre seus territórios.
+
+
+36
+
+requisitados para acalmar os conflitos, principalmente naqueles momentos em que
+os aldeamentos encontravam-se sem força policial. Muito constante foi o pedido de
+forças para reprimir os intrusos no aldeamento, o que era feito pelos padres
+atendendo as reclamações dos chefes indígenas.
+A autora, embasada em documentos da época, informa que os missionários
+foram vistos como agentes do governo pelos nativos e que em alguns casos isso
+facilitou as negociações junto às autoridades da Província. Nesse sentido, as
+viagens feitas a Porto Alegre para o estabelecimento de acordos com o governo
+foram realizadas por intermédio dos padres, atendendo os pedidos dos índios.
+Braga, ancorado em documentos, informa que a invasão dos terrenos
+reservados aos índios apareceu nas fontes consultadas imediatamente após o início
+do registro de posses imposto pela Lei de Terras de 1850. Nesse caso, segundo o
+autor, essa sucessão cronológica sugeriu uma relação direta entre os efeitos da Lei
+de Terras e a existência de conflitos entre índios e posseiros nos aldeamentos. Para
+Braga dois documentos do Padre Bernardo Pares servem para exemplificar a
+relação entre a Lei de 1850 e os conflitos entre índios e posseiros.
+Braga prossegue informando que no primeiro dos documentos o missionário
+Pares relatou as dificuldades de manter a ordem nas relações entre índios e
+invasores. Segundo o padre não era fácil regulamentar os aldeamentos sem a
+companhia de pedestres30 para impor respeito entre índios e os portugueses que
+moram entre eles. No segundo documento, a relação entre a tomada de posse dos
+terrenos e distúrbios envolvendo os indígenas que habitavam os campos de Nonoai
+fica explícita no ofício do Padre Bernardo Pares ao presidente da Província do Rio
+Grande do Sul.
+Tendo sabido que com o fim de prevenir as desordens que ameação no
+Aldeamento de Nonohay e expulsar d’aquelles campos os intrusos que
+estão tomando posses, tinha VE ordenado ao Capitão Comandante da
+Guarda Nacional de Passo Fundo de mandar um destacamento da mesma
+Guarda, e ao Subdelegado d’aquelle districto de ir com a dita força a
+executar as providencias prescriptas[...] (OFÍCIO 31..., 1851 apud BRAGA
+2006, p. 132)
+
+30
+
+As companhias de pedestres eram a proposta dos diretores de índios para impor a ordem aos
+habitantes dos aldeamentos. A força de pedestres não estaria resolvendo só os objetivos dos
+aldeamentos, mas também atuando em benefício dos moradores e dos comerciantes
+(NONNENMACHER, 2000).
+31
+Ofício do Padre Bernardo Pares ao presidente da Província do Rio Grande do Sul. AHRGSCatequese dos índios, 05 de agosto de 1851- Maço 1.
+
+
+37
+
+Os conflitos gerados com a ocupação das terras de Nonoai, que foi
+denunciada pelos índios, fizeram com que os padres denunciassem as constantes
+entradas de brancos intrusos no aldeamento, conforme relatório de 1851, em que o
+diretor geral relatava os conflitos em Nonoai.
+Onde existe bastante arado para plantações, não faltam também
+ambiciosos que [sequeiram?] apossar das terras espalhando a tirania entre
+os Índios para por este meio ficarem senhores delas, porém os esforços dos
+Missionários Jesuítas que existem entre eles tem feito com que se
+desvaneçam semelhantes intrigas. (RELATÓRIO32..., 1851 apud
+FRANCISCO, 2006 p. 199).
+
+Braga (2006) também identificou na documentação conflitos envolvendo
+indígenas e posseiros alojados nas terras reservadas para os aldeamentos, definida
+pelo autor como uma resistência ao processo de capitalização da terra no planalto
+rio-grandense que se desenvolveu na metade do século XIX. No documento fica
+clara a existência de disputas pelos terrenos dos índios mesmo depois do
+estabelecimento dos aldeamentos. Diante da situação, o Padre Pares pede
+providências ao presidente da província diante da invasão das terras dos índios,
+para evitar confronto entre posseiros e os caciques.
+Sendo os dous Indios Cacique Doble e Chico senhores de dous campos, e
+faxinais sitos nas margens do Rio por elles denominado = Gôy = a seis
+leguas mais ou menos de distancia deste Aldeamt.º e no centro das mattas,
+de há muito reclamão por meu intermedio ao Exm.º Gov.º Proval.
+providencias a fim de que seus campos, que de tempo immemorial são o
+deposito dos restos mortaes de seus maiores, não sejão invadidos por
+individuos de nossa sociedade que delles tem querido apossar-se, e
+extorquir herva de mate contígua aos mesmos campos. Os dous Cacique já
+de ha muito haverião por meios violentos feito desoccupar os seus terrenos,
+se não os obstassem os meus conselhos, e a confiança que lhes foi
+inspirado, de que, o Exm.º Governo proveria de forma, que elles
+continuarião a usofruir o que por direito sagrado lhes pertence.
+(OFÍCIO33..., 1864, apud BRAGA, 2006 p.51).
+
+Conforme Laroque (2000), desde 1849 quando iniciaram os primeiros
+contatos com os nativos na região de Nonoai, foi perceptível a estratégia adotada
+por este cacique visando defender seu território. Este autor nos informa que eles
+recorriam aos padres para ajudá-los nas negociações solicitando que estes
+
+32
+
+Relatório (parcial da Diretoria Geral das Aldeias, em 05/07/1851, ao presidente da Província, Lata
+300, maço3 – AHRS).
+33
+Ofício do Padre Antônio de Moraes Branco ao presidente da Província do Rio Grande do Sul.
+AHRGS- catequese dos índios, 8 de novembro de 1864-Maço 2.
+
+
+38
+
+intercedessem junto ao presidente da província para expulsar os invasores de seus
+territórios.
+Segundo Nonnenmacher (2000), com o aumento da colonização e da
+conquista dos territórios Kaingang ocorrem conflitos pela posse das terras,
+envolvendo várias parcelas da sociedade. Nesse sentido, inúmeros são os relatos
+de choque contra os brancos por questões de terras e alguns colonos foram mortos
+por índios Kaingang que resistiram à posse. O aldeamento foi um espaço reservado
+para os índios, no entanto foi disputado por pessoas que, por terem poder,
+usufruíam das terras dos nativos, pois estes nunca tiveram título de posse.
+Esta autora estudou os Kaingang do século XIX a partir de fontes oficiais. A
+documentação pesquisada por ela referente a aldeamentos indígenas nos traz
+muitas informações sobre os Kaingang do Rio Grande do Sul frente à expropriação
+de suas terras. Cito o caso em que o diretor do aldeamento de Nonoai se tranformou
+em invasor das terras do próprio aldeamento. No entanto, os índios não ficaram
+passivos e reagiram frente à perda de suas terras.
+Cipriano Rocha de Loures foi o primeiro diretor do aldeamento de Nonoai. Por
+volta de 1847 cercou os campos e a partir desse momento passou a usufruir em
+benefício próprio de uma extensa área do aldeamento. Segundo a autora, as três
+léguas de campo cercadas por ele eram as melhores e mais férteis existentes no
+aldeamento. Este diretor utilizava métodos psicológicos e fazia intrigas, provocando
+a saída dos índios do aldeamento e sua volta para as matas e, assim, garantia a
+posse dos campos de Nonoai.
+No entanto, a autora prossegue informando que os índios exigiram a expulsão
+do invasor, papel que foi desempenhado pelo próprio cacique representando os
+interesses da tribo e deixando claro porque queriam o afastamento de Rocha dos
+campos de Nonoai.
+1°- O Sr. Rocha nos ameaça perseguir com força armada, não quer que
+residamos nos campos que ele chama de seus e que são nossos, pois
+neles nascemos, neles estão enterrados os nossos pais, neles estávamos
+quando ele veio de Palmas com a gente do Vitorino e nunca os temos
+abandonado. 2°- O Sr. Rocha fez derrubar as casas que tínhamos no
+campo quando o Sr. Presidente nos mandou dizer que saíssemos dos
+matos. 3°- O Sr. Rocha se queixa injustamente de nós,quando se perde ou
+morrem alguns de seus animais (OFÍCIO34...,1851 apud NONNENMACHER,
+2000 p.81)
+34
+
+Correspondência de
+23/02/1851 do Pe. Parés ao diretor geral, Lata 300, maço 3 - AHRS.
+
+
+39
+
+De acordo com Nonnenmcher (2000), Rocha Loures era influente em Passo
+Fundo. Primeiro veio na condição de inspetor do aldeamento, foi juiz de direito na
+comarca de Cruz Alta e, por fim, foi subdelegado de Passo Fundo. Somando-se a
+isso, estava apoiado em uma Lei criada em 1846 que lhe concedia certos direitos.
+Deve conservar do aldeamento dos índios nos campos de Nonoai, onde não
+consentirá que se arranche algum fazendeiro e só ele diretor poderá ali ter a
+sua invernada de animais como já tem no referido campo. (COLEÇÃO 35...,
+apud NONNENMACHER, 2000 p.84).
+
+A autora prossegue informando que no ano de 1852 aumentou a revolta dos
+índios, pois, além do próprio diretor invadir os campos, local sagrado para os
+indígenas, pois era neste local que enterravam seus mortos, continuou cercando
+mais campos nas terras do aldeamento. A autora, baseada no ofício de 1° de maio
+de 1854, nos informa que ele se apoderou de mais três rincões que não constavam
+na demarcação feita pelo ex-juiz de direito e que, na verdade, pertencia ao
+aldeamento de Nonoai. A invernada alcançava a medida de mais de uma sesmaria e
+que ele desfrutava sem título de propriedade e sem pagar os impostos.
+Segundo Nonnenmcher (2000), as questões sobre as terras do aldeamento
+eram para ser reivindicadas e defendidas em favor dos índios, no entanto acabaram
+tornando-se uma disputa entre particulares 36. A autora também informa que por
+vários anos Rocha usufruiu das terras dos índios, apesar dos inúmeros pedidos
+solicitados ao governo provincial para seu afastamento.
+A mesma autora, através da documentação primária pesquisada, informa
+sobre outro conflito37 por questões de terra envolvendo fazendeiros e os Kaingang.
+Neste conflito, Clementino Pacheco e mais cinco pessoas foram mortas pelo índio
+Pedro Nicofim em 1856.
+Conforme ofício de 31 de março de 1854 (apud Nonnenmacher, 2000) o
+capitão Antonio e mais dois índios foram à capital reclamar ao presidente da
+Província que Clementino dos Santos Pacheco havia se apossado de uns campos
+que pertenciam a eles e esperavam que o governo tomasse providências a respeito.
+A autora prossegue informando que nesse momento, tendo a direção do aldeamento
+35
+
+Coleção de Leis da província de 1834 a 1856.
+Em 1868 chega a vez do coletor Cirino Veloso Linhares em reclamar a posse dos campos que
+Loures ocupava.
+37
+Fica evidente nas correspondências a participação de outras pessoas não indígenas interessadas
+nas terras provocando os conflitos para obterem vantagens.
+36
+
+
+40
+
+de Nonoai o Padre Antonio Penteado, logo que fica sabendo das mortes oficia ao
+Diretor Geral, informando os fatos e as providências que tomou.
+Cortado de dor tomo a pena para participar a V.Excia. o bárbaro
+assassinato perpetrato pelos índios do malvado Nicofim, na pessoa do
+infeliz Clementino dos Santos Pacheco e seu sobrinho José Pacheco, um
+filho, o capataz, um filho deste e um escravo [...] tomei as providencias
+seguintes [...] mandei também chamar o Doble na Vacaria com sua horda
+(OFÍCIO38..., 1856 apud NONNENMACHER, 2000 p.72)
+
+A autora prossegue informando, com base na documentação, que
+conseguiram prender trinta índios, sendo 13 mulheres e sete escravos, e entre eles
+encontrava-se Pedro Nicofim. Becker (1976) ao tratar da tragédia de 1855 na região
+de Nonoai informa que as hostilidades aumentaram entre os próprios índios e entre
+estes e os moradores brancos.
+4.3 ALIANÇAS, COLABORACIONISMO E ESTRATÉGIAS NA DEFESA DO
+TERRITÓRIO.
+A atuação das lideranças Kaingang não pode ser vista apenas sob a
+perspectiva da violência física como forma de resistência frente à defesa de seu
+território. Essas lideranças desempenharam também o papel de colaboracionistas
+desempenhando importante papel frente às autoridades provinciais e colonizadores,
+no momento da intensa ocupação das terras da Província do Rio Grande do Sul
+pelos colonos nacionais e europeus39. Igualmente contribuíram para o avanço da
+frente de expansão que estabelecia fazendas e abria estradas nos Campos de
+Palmas em direção aos campos de Nonoai (BRIGMANN, 2009).
+Luis Fernando Laroque (2000), que também pesquisou fontes documentais do
+período acredita que os caciques Kaingang tenham atuado como colaboracionistas,
+seguindo a lógica de alianças até o momento que obtivessem o que desejavam, do
+contrário rompiam as negociações. De acordo com o autor, vários caciques
+passaram a atuar como colaboracionistas do governo, perseguindo principalmente
+índios inimigos.
+
+38
+
+Oficio de 1856 do Padre Penteado ao Diretor Geral.
+Vários foram os líderes Kaingang que se destacaram no campo das negociações, ganhando
+destaque pelo colaboracionismo com as autoridades provinciais, dos quais podemos destacar Condá,
+Nonoai, Fongue e Doble (BRIGMANN, 2009)
+39
+
+
+41
+
+O cacique Yotoahe, ou como ficou conhecido entre os não indígenas Cacique
+Doble40 viveu na região Nordeste do Rio Grande do Sul, em meados do século XIX.
+Esse líder Kaingang exerceu duplo papel frente às autoridades provinciais do Rio
+Grande do Sul, para obter vantagens para si e seu grupo. Por um lado, foi mediador
+e atuou como colaboracionista das autoridades provinciais e colonizadores no
+momento da ocupação das terras indígenas. Por outro lado, reagiu contra as ordens
+das autoridades, ameaçando o projeto de colonização com insurgências e violência
+realizadas contra outros indígenas e também contra os brancos (BRIGMANN, 2009).
+O padre Antônio de Moraes Branco, no ano de 1863, deu um exemplo da
+atuação de Doble como colaborador do governo Rio-Grandense 41. O missionário, em
+ofício ao presidente da província, anunciou a disposição de Doble em perseguir um
+grupo arredio na região do Turvo, em troca de mantimentos e gratificações.
+Perguntei aos aqui aldeados se se prestavão a bater, e capturar essa gente,
+e lhes fiz conhecer que isso mto. agradaria a V.Exª.; elles me responderão
+que estão promptos para isso, mandando V.Exª. Dar-lhes carne, farinha e
+sal, e tambem algum mantimento para suas mulheres, que ficão sem elle
+durante a auzencia dos homens por não tere quem para ellas cace; assim
+mais uma gratificação para o Cacique Doble. (OFÍCIO42..., 1863, apud
+BRAGA 2006 p.146).
+
+Este cacique, através de lógicas diferentes, manteve posições contraditórias.
+Contribuiu com o governo da Província na perseguição dos indígenas resistentes,
+praticantes das correrias que insistiam em saquear as colônias. Nesse sentido foi
+solicitado quando do assalto e sequestro das famílias de Mariano Pimentel e Vargas
+em 1851 por grupos do Cacique Nicué. 43Posteriormente, os serviços de Doble foram
+solicitados após outro ataque praticado pelo mesmo cacique, na colônia Alemã de
+Mundo Novo. Este ataque resultou na morte de um colono e o sequestro de sua
+família pelos indígenas.
+O Cacique Doble teve participação ativa na perseguição dos indígenas
+acusados do crime. Diante do sucesso dessa nova missão, este cacique ganhou
+maior prestígio frente o Presidente da Província. No entanto, observamos o caráter
+40
+
+Doble retirou-se para Nonoai em 1850, devido às brigas e disputa por terra e pelo cacicado
+(NASCIMENTO, 2001).
+41
+De todos os caciques aldeados, Doble, era o mais inteligente, mais simulado e mais perverso,
+soube iludir todos os presidentes da província (MABILDE, 1983).
+42
+Ofício do Padre Antônio de Moraes Branco ao Presidente da Provínica do Rio Grande do Sul.
+AHRGS- Catequese dos Índios, 4 de agosto de 1863-Maço 2.
+43
+Trata-se dos ataques acontecidos nos campos de Vacaria resultando na morte e sequestro de
+várias pessoas.
+
+
+42
+
+oportunista e contraditório deste cacique através dos apontamentos de Mabilde em
+que o engenheiro destacou as correrias praticadas por Doble depois de aldeado.
+Neste sentido é Importante o trabalho de Mota (2000) para os Kaingang do
+Paraná, pois trata-se de tribos do mesmo grupo étnico, apenas afastadas
+geograficamente44. De acordo com o autor, os grupos Kaingang que viviam em
+Guarapuava lutaram contra ocupação de seus territórios e não deixaram os brancos
+ali se fixarem até 1839. Após a chegada das bandeiras de Siqueira Cortes e José
+dos Santos e o início da implantação das fazendas, os Kaingang chefiados pelo
+cacique Vaiton tentaram destruir a povoação branca incrustada em seus territórios.
+Nesse caso, os brancos tiveram apoio do cacique Viri e Vitorino Conda 45.
+Estes, a exemplo de Doble, aliaram-se aos brancos e possibilitaram sua
+permanência nesses territórios, e em troca passaram a receber salários e
+mercadorias. Mas também procuraram garantir parte dos territórios para sua gente
+em meio a ocupação branca, sendo que nesse local, mais de 600 indivíduos
+permanecem até os dias atuais, na sua área denominada Palmas, ocupando quase
+3 mil hectares de terra.
+Após consolidado o povoamento em Palmas em fins de 1845, o presidente da
+Província de São Paulo incumbe Loures de abrir uma picada ligando sua Província a
+do Rio Grande do Sul. Para realizar esse trabalho, principalmente nos campos de
+Nonoai onde os Kaingang estavam concentrados, Loures contou com o Cacique
+Condá, pois percebeu que este poderia ser útil contra os índios hostis nesses
+campos para a abertura da estrada46.
+As negociações estabelecidas durante a construção da estrada foram
+bastante conflituosas entre índios e brancos. Para diminuir a desordem entre os
+indígenas eram distribuídos agasalhos e alimentos. O poder de força coercitiva
+utilizado pelos Kaingang de certa maneira garantia a subsistência do grupo em um
+espaço cada vez mais reduzido e alterado pelos interesses econômicos da nova
+ordem ocidental (SILVA E BARCELOS, 2009).
+
+44
+
+O processo de aldeamento Kaingang ocorreu simultaneamente no Paraná e no Rio Grande do Sul,
+ainda que tenha iniciado no Paraná (FRANCISCO, 2006).
+45
+Vitorino Condá exerceu a função de bugreiro ou batedor de mato, a soldo das autoridades militares
+e fazendeiros de Guarapuava, Paraná, desde 1843. Mais tarde se transferiu para o aldeamento de
+Nonoai no Rio Grande do Sul (LAROQUE, 2000).
+46
+Segundo Nonnenmacher a abertura de estradas foi importante nesse período para a conquista dos
+territórios indígenas na região do Planalto, visto que todo espaço colonizável, independentemente de
+ser território indígena ou não, estava sendo ocupado pela sociedade expansionista (2000).
+
+
+43
+
+Podemos considerar que o padrão de expansão nacional, no século XIX,
+impôs ao Kaingang a necessidade de optar por formas alternativas à da violência
+física como forma de resistência. Nesse caso, o aldeamento pode ter sido uma das
+formas através do qual buscavam reelaborar estratégias contra ocupação de seu
+território. Assim, uma vez que as terras dos aldeamentos se encontravam sob
+usufruto dos grupos aldeados, estes podem tê-lo entendido como uma forma de
+manutenção de uma parte de seu território, na conjuntura de sua expropriação
+(FRANCISCO, 2006).
+Para Brigmann (2009), embasado nos estudos de Mota (2000), é importante
+pensar os aldeamentos na perspectiva dos indígenas, pois cada grupo traçava
+políticas e estratégias diferentes para adaptar-se a nova situação mediante a
+conquista ocidental. Para Mota (2000), o aldeamento foi percebido pelos indígenas
+como local de obtenção de vantagens. Segundo ele, grande parte dos indígenas via
+nos aldeamentos, primeiro uma fonte de recursos materiais da sociedade não
+indígena, segundo um local de abrigo quando se envolviam em brigas com brancos
+ou tribos inimigas e terceiro um local de abastecimento de alimentos produzido pelas
+roças dos aldeamentos.
+De acordo com Mabilde, os Kaingang procuravam o aldeamento para sua
+própria segurança.
+Os indígenas existentes na Guarita, mesmo que os de Nonoai e Campo do
+Meio são da nação que chamam coroados, propriamente selvagens e
+errantes. Os de Nonoai, já faz três anos, se apresentaram debaixo do
+comando de seu chefe Vitorino Condá, que pediu seguridade e ofereceu
+que procuraria reunir a sua gente toda de sua nação nos campos ditos de
+Nonoai (OFÍCIO47..., 1848 apud NONNENMACHER, 2000 p. 56).
+
+Dornelles (2009) destaca que houve um universo de interações diversificadas,
+inerentes ao protagonismo dos Kaingang, que pode ser observado nas trajetórias
+daquele contexto. A autora expõe o exemplo pessoal do Kaingang Luis Antonio da
+Silva Lima, também chamado Luis Bugre. Este índio foi capturado quando criança
+pelos colonos Alemães em 1847, após ter sido ferido em um assalto, e foi criado por
+eles.
+
+47
+
+Ofíco, 6 novembro de 1848 do Padre Paré ao presidente da província.
+
+
+44
+
+Este Kaingang manteve relações tanto com os outros Kaingang quanto com a
+colônia Alemã. Posteriormente, Luis Antonio teria guiado o assalto que desencadeou
+o sequestro da família Vesteg. Após o sequestro, Luís Antonio se instalou mais
+acima da serra, na região de Nova Milano. Dessa maneira recebeu e acompanhou
+os primeiros imigrantes italianos até um local de sua indicação. No momento em que
+os funcionários do império instalaram a administração colonial, ele registrou-se como
+colono, tornando-se dono do lote número17, com 148.191m.
+A partir do que sustentamos, com base em relatórios e ofícios presentes em
+fontes documentais e na análise de estudos bibliográficos, podemos observar que as
+lideranças, através de diversas atitudes, sempre procuraram preservar seu território,
+seja através de alianças, conflitos ou resistência.
+
+
+45
+
+6 CONCLUSÃO
+
+Este trabalho buscou compreender os Kaingang enquanto indivíduos com
+lógicas e comportamentos próprios. Conforme visto, a terra para eles é vital para sua
+existência física e cultural.
+Concluímos que houve e ainda há uma concepção própria de território nativo.
+Essa forte ligação simbólica da terra com sua origem é percebida desde o momento
+que se fixaram no Sul ao se estabeleceram nas partes altas do Rio Grande do Sul
+geograficamente semelhante ao Planalto Central, seu território de origem. Assim
+como a relação com os antepassados, a memória e o apego aos seus territórios
+tradicionais perpassa toda sua existência e chega aos dias atuais. Como exemplo da
+atualidade, cito o caso dos Kaingang do Morro do Osso, em Porto Alegre, que para
+justificar a tradicionalidade do uso deste território no projeto de demarcação frente a
+FUNAI usam como principal argumento a existência de um cemitério indígena onde
+haveria uma aldeia antiga ou terra perdida.
+Nesse caso, é importante entender o sentido que tem um território para esses
+povos, e nessa perspectiva poder contribuir acerca de problemas de demarcação de
+terras indígenas. Visto que, atualmente os Kaingang estão utilizando sua própria
+concepção de território nativo para demarcar suas terras, concepção esta que como
+vimos está definida muito mais em termos socio-cosmológicos que geográficos.
+Portanto é importante levar em consideração na demarcação das áreas
+indígenas o conceito diferenciado de território para indígenas e ocidentais e a
+história de seu processo de perda de terras para os brancos a partir da Lei de Terras
+de 1850. Segundo a lógica Kaingang, está intrínseco na escolha de determinada
+área toda a importância de significados da terra. Perceber esses fatores e seu
+próprio modo de apropriação do meio físico, levando em consideração seus
+aspectos culturais em relação às atividades econômicas, sociais e cosmológicas, é
+essencial para a afirmação da identidade étnica e cultural desse grupo.
+Nesse sentido, nos últimos anos vários grupos Kaingang passaram a lutar
+pela recuperação de parte de seus territórios ainda disponíveis, tendo em vista a
+brutal expropriação ocorrida a partir da metade do século XIX. Neste século os
+Kaingang passaram por momentos difíceis, com profundas transformações em seus
+territórios. Primeiramente, a partir de 1846, com a criação dos aldeamentos que
+
+
+46
+
+visavam superar os conflitos entre índios e colonos e liberar as terras para a
+colonização. Também sofreram a ação dos fazendeiros e estancieiros pelas disputas
+de suas terras.
+Veio agravar a questão indígena a Lei de Terras de 1850. Esta Lei favoreceu
+os interesses dos grandes proprietários e das elites dominantes ao garantir a estes a
+posse de grande propriedade fundiária. Em contrapartida, os índios foram excluídos
+do acesso ou da continuidade da posse da terra tradicional. Visto que a política
+oficial não permitia as comunidades indígenas o direito a terra como decorrência de
+sua ocupação.
+A progressiva exclusão dos indígenas de suas terras tradicionais acarretou
+várias formas de ações promovidas por estes na defesa de seu território.
+Inicialmente, o próprio aldeamento pode ser percebido como uma forma dos
+Kaingang manter parte de seu território, assim como o lugar onde poderiam fazer
+negociações com a sociedade envolvente, tendo em vista a sua sobrevivência.
+Usando a história de formação do aldeiamento de Nonoai como estudo de
+caso, percebemos que através de diferentes estratégias, seja através de
+negociações, colaboracionismo ou alianças com as autoridades Provinciais, os
+Kaingang procuraram lutar pela defesa de seus territórios. No entanto, na disputa
+pelas suas terras podemos verificar também atos de violência como mortes e
+sequestros. Essa estratégia de resistência, no entanto, pode ser vista num clima de
+disputas de terras em que os indígenas eram obrigados a sair de seus territórios,
+pois caso resistissem seriam mortos.
+Nesse caso, não tendo o apoio do Estado que defendia a colonização,
+interessado em terras produtivas e valorizadas, os índios reagiram contra os
+ocupantes com a mesma violência em defesa de sua sobrevivência. Deve-se levar
+em consideração também diante da violência praticada pelos índios contra os
+colonos o significado de terra para os primeiros. Conforme visto, a terra para os
+Kaingang era como uma mãe, logo ao serem expulsos de seu território não estavam
+apenas perdendo um meio de subsistência, mas sim seu suporte de vida social.
+A noção de vazio demográfico que visava mostrar a colonização passiva e
+sem conflitos interétnico pode ser considerada totalmente falsa. Em primeiro lugar,
+primeiro porque a arqueologia constatou a presença dos indígenas no Sul do Brasil
+por milênios antes da chegada do branco. Em segundo lugar porque, conforme visto,
+ao contrário de vazio territorial, podemos perceber não só a existência desses
+
+
+47
+
+povos, mas que estes se relacionavam de forma complexa com o não índio
+estabelecendo ações diversificadas pela defesa de suas terras. Em terceiro lugar
+porque apesar de todas investidas para elimina-los enquanto grupo étnico, os
+Kaingang atualmente constituem o mais numeroso povo indígena do Brasil
+Meridional, assim como a mais numerosa das sociedades pertencentes à família
+linguística Macro-Jê. De acordo com o último senso do IBGE, sua população esta
+estimada em cerca de 29 mil pessoas que ocupam três dezenas de áreas indígenas
+distribuídas entre o Oeste Paulista e o norte-noroeste do Rio Grande do Sul,
+incluindo Paraná e Oeste Catarinense.
+Os Kaingang aumentaram demograficamente nos últimos anos e a luta pela
+terra se apresenta para eles como a questão mais importante, pois dela depende
+sua sobrevivência física e cultural. Percebe-se que nos dias atuais, a exemplo do
+passado, eles continuam lutando pelos espaços ainda disponíveis, assim como
+buscam intensificar alianças com instituições e segmentos sociais diversos pela
+demarcação de suas terras.
+
+
+48
+
+FONTES DOCUMENTAIS
+ARQUIVO Histórico do RS. Catequese dos Índios - Correspondência ativa e
+passiva. 1845 a 1860, Lata 300, maço 3
+DIRETORIA DE ÍNDIOS NO ALDEAMENTO DE NONOAI. Correspondência do
+Padre Bernardo Parés. AHRGS, Catequese dos Índios, maço 1, 1848-1852.
+DIRETORIA
+
+DO
+
+ALDEAMENTO
+
+DA
+
+COLÔNIA
+
+MILITAR
+
+DE
+
+CASEROS.
+
+Correspondência do Padre Antônio Moraes Branco. AHRGS, Catequese dos
+Índios, maço 2, 1862-1867.
+
+REFERÊNCIAS BIBLIOGRÁFICAS
+
+BECKER, Ítala Irene Basile. O Índio Kaingang no Rio Grande do Sul. São
+Unisinos, 1995.
+BECKER, Ítala Irene. Dados sobre o abastecimento entre os índios Kaingang do Rio
+INSTITUTO
+ANCHIETANO DE PESQUISAS. Estudos sobre o abastecimento indígena. São
+Instituto Anchietano de Pesquisas, 1975. P. 39-59.
+BECKER, Í. I. O que sobrou dos índios pré-históricos do Rio Grande do Sul. In:
+Arqueologia do Rio Grande do Sul, Brasil - Documento 05, 2ª edição. São
+Instituto Anchietano Pesquisas. UNISINOS, 2006.
+distribuição e biologia. São
+ed. Unisinos, 1994.
+índios, brancos e a política
+indigenista no Rio Grande do Sul entre 1834 e 1868. Dissertação de Mestrado.
+Unisinos, 2006.
+BRASIL. Presidência da República. Casa Civil Lei n° 601, de 18 de setembro de
+em
+14 nov. 2012.
+um fenômeno de fronteiras
+Revista eletrônica do
+Arquivo Público do Estado de São Paulo, n° 35, 2009.
+Uma
+1808-1889/Colaboração de Mara Manzoni Luz, Beatriz Perrone-
+
+
+49
+
+Comissão Pró-Índio de
+São Paulo, 1992.
+DIAS, Jefferson L. Zuch. A tradição Taquara e sua ligação com o índio Kaingang
+UNISINOS, 2004.
+DORNELLES, Soraia Sales. A experiência vivida por imigrantes italianos e índios
+pioneiros em terras incultas e devolutas. In:
+SIMPÓSIO NACIONAL DE HISTÓRIA, 25., 2009, Fortaleza. Anais do XXV
+ANPUH, 2009.
+Disponível
+em:
+15 nov. 2012.
+a
+expropriação do território Jê no Sul do Brasil (1808-1875). Dissertação de
+Mestrado. Unisinos. São Leopoldo. 2006.
+crianças
+Kaingang em meio urbano. 2010. Dissertação (Mestrado em Serviço Social)Faculdade de serviço social, PUCRS, Porto Alegre, 2010.
+LAROQUE, Luís Fernando. Lideranças Kaingang no Brasil Meridional (18081889).
+Pesquisas Antropologia, São Leopoldo, n. 56, 2000.
+MABILDE, Pierre F. A. B. Apontamentos sobre os indígenas selvagens da Nação
+1836-1866. São Paulo:
+IBRASA, Fundação Nacional Pró-Memória, 1983.
+MARCON, Telmo. História e Cultura Kaingáng no Sul do Brasil. Passo Fundo:
+UPF, 1994.
+MOTA, Lúcio Tadeu. As guerras dos índios Kaingang. A história épica dos
+UEM, 1994.
+MOTA, Lúcio Tadeu. Os índios Kaingang e seus territórios nos campos do
+MOTA, Lúcio Tadeu;
+estudos
+Eduel, 2000. p. 81-189.
+ocupação
+e apropriação dos territórios Kaingang da Serrinha. Porto Alegre, 2001.
+Dissertação (Mestrado em História). Programa de Pós-Graduação em História,
+Pontifícia Universidade Católica do Rio Grande do Sul, Porto Alegre, 2001.
+NOELLI, Francisco Silva. Repensando os rótulos e a História dos Jê no Sul do Brasil
+MOTA, Lúcio Tadeu; NOELLI,
+estudos
+Eduel, 2000. p. 09-57.
+
+
+50
+
+NONNENMACHER, Marisa. O índio Kaingang no Rio Grande do Sul Frente à
+Sociedade Brasileira em Expansão (Século XIX). Dissertação (mestrado em
+PUCRS, 1995.
+PERRONE-MOISES, Beatriaz. Índios livres e índios Escravos – princípios da
+CUNHA, Manuela Carneiro da (org).
+Cia das Letras, 1992, p.115-132.
+Editora da UnB, 1992.
+RAMOS, Alcida Rita. Sociedades Indígenas. 2ed. São Paulo, Ed. Ática, 1988.
+Uma Arqueologia
+Espacial das Terras Altas do Sul do Brasil. Dissertação de Mestrado. Porto
+Alegre. PUCRS/IFCH/PPGH.
+O índio no
+Rio Grande do Sul. Comissão Executiva de Homenagem ao índio. Aspectos
+arqueológicos, históricos, etnográficos e étnicos. (Biênio da Colonização e
+Imigração). Porto Alegre, 1975.
+SCHMITZ, Pedro Inácio. A discussão sobre a origem e formação dos Kaingang
+e Xokleng. In. VII Reunião de Antropologia do Mercosul (RAM). GT 43. Porto
+Alegre, 2007.
+índios e bugres nos
+KERN, A.; SANTOS, M. C.; GOLIN, T. (Org.). História
+Méritos, 2009. v. 5. p.
+63-80.
+SILVA, Lígia Osório. Terras Devolutas e Latifúndio – efeitos da lei de terras de
+Unicamp, 1996.
+um
+modelo para a compreensão das sociedades Proto-Jê meridionais. São Paulo,
+PPGAS/USP. Tese de doutorado, 2001.
+Uma
+USP, 1995. Tese (Doutorado
+em Antropologia) – Instituto de Filosofia e Ciências Humanas, Universidade de São
+Paulo, 1995.
+TOMMASINO, Kimiye. Território e territorialidade Kaingang. Resistência cultural e
+Estudos Interdiscipliares dos
+UEL, 2000.
+Cunha,
+FAPESP/SMC/ Companhia das
+Letras, 1992:87-102.
+
+
+51
+
+VEIGA, Juracilda. 2006. Aspectos Fundamentais da Cultura Kaingang.
+Editora Curt Nimuendajú. [Originalmente Organização Social e
+Uma Introdução ao Parentesco, Casamento e Nominação
+Unicamp,
+1992].
+2000.
+(Tese Doutorado em Antropologia). Faculdade de Filosofia, Letras e Ciências
+Humanas, UNICAMP, 2000.
+ZARTH, Paulo Afonso. História Agrária do planalto gaúcho 1850-1920. Ijuí:
+UNIJUÍ, 1997.
+
+
