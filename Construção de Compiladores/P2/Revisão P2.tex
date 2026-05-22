@@ -124,6 +124,98 @@ lex        lex   lex   lex         lex         lex   lex         lex   lex
 |           |     |     |           |           |     |           |     |
 8     +     (     (     6     /     2     -     1     )     +     2     )     =
 \end{verbatim}
-
 \includegraphics[scale=0.4]{images/arvore-calculadora.png}\\
+
+	\subsection{Ações Semânticas}
+		↓→ Tabela de Símbolos.
+
+		Usamos ações semânticas para adicionar informações na tabela de símbolos.
+		Tradução dirigida pela sintaxe, o conjunto de ações semânticas é chamado de esquemas de tradução.
+
+		\begin{itemize}
+			\item esquemas de tradução
+				\begin{itemize}
+					\item declarações
+					\item operações
+				\end{itemize}
+		\end{itemize}
+\begin{verbatim}
+P::= MD
+M::= \epsilon {desloc = 0}
+D::= D, D
+D::= id:T {addSb (id.nome, T.tipo, desloc); desloc = desloc+T.tam}
+T::= int {T.tipo = int; T.tam=4}
+T::= real {T.tipo = real; t.tam=8}
+T::= array[num] of T1 {T.tipo = matriz(num.val, T1.tipo); T.tam=num.val*T1.tam}
+T::= ^T1 {T.tipo = ponteiro (T1.tipo); T.tam=4}
+\end{verbatim}
+\newpage
+\includegraphics[scale=0.7]{images/arvore-derivacao-exemplo.png}\\
+\textbf{Exemplo de arvore de derivação para "a: int; b: real"}.\\
+\begin{verbatim}
+	TS
+	___________________________________
+	| a, int, 0
+	| b, real, 4
+	desloc = _ _ 12
+	         0 4
+
+\end{verbatim}
+
+\section{Geração de Código Intermediário}
+	A árvore de derivação forma o \textbf{segmento de código}.
+
+
+	A grande diferença entre o código intermediário e o código objeto final é que o intermediário não especifica detalhes da máquina alvo, tais como quais registradores serão usados, quais endereços de memória serão referenciados, etc...
+
+	\begin{itemize}
+		\item intermediário
+		\item 3 endereços
+		\item independente da máquina
+		\item instruções (arq)
+	\end{itemize}
+
+	Código intermediário.
+
+	Simplifica a implementação do compilador.
+
+
+	Tradução para outras máquinas.
+
+	otimização
+
+	1 passo a mais.
+
+	\subsection{Código de 3 endereços}
+
+\begin{verbatim}
+	A = B op C
+	A = op B
+	A = B
+	goto L
+	if A oprel B goto L
+
+	A= X+Y*Z
+
+	T1 = 
+	.
+	.
+	.
+	.
+
+	S::= id = E {S.cod=E.cod((gerocod(id.nome'='E.nome)}
+	E::=E1+E2 {E.nome=geratemp;E.cod=E1.cod((E2.cod(
+				                (geracod(E.nome'='e1.nome'+'E2.nome)}
+	E::=E1*E2 {E.nome=geratemp;E.cod=E1.cod((E2.cod(
+				                (geracod(E.nome'='e1.nome'+'E2.nome)}
+	E::=(E1) {E.nome=E1.nome;E.cod=E1.cod}
+	E::=id {E.nome=id.nome;E.cod=' '}
+\end{verbatim}
+	\subsection{Tarefa: gerar esquema de tradução para construir codigo intermediário adicionando código em saída}
+\begin{verbatim}
+	S::= id=E
+	E::= E+T | E-T | T
+	T::= T*F | T/F |F
+	F::= (E) | id
+\end{verbatim}
 \end{document}
