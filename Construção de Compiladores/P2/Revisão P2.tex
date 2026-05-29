@@ -1,5 +1,6 @@
 \documentclass[ 12pt, a4paper]{article}
 \usepackage[ ]{indentfirst}
+\usepackage{amssymb}
 \usepackage[ ]{pdflscape}
 \usepackage[ ]{graphicx}
 \usepackage[ ]{booktabs}
@@ -218,4 +219,59 @@ T::= ^T1 {T.tipo = ponteiro (T1.tipo); T.tam=4}
 	T::= T*F | T/F |F
 	F::= (E) | id
 \end{verbatim}
+
+	\subsection{Otimização de código}
+		\begin{itemize}
+			\item tempo de compilação
+				\begin{itemize}
+					\item Desenvolvimento
+					\item Execução de código
+				\end{itemize}
+			\item eliminar
+				\begin{itemize}
+					\item atribuições de redundância
+					\item subexpressões comuns
+					\item temporários desnecessários
+				\end{itemize}
+			\item mudar ordem de operações
+			\item gerência de memória
+		\end{itemize}
+
+	\subsection{Representação Blocos Básicos por Grafo Acíclico Dirigido}
+		\begin{itemize}
+			\item folhas: operandos
+			\item nodos: operadores
+		\end{itemize}
+		exemplo: $x = (a+b) * (a-b)$
+
+	\subsection{Algoritmo de construção de Grafo Acíclico Dirigido}
+		\begin{enumerate}
+			\item Se $y \nexists$ no Grafo Acíclico Dirigido then cria folha $y$
+			\item se $\exists$ nodo $op$ com folhas $y$ e $z$ then denommine de $x$ else cria nodo $x$.
+		\end{enumerate}
+	\textbf{Exemplo}
+
+\begin{verbatim}
+	T1 = a + b
+	T2 = a - b
+	T3 = T1 + T2
+	T4 = a - c
+	T5 = b - c
+	T6 = T2 * T4
+	T7 = T6 - T5
+\end{verbatim}
+
+\begin{center}
+\includegraphics[scale=0.3]{images/GAD.png}
+\end{center}
+
+	\subsection{Sequência Otimizada de Execução}
+		\begin{itemize}
+			\item Faça $L=\o$
+			\item Escolha nodo $n$ que $\nexists in L$
+			\item se $\exists$ arestas incidentes em n then( se originou-se em nodos $\exists in L$ then $add$ $n$ $in$ $L$)
+			\item se n é o último em L and aresta mais à esquerda originado em n incide em n e $\nexists$ em L and predecessores de n $\exists$ em L then add n em L
+
+		\end{itemize}
+
 \end{document}
