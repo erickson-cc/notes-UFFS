@@ -1,2 +1,4 @@
 <PROGRAMA> ::= <DECLARACAO> | <PROGRAMA> <DECLARACAO>
 <DECLARACAO> ::= definir variavel como tipo string
+<DECLARACAO> ::= <tipo> variavel = new <classe>
+//Colocar uma estrutura sintática de declaração de variável

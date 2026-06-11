@@ -12,7 +12,14 @@
 \maketitle
 \section*{Conteúdos}
 	\begin{itemize}
-		\item
+		\item Tradução dirigida por sintaxe
+		\item Esquemas de tradução
+		\item Gramática de atributos
+		\item Esquemas S-atribuídos
+		\item Árvores de Sintaxe
+		\item Análise Semântica
+		\item Geração de código intermediário
+		\item Otimização de código
 	\end{itemize}
 \newpage
 
@@ -57,12 +64,14 @@
 	\subsection{Esquemas de tradução}
 
 		Esquemas de tradução é o conjunto de ações semânticas
+
+		Todo tipo de transformação que aconteece no código é uma tradução. (Código alto nível $>$ código temporário 2 operandos $>$ código de máquina), o reconhecimento sintático conduz essa tradução. Toda transformação conduzida pela sintaxe cujas regras estão na GLC é a tradução dirigida por sintaxe.
 	\begin{itemize}
 		\item extensão da GLC
 		\item atributos
 			\begin{itemize}
-				\item sintetizados
-				\item herdados
+				\item Sintetizados: atributo computado a partir dos valores dos atributos dos filhos do símbolo.
+				\item Herdados: atributo computado a partir dos valores dos atributos dos irmãos ou do pai do símbolo.
 			\end{itemize}
 		\item ações semânticas
 		\item grafo de dependência
@@ -133,6 +142,8 @@ lex        lex   lex   lex         lex         lex   lex         lex   lex
 		Usamos ações semânticas para adicionar informações na tabela de símbolos.
 		Tradução dirigida pela sintaxe, o conjunto de ações semânticas é chamado de esquemas de tradução.
 
+		A execução dessas ações pode gerar ou interpretar código, armazenar informações na tabela de símbolos, emitir mensagens de erros, etc.
+
 		\begin{itemize}
 			\item esquemas de tradução
 				\begin{itemize}
@@ -140,6 +151,8 @@ lex        lex   lex   lex         lex         lex   lex         lex   lex
 					\item operações
 				\end{itemize}
 		\end{itemize}
+
+O deslocamento é uma informação que é gerada a partir do reconhecimento sintático para dizer a partir de qual posição ifajof precisam ser geradas.
 \begin{verbatim}
 P::= MD
 M::= \epsilon {desloc = 0}
@@ -168,6 +181,11 @@ T::= ^T1 {T.tipo = ponteiro (T1.tipo); T.tam=4}
 
 
 	A grande diferença entre o código intermediário e o código objeto final é que o intermediário não especifica detalhes da máquina alvo, tais como quais registradores serão usados, quais endereços de memória serão referenciados, etc...
+
+
+
+	Temos uma gramática livre de contexto e uma expressão, precisamos adicionar ações semânticas para gerar o código intermediário. Fazer o reconhecimento e ver o que tem que ser feito. Adicionar as ações semânticas conforme subimos na árvore. Na saída vai ser armazenada como uma operação básica, no código intermediário será guardado o resultado temporário ($T.nome=geraTemp$). Adicionar 1-etc ao T na gramática quando o $T::=Txxx$ se T for derivado.
+
 
 	\begin{itemize}
 		\item intermediário
