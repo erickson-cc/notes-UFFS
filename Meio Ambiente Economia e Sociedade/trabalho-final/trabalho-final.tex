@@ -1,0 +1,86 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Pacotes Básicos ---
+\usepackage[utf8]{inputenc}
+\usepackage[]{graphicx}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage{setspace}
+\onehalfspacing % Set line spacing to 1.5
+\setlength{\parindent}{1.25cm}
+\setlength{\lineskip}{1.5cm}
+%\usepackage[main=brazilian, english]{babel}
+\usepackage{indentfirst}
+\usepackage{geometry}
+\geometry{left=3cm, top=3cm, right=2cm, bottom=2cm}
+
+\usepackage{etoolbox} % Pacote necessário para ajustar o espaçamento
+
+% Criando o ambiente 'citacao'
+\newenvironment{citacao}{
+  \vspace{0.5cm} % Espaço antes da citação
+  \small % Letra menor (geralmente tamanho 10)
+  \begin{list}{}{
+    \leftmargin=4cm % Recuo de 4 cm da margem esquerda
+    \rightmargin=0cm
+    \parsep=0pt
+    \topsep=0pt
+    \partopsep=0pt
+  }
+  \item\relax
+  \linespread{1.0}\selectfont % Garante espaçamento simples dentro da citação
+}{
+  \end{list}
+  \vspace{0.5cm} % Espaço depois da citação
+}
+\usepackage{fancyhdr}
+
+% Configura o estilo "fancy"
+\fancypagestyle{plain}{
+  \fancyhf{} % Limpa todos os cabeçalhos e rodapés
+  \fancyfoot[R]{\thepage} % Define a paginação no rodapé à direita (R = Right)
+  \renewcommand{\headrulewidth}{0pt}  % Remove a linha divisória do cabeçalho
+  \renewcommand{\footrulewidth}{0pt}  % Remove a linha divisória do rodapé
+}
+
+% Ativa o estilo configurado para todo o documento
+\pagestyle{plain}
+% --- Informações do Documento ---
+\title{UNIVERSIDADE FEDERAL DA FRONTEIRA SUL\\Ciência da Computação\\Meio Ambiente, Economia e Sociedade\\Prof. Leandro Bordin\\ Movimento Ambientalista: Desenvolvimento Sustentável em Meio ao Capitalismo}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{flushright}
+	Erickson Giesel Muller
+\end{flushright}
+
+Três correntes da economia ambiental: economia ambiental neoclássica, economia ambiental ecológica e economia ambiental marxista.
+
+
+
+
+
+
+
+
+
+
+
+
+%\begin{thebibliography}{99}
+%
+%\bibitem{curta2012}
+%
+%\bibitem{mabilde1983} 
+%	MABILDE, Pierre F. A. B. \textbf{Apontamentos sobre os indígenas selvagens da Nação Coroados das matas da Província do Rio Grande do Sul}: 1836-1866. São Paulo: IBRASA, Fundação Nacional Pró-Memória, 1983.
+%
+%\bibitem{prous1992}
+%	PROUS, André. \textbf{Arqueologia Brasileira}. Brasília: Editora da UnB, 1992.
+%
+%\bibitem{tommasino1995}
+%	TOMMASINO,  Kimiye.  \textbf{A  História  dos  Kaingáng  da  Bacia  do  Tibagi:  Uma  Sociedade Jê Meridional em Movimento}. São Paulo: USP, 1995. Tese (Doutorado  em Antropologia) – Instituto de Filosofia e Ciências Humanas, Universidade de São  Paulo, 1995. 
+%\end{thebibliography}
+%
+\end{document}
