@@ -1,0 +1,53 @@
+1. As ações semânticas podem ser utilizadas para instanciar procedimentos para fazer reconhecimento. Portanto, sim. Os esquemas de tradeução podem ser utilizadas para a interpretação do código. Mas eles não têm autonomia, mas a interpretação depende de biliotecas para fazer o reconhecimento.
+
+2.
+S::= S+B	
+S::= A
+A::= A*B		{A.nome = geraTemp(), add{A.nome "=" A1.nome "+" B.nome}
+A::= B
+B::= (S)
+B::= id			{B.nome = id.nome}
+
+3.
+Empilhamento
+0xfor = e2
+2xname = e3
+...
+
+Redução: usar o número da produção na gramática. Coluna éo  follow do simbolo que dá nome à regra
+9x} = R2
+...
+
+Salto: quando Transição por um não terminal
+0xS = 1
+...
+
+4.
+Pilha: 0
+Fita: for name in range do { exp } $
+Pilha: 0 for 2
+Fita: name in range do { exp } $
+Pilha: 0 for 2 name 3
+Fita: in range do { exp } $
+Pilha: 0 for 2 name 3 in 4
+Fita: range do { exp } $
+Pilha: 0 for 2 name 3 in 4 range 5
+Fita: do { exp } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6
+Fita: { exp } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6 { 7
+Fita: exp } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6 { 7 exp 10
+Fita: } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6 { 7 
+Fita: } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6 { 7 A 8
+Fita: } $
+Pilha: 0 for 2 name 3 in 4 range 5 do 6 { 7 A 8 } 11
+Fita: $
+
+5.
+A tabela L serve para identificar os 
+L={T2, T3, T4, T1, T2}
+Estudar o conjunto L
+
