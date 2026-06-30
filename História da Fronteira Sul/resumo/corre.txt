@@ -1,0 +1,4 @@
+tirar o título figura 1 da  imagem
+Trocar a referencia da imagem pela referenci ada página do TCC
+COSTA CURTA, Jussara
+Tirar o cabeçalho e colocar no template.
