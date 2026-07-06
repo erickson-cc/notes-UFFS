@@ -1,0 +1,7 @@
+definir
+como
+tipo
+string
+
+S::=a<A>|e<A>|i<A>|o<A>|u<A>|C<A>|T<A>|F<A>|G<A>|R<A>
+A::=f<A>|a<A>|e<A>|i<A>|ε

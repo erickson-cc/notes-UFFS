@@ -1,4 +1,1 @@
-definir Ceia como tipo string
-defina Teia como tipo int
-definir Feiar como tipo xxxx
-
+definir Teia LJLJL como tipo string
