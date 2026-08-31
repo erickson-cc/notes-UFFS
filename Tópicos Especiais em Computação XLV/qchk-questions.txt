@@ -1,0 +1,10 @@
+1. What software engineering problem does QuickCheck aim to solve?
+2. How does QuickCheck define a software property in Haskell syntax?
+3. What is the role of the Arbitrary type class?
+4. How are generator combinators structured monadically?
+5. How does QuickCheck perform test data shrinking?
+6. What happens when a conditional property (P \to Q) has a rarely satisfied precondition?
+7. How does QuickCheck measure test distribution coverage?
+8. What are the main practical advantages over manual unit testing?
+9. What limitations of QuickCheck are acknowledged by the authors?
+10. Which aspects of QuickCheck resemble modern binary fuzzing, and which differ?
