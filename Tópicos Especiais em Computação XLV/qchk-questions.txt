@@ -1,7 +1,9 @@
 1. What software engineering problem does QuickCheck aim to solve?
 2. How does QuickCheck define a software property in Haskell syntax?
 3. What is the role of the Arbitrary type class?
+Generate random test data.
 4. How are generator combinators structured monadically?
+A generator is a function that can generate a variable from an abstract type in a pseudo random way. Combinators build complex generators from simpler ones, to do this, the type of the variable is an instance of Haskell's Monad class.
 5. How does QuickCheck perform test data shrinking?
 6. What happens when a conditional property (P \to Q) has a rarely satisfied precondition?
 7. How does QuickCheck measure test distribution coverage?
