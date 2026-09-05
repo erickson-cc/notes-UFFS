@@ -1,12 +1,29 @@
 1. What software engineering problem does QuickCheck aim to solve?
+QuickCheck addresses the high cost and labor-intensive nature of software testing, which accounts for up to 50% of software development costs. It automates this process by allowing programmers to define properties as Haskell functions, which are then automatically tested against randomly generated inputs.
+
 2. How does QuickCheck define a software property in Haskell syntax?
+Property is a Haskell function that returns either a boolean for simple equations or another property when conditional laws are used.
+
 3. What is the role of the Arbitrary type class?
-Generate random test data.
+Generate random test data. The Arbitrary type class dictates how random test data is generated for specific types. A type becomes an instance of this class if arbitrary elements can be generated for it using the arbitrary method, which returns a generator of type Gen a.
+
 4. How are generator combinators structured monadically?
 A generator is a function that can generate a variable from an abstract type in a pseudo random way. Combinators build complex generators from simpler ones, to do this, the type of the variable is an instance of Haskell's Monad class.
+
 5. How does QuickCheck perform test data shrinking?
+Test data shrinking is achieved by extending the Arbitrary class with a smaller method, which returns a list of smaller, similar values to its argument (like direct subtrees). When a counter-example is found, the quickCheck function uses this method to search for a smaller counter-example to report, reducing the time needed to understand bugs.
+
 6. What happens when a conditional property (P \to Q) has a rarely satisfied precondition?
+We generate only a limited number of candidate test cases (default=1000). If we do not find 100 valid test cases, then we simply report the number of successful tests we were able to perform.
+
 7. How does QuickCheck measure test distribution coverage?
+It doesn't. It is up to the user to investigate the distribution of test data and decide whether sufficiently many tests have been run.
+
 8. What are the main practical advantages over manual unit testing?
+Using QuickCheck encourages the user to formulate formal specifications, thus improving the understanding of the user's programs. Additionally, QuickCheck allows testing to be done at a fine grain on pure functions and significantly reduces effort by automatically checking a large number of randomly generated cases rather than requiring manually written test suites.
+
 9. What limitations of QuickCheck are acknowledged by the authors?
+There is no measurement of test coverage.
+
 10. Which aspects of QuickCheck resemble modern binary fuzzing, and which differ?
+Couldn't find the answer.
