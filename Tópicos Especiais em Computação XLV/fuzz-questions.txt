@@ -1,0 +1,5 @@
+1. How did Miller et al. formally define a process crash vs. a process hang?
+2. What were the primary root causes of program crashes in 1990 (e.g., implicit
+array bounds, null pointers)?
+3. Are these root causes still prevalent in modern systems programming today?
+4. How does Miller’s pure random generator differ from modern mutation fuzzers?
