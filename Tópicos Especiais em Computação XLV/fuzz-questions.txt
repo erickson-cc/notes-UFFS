@@ -1,5 +1,11 @@
 1. How did Miller et al. formally define a process crash vs. a process hang?
-2. What were the primary root causes of program crashes in 1990 (e.g., implicit
-array bounds, null pointers)?
+
+A program is considered crashed if is terminated producing a core dump file, and it is considered hung if it enters in a loop with no output for more than 5 minutes.
+
+2. What were the primary root causes of program crashes in 1990 (e.g., implicit, array bounds, null pointers)?
+array/pointer errors, like when a program access the cells of an array with a pointer or array subscript without checking for exceeding range of the array. Null pointer is also a problem, it happens when the program references an address through a null pointer.
+
 3. Are these root causes still prevalent in modern systems programming today?
+Many of them are, the author uses the example of scanf and printf functions in C, that are vulnerable but still used today.
+
 4. How does Miller’s pure random generator differ from modern mutation fuzzers?
