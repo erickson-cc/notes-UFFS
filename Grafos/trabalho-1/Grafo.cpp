@@ -102,10 +102,6 @@ vector<int> Grafo:: testeTTL(int raiz, int ttl){
     fila.pop();
     
     //printf("%d\n", w);
-    if(ttl_r < 0){
-	    expirados.push_back(w);
-	    continue;
-    }
     for (int u = 0; u < num_vertices_; u++){
       if (matriz_adj_[w][u] != 0){
 	      if (marcado[u] == 0) {
@@ -115,6 +111,9 @@ vector<int> Grafo:: testeTTL(int raiz, int ttl){
 
         }
       }
+    }
+    if(ttl_r < 0){
+	    expirados.push_back(w);
     }
 	for (int i = 0; i < num_vertices_; i++) {
 		if (marcado[i] == 0) {
@@ -131,5 +130,7 @@ vector<int> Grafo:: testeTTL(int raiz, int ttl){
   }
 
 	sort(expirados.begin(), expirados.end());
-  return expirados;
+	return expirados;
 }
+
+
