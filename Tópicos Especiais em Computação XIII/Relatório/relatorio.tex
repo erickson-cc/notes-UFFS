@@ -78,7 +78,41 @@ Esta classe atua como a ponte de comunicação entre a aplicação e o broker Mo
 
 Alguns métodos foram criados para automatizar a configurações que se repetem no gerenciamento do callback, como \texttt{desconectar(), enviarMensagem(), enviarMensagemRetida() e removerMensagemRetida()}.
 
+\textbf{Funções do CallBack:}
 \begin{verbatim}
+	public void connectionLost(Throwable cause) {...}
+	public void deliveryComplete(org.eclipse.paho.client.mqttv3.IMqttDeliveryToken token) {...}
+	public void messageArrived(String topic, MqttMessage message) throws Exception {
+		String payload = new String(message.getPayload());
+
+		if (topic.startsWith("USERS/")) {// Criar subtópicos para evitar o problema de
+							// Guardar apenas uma mensagem
+			gerenciadorUsuarios.atualizarStatus(payload);
+		}
+		else if (topic.startsWith("GROUPS/")){ // Cria subtópico GROUPS/
+			gerenciadorGrupos.atualizarGrupo(topic, payload);
+		}
+		else if(topic.startsWith("CHAT_GRUPO/")){...}
+		else if (
+				!topic.startsWith( "USERS/") && 
+				!topic.startsWith("GROUPS/") &&
+				!topic.endsWith("_Control")
+		){...} // Chate privado. Encerrar conversa ou publicar mensagem
+		// Ler mensagens que chegam em user_Control
+		else if(topic.equals(userTopicoControle)){
+			if(payload.startsWith("REQ:")){...}
+			if(payload.startsWith("ACCEPT:")){...}
+			if(payload.startsWith("REJECT:")){...}
+			if(payload.startsWith("GROUP_REQ:")){...}
+			if(payload.startsWith("GROUP_ACCEPT:")){...}
+			if(payload.startsWith("GROUP_REJECT:")){...}
+		}
+	}
+\end{verbatim}
+\textbf{Funções do Controller:}
+\begin{verbatim}
+	public void assinarTopico(String topico) throws MqttException {...}
+	public void desassinarTopico(String topico) throws MqttException {...}
 	public void publicarStatus(String status) throws MqttException {
 		String messageStatus = userId + ":" + status;
 		MqttMessage statusUser = new MqttMessage(messageStatus.getBytes());
@@ -86,19 +120,11 @@ Alguns métodos foram criados para automatizar a configurações que se repetem 
 		statusUser.setRetained(true);// para quem logar depois
 		client.publish("USERS/" + userId, statusUser); // Publica no subtópico
 	}
-	...
-				public void messageArrived(String topic, MqttMessage message) throws Exception {
-				String payload = new String(message.getPayload());
-
-				if (topic.startsWith("USERS/")) {// Criar subtópicos para evitar o problema de
-									// Guardar apenas uma mensagem
-					gerenciadorUsuarios.atualizarStatus(payload);
-				}
-				else if (topic.startsWith("GROUPS/")){ // Cria subtópico GROUPS/
-					gerenciadorGrupos.atualizarGrupo(topic, payload);
-				}
-	...
-
+	public void desconectar() throws MqttException {...}
+	public void enviarMensagem(String topicoDestino, String mensagem) throws MqttException{...}
+	public void enviarMensagemRetida(String topicoDestino, String mensagem) 
+										throws MqttException{...}
+	public void removerMensagemRetida(String topicoDestino) throws MqttException{...}
 \end{verbatim}
 
 \section{\texttt{session.java}}
@@ -109,19 +135,9 @@ Alguns métodos foram criados para automatizar a configurações que se repetem 
     \item \textbf{Solicitações:} Controla as filas (utilizando estruturas \texttt{HashSet} e \texttt{HashMap}) e os logs de pedidos pendentes de conversas privadas e de ingressos em grupos.
 \end{itemize}
 \begin{verbatim}
-	public void registrarMensagemChat(String topico, String mensagem, String userId) {
-	...
-		if (topico.equals(salaAtivaNaTela)) {
-			if (!mensagem.startsWith("["+userId+"]")) {
-				System.out.println(mensagem);
-			}
-		}
-		else {
-			if (!mensagem.startsWith("["+userId+"]")) {
-				System.out.print("\r\n[NOTIFICAÇÃO] Nova mensagem recebida\n>> ");
-			}
-		}
-...
+	public void adicionarSolicitacao(String idSol) {...}
+	public void removerSolicitacao(String idSol) {...}
+	public boolean possuiSolicitacao(String idSol) {...}
 	public void listarPendentes() {
 		System.out.println("\n--- Solicitações de Conversa ---");
 		if (solicitacoesPendentes.isEmpty()) {
@@ -134,15 +150,11 @@ Alguns métodos foram criados para automatizar a configurações que se repetem 
 		}
 	}
 	public void listarLogSolicitacoes() {
-		System.out.println("Registros de solicitações em ordem cronológica");
-		if (logSolicitacoes.isEmpty()){
-			System.out.println("Nenhuma solicitação registrada");
-		}
-		else{
+	...
 			for (String registro : logSolicitacoes){
 				System.out.println(registro);
 			}
-		}
+	...
 	}
 	public void registrarLogSolicitacoes(String tipo, String remetente, String destinatario,
 	String canal){
@@ -159,16 +171,9 @@ Alguns métodos foram criados para automatizar a configurações que se repetem 
 		'"+grupo+"' vindo de "+membro );
 		System.out.print(">> ");
 	}
-
-	public void removerSolicitacaoGrupo(String membro){
-		solicitacoesGrupo.remove(membro);
-	}
-	public boolean possuiSolicitacaoGrupo(String membro){
-		return solicitacoesGrupo.containsKey(membro);
-	}
-	public String getGrupoSolicitado(String membro){
-		return solicitacoesGrupo.get(membro);
-	}
+	public void removerSolicitacaoGrupo(String membro){...}
+	public boolean possuiSolicitacaoGrupo(String membro){...}
+	public String getGrupoSolicitado(String membro){...}
 	public void listarSolicitacoesPendentesGrupo(){
 		System.out.println("Solicitações de participação Pendentes:");
 		if (solicitacoesGrupo.isEmpty()){
@@ -181,21 +186,171 @@ Alguns métodos foram criados para automatizar a configurações que se repetem 
 			+entry.getValue()+"'");
 		}
 	}
+	public void adicionarConversa(String utilizador, String topico) {...}
+	public void encerrarConversa(String utilizador){...}
+	public String getTopicoConversa(String utilizador) {...}
+	public void listarConversasAtivas() {...}
+	public void setSalaAtiva(String topico) {...}
+	public void encerrarConversaPorTopico(String topico) {...}
+	public void registrarMensagemChat(String topico, String mensagem, String userId) {
+	...
+		if (topico.equals(salaAtivaNaTela)) {
+			if (!mensagem.startsWith("["+userId+"]")) {
+				System.out.println(mensagem);
+			}
+		}
+		else {
+			if (!mensagem.startsWith("["+userId+"]")) {
+				System.out.print("\r\n[NOTIFICAÇÃO] Nova mensagem recebida\n>> ");
+			}
+		}
+	...
+	}
+	public void registradaMensagemGrupo(String nomeGrupo, String mensagem, String userId){
+		String topico = "CHAT_GRUPO/"+nomeGrupo;
+		historicoMensagens.putIfAbsent(topico, new ArrayList<>());
+		historicoMensagens.get(topico).add(mensagem);
+	...
+	}
+	public void imprimirHistorico(String topico) {
+		List<String> hist = historicoMensagens.get(topico);
+		if (hist != null && !hist.isEmpty()){
+			for (String msg : hist) {
+				System.out.println(msg);
+			}
+		}
+	}
+
 \end{verbatim}
 
 \section{\texttt{groups.java}}
 Classe voltada exclusivamente à manutenção das estruturas de dados das salas de chat coletivas. O sistema utiliza esta classe para recriar a estrutura hierárquica dos grupos na memória RAM de cada cliente. A classe mantém um dicionário (\texttt{Map}) que vincula o nome de cada grupo a um objeto interno chamado \texttt{infoGroup}. Este objeto registra estritamente qual é o ID do líder e um conjunto de dados (\texttt{Set}) com os IDs de todos os membros comuns, permitindo a validação rápida de permissões (como quem pode deletar o grupo ou enviar mensagens).
 
+\begin{verbatim}
+	class infoGroup { 
+		String lider = "";
+		Set<String> membros = new HashSet<>();
+	}
+
+	private Map<String, infoGroup> listaGroups;
+
+	public groups() {
+		this.listaGroups = new HashMap<>();
+	}
+	public void atualizarGrupo(String topico, String payload){...}
+	public Set<String> listarMembros(String nomeGrupo){...}
+	public boolean esseGrupoExiste(String nomeGrupo){...}
+	public void listarGrupos(){...}
+	public String retornaLider(String nomeGrupo){...}
+\end{verbatim}
 \section{\texttt{users.java}}
 Responsável pelo controle de presença da aplicação. Processa as mensagens retidas vindas do tópico raiz \texttt{USERS/\#} e atualiza instantaneamente a lista local informando quais clientes estão \texttt{ONLINE} ou \texttt{OFFLINE}. Isso garante que o menu de listagem de usuários reflita o estado real e sincronizado da rede em qualquer instante.
+\begin{verbatim}
+	public users() {
+		this.onlineUsers = new HashSet<>();
+	}
+	public void atualizarStatus(String mensagem) {...}
+	public void listarUsers() {...}
+\end{verbatim}
 
 \section{\texttt{menu.java}}
-Implementa a Interface de Linha de Comando (CLI) que guia a experiência visual e a interatividade do usuário com o sistema. Suas funções abrangem:
+Implementa a interface de linha de comando que o usuário utiliza para interagir com o programa. Suas funções abrangem:
 \begin{itemize}
     \item Capturar as entradas de teclado (através da classe \texttt{Scanner}) e processar a navegação nos submenus hierárquicos de conversas e grupos.
     \item Bloquear o fluxo contínuo de execução durante um bate-papo ativo (através de laços de repetição \texttt{while}) para permitir o envio de mensagens de texto sem a interferência do menu principal.
     \item Intermediar a lógica complexa de saída, abandono e exclusão de conversas e grupos, chamando coordenadamente os métodos de limpeza visual da classe \texttt{session} e as funções de exclusão de mensagens retidas da classe \texttt{controller}.
 \end{itemize}
+\begin{verbatim}
+	public void exibir() {
+		boolean onscreen = true;
+		while (onscreen) {
+			System.out.println("1. Listar usuários");
+			System.out.println("2. Conversas");
+			System.out.println("3. Grupos");
+			System.out.println("4. Histórico"); // Tem mais coisa aqui, abrir outro menu
+			System.out.println("0. Sair");
+
+			System.out.print(">> ");
+			String opcao = scanner.nextLine();
+
+			switch (opcao) {...}
+		...
+	}
+	private void subMenuConversas(){
+		sessoes.listarPendentes();
+		System.out.println("1. Solicitar nova conversa");
+		System.out.println("2. Aceitar solicitação pendente");
+		System.out.println("3. Recusar solicitação pendente");
+		System.out.println("4. Mostrar registros de solicitações");
+		System.out.println("5. Entrar numa conversa ativa");
+		System.out.println("0. Voltar");
+		System.out.print("Escolha: ");
+	...
+			else if (subOpcao.equals("5")){ // Modo Chat
+				sessoes.listarConversasAtivas();
+				System.out.print("Digite o ID do utilizador com quem deseja conversar: ");
+				String usuarioChat = scanner.nextLine();
+				String topicoChat =  sessoes.getTopicoConversa(usuarioChat);
+
+				if(topicoChat == null){
+					System.out.println("Não existe conversa ativa com esse usuário.");
+				}
+				else {
+					System.out.println("----------Conversa com: " + usuarioChat);
+					System.out.println("          nome do canal: "+ topicoChat);
+					System.out.println("\n Digite '/sair' para voltar ao menu ou '/encerrar' para fechar 
+					a conversa permanentemente");
+					sessoes.setSalaAtiva(topicoChat);
+					sessoes.imprimirHistorico(topicoChat);
+					
+					boolean onChat = true;
+					while (onChat) {
+						String texto = scanner.nextLine();
+						if (sessoes.getTopicoConversa(usuarioChat) == null){
+							// Se o outro usuario encerra a conversa com a tela aberta
+							onChat = false;
+							sessoes.setSalaAtiva(null);
+							System.out.println("_______________________________________________");
+							break;
+						}
+
+						if (texto.equals("/sair")) {
+							onChat = false;
+							sessoes.setSalaAtiva(null);
+							System.out.println("_______________________________________________");
+						}
+						else if(texto.equals("/encerrar")){
+							onChat = false;
+							sessoes.setSalaAtiva(null);
+							// Avisa o outro usuario que a conversa foi encerrada.
+							mqttController.enviarMensagem(topicoChat, "CMD_ENCERRAR:"+userId);
+							sessoes.encerrarConversa(usuarioChat);
+							mqttController.desassinarTopico(topicoChat);
+							System.out.println("Conversa com "+usuarioChat+" encerrada");
+							System.out.println("_______________________________________________");
+						}
+						else{
+							String mensagemChat = "["+userId+"]: "+ texto;
+							mqttController.enviarMensagem(topicoChat, mensagemChat);
+						}
+					}
+
+	}	
+	private void subMenuGrupos() {
+		System.out.println("1. Listar grupos cadastrados");
+		System.out.println("2. Criar novo grupo");
+		System.out.println("3. Solicitar entrada num grupo");
+		System.out.println("4. Gerenciar pedidos de entrada");
+		System.out.println("5. Sair de um grupo");
+		System.out.println("6. Entrar no chat de um grupo");
+		System.out.println("0. Voltar");
+		System.out.print("Escolha: ");
+	...
+	}
+	private boolean abandonarGrupo(String nomeGrupo) throws MqttException{...}
+\end{verbatim}
+\section{\texttt{chat.java}}
+Classe que possui o método main do código, define o broker como \texttt{tcp://localhost:1883}. Apresenta a tela de login e em seguida faz as chamadas de função para iniciar a sessão e assinar o tópico de controle do cliente e atualização de status.
 
 \chapter{Funcionalidades}
 \section{Comunicação um-a-um}
@@ -217,6 +372,28 @@ O gerenciamento dos grupos é dividido em dois ramos principais:
 \begin{itemize}
     \item \texttt{GROUPS/\#}: Tópico de administração assinado por todos os usuários de forma global. Usado estritamente para manter a lista de grupos, líderes e membros sincronizada na memória RAM de cada cliente.
     \item \texttt{CHAT\_GRUPO/\#}: Tópicos de comunicação efetiva. Apenas os membros validados de um grupo assinam o respectivo canal de texto, garantindo privacidade e evitando o recebimento de mensagens de grupos dos quais o usuário não faz parte.
+\end{itemize}
+
+\section{Estrutura das mensagens}
+Para o correto roteamento e interpretação de eventos pela classe \texttt{controller}, os pacotes de dados (\textit{payloads}) foram padronizados utilizando \textit{strings} separadas pelo caractere delimitador dois-pontos (\texttt{:}). Abaixo estão as estruturas implementadas no sistema:
+
+\begin{itemize}
+    \item \textbf{Mensagens de Bate-papo:} Formatadas como \texttt{[ID\_Remetente]: Texto\_da\_mensagem}. Aplicadas tanto no chat privado quanto nos grupos.
+    \item \textbf{Solicitações Privadas:} 
+    \begin{itemize}
+        \item Pedido: \texttt{REQ:ID\_Solicitante}
+        \item Aceite: \texttt{ACCEPT:ID\_Destinatario:Topico\_Gerado}$^*$.
+        \item Rejeição: \texttt{REJECT:ID\_Destinatario}
+    \end{itemize}
+    $*$\texttt{Topico\_Gerado} segue o padrão \texttt{ID1\_ID2\_Timestamp}
+    \item \textbf{Gerenciamento de Grupos:}
+    \begin{itemize}
+        \item Pedido de entrada: \texttt{GROUP\_REQ:Nome\_do\_Grupo:ID\_Solicitante}
+        \item Aceite de entrada: \texttt{GROUP\_ACCEPT:Nome\_do\_Grupo}
+        \item Rejeição de entrada: \texttt{GROUP\_REJECT:Nome\_do\_Grupo}
+        \item Comandos de exclusão mútua: \texttt{CMD\_ENCERRAR\_GRUPO} ou \texttt{CMD\_ENCERRAR:ID\_Remetente}.
+    \end{itemize}
+    \item \textbf{Status de Presença e Hierarquia:} Publicações retidas simples, transmitindo apenas o valor final do estado, como \texttt{ONLINE} / \texttt{OFFLINE} para os usuários, e \texttt{LEADER} / \texttt{MEMBER} para os membros de grupos. Estruturando os tópicos de forma que o contexto da mensagem esteja na hierarquia, economiza-se o tráfego de rede através de mensagens menores.
 \end{itemize}
 
 \section{Notificações}
